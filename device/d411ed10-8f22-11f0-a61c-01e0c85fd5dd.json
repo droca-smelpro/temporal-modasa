@@ -1,0 +1,116 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "f0f25a00-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "d411ed10-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "label" : "",
+    "name" : "Estación 1.0",
+    "softwareId" : null,
+    "type" : "workstation"
+  },
+  "credentials" : {
+    "credentialsId" : "yR8GcuXzOitRZWFmq7WO",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "7c620750-8f20-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d411ed10-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 13368
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1760718685074,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1760696934433,
+      "longValue" : 1760696934433,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1761143351008,
+      "longValue" : 1761143350847,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1761079150716,
+      "longValue" : 1761079150716,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1760696277804,
+      "longValue" : 1760696277804,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "nombreDeEstacion",
+      "lastUpdateTs" : 1761089722099,
+      "longValue" : null,
+      "strValue" : "Estación 1.0"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "orden",
+      "lastUpdateTs" : 1761090763204,
+      "longValue" : 2,
+      "strValue" : null
+    } ]
+  },
+  "calculatedFields" : [ ]
+}

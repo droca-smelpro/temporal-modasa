@@ -1,0 +1,141 @@
+{
+  "entityType" : "DEVICE_PROFILE",
+  "entity" : {
+    "default" : false,
+    "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : null,
+    "defaultQueueName" : null,
+    "defaultRuleChainId" : null,
+    "description" : "",
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "f0f25a00-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "image" : null,
+    "name" : "workstation",
+    "profileData" : {
+      "alarms" : [ {
+        "alarmType" : "Alerta de Emergencia",
+        "clearRule" : {
+          "alarmDetails" : null,
+          "condition" : {
+            "condition" : [ {
+              "key" : {
+                "key" : "evento",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "STRING",
+                "ignoreCase" : true,
+                "operation" : "EQUAL",
+                "value" : {
+                  "defaultValue" : "MODO_EMERGENCIA",
+                  "dynamicValue" : null,
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "STRING"
+            }, {
+              "key" : {
+                "key" : "tipo",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "STRING",
+                "ignoreCase" : true,
+                "operation" : "EQUAL",
+                "value" : {
+                  "defaultValue" : "DESACTIVADO",
+                  "dynamicValue" : null,
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "STRING"
+            } ],
+            "spec" : {
+              "type" : "SIMPLE"
+            }
+          },
+          "dashboardId" : null,
+          "schedule" : null
+        },
+        "createRules" : {
+          "CRITICAL" : {
+            "alarmDetails" : null,
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "evento",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "STRING",
+                  "ignoreCase" : true,
+                  "operation" : "EQUAL",
+                  "value" : {
+                    "defaultValue" : "MODO_EMERGENCIA",
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "STRING"
+              }, {
+                "key" : {
+                  "key" : "tipo",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "STRING",
+                  "ignoreCase" : true,
+                  "operation" : "EQUAL",
+                  "value" : {
+                    "defaultValue" : "ACTIVADO",
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "STRING"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "d670ad47-92b8-0a74-a961-b20bb2edf16b",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      } ],
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "provisionConfiguration" : {
+        "type" : "DISABLED",
+        "provisionDeviceSecret" : null
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "provisionDeviceKey" : null,
+    "provisionType" : "DISABLED",
+    "softwareId" : null,
+    "transportType" : "DEFAULT",
+    "type" : "DEFAULT"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "widgets_del_proyecto",
+    "description" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "41e88900-8f66-11f0-a61c-01e0c85fd5dd"
+    },
+    "image" : null,
+    "name" : "Widgets del Proyecto",
+    "order" : null,
+    "scada" : false,
+    "title" : "Widgets del Proyecto"
+  },
+  "fqns" : [ "navigation_panel", "lastest_values_table", "gauge_creado", "custom_gauge" ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

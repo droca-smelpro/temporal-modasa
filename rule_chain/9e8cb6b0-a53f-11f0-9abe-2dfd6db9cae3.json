@@ -1,0 +1,210 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "67a0e3e0-a541-11f0-9abe-2dfd6db9cae3"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "9e8cb6b0-a53f-11f0-9abe-2dfd6db9cae3"
+    },
+    "name" : "Process",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 1,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 1,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 0,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 2,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 395,
+        "layoutY" : 312
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fd846e50-a540-11f0-9abe-2dfd6db9cae3"
+      },
+      "name" : "Output",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainOutputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 670,
+        "layoutY" : 156
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if(msg.evento === \"FIN_OPERACION\"){\n    var unidades_ensambladas_anterior = parseInt(metadata.unidades_ensambladas) || 0;\n    msg.unidades_ensambladas = unidades_ensambladas_anterior + 1;\n    \n    var tiempo_inicio = metadata.shared_tiempo_inicio;\n    var tiempo_final = metadata.shared_tiempo_final;\n    msg.tiempo_operacion = tiempo_final - tiempo_inicio;\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1760044271632,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fd846e51-a540-11f0-9abe-2dfd6db9cae3"
+      },
+      "name" : "Unidades Ensambladas",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 328,
+        "layoutY" : 153
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ "tiempo_inicio", "tiempo_fin" ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "unidades_ensambladas" ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1760044271632,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "67a0e3e0-a541-11f0-9abe-2dfd6db9cae3"
+      },
+      "name" : "Fetch Unidades ensambladas",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1341,
+        "layoutY" : 85
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "scope" : "SHARED_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : false
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3367caa0-a567-11f0-9abe-2dfd6db9cae3"
+      },
+      "name" : "Save Attributes",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1036,
+        "layoutY" : 87
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var newMsg = {};\n\nif(msg.evento === \"IDENTIFICACION\"){\n    newMsg.tiempo_inicio = metadata.ts;\n}\nif(msg.evento === \"IDENTIFICACION\"){\n    newMsg.tiempo_fin = metadata.ts;\n}\n\nreturn {msg: newMsg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3367f1b0-a567-11f0-9abe-2dfd6db9cae3"
+      },
+      "name" : "Prepare Attributes",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 67,
+        "layoutY" : 308
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// List of keys to convert\nvar keysToConvert = ['tiempo_total', 'tiempo_parada', 'tiempo_espera']; \n\nkeysToConvert.forEach(function(key) {\n    if (msg[key]) {\n        var timeStr = msg[key];\n        var parts = timeStr.split(\":\");\n\n        // Ensure valid 4-part format (D:H:M:S)\n        if (parts.length === 4) {\n            var days = parseInt(parts[0], 10);\n            var hours = parseInt(parts[1], 10);\n            var minutes = parseInt(parts[2], 10);\n            var seconds = parseInt(parts[3], 10);\n\n            var totalSeconds = (((days * 24 + hours) * 60 + minutes) * 60) + seconds;\n\n            msg[key] = totalSeconds;\n        } else {\n            // optional: log invalid format\n            // logger.warn(\"Invalid time format for key \" + key + \": \" + timeStr);\n        }\n    }\n});\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n\n\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0359ab50-a56a-11f0-9abe-2dfd6db9cae3"
+      },
+      "name" : "HH:MM:SS to seconds",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
