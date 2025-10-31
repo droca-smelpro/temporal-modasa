@@ -115,6 +115,61 @@
         "propagateRelationTypes" : null,
         "propagateToOwner" : false,
         "propagateToTenant" : false
+      }, {
+        "alarmType" : "Solicitud",
+        "clearRule" : null,
+        "createRules" : {
+          "INDETERMINATE" : {
+            "alarmDetails" : "${evento} para ${motivo}",
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "evento",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "STRING",
+                  "ignoreCase" : true,
+                  "operation" : "EQUAL",
+                  "value" : {
+                    "defaultValue" : "LLAMAR_SUPERVISOR",
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "STRING"
+              }, {
+                "key" : {
+                  "key" : "motivo",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "STRING",
+                  "ignoreCase" : false,
+                  "operation" : "NOT_EQUAL",
+                  "value" : {
+                    "defaultValue" : "",
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "STRING"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "1782eeae-291d-daf8-2f3f-89b2d9203325",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
       } ],
       "configuration" : {
         "type" : "DEFAULT"

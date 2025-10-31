@@ -205,7 +205,11 @@
       },
       "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugSettings" : null,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1761763096356,
+        "failuresEnabled" : true
+      },
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -230,8 +234,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1760043758734,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1761763363135,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -246,7 +250,20 @@
     } ],
     "ruleChainConnections" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "9e8cb6b0-a53f-11f0-9abe-2dfd6db9cae3"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 112926
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }

@@ -29,7 +29,7 @@
       "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
     },
     "label" : "",
-    "name" : "Estacion 1.9",
+    "name" : "Estación 1.9",
     "softwareId" : null,
     "type" : "workstation"
   },
@@ -41,11 +41,11 @@
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1760725674781,
+      "lastUpdateTs" : 1761319084827,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,8 +53,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1760725674780,
-      "longValue" : 1760725674780,
+      "lastUpdateTs" : 1761317803625,
+      "longValue" : 1761317803624,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1761870319730,
+      "longValue" : 1761870318952,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1761834439441,
+      "longValue" : 1761834439441,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1761764169940,
+      "longValue" : 1761764169940,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

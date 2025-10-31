@@ -41,11 +41,11 @@
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1760715534661,
+      "lastUpdateTs" : 1761319080415,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,32 +53,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1760715534661,
-      "longValue" : 1760715534660,
+      "lastUpdateTs" : 1761317803625,
+      "longValue" : 1761317803624,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1760714927006,
-      "longValue" : 1760714926654,
+      "lastUpdateTs" : 1761870319731,
+      "longValue" : 1761870318070,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1760713905998,
-      "longValue" : 1760713905998,
+      "lastUpdateTs" : 1761834438560,
+      "longValue" : 1761834438560,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1760714926680,
-      "longValue" : 1760714926680,
+      "lastUpdateTs" : 1761820534929,
+      "longValue" : 1761820534929,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

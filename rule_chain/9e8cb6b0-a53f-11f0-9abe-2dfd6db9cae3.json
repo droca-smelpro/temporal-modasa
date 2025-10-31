@@ -9,7 +9,7 @@
     "externalId" : null,
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "67a0e3e0-a541-11f0-9abe-2dfd6db9cae3"
+      "id" : "67654bc0-b43a-11f0-9cd0-35be421ad23c"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -37,16 +37,40 @@
       "toIndex" : 3,
       "type" : "Success"
     }, {
-      "fromIndex" : 5,
+      "fromIndex" : 6,
       "toIndex" : 0,
       "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 11,
+      "type" : "Success"
     } ],
-    "firstNodeIndex" : 2,
+    "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 395,
-        "layoutY" : 312
+        "layoutX" : 1184,
+        "layoutY" : 137
       },
       "configuration" : {
         "version" : 0
@@ -67,8 +91,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 670,
-        "layoutY" : 156
+        "layoutX" : 454,
+        "layoutY" : 731
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -95,8 +119,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 328,
-        "layoutY" : 153
+        "layoutX" : 87,
+        "layoutY" : 733
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
@@ -127,8 +151,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1341,
-        "layoutY" : 85
+        "layoutX" : 1021,
+        "layoutY" : 860
       },
       "configuration" : {
         "processingSettings" : {
@@ -155,8 +179,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1036,
-        "layoutY" : 87
+        "layoutX" : 773,
+        "layoutY" : 864
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -179,8 +203,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 67,
-        "layoutY" : 308
+        "layoutX" : 775,
+        "layoutY" : 724
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -200,10 +224,221 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 326,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\n\n\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada){\n    var unidades_ensambladas;\n    unidades_ensambladas=1;\n    \n    msg.unidades_ensambladas=unidades_ensambladas;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=\"true\";\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=\"true\";\n          \n      \n        }\n    }\n  else{\n    unidades_ensambladas=0;\n    msg.unidades_ensambladas=unidades_ensambladas;\n    }\n      \n  //unidades_ensambladas=unidades_ALAprimera+unidades_retrabajadas;\n  \n\n  \n\n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_efectivo=tiempoSegundos(msg.tiempo_efectivo);\n  msg.p_efectivo=(msg.tiempo_total)/(msg.tiempo_efectivo);\n      }\n\n//********************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//*********************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n\n\n    if( msg.causa==\"PROBLEMA DE ENSAMBLAJE\" || msg.causa.categoria==\"PROBLEMA DE ENSAMBLAJE\"){\n        \n        msg.cont_PROBLEMA_DE_ENSAMBLAJE=1;\n        \n        msg.tiempo_paradas_causa1=tiempoSegundos(msg.tiempo_estado);\n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    if( msg.causa==\"INSTRUCTIVO REQUIERE REVISION\" || msg.causa.categoria==\"INSTRUCTIVO REQUIERE REVISION\"){\n        \n        msg.cont_INSTRUCTIVO_REQUIERE_REVISION=1;\n        \n        msg.tiempo_paradas_causa2=tiempoSegundos(msg.tiempo_estado);\n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    if( msg.causa==\"LISTA DE ESPECIFICACIONES REQUIERE REVISION\" || msg.causa.categoria==\"LISTA DE ESPECIFICACIONES REQUIERE REVISION\"  ){\n        \n        msg.cont_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION=1;\n        \n        msg.tiempo_paradas_causa3=tiempoSegundos(msg.tiempo_estado);\n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    if( msg.causa==\"PROBLEMA DE SUMINISTRO\" || msg.causa.categoria==\"PROBLEMA DE SUMINISTRO\"  ){\n        \n        msg.cont_PROBLEMA_DE_SUMINISTRO=1;\n        \n        msg.tiempo_paradas_causa4=tiempoSegundos(msg.tiempo_estado);\n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    if( msg.causa==\"PROBLEMA DE PRUEBA\" || msg.causa.categoria==\"PROBLEMA DE PRUEBA\"  ){\n        \n        msg.cont_PROBLEMA_DE_PRUEBA=1;\n        \n        msg.tiempo_paradas_causa5=tiempoSegundos(msg.tiempo_estado);\n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    if( msg.causa==\"ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO\" || msg.causa.categoria==\"ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO\"  ){\n        \n        msg.cont_ESPACIO_NO_DISPONIBLE_PARA_ABASTECIMIENTO=1;\n        \n        msg.tiempo_paradas_causa6=tiempoSegundos(msg.tiempo_estado);\n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    if( msg.causa==\"OTRO\" || msg.causa.categoria==\"OTRO\"  ){\n        \n        msg.cont_OTRO=1;\n        \n        msg.tiempo_paradas_causa7=tiempoSegundos(msg.tiempo_estado);\n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    \n    \n    \n   \n   \n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n /*\n    function tiempoSegundos(timeArray){\n        //se calcula los segundos totales\n        var partes =timeArray.split(':').map(Number);\n         //if (partes.length !== 4) {\n         //throw new Error(\"El formato debe ser dd:hh:mm:ss\");\n    \n         //}\n  var dias=partes[0]*24*3600;\n  var horas=partes[1]*3600;\n  var minutos=partes[2]*60;\n  var segundos=partes[3];\n\n        \n    return dias+horas+minutos+segundos;\n\n}\n*/\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1761864736547,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "67654bc0-b43a-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "evento",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 330,
+        "layoutY" : 319
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "var outmsg={};\noutmsg.unidades_ALAprimera=msg.unidades_ALAprimera;\noutmsg.unidades_retrabajadas=msg.unidades_retrabajadas;\noutmsg.unidades_ensambladas=msg.unidades_ensambladas;\n\n//outmsg.c_unidades_ALAprimera=msg.c_unidades_ALAprimera;\n//outmsg.cont2=msg.cont2;\n\nreturn {msg: outmsg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1761780173392,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f8ca88b0-b4f7-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "convert atributos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 596,
+        "layoutY" : 318
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "DATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ "c_unidades_ALAprimera", "c_unidades_retrabajadas", "c_unidades_ensambladas" ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1761780164383,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7ce9d140-b4f9-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "c_unidades",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 896,
+        "layoutY" : 318
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\nvar c=msg.c_unidades_ALAprimera+1;\nvar r=msg.c_unidades_retrabajadas+1;\nvar e=msg.c_unidades_ensambladas+1;\n\nif(msg.unidades_ALAprimera){\n  //var c=msg.c_unidades_ALAprimera+1;\n   msg.c_unidades_ALAprimera=c;\n   metadata.c_unidades_ALAprimera=c;\n   \n   msg.p_ALAprimera=(c/e).toFixed(2) ;\n   msg.p_retrabajadas=(1-(c/e)).toFixed(2) ;\n   metadata.p_ALAprimera=(c/e).toFixed(2) ;\n   \n   \n}\nif(msg.unidades_retrabajadas){\n   //var r=msg.c_unidades_retrabajadas+1;\n   msg.c_unidades_retrabajadas=r;\n   metadata.c_unidades_retrabajadas=r;\n   \n   msg.p_ALAprimera=(1-(r/e)).toFixed(2)  ;\n   msg.p_retrabajadas=(r/e).toFixed(2) ;\n   metadata.p_retrabajadas=(r/e).toFixed(2) ;\n}\n\nif(msg.unidades_ensambladas){\n    //var e=msg.c_unidades_ensambladas+1;\n    msg.c_unidades_ensambladas=e;\n    metadata.unidades_ensambladas=e;\n    \n    \n\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n//e=c+r",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1761783068063,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c3aa8950-b506-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "procesar",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1418,
+        "layoutY" : 299
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : true
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "03d2cde0-b50b-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "save contadores atributos",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1465,
+        "layoutY" : 384
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b23fade0-b50f-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "save contadores telemetry",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1156,
+        "layoutY" : 382
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "\n\nreturn {msg: msg, metadata: metadata, msgType: 'POST_TELEMETRY_REQUEST'};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1761778292057,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b23fd4f0-b50f-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "convert telemetry",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "9e8cb6b0-a53f-11f0-9abe-2dfd6db9cae3"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 112926
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }
