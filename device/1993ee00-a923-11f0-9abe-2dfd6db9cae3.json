@@ -38,14 +38,27 @@
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "7c620750-8f20-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "1993ee00-a923-11f0-9abe-2dfd6db9cae3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 118151
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1761319080415,
+      "lastUpdateTs" : 1762371473039,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,32 +66,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1761317803625,
-      "longValue" : 1761317803624,
+      "lastUpdateTs" : 1762366680533,
+      "longValue" : 1762366680532,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1761870319731,
-      "longValue" : 1761870318070,
+      "lastUpdateTs" : 1762390255723,
+      "longValue" : 1762390252886,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1761834438560,
-      "longValue" : 1761834438560,
+      "lastUpdateTs" : 1762371473038,
+      "longValue" : 1762371473038,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1761820534929,
-      "longValue" : 1761820534929,
+      "lastUpdateTs" : 1762366072401,
+      "longValue" : 1762366072401,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

@@ -38,14 +38,27 @@
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "7c620750-8f20-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "ed8fb3a0-a924-11f0-9abe-2dfd6db9cae3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 118150
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1761319121825,
+      "lastUpdateTs" : 1762371473290,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,16 +66,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1761863992137,
-      "longValue" : 2,
+      "lastUpdateTs" : 1762274884359,
+      "longValue" : 7,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1761864422729,
-      "longValue" : 3,
+      "lastUpdateTs" : 1762274884359,
+      "longValue" : 8,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -77,47 +90,47 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1761317803625,
-      "longValue" : 1761317803624,
+      "lastUpdateTs" : 1762366680534,
+      "longValue" : 1762366680532,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1761870340730,
-      "longValue" : 1761870337972,
+      "lastUpdateTs" : 1762390234723,
+      "longValue" : 1762390233554,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1761870217853,
-      "longValue" : 1761870217853,
+      "lastUpdateTs" : 1762376913456,
+      "longValue" : 1762376913456,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1761870216796,
-      "longValue" : 1761870216796,
+      "lastUpdateTs" : 1762376913079,
+      "longValue" : 1762376913079,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.67,
+      "doubleValue" : 0.88,
       "jsonValue" : null,
       "key" : "p_ALAprimera",
-      "lastUpdateTs" : 1761864422729,
+      "lastUpdateTs" : 1762274884359,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.33,
+      "doubleValue" : 0.13,
       "jsonValue" : null,
       "key" : "p_retrabajadas",
-      "lastUpdateTs" : 1761864422729,
+      "lastUpdateTs" : 1762274884359,
       "longValue" : null,
       "strValue" : null
     }, {

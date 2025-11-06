@@ -29,7 +29,7 @@
       "id" : "be3a09a0-8f22-11f0-a61c-01e0c85fd5dd"
     },
     "label" : "",
-    "name" : "Principal",
+    "name" : "Supervisor",
     "softwareId" : null,
     "type" : "main"
   },
@@ -71,7 +71,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1761672419498,
+      "lastUpdateTs" : 1762378787533,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -79,32 +79,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1761593266556,
-      "longValue" : 1761593266555,
+      "lastUpdateTs" : 1762366140523,
+      "longValue" : 1762366140522,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1761870328734,
-      "longValue" : 1761870325826,
+      "lastUpdateTs" : 1762390249713,
+      "longValue" : 1762390248099,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1761855145734,
-      "longValue" : 1761855145734,
+      "lastUpdateTs" : 1762378787532,
+      "longValue" : 1762378787532,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1761855079111,
-      "longValue" : 1761855079111,
+      "lastUpdateTs" : 1762365529501,
+      "longValue" : 1762365529501,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

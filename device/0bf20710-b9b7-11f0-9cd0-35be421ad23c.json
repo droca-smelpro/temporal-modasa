@@ -20,32 +20,32 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "f9a89110-af6f-11f0-9f18-0d482a772853"
+      "id" : "6b82e6f0-b8f3-11f0-9cd0-35be421ad23c"
     },
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "fa61f600-af6f-11f0-9f18-0d482a772853"
+      "id" : "0bf20710-b9b7-11f0-9cd0-35be421ad23c"
     },
     "label" : "",
-    "name" : "Downlinks",
+    "name" : "line2",
     "softwareId" : null,
-    "type" : "downlink"
+    "type" : "linea_produccion"
   },
   "credentials" : {
-    "credentialsId" : "jifPJ4jTkdlj2SIjqgzZ",
+    "credentialsId" : "ocXlcyJFWZwsFtKDyA8R",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1762371417596,
+      "lastUpdateTs" : 1762286278994,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,32 +53,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1762366680533,
-      "longValue" : 1762366680532,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastActivityTime",
-      "lastUpdateTs" : 1762390198729,
-      "longValue" : 1762390198686,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastConnectTime",
-      "lastUpdateTs" : 1762371417596,
-      "longValue" : 1762371417596,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1762366066414,
-      "longValue" : 1762366066414,
+      "lastUpdateTs" : 1762286278990,
+      "longValue" : 1762286278990,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

@@ -58,7 +58,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1761319120391,
+      "lastUpdateTs" : 1762371445470,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -66,23 +66,23 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1761782598208,
-      "longValue" : 8,
+      "lastUpdateTs" : 1762292487769,
+      "longValue" : 11,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1761782822572,
-      "longValue" : 9,
+      "lastUpdateTs" : 1762356675194,
+      "longValue" : 12,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_retrabajadas",
-      "lastUpdateTs" : 1761782822572,
+      "lastUpdateTs" : 1762356675194,
       "longValue" : 1,
       "strValue" : null
     }, {
@@ -90,47 +90,47 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1761317803625,
-      "longValue" : 1761317803624,
+      "lastUpdateTs" : 1762366680533,
+      "longValue" : 1762366680532,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1761870292715,
-      "longValue" : 1761870290162,
+      "lastUpdateTs" : 1762390225721,
+      "longValue" : 1762390225276,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1761834410688,
-      "longValue" : 1761834410688,
+      "lastUpdateTs" : 1762371445470,
+      "longValue" : 1762371445470,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1761785842466,
-      "longValue" : 1761785842466,
+      "lastUpdateTs" : 1762366042417,
+      "longValue" : 1762366042417,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.89,
+      "doubleValue" : 0.85,
       "jsonValue" : null,
       "key" : "p_ALAprimera",
-      "lastUpdateTs" : 1761782822572,
+      "lastUpdateTs" : 1762356665914,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.11,
+      "doubleValue" : 0.15,
       "jsonValue" : null,
       "key" : "p_retrabajadas",
-      "lastUpdateTs" : 1761782822572,
+      "lastUpdateTs" : 1762356665914,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -146,8 +146,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "unidades_ensambladas",
-      "lastUpdateTs" : 1761785145567,
-      "longValue" : 0,
+      "lastUpdateTs" : 1762066968250,
+      "longValue" : 1,
       "strValue" : null
     }, {
       "booleanValue" : null,

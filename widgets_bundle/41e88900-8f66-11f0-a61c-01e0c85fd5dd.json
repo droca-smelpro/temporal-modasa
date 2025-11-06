@@ -14,7 +14,7 @@
     "scada" : false,
     "title" : "Widgets del Proyecto"
   },
-  "fqns" : [ "navigation_panel", "lastest_values_table", "gauge_creado", "custom_gauge" ],
+  "fqns" : [ "navigation_panel", "lastest_values_table", "gauge_creado", "custom_gauge", "custom_gauge_porcentaje" ],
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

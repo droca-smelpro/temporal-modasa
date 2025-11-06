@@ -38,47 +38,148 @@
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "7c620750-8f20-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 118154
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 95.16129032258064,
+      "jsonValue" : null,
+      "key" : "Complemento_OEE",
+      "lastUpdateTs" : 1762389719944,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 4.838709677419355,
+      "jsonValue" : null,
+      "key" : "OEE",
+      "lastUpdateTs" : 1762389719944,
+      "longValue" : null,
+      "strValue" : null
+    }, {
       "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1761319084827,
+      "lastUpdateTs" : 1762371472234,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "c_unidades_ALAprimera",
+      "lastUpdateTs" : 1762389719944,
+      "longValue" : 15,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ensambladas",
+      "lastUpdateTs" : 1762389719944,
+      "longValue" : 15,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_retrabajadas",
+      "lastUpdateTs" : 1762073004528,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "cantidad_teorica",
+      "lastUpdateTs" : 1762383979791,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "disponibilidad",
+      "lastUpdateTs" : 1762383979791,
+      "longValue" : null,
+      "strValue" : "0.03225806451612903"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1761317803625,
-      "longValue" : 1761317803624,
+      "lastUpdateTs" : 1762366680533,
+      "longValue" : 1762366680532,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1761870319730,
-      "longValue" : 1761870318952,
+      "lastUpdateTs" : 1762390201710,
+      "longValue" : 1762390200602,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1761834439441,
-      "longValue" : 1761834439441,
+      "lastUpdateTs" : 1762389720511,
+      "longValue" : 1762389720511,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1761764169940,
-      "longValue" : 1761764169940,
+      "lastUpdateTs" : 1762389720109,
+      "longValue" : 1762389720109,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 1.0,
+      "jsonValue" : null,
+      "key" : "p_ALAprimera",
+      "lastUpdateTs" : 1762073004528,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.0,
+      "jsonValue" : null,
+      "key" : "p_retrabajadas",
+      "lastUpdateTs" : 1762073004528,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ALAprimera",
+      "lastUpdateTs" : 1762073004528,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ensambladas",
+      "lastUpdateTs" : 1762073004528,
+      "longValue" : 1,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {
@@ -99,5 +200,52 @@
       "strValue" : null
     } ]
   },
-  "calculatedFields" : [ ]
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "U_planificadas" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "d411ed10-8f22-11f0-a61c-01e0c85fd5dd"
+          },
+          "refEntityKey" : {
+            "key" : "unidades_planificadas",
+            "type" : "TS_LATEST"
+          }
+        },
+        "U_terminadas_19" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
+          },
+          "refEntityKey" : {
+            "key" : "c_unidades_ensambladas",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "((U_terminadas_19)*100)/(U_planificadas)",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "C_plan_prod",
+        "type" : "TIME_SERIES"
+      },
+      "useLatestTs" : false
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1762380543009,
+      "failuresEnabled" : true
+    },
+    "name" : "C_plan_prod",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "67a414d0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "type" : "SIMPLE"
+  } ]
 }
