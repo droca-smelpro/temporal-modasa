@@ -45,7 +45,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1761849591147,
+      "lastUpdateTs" : 1762970481323,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,35 +53,75 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1761849591144,
-      "longValue" : 1761849591144,
+      "lastUpdateTs" : 1762970481319,
+      "longValue" : 1762970481319,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1761848947712,
-      "longValue" : 1761848945610,
+      "lastUpdateTs" : 1762969846732,
+      "longValue" : 1762969844007,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1761848945300,
-      "longValue" : 1761848945300,
+      "lastUpdateTs" : 1762969843790,
+      "longValue" : 1762969843790,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1761848945627,
-      "longValue" : 1761848945627,
+      "lastUpdateTs" : 1762969844017,
+      "longValue" : 1762969844017,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "serie_abcd_dispositivo_PruebaSimulador",
+      "lastUpdateTs" : 1762964792523,
+      "longValue" : 30,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ ]
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "abcd",
+      "lastUpdateTs" : 1762967812289,
+      "longValue" : null,
+      "strValue" : "abcd"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "serie_abcd_dispositivo_PruebaSimulador",
+      "lastUpdateTs" : 1762969843920,
+      "longValue" : 30,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "seriel",
+      "lastUpdateTs" : 1762968225540,
+      "longValue" : null,
+      "strValue" : "abcd"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "seriel2",
+      "lastUpdateTs" : 1762969843920,
+      "longValue" : null,
+      "strValue" : "abcd"
+    } ]
   },
   "calculatedFields" : [ ]
 }

@@ -1,0 +1,290 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "34eed840-bb3e-11f0-9cd0-35be421ad23c"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "ef8e9860-bb21-11f0-9cd0-35be421ad23c"
+    },
+    "name" : "Messaging",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 1,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 2,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 574,
+        "layoutY" : 31
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP;\nvar estacion = msg.estacion;\nvar linea = msg.linea;\nvar serie = msg.serie;\nvar modelo = msg.MODELO;\nvar cliente = msg.cliente;\nvar operario = msg.nombre_operario;\nvar nombre_estacion = msg.motivo;\nvar tiempo_estado = msg.tiempo_estado;\n\nif (evento === \"INICIO_EMERGENCIA\" && tipo === \"ACTIVADO\") {\n    // para envio de correo\n    metadata.estacion = estacion;\n    metadata.linea = linea;\n    metadata.serie = serie;\n    metadata.cliente = cliente;\n    metadata.modelo = modelo;\n    metadata.nombre_estacion = nombre_estacion;\n    metadata.timestamp = timestamp;\n    if (Array.isArray(operario)) {\n        metadata.operario = operario.join(\", \");\n    } else {\n        metadata.operario = operario;\n    }\n    \n    var newMsg = {};\n    newMsg.chat_id = 6197999828;\n    newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n    \"🚨 *ALERTA DE EMERGENCIA REPORTADA*\\n\" +\n    \"*FECHA Y HORA:* \" + timestamp + \"\\n\\n\" +\n    \"*LÍNEA DE ENSAMBLAJE:* \" + linea + \"\\n\" +\n    \"*N° ESTACIÓN:* \" + estacion + \"\\n\" +\n    \"*NOMBRE DE ESTACIÓN:* \" + nombre_estacion + \"\\n\" +\n    \"*SERIE:* \" + serie + \"\\n\" +\n    \"*MODELO:* \" + modelo + \"\\n\" +\n    \"*CLIENTE:* \" + cliente + \"\\n\" +\n    \"*OPERARIO(S):* \" + operario + \"\\n\";\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nreturn { msg: {}, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1762816291479,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8dc79750-bb24-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Emergency Mode Active",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 912,
+        "layoutY" : 154
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "https://api.telegram.org/bot8246934751:AAFsNJfqIl_KK5dcxvD-KsbTvbUqbokdFbE/sendMessage",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : false,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/json"
+        },
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : 256
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1762815905553,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8dc7be60-bb24-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Send Message Telegram Emergency Mode",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 296,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1762816291479,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "34eed840-bb3e-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Connector",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 571,
+        "layoutY" : 242
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP || \"Sin fecha\";\nvar estacion = msg.estacion || \"Desconocida\";\nvar linea = msg.linea || \"Desconocida\";\nvar serie = msg.serie || \"Sin serie\";\nvar operario = msg.nombre_operario || \"No registrado\";\nvar motivo = msg.motivo || \"No especificado\";\n\nif (evento === \"LLAMAR_SUPERVISOR\" && tipo === \"APROBACION\") {\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"HTML\";\n    newMsg.text =\n        \"💬 <b>SOLICITUD DE APROBACIÓN</b><br>\" +\n        \"<b>FECHA Y HORA:</b> \" + timestamp + \"<br><br>\" +\n        \"<b>MOTIVO:</b> \" + motivo + \"<br>\" +\n        \"<b>N° ESTACIÓN:</b> \" + estacion + \"<br>\" +\n        \"<b>LÍNEA DE ENSAMBLAJE:</b> \" + linea + \"<br>\" +\n        \"<b>SERIE:</b> \" + serie + \"<br>\";\n\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nif (evento === \"LLAMAR_SUPERVISOR\" && tipo === \"ASISTENCIA\") {\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"HTML\";\n    newMsg.text =\n        \"💬 <b>ASISTENCIA EN ESTACIÓN</b><br>\" +\n        \"<b>FECHA Y HORA:</b> \" + timestamp + \"<br><br>\" +\n        \"<b>N° ESTACIÓN:</b> \" + estacion + \"<br>\" +\n        \"<b>LÍNEA DE ENSAMBLAJE:</b> \" + linea + \"<br>\" +\n        \"<b>SERIE:</b> \" + serie + \"<br>\";\n\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nreturn { msg: {}, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1762815570275,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4c474130-bb3e-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Request Supervisor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 908,
+        "layoutY" : 30
+      },
+      "configuration" : {
+        "fromTemplate" : "alertas@smelpro.com",
+        "toTemplate" : "ahlelycontreras.18.03@gmail.com",
+        "ccTemplate" : null,
+        "bccTemplate" : null,
+        "subjectTemplate" : "LÍNEA ${linea}/ESTACIÓN ${estacion} - Alerta de Emergencia Reportada",
+        "mailBodyType" : "true",
+        "bodyTemplate" : "<b>Notificación de Emergencia Activada</b><br><br>\n\n<b>Fecha y hora:</b> ${timestamp}<br>\n<b>Línea de Ensamblaje:</b> ${linea}<br>\n<b>N° Estación:</b> ${estacion}<br>\n<b>Nombre de Estación:</b> ${nombre_estacion}<br>\n<b>Serie:</b> ${serie}<br>\n<b>Modelo:</b> ${modelo}<br>\n<b>Cliente:</b> ${cliente}<br>\n<b>Operario(s):</b> ${operario}<br><br>\n\nSe ha registrado una condición de emergencia en la línea de producción.  \nPor favor, active los protocolos de seguridad correspondientes y comunique la situación a las áreas responsables para garantizar la continuidad y seguridad de las operaciones.<br><br>\n\n<hr>\n<table style=\"width:100%; font-family: Arial, sans-serif; border-collapse: collapse;\">\n  <tr>\n    <td style=\"width: 30%; vertical-align: middle; text-align: center; padding: 8px 0px 8px 8px;\">\n      <img src=\"https://dashboard.smelpro.com/api/images/public/v1mP9x41vsyDPellTLD3yI337oOprK00\" alt=\"Logo empresarial-01-02.png\" style=\"max-width: 180px;\" />\n    </td>\n    <td style=\"width: 70%; vertical-align: middle; text-align: left; padding: 8px; 8px 8px 0px\">\n      <b>Soporte Smelpro</b><br>\n      Dirección: Calle Hefesto 499, Oficina 502, Ate, Lima, Perú<br>\n      Teléf.: +51 1 3226467<br>\n      Cel.: +51 923265572 / 927347035 / 963409900<br><br>\n      <small>Este es un mensaje automático generado por el sistema de monitoreo IoT Smelpro - No responder este correo.</small>\n    </td>\n  </tr>\n</table>\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "863b4190-bb55-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Alert Email",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 577,
+        "layoutY" : 98
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP;\nvar estacion = msg.estacion;\nvar linea = msg.linea;\nvar serie = msg.serie;\nvar modelo = msg.modelo;\nvar cliente = msg.cliente;\nvar operario = msg.nombre_operario;\nvar nombre_estacion = msg.motivo;\nvar tiempo_estado = msg.tiempo_estado;\n\nif (evento == \"FIN_EMERGENCIA\" && tipo==\"DESACTIVADO\"){\n    var newMsg = {};\n    newMsg.chat_id = 6197999828;\n    newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n    \"✅ *EMERGENCIA RESUELTA*\\n\" +\n    \"*FECHA Y HORA:* \" + timestamp + \"\\n\" +\n    \"*TIEMPO EN ESTADO DE EMERGENCIA:* \" + tiempo_estado + \"\\n\\n\" +\n    \"*LÍNEA DE ENSAMBLAJE:* \" + linea + \"\\n\" +\n    \"*N° ESTACIÓN:* \" + estacion + \"\\n\" +\n    \"*NOMBRE DE ESTACIÓN:* \" + nombre_estacion + \"\\n\" +\n    \"*SERIE:* \" + serie + \"\\n\" +\n    \"*MODELO:* \" + modelo + \"\\n\" +\n    \"*CLIENTE:* \" + cliente + \"\\n\" +\n    \"*OPERARIO(S):* \" + operario + \"\\n\";\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nreturn { msg: {}, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "863b4191-bb55-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Emergency Mode Inactive",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1184,
+        "layoutY" : 29
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : true,
+        "smtpHost" : "localhost",
+        "smtpPort" : 25,
+        "username" : null,
+        "password" : null,
+        "smtpProtocol" : "smtp",
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c1730e90-bb56-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Send Alert Email",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "ef8e9860-bb21-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 141221
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

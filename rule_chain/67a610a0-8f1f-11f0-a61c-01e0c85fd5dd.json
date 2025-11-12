@@ -39,6 +39,10 @@
       "toIndex" : 7,
       "type" : "Post telemetry"
     }, {
+      "fromIndex" : 2,
+      "toIndex" : 8,
+      "type" : "Post telemetry"
+    }, {
       "fromIndex" : 6,
       "toIndex" : 2,
       "type" : "Success"
@@ -113,8 +117,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1760043825241,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1762816503343,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -128,8 +132,8 @@
       "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 825,
-        "layoutY" : 266
+        "layoutX" : 830,
+        "layoutY" : 314
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -207,7 +211,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1761763096356,
+        "allEnabledUntil" : 1762816561730,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -247,6 +251,29 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 841,
+        "layoutY" : 228
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "ef8e9860-bb21-11f0-9cd0-35be421ad23c"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "073f0c60-bb22-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Messaging",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -262,7 +289,20 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 112926
+    "version" : 141223
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "ef8e9860-bb21-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 141221
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

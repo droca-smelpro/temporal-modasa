@@ -20,21 +20,21 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "f0f25a00-8f22-11f0-a61c-01e0c85fd5dd"
+      "id" : "bcb29c10-bc21-11f0-9cd0-35be421ad23c"
     },
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
+      "id" : "863ddff0-bc21-11f0-9cd0-35be421ad23c"
     },
     "label" : "",
-    "name" : "Estación 1.8",
+    "name" : "RUIZ",
     "softwareId" : null,
-    "type" : "workstation"
+    "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "FQs8Cv3SeN2uQU1VoeLF",
+    "credentialsId" : "OJ4FUTZUmEJNKUzXIyoB",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -42,15 +42,28 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "7c620750-8f20-11f0-a61c-01e0c85fd5dd"
+      "id" : "863ddff0-bc21-11f0-9cd0-35be421ad23c"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
+      "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 118155
+    "version" : 140091
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "863ddff0-bc21-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 140090
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -64,27 +77,14 @@
     "type" : "Contains",
     "typeGroup" : "COMMON",
     "version" : 139945
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "196f1110-bc20-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 139946
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1762967805065,
+      "lastUpdateTs" : 1762551908081,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -92,51 +92,11 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1762966521193,
-      "longValue" : 1762966521193,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastActivityTime",
-      "lastUpdateTs" : 1762989643711,
-      "longValue" : 1762989643241,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastConnectTime",
-      "lastUpdateTs" : 1762988563157,
-      "longValue" : 1762988563157,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1762988561573,
-      "longValue" : 1762988561573,
+      "lastUpdateTs" : 1762551908067,
+      "longValue" : 1762551908066,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "nombreDeEstacion",
-      "lastUpdateTs" : 1761090631060,
-      "longValue" : null,
-      "strValue" : "Estación 1.8"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "orden",
-      "lastUpdateTs" : 1761090834706,
-      "longValue" : 10,
-      "strValue" : null
-    } ]
+    "SHARED_SCOPE" : [ ]
   },
   "calculatedFields" : [ ]
 }

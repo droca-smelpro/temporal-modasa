@@ -38,7 +38,33 @@
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "863ddff0-bc21-11f0-9cd0-35be421ad23c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 140091
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "863ddff0-bc21-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 140090
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : false,

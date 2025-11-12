@@ -74,7 +74,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1762371472234,
+      "lastUpdateTs" : 1762967803253,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -122,32 +122,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1762366680533,
-      "longValue" : 1762366680532,
+      "lastUpdateTs" : 1762966521193,
+      "longValue" : 1762966521193,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1762390201710,
-      "longValue" : 1762390200602,
+      "lastUpdateTs" : 1762989652719,
+      "longValue" : 1762989650183,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1762389720511,
-      "longValue" : 1762389720511,
+      "lastUpdateTs" : 1762989050093,
+      "longValue" : 1762989050093,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1762389720109,
-      "longValue" : 1762389720109,
+      "lastUpdateTs" : 1762989048507,
+      "longValue" : 1762989048507,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -198,6 +198,22 @@
       "lastUpdateTs" : 1761090843239,
       "longValue" : 11,
       "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "serie_abcd_dispositivo_Estación 1.9",
+      "lastUpdateTs" : 1762970758859,
+      "longValue" : 30,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "seriel2",
+      "lastUpdateTs" : 1762970758859,
+      "longValue" : null,
+      "strValue" : "abcd"
     } ]
   },
   "calculatedFields" : [ {
