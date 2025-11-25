@@ -1,11 +1,7 @@
 {
   "entityType" : "DEVICE",
   "entity" : {
-    "additionalInfo" : {
-      "gateway" : false,
-      "overwriteActivityTime" : false,
-      "description" : ""
-    },
+    "additionalInfo" : null,
     "customerId" : {
       "entityType" : "CUSTOMER",
       "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
@@ -26,15 +22,15 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "196f1110-bc20-11f0-9cd0-35be421ad23c"
+      "id" : "1ee44981-c98b-11f0-9cd0-35be421ad23c"
     },
-    "label" : "",
-    "name" : "PAREDES",
+    "label" : "Room 234 Sensor",
+    "name" : "GUERRERO DUEÑAS NESTOR ALBERTO",
     "softwareId" : null,
     "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "AYtq3zYeUkMvrj7wSFGo",
+    "credentialsId" : "d98Hady9dKYxAN3dZmeh",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -42,15 +38,15 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
+      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "196f1110-bc20-11f0-9cd0-35be421ad23c"
+      "id" : "1ee44981-c98b-11f0-9cd0-35be421ad23c"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 139946
+    "version" : 210855
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -58,7 +54,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1762551308050,
+      "lastUpdateTs" : 1764026635092,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -66,8 +62,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1762551308046,
-      "longValue" : 1762551308046,
+      "lastUpdateTs" : 1764026635087,
+      "longValue" : 1764026635086,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

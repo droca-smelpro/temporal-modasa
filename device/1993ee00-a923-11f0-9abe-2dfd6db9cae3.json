@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
     },
     "deviceData" : {
       "configuration" : {
@@ -58,40 +58,104 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1762967804133,
+      "lastUpdateTs" : 1763983742335,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"CLASIFICACION\":\"NO ESTANDAR\",\"MODELO\":\"MP45-60\",\"OPERARIO_ID\":[\"72190940\"],\"TIMESTAMP\":\"2025-11-24 19:48:27\",\"cliente\":\"TECNICA AVICOLA S.A.\",\"estacion\":6,\"estado\":\"EN PARADA\",\"evento\":\"REQUIERE_LEVANTAMIENTO\",\"linea\":1,\"names\":46,\"nombre_operario\":[\"GALLARDO TORRES KETTY YARITZA\"],\"parte\":1,\"serie\":\"X57196I\",\"total\":1,\"diff\":\"true\",\"test\":2}",
+      "key" : "buffer",
+      "lastUpdateTs" : 1764031709715,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "c_unidades_ALAprimera",
+      "lastUpdateTs" : 1763675670208,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ensambladas",
+      "lastUpdateTs" : 1763675670208,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_retrabajadas",
+      "lastUpdateTs" : 1763673418878,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1762966521193,
-      "longValue" : 1762966521193,
+      "lastUpdateTs" : 1763982713629,
+      "longValue" : 1763982713628,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1763049730726,
-      "longValue" : 1763049729629,
+      "lastUpdateTs" : 1764032722733,
+      "longValue" : 1764032721278,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1762969509414,
-      "longValue" : 1762969509414,
+      "lastUpdateTs" : 1764025040991,
+      "longValue" : 1764025040991,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1762965904732,
-      "longValue" : 1762965904732,
+      "lastUpdateTs" : 1764025037472,
+      "longValue" : 1764025037472,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 1.0,
+      "jsonValue" : null,
+      "key" : "p_ALAprimera",
+      "lastUpdateTs" : 1763673513850,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.0,
+      "jsonValue" : null,
+      "key" : "p_retrabajadas",
+      "lastUpdateTs" : 1763673513850,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ALAprimera",
+      "lastUpdateTs" : 1763673513850,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ensambladas",
+      "lastUpdateTs" : 1763673513850,
+      "longValue" : 1,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

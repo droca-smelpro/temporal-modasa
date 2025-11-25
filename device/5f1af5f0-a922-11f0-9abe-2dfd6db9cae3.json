@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
     },
     "deviceData" : {
       "configuration" : {
@@ -42,6 +42,71 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
+      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b298ac00-c997-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 214188
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 212086
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "1ee44980-c98b-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 210854
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "1ee44981-c98b-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 210855
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "3ef09dd0-c992-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 211879
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
       "id" : "7c620750-8f20-11f0-a61c-01e0c85fd5dd"
     },
     "to" : {
@@ -58,7 +123,15 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1762967802976,
+      "lastUpdateTs" : 1763983741024,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"CONTADOR_OPERACION\":1,\"CONTADOR_PARADA\":0,\"MODELO\":\"-\",\"TIMESTAMP\":\"2025-11-24 20:00:48\",\"cliente\":\"TECNICA AVICOLA S.A.\",\"contador_inspeccion\":0,\"contador_levantamiento\":0,\"desviacion\":-99.84,\"eficiencia\":107.69,\"estacion\":2,\"evento\":\"FIN_ESTACION\",\"incidentes\":0,\"linea\":1,\"names\":215,\"parte\":2,\"serie\":\"-\",\"tiempo_activo\":\"00:00:00:14\",\"tiempo_estandar\":\"02:22:00\",\"tiempo_inspeccion\":\"00:00:00:00\",\"tiempo_levantamiento\":\"00:00:00:00\",\"tiempo_operacion\":\"00:00:00:14\",\"tiempo_paradas\":\"00:00:00:00\",\"tiempo_serie\":\"00:00:06:22\",\"tiempo_total\":\"00:00:00:13\",\"total\":2,\"unidad_terminada\":\"Y\",\"diff\":\"true\",\"test\":3,\"CLASIFICACION\":\"NO ESTANDAR\",\"OPERARIO_ID\":[\"72190940\",\"12345678\",\"42385039\",\"47387549\",\"004152108\"],\"nombre_operario\":[\"GALLARDO TORRES KETTY YARITZA\",\"SUPER JUANITO PERECITO\",\"GUERRERO DUEÑAS NESTOR ALBERTO\",\"PAREDES RUIZ YONATAN\",\"GARCIA ANUEL MANUEL ASDRUBAL\"]}",
+      "key" : "buffer",
+      "lastUpdateTs" : 1764032471821,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -66,32 +139,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1762966521194,
-      "longValue" : 1762966521193,
+      "lastUpdateTs" : 1763982713629,
+      "longValue" : 1763982713628,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1763049730732,
-      "longValue" : 1763049728505,
+      "lastUpdateTs" : 1764032725725,
+      "longValue" : 1764032725044,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1762969508270,
-      "longValue" : 1762969508270,
+      "lastUpdateTs" : 1764025044960,
+      "longValue" : 1764025044960,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1762965902542,
-      "longValue" : 1762965902542,
+      "lastUpdateTs" : 1764025036154,
+      "longValue" : 1764025036154,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

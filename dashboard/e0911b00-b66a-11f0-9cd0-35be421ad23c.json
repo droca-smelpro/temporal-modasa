@@ -8573,89 +8573,6 @@
           "row" : 0,
           "col" : 0,
           "id" : "50d02d61-1765-1f0f-7c8c-afaf82210513"
-        },
-        "0a75c723-3a2b-0128-61a2-0acbc255c78a" : {
-          "typeFullFqn" : "tenant.lastest_values_table_mod",
-          "type" : "latest",
-          "sizeX" : 7.5,
-          "sizeY" : 5,
-          "config" : {
-            "datasources" : [ {
-              "type" : "entity",
-              "name" : "",
-              "entityAliasId" : "0d1d206f-e6d0-ac21-6065-05165e4f9be3",
-              "dataKeys" : [ {
-                "name" : "desviacion",
-                "type" : "timeseries",
-                "label" : "desviacion",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.3736940114181495
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1762714584402,
-                  "endTimeMs" : 1762800984402
-                },
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideFixedInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              }
-            },
-            "showTitle" : true,
-            "backgroundColor" : "#fff",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "8px",
-            "settings" : {
-              "color_a" : "#4CAF50",
-              "color_b" : "#A5D7A7"
-            },
-            "title" : "Lastest values table - mod",
-            "decimals" : null,
-            "useDashboardTimewindow" : true,
-            "displayTimewindow" : true,
-            "showTitleIcon" : false,
-            "titleTooltip" : "",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "widgetCss" : ".tb-widget .tb-widget-header {\r\n  position: absolute !important;\r\n  background: transparent !important;    /* solid background so it covers content */\r\n}",
-            "titleStyle" : {
-              "fontSize" : "24px",
-              "fontWeight" : 700,
-              "padding" : "5px 10px 10px 5px"
-            },
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "0a75c723-3a2b-0128-61a2-0acbc255c78a"
         }
       },
       "states" : {
@@ -8669,7 +8586,7 @@
                   "sizeX" : 24,
                   "sizeY" : 1,
                   "row" : 0,
-                  "col" : 0,
+                  "col" : 2,
                   "resizable" : true,
                   "mobileOrder" : 1,
                   "mobileHeight" : 1,
@@ -8678,8 +8595,8 @@
                 "bd417389-a0c4-3fdb-d44d-c6272db0f533" : {
                   "sizeX" : 4,
                   "sizeY" : 5,
-                  "row" : 1,
-                  "col" : 0
+                  "row" : 7,
+                  "col" : 3
                 },
                 "cff243f3-2877-1554-d7d5-a4afba800210" : {
                   "sizeX" : 20,
@@ -8690,14 +8607,14 @@
                 "50d02d61-1765-1f0f-7c8c-afaf82210513" : {
                   "sizeX" : 19,
                   "sizeY" : 25,
-                  "row" : 1,
-                  "col" : 5
+                  "row" : 4,
+                  "col" : 7
                 }
               },
               "gridSettings" : {
-                "layoutType" : "divider",
+                "layoutType" : "default",
                 "backgroundColor" : "#eeeeee",
-                "columns" : 12,
+                "columns" : 24,
                 "margin" : 10,
                 "outerMargin" : true,
                 "backgroundSizeMode" : "100%",
@@ -8707,29 +8624,7 @@
                 "rowHeight" : 70,
                 "backgroundImageUrl" : null,
                 "mobileAutoFillHeight" : false,
-                "mobileRowHeight" : 70,
-                "layoutDimension" : {
-                  "type" : "percentage",
-                  "leftWidthPercentage" : 50
-                }
-              }
-            },
-            "right" : {
-              "widgets" : {
-                "0a75c723-3a2b-0128-61a2-0acbc255c78a" : {
-                  "sizeX" : 7,
-                  "sizeY" : 12,
-                  "row" : 0,
-                  "col" : 4
-                }
-              },
-              "gridSettings" : {
-                "layoutType" : "divider",
-                "backgroundColor" : "#eeeeee",
-                "columns" : 12,
-                "margin" : 10,
-                "outerMargin" : true,
-                "backgroundSizeMode" : "100%"
+                "mobileRowHeight" : 70
               }
             }
           }

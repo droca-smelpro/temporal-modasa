@@ -25,6 +25,10 @@
       "toIndex" : 1,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Success"
@@ -37,6 +41,22 @@
       "toIndex" : 5,
       "type" : "Success"
     }, {
+      "fromIndex" : 2,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 11,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
       "fromIndex" : 3,
       "toIndex" : 1,
       "type" : "Success"
@@ -44,24 +64,72 @@
       "fromIndex" : 5,
       "toIndex" : 1,
       "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 7,
+      "type" : "True"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 9,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 2,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 574,
-        "layoutY" : 31
+        "layoutX" : 476,
+        "layoutY" : 353
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP;\nvar estacion = msg.estacion;\nvar linea = msg.linea;\nvar serie = msg.serie;\nvar modelo = msg.MODELO;\nvar cliente = msg.cliente;\nvar operario = msg.nombre_operario;\nvar nombre_estacion = msg.motivo;\nvar tiempo_estado = msg.tiempo_estado;\n\nif (evento === \"INICIO_EMERGENCIA\" && tipo === \"ACTIVADO\") {\n    // para envio de correo\n    metadata.estacion = estacion;\n    metadata.linea = linea;\n    metadata.serie = serie;\n    metadata.cliente = cliente;\n    metadata.modelo = modelo;\n    metadata.nombre_estacion = nombre_estacion;\n    metadata.timestamp = timestamp;\n    if (Array.isArray(operario)) {\n        metadata.operario = operario.join(\", \");\n    } else {\n        metadata.operario = operario;\n    }\n    \n    var newMsg = {};\n    newMsg.chat_id = 6197999828;\n    newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n    \"🚨 *ALERTA DE EMERGENCIA REPORTADA*\\n\" +\n    \"*FECHA Y HORA:* \" + timestamp + \"\\n\\n\" +\n    \"*LÍNEA DE ENSAMBLAJE:* \" + linea + \"\\n\" +\n    \"*N° ESTACIÓN:* \" + estacion + \"\\n\" +\n    \"*NOMBRE DE ESTACIÓN:* \" + nombre_estacion + \"\\n\" +\n    \"*SERIE:* \" + serie + \"\\n\" +\n    \"*MODELO:* \" + modelo + \"\\n\" +\n    \"*CLIENTE:* \" + cliente + \"\\n\" +\n    \"*OPERARIO(S):* \" + operario + \"\\n\";\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nreturn { msg: {}, metadata: metadata, msgType: msgType };\n",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP;\nvar estacion = msg.estacion;\nvar linea = msg.linea;\nvar serie = msg.serie;\nvar modelo = msg.MODELO;\nvar cliente = msg.cliente;\nvar operario = msg.nombre_operario;\nvar nombre_estacion = msg.motivo;\nvar tiempo_estado = msg.tiempo_estado;\n\nif (evento === \"INICIO_EMERGENCIA\" && tipo === \"ACTIVADO\") {\n    metadata.evento = evento;\n    // para envio de correo\n    metadata.estacion = estacion;\n    metadata.linea = linea;\n    metadata.serie = serie;\n    metadata.cliente = cliente;\n    metadata.modelo = modelo;\n    metadata.nombre_estacion = nombre_estacion;\n    metadata.timestamp = timestamp;\n    if (Array.isArray(operario)) {\n        metadata.operario = operario.join(\", \");\n    } else {\n        metadata.operario = operario;\n    }\n    \n    var newMsg = {};\n    //newMsg.chat_id = -5056307782;\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n    \"🚨 *ALERTA DE EMERGENCIA REPORTADA*\\n\" +\n    \"*FECHA Y HORA:* \" + timestamp + \"\\n\\n\" +\n    \"*LÍNEA DE ENSAMBLAJE:* \" + linea + \"\\n\" +\n    \"*N° ESTACIÓN:* \" + estacion + \"\\n\" +\n    \"*NOMBRE DE ESTACIÓN:* \" + nombre_estacion + \"\\n\" +\n    \"*SERIE:* \" + serie + \"\\n\" +\n    \"*MODELO:* \" + modelo + \"\\n\" +\n    \"*CLIENTE:* \" + cliente + \"\\n\" +\n    \"*OPERARIO(S):* \" + operario + \"\\n\";\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nreturn { msg: {}, metadata: metadata, msgType: msgType };\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1762816291479,
+        "allEnabledUntil" : 1763055364108,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -77,8 +145,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 912,
-        "layoutY" : 154
+        "layoutX" : 1472,
+        "layoutY" : 290
       },
       "configuration" : {
         "restEndpointUrlPattern" : "https://api.telegram.org/bot8246934751:AAFsNJfqIl_KK5dcxvD-KsbTvbUqbokdFbE/sendMessage",
@@ -107,7 +175,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1762815905553,
+        "allEnabledUntil" : 1763394573781,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -123,8 +191,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 296,
-        "layoutY" : 152
+        "layoutX" : 132,
+        "layoutY" : 372
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -135,7 +203,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1762816291479,
+        "allEnabledUntil" : 1763156379547,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -151,19 +219,19 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 571,
-        "layoutY" : 242
+        "layoutX" : 476,
+        "layoutY" : 278
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP || \"Sin fecha\";\nvar estacion = msg.estacion || \"Desconocida\";\nvar linea = msg.linea || \"Desconocida\";\nvar serie = msg.serie || \"Sin serie\";\nvar operario = msg.nombre_operario || \"No registrado\";\nvar motivo = msg.motivo || \"No especificado\";\n\nif (evento === \"LLAMAR_SUPERVISOR\" && tipo === \"APROBACION\") {\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"HTML\";\n    newMsg.text =\n        \"💬 <b>SOLICITUD DE APROBACIÓN</b><br>\" +\n        \"<b>FECHA Y HORA:</b> \" + timestamp + \"<br><br>\" +\n        \"<b>MOTIVO:</b> \" + motivo + \"<br>\" +\n        \"<b>N° ESTACIÓN:</b> \" + estacion + \"<br>\" +\n        \"<b>LÍNEA DE ENSAMBLAJE:</b> \" + linea + \"<br>\" +\n        \"<b>SERIE:</b> \" + serie + \"<br>\";\n\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nif (evento === \"LLAMAR_SUPERVISOR\" && tipo === \"ASISTENCIA\") {\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"HTML\";\n    newMsg.text =\n        \"💬 <b>ASISTENCIA EN ESTACIÓN</b><br>\" +\n        \"<b>FECHA Y HORA:</b> \" + timestamp + \"<br><br>\" +\n        \"<b>N° ESTACIÓN:</b> \" + estacion + \"<br>\" +\n        \"<b>LÍNEA DE ENSAMBLAJE:</b> \" + linea + \"<br>\" +\n        \"<b>SERIE:</b> \" + serie + \"<br>\";\n\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nreturn { msg: {}, metadata: metadata, msgType: msgType };\n",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString()\n    .toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString()\n    .toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP || \"Sin fecha\";\nvar estacion = msg.estacion || \"Desconocida\";\nvar linea = msg.linea || \"Desconocida\";\nvar motivo = msg.motivo;\nvar operario = msg.nombre_operario || \"No registrado\";\nvar responsables_llamada = \"@JavierBautistaTovar @Franco_Alcantara @HC2902\";\n\nif (evento === \"LLAMAR_SUPERVISOR\" && tipo ===\n    \"APROBACION\") {\n    metadata.evento = evento;\n    var newMsg = {};\n    //newMsg.chat_id = -5056307782;\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n        newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n        \"💬 *SOLICITUD DE APROBACIÓN*\\n\" +\n        \"*FECHA Y HORA:* \" + timestamp + \"\\n\\n\" +\n        \"*N° ESTACIÓN:* \" + estacion + \"\\n\" +\n        \"*LÍNEA DE ENSAMBLAJE:* \" + linea +\"\\n\" +\n        \"*MOTIVO:*\" + motivo + \"\\n\\n\" +\n        \"*RESPONSABLE(S): *\" + responsables_llamada;\n\n\n    return {\n        msg: newMsg,\n        metadata: metadata,\n        msgType: msgType\n    };\n}\n\nif (evento === \"LLAMAR_SUPERVISOR\" && tipo ===\n    \"ASISTENCIA\") {\n    metadata.evento = evento;\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n        \"💬 *ASISTENCIA EN ESTACIÓN*\\n\" +\n        \"*FECHA Y HORA:* \" + timestamp + \"\\n\\n\" +\n        \"*N° ESTACIÓN:* \" + estacion + \"\\n\" +\n        \"*LÍNEA DE ENSAMBLAJE:* \" + linea;\n\n    return {\n        msg: newMsg,\n        metadata: metadata,\n        msgType: msgType\n    };\n}\n\nreturn {\n    msg: {},\n    metadata: metadata,\n    msgType: msgType\n};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1762815570275,
+        "allEnabledUntil" : 1763394324841,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -179,8 +247,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 908,
-        "layoutY" : 30
+        "layoutX" : 1278,
+        "layoutY" : 53
       },
       "configuration" : {
         "fromTemplate" : "alertas@smelpro.com",
@@ -207,19 +275,19 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 577,
-        "layoutY" : 98
+        "layoutX" : 476,
+        "layoutY" : 430
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP;\nvar estacion = msg.estacion;\nvar linea = msg.linea;\nvar serie = msg.serie;\nvar modelo = msg.modelo;\nvar cliente = msg.cliente;\nvar operario = msg.nombre_operario;\nvar nombre_estacion = msg.motivo;\nvar tiempo_estado = msg.tiempo_estado;\n\nif (evento == \"FIN_EMERGENCIA\" && tipo==\"DESACTIVADO\"){\n    var newMsg = {};\n    newMsg.chat_id = 6197999828;\n    newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n    \"✅ *EMERGENCIA RESUELTA*\\n\" +\n    \"*FECHA Y HORA:* \" + timestamp + \"\\n\" +\n    \"*TIEMPO EN ESTADO DE EMERGENCIA:* \" + tiempo_estado + \"\\n\\n\" +\n    \"*LÍNEA DE ENSAMBLAJE:* \" + linea + \"\\n\" +\n    \"*N° ESTACIÓN:* \" + estacion + \"\\n\" +\n    \"*NOMBRE DE ESTACIÓN:* \" + nombre_estacion + \"\\n\" +\n    \"*SERIE:* \" + serie + \"\\n\" +\n    \"*MODELO:* \" + modelo + \"\\n\" +\n    \"*CLIENTE:* \" + cliente + \"\\n\" +\n    \"*OPERARIO(S):* \" + operario + \"\\n\";\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nreturn { msg: {}, metadata: metadata, msgType: msgType };\n",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar tipo = msg.TIPO_EVENTO ? msg.TIPO_EVENTO.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP;\nvar estacion = msg.estacion;\nvar linea = msg.linea;\nvar serie = msg.serie;\nvar modelo = msg.MODELO;\nvar cliente = msg.cliente;\nvar operario = msg.nombre_operario;\nvar nombre_estacion = msg.motivo;\nvar tiempo_estado = msg.tiempo_estado;\n\nif (evento == \"FIN_EMERGENCIA\" && tipo==\"DESACTIVADO\"){\n    metadata.evento = evento;\n    var newMsg = {};\n    //newMsg.chat_id = -5056307782;\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n    newMsg.text =\n    \"✅ *EMERGENCIA RESUELTA*\\n\" +\n    \"*FECHA Y HORA:* \" + timestamp + \"\\n\" +\n    \"*TIEMPO EN ESTADO DE EMERGENCIA:* \" + tiempo_estado + \"\\n\\n\" +\n    \"*LÍNEA DE ENSAMBLAJE:* \" + linea + \"\\n\" +\n    \"*N° ESTACIÓN:* \" + estacion + \"\\n\" +\n    \"*NOMBRE DE ESTACIÓN:* \" + nombre_estacion + \"\\n\" +\n    \"*SERIE:* \" + serie + \"\\n\" +\n    \"*MODELO:* \" + modelo + \"\\n\" +\n    \"*CLIENTE:* \" + cliente + \"\\n\" +\n    \"*OPERARIO(S):* \" + operario + \"\\n\";\n    return { msg: newMsg, metadata: metadata, msgType: msgType };\n}\n\nreturn { msg: {}, metadata: metadata, msgType: msgType };\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1763055364108,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -235,8 +303,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1184,
-        "layoutY" : 29
+        "layoutX" : 1514,
+        "layoutY" : 54
       },
       "configuration" : {
         "useSystemSmtpSettings" : true,
@@ -267,6 +335,245 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1325,
+        "layoutY" : 579
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "http://dashboard.smelpro.com/api/alarms?pageSize=100&page=0&searchStatus=ACTIVE",
+        "requestMethod" : "GET",
+        "useSimpleClientHttpFactory" : false,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/json",
+          "X-Authorization" : "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtb2Rhc2FAc21lbHByby5jb20iLCJ1c2VySWQiOiI3YzRjMmFkMC04ZjFmLTExZjAtYTYxYy0wMWUwYzg1ZmQ1ZGQiLCJzY29wZXMiOlsiVEVOQU5UX0FETUlOIl0sInNlc3Npb25JZCI6ImIwNGRhMTU2LTVjYzEtNDk5YS1iOTA3LWEyZWE0NTZkNjU5YSIsImV4cCI6MTc2MzQwMTA0OCwiaXNzIjoidGhpbmdzYm9hcmQuaW8iLCJpYXQiOjE3NjMzOTIwNDgsImVuYWJsZWQiOnRydWUsImlzUHVibGljIjpmYWxzZSwidGVuYW50SWQiOiI2N2E0MTRkMC04ZjFmLTExZjAtYTYxYy0wMWUwYzg1ZmQ1ZGQiLCJjdXN0b21lcklkIjoiMTM4MTQwMDAtMWRkMi0xMWIyLTgwODAtODA4MDgwODA4MDgwIn0.QsLVAUf84jMCZmgvYYRGRsZWWJLddca32BPA-7wnx0XarYoec-14VVdooaptRRxL8xsunz1Y8eOwlPlCqg_o5w"
+        },
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : 256
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763057632218,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1515efc0-c0b8-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Get alarms",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1378,
+        "layoutY" : 454
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var data = msg.data ? msg.data : [];\n\nif (typeof data === \"string\") {\n    try {\n        data = JSON.parse(data);\n    } catch (e) {\n        data = [];\n    }\n}\n\nif (data && data.data) {\n    data = data.data;\n}\n\nvar total = data.length;\nvar lineas = {}; // { linea: [estaciones] }\n\nfor (var i = 0; i < total; i++) {\n    var alarm = data[i];\n    var nombre = alarm.originatorName || \"\";\n\n    var partes = nombre.split(\" \");\n    if (partes.length >= 2) {\n        var numeros = partes[1].split(\".\");\n        var linea = \"Línea \" + (numeros[0] || \"?\");\n        var estacion = \"Estación \" + (numeros[1] || \"?\");\n\n        if (!lineas[linea]) lineas[linea] = [];\n        lineas[linea].push(estacion);\n    }\n}\n\nvar texto = \"\";\nif (total > 0) {\n    texto = \"*🚨 Alertas activas: \" + total + \"*\\n\\n\";\n    for (var linea in lineas) {\n        texto += \"*\" + linea + \"* → \" + lineas[linea].join(\", \") + \"\\n\";\n    }\n} else {\n    texto = \"✅ *No hay alertas activas actualmente.*\";\n}\n\nvar newMsg = {};\nnewMsg.chat_id = -5069003041;  \nnewMsg.parse_mode = \"Markdown\";\nnewMsg.text = texto;\n\nreturn { msg: newMsg, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763056679786,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "28953d30-c0b8-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Get alarms active",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1015,
+        "layoutY" : 581
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return metadata.evento == \"INICIO_EMERGENCIA\" || metadata.evento == \"FIN_EMERGENCIA\" || metadata.evento == \"INICIO_PARADA\" || metadata.evento == \"FIN_PARADA\" || metadata.evento == \"LLAMAR_SUPERVISOR\" || metadata.evento == \"REQUIERE_INSPECCION\" || metadata.evento == \"FIN_ALERTA_INSPECCION\";"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e9aa59a0-c0be-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Message - Alarmas Activas",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 477,
+        "layoutY" : 129
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP || new Date().toISOString();\nvar estacion = msg.estacion || \"-\";\nvar linea = msg.linea || \"-\";\nvar serie = msg.serie || \"-\";\nvar modelo = msg.MODELO || \"-\";\nvar cliente = msg.cliente || \"-\";\nvar operario = msg.nombre_operario || \"-\";\nvar causa = msg.causa || [];\n\n// Función para asignar responsable\n/*\nfunction obtenerResponsable(categoria) {\n    var c = (categoria || \"\").toString().toUpperCase();\n\n    if (c === \"PROBLEMA DE ENSAMBLAJE\") {\n        return \"@diego_roca\";\n    }else if (c === \"INSTRUCTIVO REQUIERE REVISIÓN\"){\n        return \"@fiamahle\"\n    }else if (c === \"LISTA DE ESPECIFICACIONES REQUIERE REVISIÓN\"){\n        return \"@diego_roca\"\n    }else if (c === \"PROBLEMA DE SUMINISTRO\"){\n        return \"@fiamahle\"\n    }else if (c === \"PROBLEMA DE PRUEBA\"){\n        return \"@diego_roca\"\n    }else if (c === \"ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO\"){\n        return \"@fiamahle\"\n    }else if (c === \"OTRO\"){\n        return \"@diego_roca\"\n    }\n\n    // Default\n    return \"@fiamahle\";\n}\n*/\n\n\nfunction obtenerResponsable(categoria,subcategoria, detalle){\n    var c = (categoria || \"\").toString().toUpperCase();\n    var s = (subcategoria || \"\").toString().toUpperCase();\n    var d = (detalle || \"\").toString().toUpperCase();\n    \n    if (c === \"PROBLEMA DE ENSAMBLAJE\"){\n        if (s === \"PIEZAS DAÑADAS O NO ENCAJAN\"){\n            if (d === \"DEFECTO DE FABRICACION\"){\n                return \"@JavierBautistaTovar\"\n            }else if (d === \"DEFECTO DE INGENIERÍA\"){\n                return \"@ErwinHCH @Osabber @Ocastro2025\"\n            }else if (d === \"DEFECTO DE PINTURA\"){\n                return \"@ROGERNIETO\"\n            }\n        }\n        \n        if (s === \"FALTA DE HERRAMIENTAS\"){\n            if (d === \"NO HAY POR CALIBRACIÓN\"){\n                return \"@PENDIENTE\"\n            }else if (d === \"NO HAY POR DETERIORO\"){\n                return \"@PENDIENTE\"\n            }else if (d === \"NO HAY POR ABASTECIMIENTO\"){\n                return \"@PENDIENTE\"\n            }\n        }\n        \n        if (s === \"FALTA DE COMPONENTES (PIEZAS FABRICADAS)\"){\n            if (d === \"NO ESTÁ FABRICADO\"){\n                return \"@JavierBautistaTovar @Ecarranza21\"\n            }else if (d === \"NO ESTÁ ABASTECIDO\"){\n                return \"@JavierBautistaTovar @Ecarranza21\"\n            }\n        }\n        \n        if (s === \"FALTA DE MATERIAL (PIEZAS COMPRADAS)\"){\n            if (d === \"NO HAY EN STOCK\"){\n                return \"@edpgs @andreams25\"\n            }else if (d === \"NO ESTÁ ABASTECIDO\"){\n                return \"@PENDIENTE\"\n            }\n        }\n        \n    }else if (c === \"INSTRUCTIVO REQUIERE REVISIÓN\"){\n        return \"@ErwinHCH @Osabber @Ocastro2025 @VPW35 @PENDIENTE\"\n            \n            \n    }else if (c === \"LISTA DE ESPECIFICACIONES REQUIERE REVISIÓN\"){\n        return \"@HC2902 @melanibelen10\"\n    \n        \n    }else if (c === \"PROBLEMA DE SUMINISTRO (CONSUMIBLES LÍQUIDOS)\"){\n        if (d === \"SISTEMA INOPERATIVO\"){\n            return \"@Ferdinandstone\"\n        }else if (d === \"NO HAY EN STOCK\"){\n            return \"@edpgs @lfernandez3\"\n        }\n    \n        \n    }else if (c === \"PROBLEMA DE PRUEBA\"){\n        if(d === \"BANCOS INOPERATIVOS\"){\n            return \"@Ferdinandstone\"\n        }else if (d === \"COMPONENTE DAÑADO (GARANTÍA)\"){\n            return \"@InstructorMP05\"\n        }else if (d === \"FALTA DE HERRAMIENTAS\"){\n            return \"@PENDIENTE\"\n        }\n    \n        \n    }else if (c === \"ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO\"){\n        return \"@JavierBautistaTovar\"\n    \n        \n    }else if (c === \"OTRO\"){\n        return \"@Franco_Alcantara\"\n    }\n \n    \n}\n\nif (evento === \"INICIO_PARADA\") {\n    metadata.evento = evento;\n    // Obtener causa: categoria, sucategoria y detalle\n    var causasTexto = \"\";\n    if (Array.isArray(causa) && causa.length > 0) {\n        causa.forEach(function(c, i) {\n            causasTexto += \"CAUSA \" +\n                \":\\n\";\n            causasTexto += \"• Categoría: \" + (c\n                .categoria || \"-\") + \"\\n\";\n            causasTexto += \"• Subcategoría: \" + (c\n                .subcategoria || \"-\") + \"\\n\";\n            causasTexto += \"• Detalle: \" + (c\n                .detalle || \"-\") + \"\\n\\n\";\n        });\n    } else {\n        causasTexto = \"_Sin causas detalladas_\\n\\n\";\n    }\n\n    // responsable por primera causa\n    var responsable = \"\";\n    //if (causa.length > 0) responsable = obtenerResponsable(\n      //  causa[0].categoria);\n        \n    if (causa.length > 0) {\n    responsable = obtenerResponsable(\n        causa[0].categoria,\n        causa[0].subcategoria,\n        causa[0].detalle\n    );\n}\n\n\n    // Operario a texto simple\n    var operarioStr = Array.isArray(operario) ? operario\n        .join(\", \") : operario;\n\n    metadata.estacion = estacion;\n    metadata.linea = linea;\n    metadata.serie = serie;\n    metadata.cliente = cliente;\n    metadata.modelo = modelo;\n    metadata.operario = operarioStr;\n    metadata.timestamp = timestamp;\n    metadata.responsable = responsable;\n\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n\n    function escapeMarkdown(text) {\n        if (!text) return \"\"; // null o undefined\n        text = text.toString(); \n        return text.replace(/([_*[\\]()~>])/g, \"\\\\$1\");\n    }\n\n    newMsg.text =\n        \"⚠️ *INICIO DE PARADA REGISTRADO*\\n\" +\n        \"*FECHA Y HORA:* \" + escapeMarkdown(timestamp) +\n        \"\\n\\n\" +\n        \"*LÍNEA:* \" + escapeMarkdown(linea) + \"\\n\" +\n        \"*ESTACIÓN:* \" + escapeMarkdown(estacion) + \"\\n\" +\n        \"*SERIE:* \" + escapeMarkdown(serie) + \"\\n\" +\n        \"*MODELO:* \" + escapeMarkdown(modelo) + \"\\n\" +\n        \"*CLIENTE:* \" + escapeMarkdown(cliente) + \"\\n\" +\n        \"*OPERARIO(S):* \" + escapeMarkdown(operarioStr) +\n        \"\\n\\n\" +\n        \"*⛔ DETALLE DE CAUSA: *\\n\" +\n        escapeMarkdown(causasTexto) +\n        \"*Responsable(s) asignado(s):* \" + escapeMarkdown(\n            responsable);\n\n\n    return {\n        msg: newMsg,\n        metadata: metadata,\n        msgType: msgType\n    };\n}",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763156379547,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7e2bc580-c18e-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Inicio Parada",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 477,
+        "layoutY" : 206
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP || new Date().toISOString();\nvar estacion = msg.estacion || \"-\";\nvar linea = msg.linea || \"-\";\nvar serie = msg.serie || \"-\";\nvar modelo = msg.MODELO || \"-\";\nvar cliente = msg.cliente || \"-\";\nvar operario = msg.nombre_operario || \"-\";\nvar causa = msg.causa || [];\nvar tiempo_estado = msg.tiempo_estado;\n\n\nif (evento === \"FIN_PARADA\") {\n    metadata.evento = evento;\n    // Obtener causa: categoria, sucategoria y detalle\n    var causasTexto = \"\";\n    if (Array.isArray(causa) && causa.length > 0) {\n        causa.forEach(function(c, i) {\n            causasTexto += \"CAUSA \" +\n                \":\\n\";\n            causasTexto += \"• Categoría: \" + (c\n                .categoria || \"-\") + \"\\n\";\n            causasTexto += \"• Subcategoría: \" + (c\n                .subcategoria || \"-\") + \"\\n\";\n            causasTexto += \"• Detalle: \" + (c\n                .detalle || \"-\") + \"\\n\\n\";\n        });\n    } else {\n        causasTexto = \"_Sin causas detalladas_\\n\\n\";\n    }\n\n    // Operario a texto simple\n    var operarioStr = Array.isArray(operario) ? operario\n        .join(\", \") : operario;\n\n    metadata.estacion = estacion;\n    metadata.linea = linea;\n    metadata.serie = serie;\n    metadata.cliente = cliente;\n    metadata.modelo = modelo;\n    metadata.operario = operarioStr;\n    metadata.timestamp = timestamp;\n\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n\n    function escapeMarkdown(text) {\n        if (!text) return \"\"; // null o undefined\n        text = text.toString(); \n        return text.replace(/([_*[\\]()~>])/g, \"\\\\$1\");\n    }\n\n    newMsg.text =\n        \"✅ *PARADA RESUELTA*\\n\" +\n        \"*FECHA Y HORA:* \" + escapeMarkdown(timestamp) +\"\\n\" +\n        \"*TIEMPO EN ESTADO DE PARADA* \" + tiempo_estado +\n        \"\\n\\n\" +\n        \"*LÍNEA:* \" + escapeMarkdown(linea) + \"\\n\" +\n        \"*ESTACIÓN:* \" + escapeMarkdown(estacion) +\n        \"\\n\\n\" +\n        \"*⛔ DETALLE DE CAUSA REAL: *\\n\" +\n        escapeMarkdown(causasTexto);\n\n\n    return {\n        msg: newMsg,\n        metadata: metadata,\n        msgType: msgType\n    };\n}",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "dec69940-c1a4-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Fin Parada",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 476,
+        "layoutY" : 508
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP || new Date().toISOString();\nvar estacion = msg.estacion || \"-\";\nvar linea = msg.linea || \"-\";\nvar serie = msg.serie || \"-\";\nvar modelo = msg.MODELO || \"-\";\nvar cliente = msg.cliente || \"-\";\nvar operario = msg.nombre_operario || \"-\";\nvar causa = msg.causa || [];\nvar estado = msg.estado || [];\nvar responsables = \"@PENDIENTE @PENDIENTE\";\n\nif (evento === \"REQUIERE_INSPECCION\") {\n    metadata.evento = evento;\n\n    // Operario a texto simple\n    var operarioStr = Array.isArray(operario) ? operario\n        .join(\", \") : operario;\n\n    metadata.estacion = estacion;\n    metadata.linea = linea;\n    metadata.serie = serie;\n    metadata.cliente = cliente;\n    metadata.modelo = modelo;\n    metadata.operario = operarioStr;\n    metadata.timestamp = timestamp;\n\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n\n    function escapeMarkdown(text) {\n        if (!text) return \"\"; // null o undefined\n        text = text.toString(); \n        return text.replace(/([_*[\\]()~>])/g, \"\\\\$1\");\n    }\n\n    newMsg.text =\n        \"🔍 *SE REQUIERE INSPECCIÓN*\\n\" +\n        \"*FECHA Y HORA:* \" + escapeMarkdown(timestamp) +\n        \"\\n\\n\" +\n        \"*LÍNEA:* \" + escapeMarkdown(linea) + \"\\n\" +\n        \"*ESTACIÓN:* \" + escapeMarkdown(estacion) + \"\\n\" +\n        \"*ESTADO: *\" + escapeMarkdown(estado) + \"\\n\" +\n        \"*SERIE:* \" + escapeMarkdown(serie) + \"\\n\" +\n        \"*MODELO:* \" + escapeMarkdown(modelo) + \"\\n\" +\n        \"*CLIENTE:* \" + escapeMarkdown(cliente) + \"\\n\" +\n        \"*OPERARIO(S):* \" + escapeMarkdown(operarioStr) + \"\\n\\n\" +\n        \"*Responsable(s) asignado(s):* \" + escapeMarkdown(responsables);\n\n\n    return {\n        msg: newMsg,\n        metadata: metadata,\n        msgType: msgType\n    };\n}",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2ab84d90-c3d4-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Requiere Inspeccion",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 490,
+        "layoutY" : 720
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP || new Date().toISOString();\nvar estacion = msg.estacion || \"-\";\nvar linea = msg.linea || \"-\";\nvar serie = msg.serie || \"-\";\nvar modelo = msg.MODELO || \"-\";\nvar cliente = msg.cliente || \"-\";\nvar operario = msg.nombre_operario || \"-\";\nvar causa = msg.causa || [];\nvar tiempo_estado = msg.tiempo_estado;\n\n\nif (evento === \"FIN_ALERTA_INSPECCION\") {\n    metadata.evento = evento;\n    // Operario a texto simple\n    var operarioStr = Array.isArray(operario) ? operario\n        .join(\", \") : operario;\n\n    metadata.estacion = estacion;\n    metadata.linea = linea;\n    metadata.serie = serie;\n    metadata.cliente = cliente;\n    metadata.modelo = modelo;\n    metadata.operario = operarioStr;\n    metadata.timestamp = timestamp;\n\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n\n    function escapeMarkdown(text) {\n        if (!text) return \"\"; // null o undefined\n        text = text.toString(); \n        return text.replace(/([_*[\\]()~>])/g, \"\\\\$1\");\n    }\n\n    newMsg.text =\n        \"✅ *INSPECCIÓN TERMINADA*\\n\" +\n        \"*FECHA Y HORA:* \" + escapeMarkdown(timestamp) +\"\\n\" +\n        \"*TIEMPO EN ESTADO DE INSPECCION* \" + tiempo_estado +\n        \"\\n\\n\" +\n        \"*LÍNEA:* \" + escapeMarkdown(linea) + \"\\n\" +\n        \"*ESTACIÓN:* \" + escapeMarkdown(estacion);\n\n\n    return {\n        msg: newMsg,\n        metadata: metadata,\n        msgType: msgType\n    };\n}",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2ab84d91-c3d4-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Fin Alerta Inspeccion",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 477,
+        "layoutY" : 582
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var evento = msg.evento ? msg.evento.toString().toUpperCase() : \"\";\nvar timestamp = msg.TIMESTAMP || new Date().toISOString();\nvar estacion = msg.estacion || \"-\";\nvar linea = msg.linea || \"-\";\nvar serie = msg.serie || \"-\";\nvar modelo = msg.MODELO || \"-\";\nvar cliente = msg.cliente || \"-\";\nvar operario = msg.nombre_operario || \"-\";\nvar causa = msg.causa || [];\nvar estado = msg.estado || [];\nvar responsables = \"@PENDIENTE @PENDIENTE\";\n\nif (evento === \"REQUIERE_LEVANTAMIENTO\") {\n    metadata.evento = evento;\n\n    // Operario a texto simple\n    var operarioStr = Array.isArray(operario) ? operario\n        .join(\", \") : operario;\n\n    metadata.estacion = estacion;\n    metadata.linea = linea;\n    metadata.serie = serie;\n    metadata.cliente = cliente;\n    metadata.modelo = modelo;\n    metadata.operario = operarioStr;\n    metadata.timestamp = timestamp;\n\n    var newMsg = {};\n    newMsg.chat_id = -5069003041;\n    newMsg.parse_mode = \"Markdown\";\n\n    function escapeMarkdown(text) {\n        if (!text) return \"\"; // null o undefined\n        text = text.toString(); \n        return text.replace(/([_*[\\]()~>])/g, \"\\\\$1\");\n    }\n\n    newMsg.text =\n        \"🗣 *SE REQUIERE LEVANTAMIENTO*\\n\" +\n        \"*FECHA Y HORA:* \" + escapeMarkdown(timestamp) +\n        \"\\n\\n\" +\n        \"*LÍNEA:* \" + escapeMarkdown(linea) + \"\\n\" +\n        \"*ESTACIÓN:* \" + escapeMarkdown(estacion) + \"\\n\" +\n        \"*ESTADO: *\" + escapeMarkdown(estado) + \"\\n\" +\n        \"*SERIE:* \" + escapeMarkdown(serie) + \"\\n\" +\n        \"*MODELO:* \" + escapeMarkdown(modelo) + \"\\n\" +\n        \"*CLIENTE:* \" + escapeMarkdown(cliente) + \"\\n\" +\n        \"*OPERARIO(S):* \" + escapeMarkdown(operarioStr) + \"\\n\\n\" +\n        \"*Responsable(s) asignado(s):* \" + escapeMarkdown(responsables);\n\n\n    return {\n        msg: newMsg,\n        metadata: metadata,\n        msgType: msgType\n    };\n}",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d66c4380-c4a6-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Filter Requiere Levantamiento",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -282,7 +589,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 141221
+    "version" : 210366
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

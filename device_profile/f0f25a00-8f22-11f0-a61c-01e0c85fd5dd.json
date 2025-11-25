@@ -31,7 +31,7 @@
                 "ignoreCase" : true,
                 "operation" : "EQUAL",
                 "value" : {
-                  "defaultValue" : "MODO_EMERGENCIA",
+                  "defaultValue" : "FIN_EMERGENCIA",
                   "dynamicValue" : null,
                   "userValue" : null
                 }
@@ -40,7 +40,7 @@
               "valueType" : "STRING"
             }, {
               "key" : {
-                "key" : "tipo",
+                "key" : "TIPO_EVENTO",
                 "type" : "TIME_SERIES"
               },
               "predicate" : {
@@ -77,7 +77,7 @@
                   "ignoreCase" : true,
                   "operation" : "EQUAL",
                   "value" : {
-                    "defaultValue" : "MODO_EMERGENCIA",
+                    "defaultValue" : "INICIO_EMERGENCIA",
                     "dynamicValue" : null,
                     "userValue" : null
                   }
@@ -86,7 +86,7 @@
                 "valueType" : "STRING"
               }, {
                 "key" : {
-                  "key" : "tipo",
+                  "key" : "TIPO_EVENTO",
                   "type" : "TIME_SERIES"
                 },
                 "predicate" : {
@@ -166,6 +166,201 @@
           }
         },
         "id" : "1782eeae-291d-daf8-2f3f-89b2d9203325",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      }, {
+        "alarmType" : "Alerta de Parada",
+        "clearRule" : {
+          "alarmDetails" : null,
+          "condition" : {
+            "condition" : [ {
+              "key" : {
+                "key" : "evento",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "STRING",
+                "ignoreCase" : true,
+                "operation" : "EQUAL",
+                "value" : {
+                  "defaultValue" : "FIN_PARADA",
+                  "dynamicValue" : null,
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "STRING"
+            } ],
+            "spec" : {
+              "type" : "SIMPLE"
+            }
+          },
+          "dashboardId" : null,
+          "schedule" : null
+        },
+        "createRules" : {
+          "MAJOR" : {
+            "alarmDetails" : null,
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "evento",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "STRING",
+                  "ignoreCase" : true,
+                  "operation" : "EQUAL",
+                  "value" : {
+                    "defaultValue" : "INICIO_PARADA",
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "STRING"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "2b78763d-5f60-3e16-da91-33c6804d72cf",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      }, {
+        "alarmType" : "Se requiere Inspección",
+        "clearRule" : {
+          "alarmDetails" : null,
+          "condition" : {
+            "condition" : [ {
+              "key" : {
+                "key" : "evento",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "STRING",
+                "ignoreCase" : true,
+                "operation" : "EQUAL",
+                "value" : {
+                  "defaultValue" : "FIN_ALERTA_INSPECCION",
+                  "dynamicValue" : null,
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "STRING"
+            } ],
+            "spec" : {
+              "type" : "SIMPLE"
+            }
+          },
+          "dashboardId" : null,
+          "schedule" : null
+        },
+        "createRules" : {
+          "MINOR" : {
+            "alarmDetails" : null,
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "evento",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "STRING",
+                  "ignoreCase" : true,
+                  "operation" : "EQUAL",
+                  "value" : {
+                    "defaultValue" : "REQUIERE_INSPECCION",
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "STRING"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "005c7c45-cfb2-b34f-106b-db05a6b7648d",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      }, {
+        "alarmType" : "Se requiere levantamiento",
+        "clearRule" : {
+          "alarmDetails" : null,
+          "condition" : {
+            "condition" : [ {
+              "key" : {
+                "key" : "evento",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "STRING",
+                "ignoreCase" : true,
+                "operation" : "EQUAL",
+                "value" : {
+                  "defaultValue" : "REQUIERE_LEVANTAMIENTO",
+                  "dynamicValue" : null,
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "STRING"
+            } ],
+            "spec" : {
+              "type" : "SIMPLE"
+            }
+          },
+          "dashboardId" : null,
+          "schedule" : null
+        },
+        "createRules" : {
+          "WARNING" : {
+            "alarmDetails" : null,
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "evento",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "STRING",
+                  "ignoreCase" : true,
+                  "operation" : "EQUAL",
+                  "value" : {
+                    "defaultValue" : "REQUIERE_LEVANTAMIENTO",
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "STRING"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "10505119-8731-f8d7-67ea-b5f97bfd12c1",
         "propagate" : false,
         "propagateRelationTypes" : null,
         "propagateToOwner" : false,

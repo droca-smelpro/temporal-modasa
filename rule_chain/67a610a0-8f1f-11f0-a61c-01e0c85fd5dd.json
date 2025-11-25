@@ -36,11 +36,15 @@
       "type" : "RPC Request to Device"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 7,
+      "toIndex" : 8,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 8,
+      "toIndex" : 9,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 10,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
@@ -50,12 +54,16 @@
       "fromIndex" : 7,
       "toIndex" : 0,
       "type" : "Output"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 7,
+      "type" : "Salida 1"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
-        "layoutX" : 1135,
-        "layoutY" : 150
+        "layoutX" : 809,
+        "layoutY" : 532
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -200,8 +208,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Process incoming messages from devices with the alarm rules defined in the device profile. Dispatch all incoming messages with \"Success\" relation type.",
-        "layoutX" : 204,
-        "layoutY" : 240
+        "layoutX" : 185,
+        "layoutY" : 59
       },
       "configuration" : {
         "persistAlarmRulesState" : false,
@@ -227,8 +235,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 786,
-        "layoutY" : 151
+        "layoutX" : 508,
+        "layoutY" : 528
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
@@ -254,8 +262,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 841,
-        "layoutY" : 228
+        "layoutX" : 826,
+        "layoutY" : 204
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
@@ -274,6 +282,85 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 829,
+        "layoutY" : 108
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "19e854a0-c574-11f0-9cd0-35be421ad23c"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3b7b2610-c574-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Alarmas",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 200,
+        "layoutY" : 526
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "7857e610-c65d-11f0-9cd0-35be421ad23c"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a85ad640-c664-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "re Recontruir",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 315,
+        "layoutY" : 725
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "General Alarm",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "cd6752c0-c951-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "HYBH",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -289,7 +376,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 141223
+    "version" : 210368
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -302,7 +389,33 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 141221
+    "version" : 210366
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "19e854a0-c574-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 210364
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "7857e610-c65d-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 210362
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

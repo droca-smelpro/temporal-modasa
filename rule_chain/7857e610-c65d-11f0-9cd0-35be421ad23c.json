@@ -1,0 +1,473 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "89b3a880-c663-11f0-9cd0-35be421ad23c"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "7857e610-c65d-11f0-9cd0-35be421ad23c"
+    },
+    "name" : "Reconstruir",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 1,
+      "toIndex" : 12,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 7,
+      "type" : "ultimo"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 5,
+      "type" : "true"
+    } ],
+    "firstNodeIndex" : 3,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1184,
+        "layoutY" : 435
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "bf0f3b30-c65d-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "Salida 1",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainOutputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 303,
+        "layoutY" : 275
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "DATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "buffer" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764018620619,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "36345470-c65e-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "buffer",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "msg.buffer.parte == msg.buffer.total",
+        "layoutX" : 510,
+        "layoutY" : 423
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(msg.buffer.parte == msg.buffer.total) {\n        return ['ultimo'];\n    }\n    else {\n        return ['aun no es el ultimo'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764018697435,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7aa9f6f0-c65e-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "es el ultimo trozo?",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 53,
+        "layoutY" : 279
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var msgout = {};\nmsgout.buffer=msg;\n\nreturn {msg: msgout, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764018620619,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "89b3a880-c663-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "msgout.buffer=msg;",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 273,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName == \"PruebaSimulador\") {\n        return ['pruebasimulador'];\n    }\n    else {\n        return ['noo'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763682169055,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "623982c0-c668-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "FILTRO_sim",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1239,
+        "layoutY" : 265
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : true
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764018689178,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a928e590-c66d-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "completando atributo",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1202,
+        "layoutY" : 506
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763766630910,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "89cc5fa0-c66e-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "HTFR",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 825,
+        "layoutY" : 431
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// Clonar los objetos para evitar problemas\nvar newMsg = {};\n\nif (msg.buffer) {\n    for (var key in msg.buffer) {\n        newMsg[key] = msg.buffer[key];\n    }\n}\n\n\n\n\n\nreturn {msg: newMsg, metadata: metadata, msgType: 'POST_TELEMETRY_REQUEST'};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764018502969,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7fb67cd0-c673-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "convert TELEMETRY",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 134,
+        "layoutY" : 606
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// Clonar los objetos para evitar problemas\r\nvar newMsg = {};\r\n\r\nif (msg.buffer) {\r\n    for (var key in msg.buffer) {\r\n        newMsg[key] = msg.buffer[key];\r\n    }\r\n}\r\n\r\nif (msg.ss_buffer) {\r\n    for (var key in msg.ss_buffer) {\r\n        newMsg[key] = msg.ss_buffer[key];\r\n    }\r\n}\r\n\r\n// Devolver el mensaje como JSON real\r\nreturn {\r\n    msg: newMsg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763743253744,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c0352c10-c6f6-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "sauna1_sumar",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 133,
+        "layoutY" : 662
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var newMsg = {};\n\n\n\n\n\n\n\n// Primero copiar ss_buffer\nif (msg.ss_buffer) {\n    for (var key in msg.ss_buffer) {\n        newMsg[key] = msg.ss_buffer[key];\n    }\n}\n\n// Luego copiar buffer con prioridad\nif (msg.buffer) {\n    for (var key in msg.buffer) {\n\n        // Si ambos tienen el mismo atributo\n        if (newMsg.hasOwnProperty(key)) {\n\n            // Si sus valores son iguales → no hacer nada, dejar existente\n            if (newMsg[key] === msg.buffer[key]) {\n                continue;\n            }\n\n            // Si sus valores son diferentes → usar el de buffer\n            newMsg[key] = msg.buffer[key];\n\n        } else {\n            // Si no existe en uno, agregar normal\n            newMsg[key] = msg.buffer[key];\n        }\n    }\n}\n\n\n\n\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763744069578,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a67b68a0-c6f8-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "sauna2_suma_filtrar",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 131,
+        "layoutY" : 549
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "// Clonar los objetos para evitar problemas\r\nvar newMsg = {};\r\n\r\nnewMsg=msg;\r\n\r\n// Devolver el mensaje como JSON real\r\nreturn {\r\n    msg: newMsg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763746034347,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "39935db0-c6fd-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "sauna_igual",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 135,
+        "layoutY" : 721
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var result = {};\r\n\r\n// Nuevo objeto buffer combinado\r\nvar newBuffer = {};\r\n\r\n// Primero: copiar atributos de ss_buffer\r\nif (msg.ss_buffer) {\r\n    for (var key in msg.ss_buffer) {\r\n        newBuffer[key] = msg.ss_buffer[key];\r\n    }\r\n}\r\n\r\n// Segundo: copiar atributos de buffer con prioridad\r\nif (msg.buffer) {\r\n    for (var key in msg.buffer) {\r\n\r\n        // Si existe en ambos\r\n        if (newBuffer.hasOwnProperty(key)) {\r\n\r\n            // Si valores son iguales → no hacer nada (dejar ss_buffer)\r\n            if (newBuffer[key] === msg.buffer[key]) {\r\n                continue;\r\n            }\r\n\r\n            // Si valores son distintos → gana buffer\r\n            newBuffer[key] = msg.buffer[key];\r\n\r\n        } else {\r\n            // Si no existe → agregar\r\n            newBuffer[key] = msg.buffer[key];\r\n        }\r\n    }\r\n}\r\n\r\n// Devolver el resultado envuelto en \"buffer\"\r\nresult.buffer = newBuffer;\r\n\r\nreturn {\r\n    msg: result,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763746034347,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "39935db1-c6fd-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "sauna3_buffer_sumar_filtrar",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "suma el msg actual y el anterior si son del mismo mensaje, caso contrario deja pasar el ultimo mensaje",
+        "layoutX" : 608,
+        "layoutY" : 277
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var result = {};\r\n\r\n// 1. Si ss_buffer no existe → devolver solo buffer\r\nif (!msg.ss_buffer) {\r\n    \r\n    // si es la primera parte de un mensaje\r\n    if(msg.buffer.parte==1){\r\n        msg.buffer.diff=\"true\";\r\n    }\r\n    else{\r\n        msg.buffer.diff=\"false\";\r\n    }\r\n    msg.buffer.test=1;\r\n    \r\n    result.buffer = msg.buffer || {};\r\n    \r\n    \r\n    return {\r\n        msg: result,\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n\r\n\r\n\r\n// 2. Verificar ID de ambos (si existe buffer también)\r\n//var idBuffer = msg.buffer ? msg.buffer.namess : null;\r\n//var idSS = msg.ss_buffer ? msg.ss_buffer.namess : null;\r\n\r\n// Si los IDs difieren → NO fusionar (solo buffer)\r\nif (msg.buffer.names !== msg.ss_buffer.names) {\r\n    \r\n     // si es la primera parte de un mensaje\r\n    if(msg.buffer.parte==1){\r\n        msg.buffer.diff=\"true\";\r\n    }\r\n    else{\r\n        msg.buffer.diff=\"false\";\r\n    }\r\n    \r\n    msg.buffer.test=2;\r\n    result.buffer = msg.buffer || {};\r\n    \r\n    \r\n    return {\r\n        msg: result,\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n\r\nelse if(msg.buffer.names == msg.ss_buffer.names){\r\n\r\n// 3. IDs iguales → realizar fusión con reglas\r\nvar newBuffer = {};\r\n\r\n// Copiar primero ss_buffer\r\nfor (var key in msg.ss_buffer) {\r\n    newBuffer[key] = msg.ss_buffer[key];\r\n}\r\n\r\n\r\n\r\n\r\n// Fusionar buffer con prioridad en conflicto\r\nfor (var key in msg.buffer) {\r\n\r\n    if (newBuffer.hasOwnProperty(key)) {\r\n\r\n        // Si valores iguales → dejar el de ss_buffer\r\n        if (newBuffer[key] === msg.buffer[key]) {\r\n            continue;\r\n        }\r\n\r\n        // Si valores distintos → gana buffer\r\n        newBuffer[key] = msg.buffer[key];\r\n\r\n    } else {\r\n        // Si no existe → agregar\r\n        newBuffer[key] = msg.buffer[key];\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\nif(msg.ss_buffer.diff==\"true\" && (msg.buffer.parte - msg.ss_buffer.parte)==1 ){\r\n    newBuffer.diff=\"true\";\r\n}\r\n\r\nelse{\r\n    newBuffer.diff=\"false\";\r\n}\r\n\r\n\r\nnewBuffer.test=3;\r\n\r\n\r\nresult.buffer = newBuffer;\r\n\r\nreturn {\r\n    msg: result,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n\r\n}",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764018625996,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "399384c0-c6fd-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "sauna4",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "msg.buffer.parte == msg.buffer.total",
+        "layoutX" : 905,
+        "layoutY" : 269
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(msg.buffer.diff == \"true\") {\n        return ['true'];\n    }\n    else {\n        return ['false'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764018634906,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afaca0e0-c72c-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "se perdio mensaje?",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "7857e610-c65d-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 210362
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

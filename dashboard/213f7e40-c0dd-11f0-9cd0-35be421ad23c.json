@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Admin Panel",
+    "title" : "Admin Panel para testeo",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -91,36 +91,86 @@
                 "type" : "entityField",
                 "label" : "Name",
                 "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.7466669558570668
+                "settings" : {
+                  "customTitle" : "",
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "enabled",
+                  "disableSorting" : false
+                },
+                "_hash" : 0.7466669558570668,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "email",
                 "type" : "entityField",
-                "label" : "Email",
+                "label" : "Usuario",
                 "color" : "#4caf50",
                 "settings" : { },
-                "_hash" : 0.2994408019546888
+                "_hash" : 0.2994408019546888,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "firstName",
                 "type" : "entityField",
-                "label" : "First name",
+                "label" : "Nombres",
                 "color" : "#ffc107",
                 "settings" : { },
-                "_hash" : 0.8774543295177568
+                "_hash" : 0.8774543295177568,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "lastName",
                 "type" : "entityField",
-                "label" : "Last name",
+                "label" : "Apellidos",
                 "color" : "#607d8b",
                 "settings" : { },
-                "_hash" : 0.5894745228836846
+                "_hash" : 0.5894745228836846,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "phone",
                 "type" : "entityField",
                 "label" : "Phone",
                 "color" : "#607d8b",
-                "settings" : { },
-                "_hash" : 0.6730739369191564
+                "settings" : {
+                  "customTitle" : "",
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "enabled",
+                  "disableSorting" : false
+                },
+                "_hash" : 0.6730739369191564,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -130,18 +180,7 @@
             "configMode" : "advanced",
             "actions" : {
               "actionCellButton" : [ {
-                "name" : "edit",
-                "icon" : "edit",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "updateDashboardState",
-                "targetDashboardStateId" : null,
-                "openRightLayout" : false,
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "id" : "3b218466-4cd8-b175-5a3f-9c0334fe54cb"
-              }, {
-                "name" : "dlelete",
+                "name" : "Delete",
                 "icon" : "delete",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
@@ -153,10 +192,11 @@
                 "id" : "214894b0-11a5-f87f-f000-90003cdd316a"
               } ],
               "headerButton" : [ {
-                "name" : "add user",
+                "name" : "Agregar usuario",
                 "buttonType" : "icon",
                 "icon" : "add",
                 "buttonColor" : "rgba(0, 0, 0, 0.87)",
+                "customButtonStyle" : { },
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "customPretty",
@@ -228,7 +268,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n        '<div class=\"flex flex-col items-stretch justify-center\">' +\n           '<div class=\"title\">Huella Hidrica</div>' +\n        '</div>' +\n        '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-4 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' +\n           '<div class=\"powered-by\">Smart water monitoring</div>' +\n        '</div>' +\n        '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n            '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n        '</div>' +\n    '</div>';\n    ",
+              "markdownTextFunction" : "\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n        '<div class=\"flex flex-col items-stretch justify-center\">' +\n           '<div class=\"title\">ModaPower</div>' +\n        '</div>' +\n        '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-4 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' +\n           '<div class=\"powered-by\">Gestión de Usuarios</div>' +\n        '</div>' +\n        '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n            '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n        '</div>' +\n    '</div>';\n    ",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 24px;\n    justify-content: space-around;\n}\n\n@media (min-width: 960px) {\n    .header {\n        gap: 24px;\n    }\n}\n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 24px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
             },
@@ -318,7 +358,7 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "4px",
             "settings" : {
-              "entitiesTitle" : "Dispositivos",
+              "entitiesTitle" : "Operarios",
               "enableSearch" : true,
               "enableSelectColumnDisplay" : true,
               "enableStickyHeader" : true,
@@ -338,7 +378,7 @@
               "useRowStyleFunction" : false,
               "rowStyleFunction" : ""
             },
-            "title" : "Dispositivos",
+            "title" : "Operarios",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : {
@@ -352,28 +392,66 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "1b4e8b88-87f0-01bf-a46a-5c9b373a3bab",
+              "entityAliasId" : "e56c892e-06df-e81f-c696-8cf8c7efab80",
               "dataKeys" : [ {
                 "name" : "name",
                 "type" : "entityField",
-                "label" : "Name",
+                "label" : "Nombre",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.8145253766768086
+                "_hash" : 0.8145253766768086,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "label",
                 "type" : "entityField",
                 "label" : "Label",
                 "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.33510629029162964
+                "settings" : {
+                  "customTitle" : "",
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "enabled",
+                  "disableSorting" : false
+                },
+                "_hash" : 0.33510629029162964,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "type",
                 "type" : "entityField",
                 "label" : "Type",
                 "color" : "#4caf50",
-                "settings" : { },
-                "_hash" : 0.42171857011769387
+                "settings" : {
+                  "customTitle" : "",
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "enabled",
+                  "disableSorting" : false
+                },
+                "_hash" : 0.42171857011769387,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -387,52 +465,8 @@
             "widgetStyle" : { },
             "displayTimewindow" : true,
             "actions" : {
-              "headerButton" : [ {
-                "name" : "Add device",
-                "icon" : "add",
-                "type" : "customPretty",
-                "customHtml" : "<form #addDeviceForm=\"ngForm\" [formGroup]=\"addDeviceFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar class=\"flex flex-row\" color=\"primary\">\n    <h2>Add device</h2>\n    <span class=\"flex-1\"></span>\n    <button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n    <div class=\"mat-padding flex flex-col\">\n      <mat-form-field class=\"mat-block\">\n        <mat-label>Device name</mat-label>\n        <input matInput formControlName=\"deviceName\" required>\n        <mat-error *ngIf=\"addDeviceFormGroup.get('deviceName').hasError('required')\">\n          Device name is required.\n        </mat-error>\n      </mat-form-field>\n      <div class=\"flex flex-row gap-2\">\n        <tb-entity-subtype-autocomplete\n            class=\"max-w-50% flex-full\"\n            formControlName=\"deviceType\"\n            [required]=\"true\"\n            [entityType]=\"'DEVICE'\"\n        ></tb-entity-subtype-autocomplete>\n        <mat-form-field class=\"mat-block max-w-50% flex-full\">\n          <mat-label>Label</mat-label>\n          <input matInput formControlName=\"deviceLabel\">\n        </mat-form-field>\n      </div>\n      <div formGroupName=\"attributes\" class=\"flex flex-row gap-2\">\n        <mat-form-field class=\"mat-block max-w-50% flex-full\">\n          <mat-label>Latitude</mat-label>\n          <input type=\"number\" step=\"any\" matInput formControlName=\"latitude\">\n        </mat-form-field>\n        <mat-form-field class=\"mat-block max-w-50% flex-full\">\n          <mat-label>Longitude</mat-label>\n          <input type=\"number\" step=\"any\" matInput formControlName=\"longitude\">\n        </mat-form-field>\n      </div>\n    </div>\n  </div>\n  <div mat-dialog-actions class=\"flex flex-row\">\n    <span class=\"flex-1\"></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            style=\"margin-right: 20px;\"\n            type=\"submit\"\n            [disabled]=\"(isLoading$ | async) || addDeviceForm.invalid || !addDeviceForm.dirty\">\n      Create\n    </button>\n  </div>\n</form>\n",
-                "customCss" : "",
-                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenAddDeviceDialog();\n\nfunction openAddDeviceDialog() {\n    customDialog.customDialog(htmlTemplate, AddDeviceDialogController).subscribe();\n}\n\nfunction AddDeviceDialogController(instance) {\n    let vm = instance;\n    \n    vm.addDeviceFormGroup = vm.fb.group({\n      deviceName: ['', [vm.validators.required]],\n      deviceType: ['', [vm.validators.required]],\n      deviceLabel: [''],\n      attributes: vm.fb.group({\n          latitude: [null],\n          longitude: [null]\n      })      \n    });\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.addDeviceFormGroup.markAsPristine();\n        let device = {\n            name: vm.addDeviceFormGroup.get('deviceName').value,\n            type: vm.addDeviceFormGroup.get('deviceType').value,\n            label: vm.addDeviceFormGroup.get('deviceLabel').value\n        };\n        deviceService.saveDevice(device).subscribe(\n            function (device) {\n                saveAttributes(device.id).subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n            }\n        );\n    };\n    \n    function saveAttributes(entityId) {\n        let attributes = vm.addDeviceFormGroup.get('attributes').value;\n        let attributesArray = [];\n        for (let key in attributes) {\n            attributesArray.push({key: key, value: attributes[key]});\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, \"SERVER_SCOPE\", attributesArray);\n        } else {\n            return widgetContext.rxjs.of([]);\n        }\n    }\n}",
-                "customResources" : [ ],
-                "id" : "70837a9d-c3de-a9a7-03c5-dccd14998758"
-              } ],
+              "headerButton" : [ ],
               "actionCellButton" : [ {
-                "name" : "copy access token",
-                "icon" : "content_copy",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "updateDashboardState",
-                "targetDashboardStateId" : null,
-                "openRightLayout" : false,
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "id" : "f5f685bf-5b9f-6fcb-a1cd-d9f09e4d89e7"
-              }, {
-                "name" : "Edit device",
-                "icon" : "edit",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "customPretty",
-                "customHtml" : "<form #editDeviceForm=\"ngForm\" [formGroup]=\"editDeviceFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar class=\"flex flex-row\" color=\"primary\">\n    <h2>Edit device</h2>\n    <span class=\"flex-1\"></span>\n    <button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n    <div class=\"mat-padding flex flex-col\">\n      <mat-form-field class=\"mat-block\">\n        <mat-label>Device name</mat-label>\n        <input matInput formControlName=\"deviceName\" required>\n        <mat-error *ngIf=\"editDeviceFormGroup.get('deviceName').hasError('required')\">\n          Device name is required.\n        </mat-error>\n      </mat-form-field>\n      <div class=\"flex flex-row gap-2\">\n        <tb-entity-subtype-autocomplete\n            class=\"max-w-50% flex-full\"\n            formControlName=\"deviceType\"\n            [required]=\"true\"\n            [entityType]=\"'DEVICE'\"\n        ></tb-entity-subtype-autocomplete>\n        <mat-form-field class=\"mat-block max-w-50% flex-full\">\n          <mat-label>Label</mat-label>\n          <input matInput formControlName=\"deviceLabel\">\n        </mat-form-field>\n      </div>\n      <div formGroupName=\"attributes\" class=\"flex flex-row gap-2\">\n        <mat-form-field class=\"mat-block max-w-50% flex-full\">\n          <mat-label>Latitude</mat-label>\n          <input type=\"number\" step=\"any\" matInput formControlName=\"latitude\">\n        </mat-form-field>\n        <mat-form-field class=\"mat-block max-w-50% flex-full\">\n          <mat-label>Longitude</mat-label>\n          <input type=\"number\" step=\"any\" matInput formControlName=\"longitude\">\n        </mat-form-field>\n      </div>\n    </div>\n  </div>\n  <div mat-dialog-actions class=\"flex flex-row\">\n    <span class=\"flex-1\"></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            style=\"margin-right: 20px;\"\n            type=\"submit\"\n            [disabled]=\"(isLoading$ | async) || editDeviceForm.invalid || !editDeviceForm.dirty\">\n      Update\n    </button>\n  </div>\n</form>\n",
-                "customCss" : "",
-                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenEditDeviceDialog();\n\nfunction openEditDeviceDialog() {\n    customDialog.customDialog(htmlTemplate, EditDeviceDialogController).subscribe();\n}\n\nfunction EditDeviceDialogController(instance) {\n    let vm = instance;\n    \n    vm.device = null;\n    vm.attributes = {};\n    \n    vm.editDeviceFormGroup = vm.fb.group({\n      deviceName: ['', [vm.validators.required]],\n      deviceType: ['', [vm.validators.required]],\n      deviceLabel: [''],\n      attributes: vm.fb.group({\n          latitude: [null],\n          longitude: [null]\n      })      \n    });\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.editDeviceFormGroup.markAsPristine();\n        if (vm.editDeviceFormGroup.get('deviceType').value !== vm.device.type) {\n            delete vm.device.deviceProfileId;\n        }\n        vm.device.name = vm.editDeviceFormGroup.get('deviceName').value,\n        vm.device.type = vm.editDeviceFormGroup.get('deviceType').value,\n        vm.device.label = vm.editDeviceFormGroup.get('deviceLabel').value\n        deviceService.saveDevice(vm.device).subscribe(\n            function () {\n                saveAttributes().subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n            }\n        );\n    };\n    \n    getEntityInfo();\n    \n    function getEntityInfo() {\n        deviceService.getDevice(entityId.id).subscribe(\n            function (device) {\n                attributeService.getEntityAttributes(entityId, 'SERVER_SCOPE',\n                                                    ['latitude', 'longitude']).subscribe(\n                   function (attributes) {\n                        for (let i = 0; i < attributes.length; i++) {\n                            vm.attributes[attributes[i].key] = attributes[i].value; \n                        }\n                        vm.device = device;\n                        vm.editDeviceFormGroup.patchValue(\n                            {\n                                deviceName: vm.device.name,\n                                deviceType: vm.device.type,\n                                deviceLabel: vm.device.label,\n                                attributes: {\n                                    latitude: vm.attributes.latitude,\n                                    longitude: vm.attributes.longitude\n                                }\n                            }, {emitEvent: false}\n                        );\n                   } \n                );\n            }\n        );    \n    }\n    \n    function saveAttributes() {\n        let attributes = vm.editDeviceFormGroup.get('attributes').value;\n        let attributesArray = [];\n        for (let key in attributes) {\n            attributesArray.push({key: key, value: attributes[key]});\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, 'SERVER_SCOPE', attributesArray);\n        } else {\n            return widgetContext.rxjs.of([]);\n        }\n    }\n}",
-                "customResources" : [ ],
-                "openInSeparateDialog" : false,
-                "openInPopover" : false,
-                "id" : "93931e52-5d7c-903e-67aa-b9435df44ff4"
-              }, {
-                "name" : "upload image",
-                "icon" : "mdi:image-plus",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "updateDashboardState",
-                "targetDashboardStateId" : null,
-                "openRightLayout" : false,
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "id" : "1a4bdae7-eb8c-a912-7614-c1597960a316"
-              }, {
                 "name" : "Delete device",
                 "icon" : "delete",
                 "type" : "custom",
@@ -532,38 +566,88 @@
               "dataKeys" : [ {
                 "name" : "name",
                 "type" : "entityField",
-                "label" : "Name",
+                "label" : "Usuario",
                 "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.7466669558570668
+                "settings" : {
+                  "customTitle" : "",
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "enabled",
+                  "disableSorting" : false
+                },
+                "_hash" : 0.7466669558570668,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "email",
                 "type" : "entityField",
-                "label" : "Email",
+                "label" : "Usuario",
                 "color" : "#4caf50",
                 "settings" : { },
-                "_hash" : 0.2994408019546888
+                "_hash" : 0.2994408019546888,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "firstName",
                 "type" : "entityField",
-                "label" : "First name",
+                "label" : "Nombres",
                 "color" : "#ffc107",
                 "settings" : { },
-                "_hash" : 0.8774543295177568
+                "_hash" : 0.8774543295177568,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "lastName",
                 "type" : "entityField",
-                "label" : "Last name",
+                "label" : "Apellidos",
                 "color" : "#607d8b",
                 "settings" : { },
-                "_hash" : 0.5894745228836846
+                "_hash" : 0.5894745228836846,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "phone",
                 "type" : "entityField",
                 "label" : "Phone",
                 "color" : "#607d8b",
-                "settings" : { },
-                "_hash" : 0.6730739369191564
+                "settings" : {
+                  "customTitle" : "",
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "enabled",
+                  "disableSorting" : false
+                },
+                "_hash" : 0.6730739369191564,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -594,10 +678,11 @@
                 "id" : "da83abdc-f87d-4f9b-857a-07cbd709b6f6"
               } ],
               "headerButton" : [ {
-                "name" : "add user",
+                "name" : "Agregar administrador",
                 "buttonType" : "icon",
                 "icon" : "add",
                 "buttonColor" : "rgba(0, 0, 0, 0.87)",
+                "customButtonStyle" : { },
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "customPretty",
@@ -705,6 +790,16 @@
             "resolveMultiple" : true,
             "entityType" : "DEVICE"
           }
+        },
+        "e56c892e-06df-e81f-c696-8cf8c7efab80" : {
+          "id" : "e56c892e-06df-e81f-c696-8cf8c7efab80",
+          "alias" : "operarios",
+          "filter" : {
+            "type" : "deviceType",
+            "resolveMultiple" : true,
+            "deviceTypes" : [ "chambas" ],
+            "deviceNameFilter" : ""
+          }
         }
       },
       "filters" : {
@@ -750,7 +845,7 @@
               "keyFilterPredicate" : {
                 "operation" : "EQUAL",
                 "value" : {
-                  "defaultValue" : "MPF - Pisco",
+                  "defaultValue" : "Modasa",
                   "dynamicValue" : null
                 },
                 "ignoreCase" : true,
@@ -818,13 +913,13 @@
         "dashboardCss" : ".tb-widget-container > .tb-widget {\n    border-radius: 8px !important;\n}\n\ngridster-item:not(.tb-noselect) > .tb-widget-container > .tb-widget {\n    cursor: default !important;\n}\n\n.tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-row {\n    cursor: pointer;\n}\n\n.tb-widget-container > .tb-widget .tb-legend-keys {\n    cursor: pointer;\n}\n\n.tb-dashboard-page.dark tb-dashboard > div {\n    background-color: #0A1F36 !important; /* rgb(238, 238, 238)*/\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget {\n    background: #0D2743 !important;\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget svg tspan {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-legend-item-label div {\n    color: rgba(255, 255, 255, 0.38) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-legend-item-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-shape svg text {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-type-label {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-item-label div {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text > div > div {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-row {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-row .mat-mdc-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mat-sort-header-arrow {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-divider {\n    border-top-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-moz-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-webkit-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element:-ms-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell .mdc-checkbox__background,.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mdc-checkbox__background {\n    border-color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget mat-toolbar.mat-mdc-table-toolbar:not([color=\"primary\"]) button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button[disabled][disabled] mat-icon {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button[disabled][disabled] {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator .mat-mdc-select-value {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-mdc-select-arrow {\n    color : rgba(255, 255, 255, 0.57);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple:before {\n    border-bottom-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, \n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {\n    border-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div,\n.tb-dashboard-page.dark .tb-markdown-view div.param,\n.tb-dashboard-page.dark .tb-markdown-view .header .title,\n.tb-dashboard-page.dark .tb-markdown-view p {\n    color : rgba(255, 255, 255, 0.87);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div.param-title,\n.tb-dashboard-page.dark .tb-markdown-view .header .subtitle {\n    color : rgba(255, 255, 255, 0.6);\n}\n\n\n.tb-dashboard-page.dark .tb-powered-by-footer {\n    color : rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Override value card background */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-panel {\n    background: #0D2743 !important;\n}\n\n/* Optional: overlay blur background fix */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-overlay {\n    background: rgba(0, 0, 0, 0.4) !important;\n}\n\n/* Override value card label and value text color */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-value,\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-label-row div {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Override subtitle or helper text if any */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-label-row div:nth-child(2) {\n    color: rgba(255, 255, 255, 0.6) !important;\n}\n\n/* Battery widget container background */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-panel {\n    background: #0D2743 !important;\n}\n\n/* Overlay background fix */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-overlay {\n    background: rgba(0, 0, 0, 0.4) !important;\n}\n\n/* Battery title text */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-widget-title .title {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Battery percentage value */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Optional: adjust indicator color if needed (or leave it if it's intentional) */\n/* Uncomment and modify if you want a darker-themed green indicator\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-indicator-box {\n    background-image: linear-gradient(0deg, #5cdf90 0%, #5cdf90 100%) !important;\n}\n*/"
       }
     },
-    "name" : "Admin Panel",
+    "name" : "Admin Panel para testeo",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,
     "id" : {
       "entityType" : "DASHBOARD",
-      "id" : "c7881db0-8f1f-11f0-a61c-01e0c85fd5dd"
+      "id" : "213f7e40-c0dd-11f0-9cd0-35be421ad23c"
     }
   },
   "relations" : [ ],

@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "testeo_envios",
+    "title" : "testeo_envios_FIN_ESTACIÓN",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -29,13 +29,6 @@
                 "_hash" : 0.3401404581803076,
                 "decimals" : 0
               }, {
-                "name" : "causa",
-                "type" : "timeseries",
-                "label" : "causa",
-                "color" : "#607d8b",
-                "settings" : { },
-                "_hash" : 0.6782603087456879
-              }, {
                 "name" : "estado",
                 "type" : "timeseries",
                 "label" : "estado",
@@ -43,26 +36,18 @@
                 "settings" : { },
                 "_hash" : 0.9103828634358593
               }, {
-                "name" : "checklist",
-                "type" : "timeseries",
-                "label" : "checklist",
-                "color" : "#8bc34a",
-                "settings" : { },
-                "_hash" : 0.5869464224199324
-              }, {
-                "name" : "timestamp",
+                "name" : "TIMESTAMP",
                 "type" : "timeseries",
                 "label" : "timestamp",
                 "color" : "#3f51b5",
                 "settings" : { },
-                "_hash" : 0.4249069180449173
-              }, {
-                "name" : "tipo",
-                "type" : "timeseries",
-                "label" : "tipo",
-                "color" : "#e91e63",
-                "settings" : { },
-                "_hash" : 0.20480920594328356
+                "_hash" : 0.4249069180449173,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "nombre_operario",
                 "type" : "timeseries",
@@ -70,6 +55,40 @@
                 "color" : "#8bc34a",
                 "settings" : { },
                 "_hash" : 0.8593273676937472
+              }, {
+                "name" : "p_operario",
+                "type" : "timeseries",
+                "label" : "p_operario",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.6526226538564289
+              }, {
+                "name" : "tiempo_estandar",
+                "type" : "timeseries",
+                "label" : "tiempo_estandar",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.92739790731397
+              }, {
+                "name" : "tiempo_total",
+                "type" : "timeseries",
+                "label" : "tiempo_total",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.5874537381147443
+              }, {
+                "name" : "serie",
+                "type" : "timeseries",
+                "label" : "serie",
+                "color" : "#3f51b5",
+                "settings" : { },
+                "_hash" : 0.49749249806308504,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -402,13 +421,13 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "testeo_envios",
+    "name" : "testeo_envios_FIN_ESTACIÓN",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,
     "id" : {
       "entityType" : "DASHBOARD",
-      "id" : "db908e30-b5b4-11f0-9cd0-35be421ad23c"
+      "id" : "64164c50-c658-11f0-9cd0-35be421ad23c"
     }
   },
   "relations" : [ ],

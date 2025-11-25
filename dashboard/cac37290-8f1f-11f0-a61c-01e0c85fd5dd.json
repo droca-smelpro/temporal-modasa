@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Dashboard Supervisor",
+    "title" : "Dashboard de supervisión",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -17,19 +17,459 @@
               "type" : "entity",
               "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
               "dataKeys" : [ {
-                "name" : "name",
-                "type" : "entityField",
-                "label" : "Name",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.5362121150243723
-              }, {
                 "name" : "label",
                 "type" : "entityField",
                 "label" : "Label",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.6323590865553395
+              }, {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5362121150243723
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "device",
+              "deviceId" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3",
+              "dataKeys" : [ {
+                "name" : "unidades_ensambladas",
+                "type" : "timeseries",
+                "label" : "Producción total de la linea",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.8477662647149733,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "p_ALAprimera",
+                "type" : "timeseries",
+                "label" : "FPY",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.9569338091687015,
+                "aggregationType" : "AVG",
+                "units" : "%",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "OEE",
+                "type" : "timeseries",
+                "label" : "OEE",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.3133725110947847,
+                "aggregationType" : "AVG",
+                "units" : "%",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "C_plan_prod",
+                "type" : "timeseries",
+                "label" : "Cumplimiento del plan de producción",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.2577064823058478,
+                "aggregationType" : "NONE",
+                "units" : "%",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "tiempo_serie_total",
+                "type" : "timeseries",
+                "label" : "Tiempo total de ciclo de linea",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.11886359435868354,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "device",
+              "deviceId" : "7a984630-b8d5-11f0-9cd0-35be421ad23c",
+              "dataKeys" : [ {
+                "name" : "UE_10",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.0",
+                "color" : "#3f51b5",
+                "settings" : { },
+                "_hash" : 0.18370783584800499,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_11",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.1",
+                "color" : "#e91e63",
+                "settings" : { },
+                "_hash" : 0.6553656153798353,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_12",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.2",
+                "color" : "#ffeb3b",
+                "settings" : { },
+                "_hash" : 0.6280718575530826,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_13",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.3",
+                "color" : "#03a9f4",
+                "settings" : { },
+                "_hash" : 0.10975529024964326,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_14",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.4",
+                "color" : "#ff9800",
+                "settings" : { },
+                "_hash" : 0.456889126521311,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_15",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.5",
+                "color" : "#673ab7",
+                "settings" : { },
+                "_hash" : 0.9267602589359197,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_16",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.6",
+                "color" : "#cddc39",
+                "settings" : { },
+                "_hash" : 0.30067847171365125,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_17",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.7",
+                "color" : "#009688",
+                "settings" : { },
+                "_hash" : 0.9198016276371062,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_18",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.8",
+                "color" : "#795548",
+                "settings" : { },
+                "_hash" : 0.06960400487991802,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_19",
+                "type" : "timeseries",
+                "label" : "Producción Estación 1.9",
+                "color" : "#00bcd4",
+                "settings" : { },
+                "_hash" : 0.14257536774336954,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "counter_parada_PROBLEMA_DE_ENSAMBLAJE",
+                "type" : "timeseries",
+                "label" : "PROBLEMA DE ENSAMBLAJE",
+                "color" : "#2962ff",
+                "settings" : { },
+                "_hash" : 0.9898889104570793,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "counter_parada_INSTRUCTIVO_REQUIERE_REVISION",
+                "type" : "timeseries",
+                "label" : "INSTRUCTIVO REQUIERE REVISION",
+                "color" : "#00c853",
+                "settings" : { },
+                "_hash" : 0.14404378542928198,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "counter_parada_ESPACION_NO_DISPONIBLE_PARA_ABASTECIMIENTO",
+                "type" : "timeseries",
+                "label" : "ESPACION NO DISPONIBLE PARA ABASTECIMIENTO",
+                "color" : "#d50000",
+                "settings" : { },
+                "_hash" : 0.9743303797362197,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "counter_parada_PROBLEMA_DE_PRUEBA",
+                "type" : "timeseries",
+                "label" : "PROBLEMA DE PRUEBA",
+                "color" : "#ffab00",
+                "settings" : { },
+                "_hash" : 0.37099956509353116,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "counter_parada_PROBLEMA_DE_SUMINISTRO",
+                "type" : "timeseries",
+                "label" : "PROBLEMA DE SUMINISTRO",
+                "color" : "#455a64",
+                "settings" : { },
+                "_hash" : 0.9305976972383522,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "counter_parada_OTRO",
+                "type" : "timeseries",
+                "label" : "OTRO",
+                "color" : "#aa00ff",
+                "settings" : { },
+                "_hash" : 0.17411573059681118,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "time_parada_PROBLEMA_DE_ENSAMBLAJE",
+                "type" : "timeseries",
+                "label" : "T. PROBLEMA DE ENSAMBLAJE",
+                "color" : "#64dd17",
+                "settings" : { },
+                "_hash" : 0.09998775166403506,
+                "aggregationType" : "SUM",
+                "units" : "min",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "const diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n  //var horas   =diff/3600;\n  //var dias    =diff/86400;\n   \n   return  ((minutos.toFixed(2))*100/100) ;",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "time_parada_PROBLEMA_DE_PRUEBA",
+                "type" : "timeseries",
+                "label" : "T. PROBLEMA DE PRUEBA",
+                "color" : "#304ffe",
+                "settings" : { },
+                "_hash" : 0.24560271639583753,
+                "aggregationType" : "SUM",
+                "units" : "min",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "const diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n  //var horas   =diff/3600;\n  //var dias    =diff/86400;\n   \n   return  ((minutos.toFixed(2))*100/100) ;",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "time_parada_PROBLEMA_DE_SUMINISTRO",
+                "type" : "timeseries",
+                "label" : "T. PROBLEMA DE SUMINISTRO",
+                "color" : "#c51162",
+                "settings" : { },
+                "_hash" : 0.9500850236505286,
+                "aggregationType" : "SUM",
+                "units" : "min",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "const diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n  //var horas   =diff/3600;\n  //var dias    =diff/86400;\n   \n   return  ((minutos.toFixed(2))*100/100) ;",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "time_parada_ESPACIO_NO_DISPONIBLE_PARA_ABASTECIMIENTO",
+                "type" : "timeseries",
+                "label" : "T. ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO",
+                "color" : "#ffd600",
+                "settings" : { },
+                "_hash" : 0.5103721987701573,
+                "aggregationType" : "SUM",
+                "units" : "min",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "const diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n  //var horas   =diff/3600;\n  //var dias    =diff/86400;\n   \n   return  ((minutos.toFixed(2))*100/100) ;",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "time_parada_INSTRUCTIVO_REQUIERE_REVISION",
+                "type" : "timeseries",
+                "label" : "T. INSTRUCTIVO REQUIERE REVISION",
+                "color" : "#0091ea",
+                "settings" : { },
+                "_hash" : 0.3076101835480901,
+                "aggregationType" : "SUM",
+                "units" : "min",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "const diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n  //var horas   =diff/3600;\n  //var dias    =diff/86400;\n   \n   return  ((minutos.toFixed(2))*100/100) ;",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "time_parada_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION",
+                "type" : "timeseries",
+                "label" : "T. LISTA DE ESPECIFICACIONES REQUIERE REVISION",
+                "color" : "#ff6d00",
+                "settings" : { },
+                "_hash" : 0.23901223448009368,
+                "aggregationType" : "SUM",
+                "units" : "min",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "const diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n  //var horas   =diff/3600;\n  //var dias    =diff/86400;\n   \n   return  ((minutos.toFixed(2))*100/100) ;",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "time_parada_OTRO",
+                "type" : "timeseries",
+                "label" : "T. OTRO",
+                "color" : "#6200ea",
+                "settings" : { },
+                "_hash" : 0.0819665675145883,
+                "aggregationType" : "SUM",
+                "units" : "min",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "const diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n  //var horas   =diff/3600;\n  //var dias    =diff/86400;\n   \n   return  ((minutos.toFixed(2))*100/100) ;",
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "entityAliasId" : "0d1d206f-e6d0-ac21-6065-05165e4f9be3",
+              "dataKeys" : [ {
+                "name" : "p_efectivo",
+                "type" : "timeseries",
+                "label" : "Balanza de carga ${entityName}",
+                "color" : "#9e9e9e",
+                "settings" : { },
+                "_hash" : 0.30632672547031436,
+                "aggregationType" : "NONE",
+                "units" : "%",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value*100;"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "entityAliasId" : "b42407b7-5c23-ba73-50af-18f5907ea702",
+              "dataKeys" : [ {
+                "name" : "p_operario",
+                "type" : "timeseries",
+                "label" : "Eficiencia ${entityName}",
+                "color" : "#ff5722",
+                "settings" : { },
+                "_hash" : 0.024923276712896958,
+                "aggregationType" : "AVG",
+                "units" : "%",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -73,7 +513,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div id=\"menu-buttondiv\" class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n        '<mat-icon>menu</mat-icon>' +\n    '</button>' +\n'</div>' +\n\n        \n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n    '<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+\n        '<div class=\"title\">${entityLabel}</div>' +\n           '<div class=\"subtitle\">${entityName}</div>' +\n    '</div>'+\n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 12px;\">' +\n        '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n'</div>';",
+              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div id=\"menu-buttondiv\" class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n        '<mat-icon>menu</mat-icon>' +\n    '</button>' +\n'</div>' +\n\n        \n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n    '<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+\n        '<div class=\"title\">${entityLabel}</div>' +\n           '<div class=\"subtitle\">${entityName}</div>' +\n    '</div>'+\n    \n        '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n               //'<button mat-button disabled class=\"tb-nav-button_dis\" id=\"btn-nutrientes\">Nutrientes</button>' +\n                '<button id=\"download\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                //'<button mat-button class=\"tb-nav-button\" id=\"btn-estado\">Estado del equipo</button>' +\n    '</div>' +\n    \n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 12px;\">' +\n        '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n'</div>';",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
             },
@@ -134,6 +574,16 @@
                 "openInSeparateDialog" : false,
                 "openInPopover" : true,
                 "id" : "653f17a0-d057-13fa-a484-f7db4866eb04"
+              }, {
+                "name" : "download",
+                "icon" : "download",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "console.log(widgetContext.data);\r\n\r\n// === Helper: Escapar campos CSV ===\r\nfunction escapeCsvField(field) {\r\n    if (field == null || field === undefined) return '\"\"';\r\n    const s = String(field);\r\n    return `\"${s.replace(/\"/g, '\"\"')}\"`;\r\n}\r\n\r\n// === Todas las series del widget ===\r\nconst series = widgetContext.data;\r\n\r\n// === Desde el índice 2 en adelante están las series de datos ===\r\nconst dataSeries = series.slice(2);\r\n\r\n// === GENERAR CABECERA DINÁMICA DESDE LOS LABELS ===\r\nconst dynamicHeaders = [\r\n    \"Linea\",   // siempre fijo\r\n    ...dataSeries.map(s => s.dataKey?.label || s.dataKey?.name || \"Sin nombre\")\r\n];\r\n\r\n// === Fusionar valores (solo 1 por serie) ===\r\nconst mergedValues = {};\r\n\r\ndataSeries.forEach((serie, index) => {\r\n\r\n    const isOperario = index === dataSeries.length - 1;\r\n    if (isOperario) mergedValues[index] = new Set();\r\n\r\n    serie.data.forEach(point => {\r\n        let value = point[1];\r\n\r\n        if (isOperario) {\r\n            // Intentar parseo JSON SIEMPRE\r\n            try {\r\n                const arr = JSON.parse(value);\r\n                if (Array.isArray(arr)) {\r\n                    arr.forEach(n => mergedValues[index].add(n));\r\n                    return;\r\n                }\r\n            } catch (e) {}\r\n\r\n            if (value) mergedValues[index].add(value);\r\n            return;\r\n        }\r\n\r\n        // Series normales\r\n        if (typeof value === \"string\" && value.startsWith('[\"')) {\r\n            try {\r\n                value = JSON.parse(value).join(\", \");\r\n            } catch (e) {}\r\n        }\r\n\r\n        if (value !== \"\" && value != null) {\r\n            mergedValues[index] = value;\r\n        }\r\n    });\r\n});\r\n\r\n// Convertir mergedValues a arreglo final\r\nconst finalValues = dataSeries.map((_, index) => {\r\n    if (index === dataSeries.length - 1) {\r\n        return Array.from(mergedValues[index]).join(\", \");\r\n    }\r\n    return mergedValues[index] || \"\";\r\n});\r\n\r\n// === SINGLE ROW FINAL ===\r\nconst singleRow = [\r\n    series[0]?.datasource?.entityName || \"\",\r\n    ...finalValues\r\n];\r\n\r\n\r\n//******************************************************************************\r\n// === Obtener fecha en GMT-05 ===\r\nfunction getDateTimeGMT5() {\r\n    const options = {\r\n        timeZone: 'America/Lima', // GMT-05 sin DST\r\n        year: 'numeric',\r\n        month: '2-digit',\r\n        day: '2-digit',\r\n        hour: '2-digit',\r\n        minute: '2-digit',\r\n        second: '2-digit',\r\n        hour12: false\r\n    };\r\n\r\n    // Resultado típico: \"11/24/2025, 14:33:51\"\r\n    const formatted = new Intl.DateTimeFormat('en-US', options).format(new Date());\r\n\r\n    const [date, time] = formatted.split(', ');\r\n    const [month, day, year] = date.split('/');\r\n\r\n    // DEVUELVE: 2025-11-24_14-33-51\r\n    return `${year}_${month}_${day}_${time.replace(/:/g, '-')}`;\r\n}\r\nconst fechaGMT5 = getDateTimeGMT5();\r\n\r\n\r\n// === Obtener entityName ===\r\nvar entityName = series[0]?.datasource?.entityName || \"SinNombre\";\r\n// === Nombre final del archivo ===\r\nconst fileName = `Reporte-${entityName}-${fechaGMT5}.csv`;\r\n\r\n//******************************************************************************\r\n\r\n\r\n\r\n\r\n\r\n// === Construcción del CSV ===\r\nconst csvContent = [\r\n    dynamicHeaders.map(escapeCsvField).join(\",\"),   // <-- HEADERS DINÁMICOS\r\n    singleRow.map(escapeCsvField).join(\",\")\r\n].join(\"\\n\");\r\n\r\n// === Descargar CSV ===\r\nconst blob = new Blob([\"\\uFEFF\" + csvContent], { type: 'text/csv;charset=utf-8;' });\r\nconst link = document.createElement(\"a\");\r\nlink.href = URL.createObjectURL(blob);\r\nlink.setAttribute(\"download\", fileName);\r\ndocument.body.appendChild(link);\r\nlink.click();\r\ndocument.body.removeChild(link);\r\nURL.revokeObjectURL(link.href);\r\n\r\nconsole.log(\"CSV generado con headers dinámicos desde dataKey.label\");\r\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "843e5756-867d-371f-4252-7165763fbeef"
               } ]
             },
             "useDashboardTimewindow" : true,
@@ -221,8 +671,8 @@
                 "size" : 16,
                 "sizeUnit" : "px",
                 "style" : "normal",
-                "weight" : "500",
-                "lineHeight" : "1.5"
+                "weight" : "bold",
+                "lineHeight" : ""
               },
               "labelColor" : {
                 "type" : "constant",
@@ -235,8 +685,7 @@
               "icon" : "cancel",
               "iconColor" : {
                 "type" : "constant",
-                "color" : "#F44336",
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';",
+                "color" : "#FF1100",
                 "gradient" : {
                   "advancedMode" : false,
                   "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
@@ -258,10 +707,11 @@
                   "advancedMode" : false,
                   "range" : [ ],
                   "rangeAdvanced" : [ ]
-                }
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
               },
               "valueFont" : {
-                "size" : 30,
+                "size" : 33,
                 "sizeUnit" : "px",
                 "family" : "Roboto",
                 "weight" : "500",
@@ -313,7 +763,7 @@
             },
             "units" : null,
             "decimals" : null,
-            "useDashboardTimewindow" : false,
+            "useDashboardTimewindow" : true,
             "showLegend" : false,
             "widgetStyle" : { },
             "actions" : {
@@ -406,6 +856,9 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
@@ -421,8 +874,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1754000009840,
-                  "endTimeMs" : 1754086409840
+                  "startTimeMs" : 1763586316627,
+                  "endTimeMs" : 1763672716627
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -433,7 +886,8 @@
               "aggregation" : {
                 "type" : "AVG",
                 "limit" : 25000
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : false,
             "backgroundColor" : "rgba(0, 0, 0, 0)",
@@ -444,12 +898,12 @@
               "autoScale" : true,
               "showLabel" : true,
               "labelFont" : {
-                "family" : "Roboto",
                 "size" : 16,
                 "sizeUnit" : "px",
+                "family" : "Roboto",
+                "weight" : "bold",
                 "style" : "normal",
-                "weight" : "500",
-                "lineHeight" : "1.5"
+                "lineHeight" : ""
               },
               "labelColor" : {
                 "type" : "constant",
@@ -462,7 +916,8 @@
               "icon" : "mdi:counter",
               "iconColor" : {
                 "type" : "constant",
-                "color" : "#317C34",
+                "color" : "#4CAF50",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';",
                 "gradient" : {
                   "advancedMode" : false,
                   "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
@@ -484,13 +939,12 @@
                   "advancedMode" : false,
                   "range" : [ ],
                   "rangeAdvanced" : [ ]
-                },
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+                }
               },
               "valueFont" : {
                 "family" : "Roboto",
-                "size" : 3,
-                "sizeUnit" : "vw",
+                "size" : 33,
+                "sizeUnit" : "px",
                 "style" : "normal",
                 "weight" : "500",
                 "lineHeight" : "100%"
@@ -629,7 +1083,7 @@
               "dataKeys" : [ {
                 "name" : "tiempo_total",
                 "type" : "timeseries",
-                "label" : "Promedio tiempo total",
+                "label" : "Promedio Tiempo Total",
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.9155524865166739,
@@ -655,7 +1109,7 @@
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_QUARTER",
+                "quickInterval" : "CURRENT_MONTH",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -665,8 +1119,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1761979898545,
-                  "endTimeMs" : 1762066298545
+                  "startTimeMs" : 1763566719751,
+                  "endTimeMs" : 1763653119751
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -693,8 +1147,8 @@
                 "size" : 16,
                 "sizeUnit" : "px",
                 "style" : "normal",
-                "weight" : "500",
-                "lineHeight" : "1.5"
+                "weight" : "bold",
+                "lineHeight" : ""
               },
               "labelColor" : {
                 "type" : "constant",
@@ -733,7 +1187,7 @@
                 }
               },
               "valueFont" : {
-                "size" : 30,
+                "size" : 33,
                 "sizeUnit" : "px",
                 "family" : "Roboto",
                 "weight" : "500",
@@ -853,7 +1307,49 @@
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
-            "datasources" : [ ],
+            "datasources" : [ {
+              "type" : "device",
+              "deviceId" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3",
+              "dataKeys" : [ {
+                "name" : "OEE",
+                "type" : "timeseries",
+                "label" : "Promedio OEE",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.434420980926461,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "device",
+              "deviceId" : "7a984630-b8d5-11f0-9cd0-35be421ad23c",
+              "dataKeys" : [ {
+                "name" : "UE_10",
+                "type" : "timeseries",
+                "label" : "Suma UE_10",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.644664053937547,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
             "timewindow" : {
               "displayValue" : "",
               "selectedTab" : 0,
@@ -892,7 +1388,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark'); var darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode'; return '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' + '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\">' + '<mat-icon>menu</mat-icon>' + '</button>' + '<div class=\"flex flex-col items-stretch justify-center\">' + '<div class=\"title\">Gestión de Producción</div>' + '</div>' + '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-4 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' + '<div class=\"powered-by\">Demo desarrollada por Smelpro</div>' + '</div>' + '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' + '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' + '</div>' + '</div>';\n\n\n",
+              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' :\n    'darkMode';\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>menu</mat-icon>' + '</button>' +\n    '<div class=\"flex flex-col items-stretch justify-center\">' +\n    '<div class=\"title\">Gestión de Producción</div>' +\n    \n    '</div>' +\n    '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-4 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' +\n    '<div class=\"powered-by\">Demo desarrollada por Smelpro</div>' +\n    '</div>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n               //'<button mat-button disabled class=\"tb-nav-button_dis\" id=\"btn-nutrientes\">Nutrientes</button>' +\n                '<button id=\"download\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                //'<button mat-button class=\"tb-nav-button\" id=\"btn-estado\">Estado del equipo</button>' +\n    '</div>' +\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n    '<button (click)=\"darkMode = ' + darkModeExpression +\n    ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ ' +\n    darkModeExpression +\n    ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ ' +\n    darkModeExpression +\n    ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' + '</div>';",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 24px;\n    justify-content: space-around;\n}\n\n@media (min-width: 960px) {\n    .header {\n        gap: 24px;\n    }\n}\n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 24px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
             },
@@ -918,7 +1414,7 @@
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "custom",
-                "customFunction" : "$('.tb-dashboard-page, .cdk-overlay-container, .tb-popover-inner').toggleClass('dark');",
+                "customFunction" : "$('.tb-dashboard-page, .cdk-overlay-container').toggleClass('dark');\r\n",
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "fd666ec9-cd5a-af01-47e1-b7e53911f87a"
@@ -948,14 +1444,27 @@
                 "popoverWidth" : "17vw",
                 "popoverHeight" : "70vh",
                 "popoverStyle" : {
-                  "padding" : "12px"
+                  "margin" : "0px",
+                  "padding" : "0px !important"
                 },
                 "openInSeparateDialog" : false,
                 "openInPopover" : true,
                 "id" : "d2a537b1-25ce-7ea3-57f2-7e2a4e9c18b5"
+              }, {
+                "name" : "download",
+                "icon" : "download",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "console.log(widgetContext.data);",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "b1a1e0bc-8c77-a427-00bf-6c820bbfe533"
               } ]
             },
-            "pageSize" : 1024
+            "pageSize" : 1024,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
           },
           "row" : 0,
           "col" : 0,
@@ -1037,13 +1546,13 @@
             "showTitle" : false,
             "backgroundColor" : "#fff",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "15px",
+            "padding" : "8px",
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "//var estado = \"EN OPERACIÓN\";\n//var cliente = \"MODABUS S.A. DE C.V.\";\n//var serie = \"X57196I\";\n//var operarios = \"Juan Pérez, María Gómez\";\n\n\n// === Obtener el valor del key 'estado' en la data \nvar estado = '';\nvar cliente= '';\nvar serie = '';\nvar nombre_operario= '';\n\nif (ctx && ctx.data && ctx.data.length > 0) {\n    // Buscar el datasource que contenga la telemetría 'estado'\n  var estadoData = ctx.data.find(d => d.dataKey && d.dataKey.name === 'estado');\n  if (estadoData && estadoData.data && estadoData.data.length > 0) {\n      // Obtener el último valor\n    estado = estadoData.data[estadoData.data.length - 1][1]; // último valor disponible\n  }\n\n\n\n    // Buscar el datasource que contenga la telemetría 'estado'\n  var clienteData = ctx.data.find(d => d.dataKey && d.dataKey.name === 'cliente');\n  if (clienteData && clienteData.data && clienteData.data.length > 0) {\n      // Obtener el último valor\n    cliente = clienteData.data[clienteData.data.length - 1][1]; // último valor disponible\n  }\n\n\n\n    // Buscar el datasource que contenga la telemetría 'estado'\n  var serieData = ctx.data.find(d => d.dataKey && d.dataKey.name === 'serie');\n  if (serieData && serieData.data && serieData.data.length > 0) {\n      // Obtener el último valor\n    serie = serieData.data[serieData.data.length - 1][1]; // último valor disponible\n  }\n}\n\nif (ctx && ctx.data && ctx.data.length > 0) {\n    // Buscar el datasource que contenga la telemetría 'estado'\n  var nombre_operarioData = ctx.data.find(d => d.dataKey && d.dataKey.name === 'nombre_operario');\n  if (nombre_operarioData && nombre_operarioData.data && nombre_operarioData.data.length > 0) {\n      // Obtener el último valor\n    nombre_operario = nombre_operarioData.data[nombre_operarioData.data.length - 1][1]; // último valor disponible\n  }\n  \n    try {\n      var parsed = JSON.parse(nombre_operario);\n      if (Array.isArray(parsed)) {\n        nombre_operario = parsed.join(\", \");\n      }\n    } catch (e) {\n      // Si no es JSON, verificar si ya es array real\n      if (Array.isArray(nombre_operario)) {\n        nombre_operario = nombre_operario.join(\", \");\n      }\n    }\n  \n}\n\n\n\n\n\n\n\n\n\nreturn `\n  <div class=\"station-card\">\n    <div class=\"station-info\">\n      <h3>Estado actual de la estación</h3>\n      <p><strong>ESTADO:</strong> ${estado}</p>\n      <p><strong>CLIENTE:</strong> ${cliente}</p>\n      <p><strong>SERIE:</strong> ${serie}</p>\n      <p><strong>OPERARIO(S):</strong> ${nombre_operario}</p>\n    </div>\n   \n  </div>\n`;\n",
+              "markdownTextFunction" : "//var estado = \"EN OPERACIÓN\";\n//var cliente = \"MODABUS S.A. DE C.V.\";\n//var serie = \"X57196I\";\n//var operarios = \"Juan Pérez, María Gómez\";\n\n// === Obtener el valor del key 'estado' en la data \nvar estado = '';\nvar cliente= '';\nvar serie = '';\nvar nombre_operario= '';\n\nif (ctx && ctx.data && ctx.data.length > 0) {\n    // Buscar el datasource que contenga la telemetría 'estado'\n  var estadoData = ctx.data.find(d => d.dataKey && d.dataKey.name === 'estado');\n  if (estadoData && estadoData.data && estadoData.data.length > 0) {\n      // Obtener el último valor\n    estado = estadoData.data[estadoData.data.length - 1][1]; // último valor disponible\n  }\n\n    // Buscar el datasource que contenga la telemetría 'estado'\n  var clienteData = ctx.data.find(d => d.dataKey && d.dataKey.name === 'cliente');\n  if (clienteData && clienteData.data && clienteData.data.length > 0) {\n      // Obtener el último valor\n    cliente = clienteData.data[clienteData.data.length - 1][1]; // último valor disponible\n  }\n\n    // Buscar el datasource que contenga la telemetría 'estado'\n  var serieData = ctx.data.find(d => d.dataKey && d.dataKey.name === 'serie');\n  if (serieData && serieData.data && serieData.data.length > 0) {\n      // Obtener el último valor\n    serie = serieData.data[serieData.data.length - 1][1]; // último valor disponible\n  }\n}\n\nif (ctx && ctx.data && ctx.data.length > 0) {\n    // Buscar el datasource que contenga la telemetría 'estado'\n  var nombre_operarioData = ctx.data.find(d => d.dataKey && d.dataKey.name === 'nombre_operario');\n  if (nombre_operarioData && nombre_operarioData.data && nombre_operarioData.data.length > 0) {\n      // Obtener el último valor\n    nombre_operario = nombre_operarioData.data[nombre_operarioData.data.length - 1][1]; // último valor disponible\n  }\n  \n    try {\n      var parsed = JSON.parse(nombre_operario);\n      if (Array.isArray(parsed)) {\n        nombre_operario = parsed.join(\", \");\n      }\n    } catch (e) {\n      // Si no es JSON, verificar si ya es array real\n      if (Array.isArray(nombre_operario)) {\n        nombre_operario = nombre_operario.join(\", \");\n      }\n    }\n}\n\nreturn `\n  <div class=\"station-card\">\n    <div class=\"station-info\">\n      <h3>Estado actual de la estación</h3>\n      <p><strong>ESTADO:</strong> ${estado}</p>\n      <p><strong>CLIENTE:</strong> ${cliente}</p>\n      <p><strong>SERIE:</strong> ${serie}</p>\n      <p><strong>OPERARIO(S):</strong> ${nombre_operario}</p>\n    </div>\n   \n  </div>\n`;\n",
               "applyDefaultMarkdownStyle" : false,
-              "markdownCss" : "\n.station-info {\n  color: #222;\n  text-align: left;\n  font-family: 'Roboto', sans-serif;\n}\n\n.station-info h3 {\n  color: inherit; \n  font-size: 24px;\n  margin-bottom: 8px;\n  \n}\n\n.station-info p {\n  margin: 4px 0;\n  font-size: 1em;\n}\n\n.station-info strong {\n  color: #3C9B40; \n}\n\n.station-info .highlight {\n  color: #f57c00; \n  font-weight: bold;\n}\n"
+              "markdownCss" : ".station-card{\n    padding-left: 10px ;\n}\n\n\n.station-info {\n  color: #222;\n  text-align: left;\n  font-family: 'Roboto', sans-serif;\n}\n\n.station-info h3 {\n  color: inherit; \n  font-size: 24px;\n  margin-bottom: 8px;\n  \n}\n\n.station-info p {\n  margin: 4px 0;\n  font-size: 1em;\n}\n\n.station-info strong {\n  color: #3C9B40; \n}\n\n.station-info .highlight {\n  color: #f57c00; \n  font-weight: bold;\n}\n"
             },
             "title" : "New Markdown/HTML Card",
             "showTitleIcon" : false,
@@ -1699,7 +2208,7 @@
               "realtime" : {
                 "realtimeType" : 0,
                 "interval" : 1000,
-                "timewindowMs" : 604800000,
+                "timewindowMs" : 2592000000,
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
@@ -1709,10 +2218,7 @@
                 "historyType" : 0,
                 "interval" : 1000,
                 "timewindowMs" : 86400000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1754420708380,
-                  "endTimeMs" : 1754507108380
-                },
+                "fixedTimewindow" : null,
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
@@ -1728,7 +2234,7 @@
             "showTitle" : true,
             "backgroundColor" : "rgb(255, 255, 255)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "4px",
+            "padding" : "8px",
             "settings" : {
               "alarmsTitle" : "Alertas",
               "enableSelection" : false,
@@ -1906,19 +2412,378 @@
               "type" : "entity",
               "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
               "dataKeys" : [ {
-                "name" : "name",
-                "type" : "entityField",
-                "label" : "Name",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.5362121150243723
-              }, {
                 "name" : "label",
                 "type" : "entityField",
                 "label" : "Label",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.6323590865553395
+              }, {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5362121150243723
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "deviceId" : null,
+              "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
+              "dataKeys" : [ {
+                "name" : "estado",
+                "type" : "timeseries",
+                "label" : "Estado",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.3663297940643925,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "cliente",
+                "type" : "timeseries",
+                "label" : "Cliente",
+                "color" : "#3f51b5",
+                "settings" : { },
+                "_hash" : 0.1744349914626402,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "serie",
+                "type" : "timeseries",
+                "label" : "Serie",
+                "color" : "#e91e63",
+                "settings" : { },
+                "_hash" : 0.5746971231409285,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "string_nombre_operario",
+                "type" : "timeseries",
+                "label" : "Operario(s)",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.6570680750913391,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "unidades_ensambladas",
+                "type" : "timeseries",
+                "label" : "Producción total de estación",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.8799161497840817,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "time_parada",
+                "type" : "timeseries",
+                "label" : "Tiempo promedio de parada",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.8152979118694234,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "tiempo_total",
+                "type" : "timeseries",
+                "label" : "Promedio tiempo total",
+                "color" : "#ff9800",
+                "settings" : { },
+                "_hash" : 0.8897596915936941,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "//return (value/60).toFixed(2);\n\n\nconst diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n   var horas   =diff/3600;\n   var dias    =diff/86400;\n   \n   if(diff>=60){\n       \n       return Math.floor(minutos.toFixed(2)) + \" min\";\n   }\n   else if(diff>=3600){\n       return Math.floor(horas.toFixed(2)) + \" h\";\n   }\n   \n   else if(diff>=86400){\n       return dias.toFixed(2) + \" d\";\n   }\n   else{\n       return Math.floor(diff) + \" s\";\n   }\n\n\n/*\n    // value is in ms\n    var totalMinutes = Math.floor(diff / (60 * 1000));\n    var hours = Math.floor(totalMinutes / 60);\n    var minutes = totalMinutes % 60;\n\n    \n    if (hours > 200){\n        return \" \"\n    } else if (hours === 0) {\n        if (minutes === 0) {\n            return \" - \";\n        }\n        return minutes + \" min\";\n    }\n\n    return hours + \" h\" + (minutes > 0 ? \" \" + minutes + \" min\" : \"\");\n\n*/",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "p_retrabajadas",
+                "type" : "timeseries",
+                "label" : "Retrabajo",
+                "color" : "#ffeb3b",
+                "settings" : { },
+                "_hash" : 0.5266125455109248,
+                "aggregationType" : "AVG",
+                "units" : "%",
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value*100;",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "p_ALAprimera",
+                "type" : "timeseries",
+                "label" : "First Pass Yield",
+                "color" : "#03a9f4",
+                "settings" : { },
+                "_hash" : 0.9402196025157781,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value*100;"
+              }, {
+                "name" : "p_efectivo",
+                "type" : "timeseries",
+                "label" : "Tiempo efectivo",
+                "color" : "#673ab7",
+                "settings" : { },
+                "_hash" : 0.6108165844106214,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value*100;"
+              }, {
+                "name" : "cont_PROBLEMA_DE_ENSAMBLAJE",
+                "type" : "timeseries",
+                "label" : "PROBLEMA DE ENSAMBLAJE",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.8599528263409281,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "cont_PROBLEMA_DE_PRUEBA",
+                "type" : "timeseries",
+                "label" : "PROBLEMA DE PRUEBA",
+                "color" : "#795548",
+                "settings" : { },
+                "_hash" : 0.9013478536245256,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "cont_PROBLEMA_DE_SUMINISTRO",
+                "type" : "timeseries",
+                "label" : "PROBLEMA DE SUMINISTRO",
+                "color" : "#00bcd4",
+                "settings" : { },
+                "_hash" : 0.2843297889493157,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "cont_ESPACIO_NO_DISPONIBLE_PARA_ABASTECIMIENTO",
+                "type" : "timeseries",
+                "label" : "ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO",
+                "color" : "#ff5722",
+                "settings" : { },
+                "_hash" : 0.8819743766183049,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "cont_INSTRUCTIVO_REQUIERE_REVISION",
+                "type" : "timeseries",
+                "label" : "INSTRUCTIVO REQUIERE REVISION",
+                "color" : "#9e9e9e",
+                "settings" : { },
+                "_hash" : 0.9510716621189121,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "cont_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION",
+                "type" : "timeseries",
+                "label" : "LISTA DE ESPECIFICACIONES REQUIERE REVISION",
+                "color" : "#2962ff",
+                "settings" : { },
+                "_hash" : 0.9424151051542291,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "cont_OTRO",
+                "type" : "timeseries",
+                "label" : "OTRO",
+                "color" : "#00c853",
+                "settings" : { },
+                "_hash" : 0.5043861284575636,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "tiempo_paradas_causa1",
+                "type" : "timeseries",
+                "label" : "T. PROBLEMA DE ENSAMBLAJE",
+                "color" : "#cddc39",
+                "settings" : { },
+                "_hash" : 0.009064895484521274,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "const diff = value;\n\n    if (isNaN(diff)) return \"\";\n\n\n   var minutos =diff/60;\n  //var horas   =diff/3600;\n  //var dias    =diff/86400;\n   \n   return  ((minutos.toFixed(2))*100/100) ;",
+                "comparisonEnabled" : null
+              }, {
+                "name" : "tiempo_paradas_causa2",
+                "type" : "timeseries",
+                "label" : "T. INSTRUCTIVO REQUIERE REVISION",
+                "color" : "#d50000",
+                "settings" : { },
+                "_hash" : 0.748542863578124,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "tiempo_paradas_causa3",
+                "type" : "timeseries",
+                "label" : "T. LISTA DE ESPECIFICACIONES REQUIERE REVISION",
+                "color" : "#ffab00",
+                "settings" : { },
+                "_hash" : 0.5468665355409138,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "tiempo_paradas_causa4",
+                "type" : "timeseries",
+                "label" : "T. PROBLEMA DE SUMINISTRO",
+                "color" : "#455a64",
+                "settings" : { },
+                "_hash" : 0.33711235321803534,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "tiempo_paradas_causa5",
+                "type" : "timeseries",
+                "label" : "T. PROBLEMA DE PRUEBA",
+                "color" : "#aa00ff",
+                "settings" : { },
+                "_hash" : 0.6467009150616222,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "tiempo_paradas_causa6",
+                "type" : "timeseries",
+                "label" : "T. ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO",
+                "color" : "#64dd17",
+                "settings" : { },
+                "_hash" : 0.19381401053303526,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "tiempo_paradas_causa7",
+                "type" : "timeseries",
+                "label" : "T. OTRO",
+                "color" : "#304ffe",
+                "settings" : { },
+                "_hash" : 0.02130086039011525,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "entityAliasId" : "580811ae-f6b7-39cf-4b76-c48dc221bd88",
+              "dataKeys" : [ {
+                "name" : "p_operario",
+                "type" : "timeseries",
+                "label" : "Eficiencia ${entityName}",
+                "color" : "#009688",
+                "settings" : { },
+                "_hash" : 0.2800909541477765,
+                "aggregationType" : "AVG",
+                "units" : null,
+                "decimals" : 2,
+                "funcBody" : null,
+                "usePostProcessing" : false,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -1926,12 +2791,15 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
+                "quickInterval" : "CURRENT_MONTH",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -1941,8 +2809,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1682928998568,
-                  "endTimeMs" : 1683015398568
+                  "startTimeMs" : 1763507079088,
+                  "endTimeMs" : 1763593479088
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -1953,7 +2821,8 @@
               "aggregation" : {
                 "type" : "AVG",
                 "limit" : 2500
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : false,
             "backgroundColor" : "#fff",
@@ -1962,9 +2831,9 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n        '<mat-icon>menu</mat-icon>' +\n    '</button>' +\n'</div>' +\n\n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n    '<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+\n        '<div class=\"title\">${entityLabel}</div>' +\n           '<div class=\"subtitle\">${entityName}</div>' +\n    '</div>'+\n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 12px;\">' +\n        '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n'</div>';",
+              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n        '<mat-icon>menu</mat-icon>' +\n    '</button>' +\n'</div>' +\n\n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n    '<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+\n        '<div class=\"title\">${entityLabel}</div>' +\n           '<div class=\"subtitle\">${entityName}</div>' +\n           \n    \n    \n   \n    \n\n           \n   \n'</div>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n               //'<button mat-button disabled class=\"tb-nav-button_dis\" id=\"btn-nutrientes\">Nutrientes</button>' +\n    '<button id=\"download\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                //'<button mat-button class=\"tb-nav-button\" id=\"btn-estado\">Estado del equipo</button>' +\n    '</div>' +\n\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 12px;\">' +\n        '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n    \n    \n'</div>';",
               "applyDefaultMarkdownStyle" : false,
-              "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
+              "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n.tb-timewindow-label {\n    \n}\n"
             },
             "title" : "New Markdown/HTML Card",
             "showTitleIcon" : false,
@@ -2021,10 +2890,29 @@
                 "openInSeparateDialog" : false,
                 "openInPopover" : true,
                 "id" : "d381569f-53cb-0b10-007b-9efb8eba99f6"
+              }, {
+                "name" : "download",
+                "icon" : "download",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "console.log(widgetContext.data);\r\n\r\n// === Helper: Escapar campos CSV ===\r\nfunction escapeCsvField(field) {\r\n    if (field == null || field === undefined) return '\"\"';\r\n    const s = String(field);\r\n    return `\"${s.replace(/\"/g, '\"\"')}\"`;\r\n}\r\n\r\n// === Todas las series del widget ===\r\nconst series = widgetContext.data;\r\n\r\n// === Desde el índice 2 en adelante están las series de datos ===\r\nconst dataSeries = series.slice(2);\r\n\r\n// === GENERAR CABECERA DINÁMICA DESDE LOS LABELS ===\r\nconst dynamicHeaders = [\r\n    \"Estación\",   // siempre fijo\r\n    ...dataSeries.map(s => s.dataKey?.label || s.dataKey?.name || \"Sin nombre\")\r\n];\r\n\r\n// === Fusionar valores (solo 1 por serie) ===\r\nconst mergedValues = {};\r\n\r\ndataSeries.forEach((serie, index) => {\r\n\r\n    const isOperario = index === dataSeries.length - 1;\r\n    if (isOperario) mergedValues[index] = new Set();\r\n\r\n    serie.data.forEach(point => {\r\n        let value = point[1];\r\n\r\n        if (isOperario) {\r\n            // Intentar parseo JSON SIEMPRE\r\n            try {\r\n                const arr = JSON.parse(value);\r\n                if (Array.isArray(arr)) {\r\n                    arr.forEach(n => mergedValues[index].add(n));\r\n                    return;\r\n                }\r\n            } catch (e) {}\r\n\r\n            if (value) mergedValues[index].add(value);\r\n            return;\r\n        }\r\n\r\n        // Series normales\r\n        if (typeof value === \"string\" && value.startsWith('[\"')) {\r\n            try {\r\n                value = JSON.parse(value).join(\", \");\r\n            } catch (e) {}\r\n        }\r\n\r\n        if (value !== \"\" && value != null) {\r\n            mergedValues[index] = value;\r\n        }\r\n    });\r\n});\r\n\r\n// Convertir mergedValues a arreglo final\r\nconst finalValues = dataSeries.map((_, index) => {\r\n    if (index === dataSeries.length - 1) {\r\n        return Array.from(mergedValues[index]).join(\", \");\r\n    }\r\n    return mergedValues[index] || \"\";\r\n});\r\n\r\n// === SINGLE ROW FINAL ===\r\nconst singleRow = [\r\n    series[0]?.datasource?.entityName || \"\",\r\n    ...finalValues\r\n];\r\n\r\n//******************************************************************************\r\n// === Obtener fecha en GMT-05 ===\r\nfunction getDateTimeGMT5() {\r\n    const options = {\r\n        timeZone: 'America/Lima', // GMT-05 sin DST\r\n        year: 'numeric',\r\n        month: '2-digit',\r\n        day: '2-digit',\r\n        hour: '2-digit',\r\n        minute: '2-digit',\r\n        second: '2-digit',\r\n        hour12: false\r\n    };\r\n\r\n    // Resultado típico: \"11/24/2025, 14:33:51\"\r\n    const formatted = new Intl.DateTimeFormat('en-US', options).format(new Date());\r\n\r\n    const [date, time] = formatted.split(', ');\r\n    const [month, day, year] = date.split('/');\r\n\r\n    // DEVUELVE: 2025-11-24_14-33-51\r\n    return `${year}_${month}_${day}_${time.replace(/:/g, '-')}`;\r\n}\r\nconst fechaGMT5 = getDateTimeGMT5();\r\n\r\n\r\n// === Obtener entityName ===\r\nvar entityName = series[0]?.datasource?.entityName || \"SinNombre\";\r\n// === Nombre final del archivo ===\r\nconst fileName = `Reporte-${entityName}-${fechaGMT5}.csv`;\r\n\r\n//******************************************************************************\r\n// === Construcción del CSV ===\r\nconst csvContent = [\r\n    dynamicHeaders.map(escapeCsvField).join(\",\"),   // <-- HEADERS DINÁMICOS\r\n    singleRow.map(escapeCsvField).join(\",\")\r\n].join(\"\\n\");\r\n\r\n// === Descargar CSV ===\r\nconst blob = new Blob([\"\\uFEFF\" + csvContent], { type: 'text/csv;charset=utf-8;' });\r\nconst link = document.createElement(\"a\");\r\nlink.href = URL.createObjectURL(blob);\r\n\r\n\r\n\r\n\r\nlink.setAttribute(\"download\", fileName);\r\ndocument.body.appendChild(link);\r\nlink.click();\r\ndocument.body.removeChild(link);\r\nURL.revokeObjectURL(link.href);\r\n\r\nconsole.log(\"CSV generado con headers dinámicos desde dataKey.label\");\r\n\r\n//-------------------------------------------------------------------------\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "bed39725-ab80-3586-8742-8a04a85af228"
               } ]
             },
             "useDashboardTimewindow" : true,
-            "displayTimewindow" : true
+            "displayTimewindow" : true,
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "14px",
+              "icon" : "query_builder",
+              "iconPosition" : "right",
+              "font" : null,
+              "color" : "#959191",
+              "displayTypePrefix" : true
+            }
           },
           "row" : 0,
           "col" : 0,
@@ -3251,7 +4139,8 @@
             "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
-              "fontWeight" : 400
+              "fontWeight" : 400,
+              "margin" : "1px"
             },
             "units" : "min",
             "decimals" : 2,
@@ -3268,7 +4157,7 @@
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "customPretty",
-                "customHtml" : "<div class=\"simple-text-popup\">\n\n    <mat-toolbar color=\"primary\">\n        <h2>Tiempo Total de Parada</h2>\n        <span class=\"flex-1\"></span>\n        <button mat-icon-button (click)=\"close()\" type=\"button\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </mat-toolbar>\n\n    <div mat-dialog-content style=\"padding: 24px;\">\n        <div style=\"font-size: 16px; line-height: 1.6;\">\n            <b>Definición:</b> <br>\n             Mide la pérdida directa de tiempo productivo y ayuda a priorizar acciones correctivas y mantenimiento.<br><br>\n            <b>Fuente de datos / cálculo:</b> <br>\n            <ul>\n              <li>Diferencia entre <i>hora inicio parada</i> y <i>hora fin parada</i> registrada por operario.</li>\n              <li>Tiempo promedio de tiempos de paradas en todas las estaciones.</li>\n            </ul>\n\n        </div>\n    </div>\n\n    <mat-divider></mat-divider>\n\n    <div mat-dialog-actions style=\"padding: 8px;\" class=\"flex flex-row justify-end\">\n        <button mat-raised-button color=\"primary\" (click)=\"close()\">Cerrar</button>\n    </div>\n\n</div>",
+                "customHtml" : "<div class=\"simple-text-popup\">\n\n    <mat-toolbar color=\"primary\">\n        <h2>Tiempo Promedio de Parada</h2>\n        <span class=\"flex-1\"></span>\n        <button mat-icon-button (click)=\"close()\" type=\"button\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </mat-toolbar>\n\n    <div mat-dialog-content style=\"padding: 24px;\">\n        <div style=\"font-size: 16px; line-height: 1.6;\">\n            <b>Definición:</b> <br>\n             Mide la pérdida directa de tiempo productivo y ayuda a priorizar acciones correctivas y mantenimiento.<br><br>\n            <b>Fuente de datos / cálculo:</b> <br>\n            <ul>\n              <li>Diferencia entre <i>hora inicio parada</i> y <i>hora fin parada</i> registrada por operario.</li>\n              <li>Tiempo promedio de tiempos de paradas en todas las estaciones.</li>\n            </ul>\n\n        </div>\n    </div>\n\n    <mat-divider></mat-divider>\n\n    <div mat-dialog-actions style=\"padding: 8px;\" class=\"flex flex-row justify-end\">\n        <button mat-raised-button color=\"primary\" (click)=\"close()\">Cerrar</button>\n    </div>\n\n</div>",
                 "customCss" : ".cdk-overlay-container.dark .simple-text-popup {\n  background-color: #0D2743 !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.cdk-overlay-container.dark .mat-mdc-dialog-container .mat-mdc-dialog-content {\n\tcolor: #FFF !important;\n}",
                 "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\n\nopenTextDialog();\n\nfunction openTextDialog() {\n    customDialog.customDialog(htmlTemplate, TextDialogController).subscribe();\n}\n\nfunction TextDialogController(instance) {\n    let vm = instance;\n\n    vm.close = function () {\n        vm.dialogRef.close(null);\n    };\n}\n\n",
                 "customResources" : [ ],
@@ -3281,7 +4170,7 @@
             "displayTimewindow" : true,
             "margin" : "0px",
             "borderRadius" : "0px",
-            "widgetCss" : ".title {\n  font-size: 24px !important;\n  font-weight: 700 !important;\n}\n",
+            "widgetCss" : ".title {\n  font-size: 24px !important;\n  font-weight: 700 !important;\n}\n\ntext tspan:nth-child(1){\n    display: none;\n}",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
             "showTitleIcon" : false,
@@ -4300,7 +5189,7 @@
             "showTitle" : true,
             "backgroundColor" : "rgba(255, 255, 255, 0.97)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "10px",
+            "padding" : "8px",
             "settings" : {
               "layout" : "default",
               "autoScale" : true,
@@ -4427,7 +5316,7 @@
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
-              "fontSize" : "16px",
+              "fontSize" : "24px",
               "fontWeight" : 400
             },
             "units" : "%",
@@ -4464,7 +5353,7 @@
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "titleFont" : {
-              "size" : 12,
+              "size" : 10,
               "sizeUnit" : "px",
               "family" : "Roboto",
               "weight" : "bold",
@@ -6453,16 +7342,17 @@
               "dataKeys" : [ {
                 "name" : "p_retrabajadas",
                 "type" : "timeseries",
-                "label" : "porcentaje retrabajadas",
+                "label" : "Retrabajo",
                 "color" : "#009688",
                 "settings" : { },
                 "_hash" : 0.2651439794652716,
-                "aggregationType" : "NONE",
+                "aggregationType" : "AVG",
                 "units" : null,
                 "decimals" : 2,
                 "funcBody" : null,
                 "usePostProcessing" : true,
-                "postFuncBody" : "return value*100;"
+                "postFuncBody" : "return value*100;",
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -6470,12 +7360,15 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
+                "quickInterval" : "CURRENT_MONTH",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -6485,8 +7378,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1759963083049,
-                  "endTimeMs" : 1760049483049
+                  "startTimeMs" : 1763573014434,
+                  "endTimeMs" : 1763659414434
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -6497,7 +7390,8 @@
               "aggregation" : {
                 "type" : "AVG",
                 "limit" : 25000
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : true,
             "backgroundColor" : "#fff",
@@ -6506,14 +7400,14 @@
             "settings" : { },
             "title" : "Retrabajo",
             "decimals" : null,
-            "useDashboardTimewindow" : true,
+            "useDashboardTimewindow" : false,
             "displayTimewindow" : true,
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "widgetStyle" : { },
-            "widgetCss" : "",
+            "widgetCss" : ".gauge-bg,\n.gauge-progress {\n  stroke-width: 18px !important;\n}\n",
             "titleStyle" : {
               "fontSize" : "24px",
               "fontWeight" : 700
@@ -6538,6 +7432,15 @@
                 "openInPopover" : false,
                 "id" : "26e7e892-6c9f-9d6d-3c36-433006984ea8"
               } ]
+            },
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "24px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : null,
+              "color" : "#959191",
+              "displayTypePrefix" : true
             }
           },
           "row" : 0,
@@ -6605,24 +7508,25 @@
               }
             },
             "showTitle" : true,
-            "backgroundColor" : "rgba(0, 0, 0, 0)",
+            "backgroundColor" : "rgb(255, 255, 255)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
+            "padding" : "8px",
             "settings" : {
               "layout" : "default",
               "autoScale" : true,
               "showValue" : true,
               "valueFont" : {
-                "family" : "Roboto",
-                "size" : 24,
+                "size" : 18,
                 "sizeUnit" : "px",
-                "style" : "normal",
+                "family" : "Roboto",
                 "weight" : "500",
+                "style" : "normal",
                 "lineHeight" : "32px"
               },
               "valueColor" : {
                 "type" : "range",
                 "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';",
                 "gradient" : {
                   "advancedMode" : false,
                   "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
@@ -6660,8 +7564,7 @@
                     "color" : "#D81838"
                   } ],
                   "rangeAdvanced" : [ ]
-                },
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+                }
               },
               "tickMin" : 0,
               "tickMax" : 100,
@@ -6734,7 +7637,7 @@
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
-              "fontSize" : "18px",
+              "fontSize" : "24px",
               "fontWeight" : 700
             },
             "units" : "%",
@@ -6771,12 +7674,12 @@
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "titleFont" : {
-              "size" : 0,
+              "size" : 11,
               "sizeUnit" : "px",
-              "family" : null,
-              "weight" : null,
-              "style" : null,
-              "lineHeight" : null
+              "family" : "Roboto",
+              "weight" : "bold",
+              "style" : "normal",
+              "lineHeight" : "20px"
             },
             "titleIcon" : "mdi:water-percent",
             "iconColor" : "rgba(0, 0, 0, 0.87)",
@@ -6909,7 +7812,7 @@
               "realtime" : {
                 "realtimeType" : 0,
                 "interval" : 1800000,
-                "timewindowMs" : 266400000,
+                "timewindowMs" : 86400000,
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
@@ -7278,7 +8181,7 @@
             "showTitle" : true,
             "backgroundColor" : "rgb(255, 255, 255)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "4px",
+            "padding" : "8px",
             "settings" : {
               "alarmsTitle" : "Alarmas",
               "enableSelection" : true,
@@ -7289,7 +8192,7 @@
               "enableStickyAction" : false,
               "showCellActionsMenu" : true,
               "reserveSpaceForHiddenAction" : "true",
-              "displayDetails" : false,
+              "displayDetails" : true,
               "allowAcknowledgment" : false,
               "allowClear" : false,
               "allowAssign" : false,
@@ -7401,6 +8304,26 @@
             "displayTimewindow" : true,
             "actions" : {
               "headerButton" : [ {
+                "name" : "Historial",
+                "buttonType" : "icon",
+                "icon" : "history",
+                "buttonColor" : "rgba(0, 0, 0, 0.87)",
+                "customButtonStyle" : { },
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "alertashistorial",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "dialogTitle" : "",
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : null,
+                "dialogHeight" : 67,
+                "openInSeparateDialog" : true,
+                "openInPopover" : false,
+                "id" : "d0ec86bd-f1f4-25a9-5fe2-2debdeafe981"
+              }, {
                 "name" : "Información",
                 "buttonType" : "icon",
                 "icon" : "help",
@@ -7421,7 +8344,7 @@
             "configMode" : "advanced",
             "alarmFilterConfig" : {
               "statusList" : [ "ACTIVE", "UNACK" ],
-              "severityList" : [ "CRITICAL", "MAJOR", "MINOR" ],
+              "severityList" : [ "CRITICAL", "MAJOR", "MINOR", "WARNING" ],
               "typeList" : [ ],
               "searchPropagatedAlarms" : false,
               "assignedToCurrentUser" : false,
@@ -7656,7 +8579,7 @@
             "showTitle" : true,
             "backgroundColor" : "rgb(255, 255, 255)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "4px",
+            "padding" : "8px",
             "settings" : {
               "alarmsTitle" : "Solicitudes",
               "enableSelection" : true,
@@ -7807,6 +8730,26 @@
                 "id" : "7328404a-81fe-f1cd-05b2-9bb8af32774a"
               } ],
               "headerButton" : [ {
+                "name" : "Historial",
+                "buttonType" : "icon",
+                "icon" : "history",
+                "buttonColor" : "rgba(0, 0, 0, 0.87)",
+                "customButtonStyle" : { },
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "solicitudeshistorial",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "dialogTitle" : "",
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : null,
+                "dialogHeight" : 68,
+                "openInSeparateDialog" : true,
+                "openInPopover" : false,
+                "id" : "b07a8aa1-df7f-c3ea-345e-b874130925d7"
+              }, {
                 "name" : "Información",
                 "buttonType" : "icon",
                 "icon" : "help",
@@ -7867,16 +8810,17 @@
               "dataKeys" : [ {
                 "name" : "p_ALAprimera",
                 "type" : "timeseries",
-                "label" : "p_ALAprimera",
+                "label" : "FPY",
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.884983921831969,
-                "aggregationType" : "NONE",
+                "aggregationType" : "AVG",
                 "units" : null,
                 "decimals" : 2,
                 "funcBody" : null,
                 "usePostProcessing" : null,
-                "postFuncBody" : null
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -7884,12 +8828,15 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
+                "quickInterval" : "CURRENT_YEAR",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -7899,8 +8846,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1759963083049,
-                  "endTimeMs" : 1760049483049
+                  "startTimeMs" : 1763056559117,
+                  "endTimeMs" : 1763142959117
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -7911,7 +8858,8 @@
               "aggregation" : {
                 "type" : "AVG",
                 "limit" : 25000
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : true,
             "backgroundColor" : "#fff",
@@ -7920,7 +8868,7 @@
             "settings" : { },
             "title" : "FPY",
             "decimals" : 2,
-            "useDashboardTimewindow" : true,
+            "useDashboardTimewindow" : false,
             "displayTimewindow" : true,
             "showTitleIcon" : false,
             "titleTooltip" : "",
@@ -7952,6 +8900,15 @@
                 "openInPopover" : false,
                 "id" : "26e7e892-6c9f-9d6d-3c36-433006984ea8"
               } ]
+            },
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "24px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : null,
+              "color" : "#959191",
+              "displayTypePrefix" : true
             }
           },
           "row" : 0,
@@ -8173,10 +9130,10 @@
             "titleColor" : null,
             "titleTooltip" : "",
             "widgetStyle" : { },
-            "widgetCss" : "thead {\n    display: none !important;\n}\n\n.tb-popover-inner{\n    background-color: #0D2743 !important;\n}",
+            "widgetCss" : "\nthead {\n    display: none !important;\n}\n.tb-popover-inner{\n    background-color: #0D2743 !important;\n}\n\n.tb-popover-inner-content{\n    padding: 0px !important;\n}\n",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "borderRadius" : "0"
+            "borderRadius" : "0px"
           },
           "row" : 0,
           "col" : 0,
@@ -8485,12 +9442,12 @@
               "autoScale" : true,
               "showLabel" : true,
               "labelFont" : {
-                "family" : "Roboto",
-                "size" : 16,
+                "size" : 13,
                 "sizeUnit" : "px",
+                "family" : "Roboto",
+                "weight" : "bold",
                 "style" : "normal",
-                "weight" : "500",
-                "lineHeight" : "1.5"
+                "lineHeight" : ""
               },
               "labelColor" : {
                 "type" : "constant",
@@ -8503,7 +9460,8 @@
               "icon" : "mdi:counter",
               "iconColor" : {
                 "type" : "constant",
-                "color" : "#E89623",
+                "color" : "#4CAF50",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';",
                 "gradient" : {
                   "advancedMode" : false,
                   "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
@@ -8525,13 +9483,12 @@
                   "advancedMode" : false,
                   "range" : [ ],
                   "rangeAdvanced" : [ ]
-                },
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+                }
               },
               "valueFont" : {
                 "family" : "Roboto",
-                "size" : 3,
-                "sizeUnit" : "vw",
+                "size" : 30,
+                "sizeUnit" : "px",
                 "style" : "normal",
                 "weight" : "500",
                 "lineHeight" : "100%"
@@ -9522,12 +10479,13 @@
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.9701880297935087,
-                "aggregationType" : "NONE",
+                "aggregationType" : "AVG",
                 "units" : null,
                 "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : null,
-                "postFuncBody" : null
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -9535,12 +10493,15 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
+                "quickInterval" : "CURRENT_YEAR",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -9550,8 +10511,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1754000009840,
-                  "endTimeMs" : 1754086409840
+                  "startTimeMs" : 1763060555063,
+                  "endTimeMs" : 1763146955063
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -9562,7 +10523,8 @@
               "aggregation" : {
                 "type" : "AVG",
                 "limit" : 25000
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : false,
             "backgroundColor" : "rgba(0, 0, 0, 0)",
@@ -9573,12 +10535,12 @@
               "autoScale" : true,
               "showLabel" : true,
               "labelFont" : {
-                "size" : 35,
+                "size" : 30,
                 "sizeUnit" : "px",
                 "family" : "Roboto",
-                "weight" : "500",
+                "weight" : "bold",
                 "style" : "normal",
-                "lineHeight" : "1.5"
+                "lineHeight" : ""
               },
               "labelColor" : {
                 "type" : "constant",
@@ -9617,11 +10579,11 @@
                 }
               },
               "valueFont" : {
+                "size" : 50,
+                "sizeUnit" : "px",
                 "family" : "Roboto",
-                "size" : 3,
-                "sizeUnit" : "vw",
-                "style" : "normal",
                 "weight" : "500",
+                "style" : "normal",
                 "lineHeight" : "100%"
               },
               "valueColor" : {
@@ -9724,7 +10686,8 @@
                 "style" : null,
                 "lineHeight" : "1"
               },
-              "color" : null
+              "color" : "#959191",
+              "displayTypePrefix" : true
             }
           },
           "row" : 0,
@@ -10144,9 +11107,9 @@
             "decimals" : 2,
             "noDataDisplayMessage" : "",
             "timewindowStyle" : {
-              "showIcon" : false,
+              "showIcon" : true,
               "iconSize" : "24px",
-              "icon" : null,
+              "icon" : "schedule",
               "iconPosition" : "left",
               "font" : {
                 "size" : 12,
@@ -10156,7 +11119,7 @@
                 "style" : "normal",
                 "lineHeight" : "16px"
               },
-              "color" : null,
+              "color" : "#959191",
               "displayTypePrefix" : true
             },
             "margin" : "",
@@ -10313,7 +11276,7 @@
                 "name" : "time_parada_PROBLEMA_DE_ENSAMBLAJE",
                 "type" : "timeseries",
                 "label" : "PROBLEMA DE ENSAMBLAJE",
-                "color" : "#2196f3",
+                "color" : "#F44336",
                 "settings" : { },
                 "_hash" : 0.9123096063364914,
                 "aggregationType" : "SUM",
@@ -10327,7 +11290,7 @@
                 "name" : "time_parada_INSTRUCTIVO_REQUIERE_REVISION",
                 "type" : "timeseries",
                 "label" : "INSTRUCTIVO REQUIERE REVISION",
-                "color" : "#4caf50",
+                "color" : "#E89623",
                 "settings" : { },
                 "_hash" : 0.5216107735251985,
                 "aggregationType" : "SUM",
@@ -10341,7 +11304,7 @@
                 "name" : "time_parada_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION",
                 "type" : "timeseries",
                 "label" : "LISTA DE ESPECIFICACIONES REQUIERE REVISION",
-                "color" : "#f44336",
+                "color" : "#155BA6",
                 "settings" : { },
                 "_hash" : 0.5462101808994511,
                 "aggregationType" : "SUM",
@@ -10355,7 +11318,7 @@
                 "name" : "time_parada_PROBLEMA_DE_SUMINISTRO",
                 "type" : "timeseries",
                 "label" : "PROBLEMA DE SUMINISTRO",
-                "color" : "#ffc107",
+                "color" : "#4CAF50",
                 "settings" : { },
                 "_hash" : 0.771550273450772,
                 "aggregationType" : "SUM",
@@ -10369,7 +11332,7 @@
                 "name" : "time_parada_PROBLEMA_DE_PRUEBA",
                 "type" : "timeseries",
                 "label" : "PROBLEMA DE PRUEBA",
-                "color" : "#607d8b",
+                "color" : "#F44336",
                 "settings" : { },
                 "_hash" : 0.20141225954256714,
                 "aggregationType" : "SUM",
@@ -10383,7 +11346,7 @@
                 "name" : "time_parada_ESPACIO_NO_DISPONIBLE_PARA_ABASTECIMIENTO",
                 "type" : "timeseries",
                 "label" : "ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO",
-                "color" : "#9c27b0",
+                "color" : "#E89623",
                 "settings" : { },
                 "_hash" : 0.31959744163538883,
                 "aggregationType" : "SUM",
@@ -10397,7 +11360,7 @@
                 "name" : "time_parada_OTRO",
                 "type" : "timeseries",
                 "label" : "OTRO",
-                "color" : "#8bc34a",
+                "color" : "#155BA6",
                 "settings" : { },
                 "_hash" : 0.2967341140176164,
                 "aggregationType" : "SUM",
@@ -10637,12 +11600,13 @@
                 "color" : "#f44336",
                 "settings" : { },
                 "_hash" : 0.2792270019821653,
-                "aggregationType" : "NONE",
-                "units" : null,
-                "decimals" : null,
+                "aggregationType" : "AVG",
+                "units" : "%",
+                "decimals" : 2,
                 "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value*100*1/1;",
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -10692,7 +11656,7 @@
               "color_b" : "#AFC9E6"
             },
             "title" : "Eficiencia de Operarios",
-            "decimals" : null,
+            "decimals" : 2,
             "useDashboardTimewindow" : false,
             "displayTimewindow" : true,
             "showTitleIcon" : false,
@@ -10767,12 +11731,13 @@
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.8524839126851288,
-                "aggregationType" : "NONE",
+                "aggregationType" : "AVG",
                 "units" : null,
                 "decimals" : 2,
                 "funcBody" : null,
                 "usePostProcessing" : null,
-                "postFuncBody" : null
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -10780,12 +11745,15 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
+                "quickInterval" : "CURRENT_YEAR",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -10795,8 +11763,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1759963083049,
-                  "endTimeMs" : 1760049483049
+                  "startTimeMs" : 1763060555063,
+                  "endTimeMs" : 1763146955063
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -10807,16 +11775,17 @@
               "aggregation" : {
                 "type" : "AVG",
                 "limit" : 25000
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : true,
             "backgroundColor" : "#fff",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "20px",
+            "padding" : "8px",
             "settings" : { },
             "title" : "OEE de Línea",
             "decimals" : 2,
-            "useDashboardTimewindow" : true,
+            "useDashboardTimewindow" : false,
             "displayTimewindow" : true,
             "showTitleIcon" : false,
             "titleTooltip" : "",
@@ -10848,6 +11817,15 @@
                 "openInPopover" : false,
                 "id" : "26e7e892-6c9f-9d6d-3c36-433006984ea8"
               } ]
+            },
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "24px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : null,
+              "color" : "#959191",
+              "displayTypePrefix" : true
             }
           },
           "row" : 0,
@@ -10914,24 +11892,25 @@
               }
             },
             "showTitle" : true,
-            "backgroundColor" : "rgba(0, 0, 0, 0)",
+            "backgroundColor" : "rgb(255, 255, 255)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
+            "padding" : "8px",
             "settings" : {
               "layout" : "default",
               "autoScale" : true,
               "showValue" : true,
               "valueFont" : {
+                "family" : "Roboto",
                 "size" : 14,
                 "sizeUnit" : "px",
-                "family" : "Roboto",
-                "weight" : "500",
                 "style" : "normal",
+                "weight" : "500",
                 "lineHeight" : "32px"
               },
               "valueColor" : {
                 "type" : "range",
                 "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';",
                 "gradient" : {
                   "advancedMode" : false,
                   "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
@@ -10969,8 +11948,7 @@
                     "color" : "#D81838"
                   } ],
                   "rangeAdvanced" : [ ]
-                },
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+                }
               },
               "tickMin" : 0,
               "tickMax" : 100,
@@ -10984,18 +11962,10 @@
                 "lineHeight" : "16px"
               },
               "ticksColor" : "rgb(46, 74, 89)",
-              "background" : {
-                "type" : "color",
-                "color" : "#fff",
-                "overlay" : {
-                  "enabled" : false,
-                  "color" : "rgba(255,255,255,0.72)",
-                  "blur" : 3
-                }
-              },
               "barColor" : {
                 "type" : "range",
                 "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';",
                 "gradient" : {
                   "advancedMode" : false,
                   "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
@@ -11033,17 +12003,25 @@
                     "color" : "#D81838"
                   } ],
                   "rangeAdvanced" : [ ]
-                },
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+                }
               },
               "barBackground" : "rgba(0, 0, 0, 0.04)",
+              "background" : {
+                "type" : "color",
+                "color" : "#fff",
+                "overlay" : {
+                  "enabled" : false,
+                  "color" : "rgba(255,255,255,0.72)",
+                  "blur" : 3
+                }
+              },
               "padding" : "12px"
             },
-            "title" : "Cumplimiento del plan de producción de la línea",
+            "title" : "Cumplimiento del plan de producción",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
-              "fontSize" : "16px",
+              "fontSize" : "24px",
               "fontWeight" : 400
             },
             "units" : "%",
@@ -11080,10 +12058,10 @@
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "titleFont" : {
-              "size" : 8,
+              "size" : 11,
               "sizeUnit" : "px",
               "family" : "Roboto",
-              "weight" : "500",
+              "weight" : "bold",
               "style" : "normal",
               "lineHeight" : "20px"
             },
@@ -11125,13 +12103,13 @@
               "dataKeys" : [ {
                 "name" : "OEE",
                 "type" : "timeseries",
-                "label" : "OEE",
+                "label" : "Promedio OEE",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.8524839126851288,
-                "aggregationType" : "NONE",
+                "_hash" : 0.48291977610564496,
+                "aggregationType" : "AVG",
                 "units" : null,
-                "decimals" : 2,
+                "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : null,
                 "postFuncBody" : null,
@@ -11143,12 +12121,15 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
+                "quickInterval" : "CURRENT_YEAR",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -11158,8 +12139,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1759963083049,
-                  "endTimeMs" : 1760049483049
+                  "startTimeMs" : 1762979907824,
+                  "endTimeMs" : 1763066307824
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -11170,7 +12151,8 @@
               "aggregation" : {
                 "type" : "AVG",
                 "limit" : 25000
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : true,
             "backgroundColor" : "#fff",
@@ -11754,9 +12736,9 @@
               "timezone" : null
             },
             "showTitle" : true,
-            "backgroundColor" : "rgba(0, 0, 0, 0)",
+            "backgroundColor" : "rgb(255, 255, 255)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
+            "padding" : "8px",
             "settings" : {
               "sortSeries" : false,
               "animation" : {
@@ -11871,10 +12853,10 @@
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "titleFont" : {
-              "size" : 16,
+              "size" : 24,
               "sizeUnit" : "px",
               "family" : "Roboto",
-              "weight" : "500",
+              "weight" : "bold",
               "style" : "normal",
               "lineHeight" : "24px"
             },
@@ -11970,7 +12952,7 @@
             "showTitle" : true,
             "backgroundColor" : "#fff",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "8px",
+            "padding" : "10px",
             "settings" : {
               "color_a" : "#FF1100",
               "color_b" : "#001DFF"
@@ -11984,7 +12966,7 @@
             "dropShadow" : true,
             "enableFullscreen" : false,
             "widgetStyle" : { },
-            "widgetCss" : ".tb-timewindow.no-padding {\n  padding: 6px 3px !important;   \n}\n\n.tb-search-container {\n  display: none !important;\n}\n",
+            "widgetCss" : ".tb-search-container {\n  display: none !important;\n}\n\n",
             "titleStyle" : {
               "fontSize" : "24px",
               "fontWeight" : 700,
@@ -12231,13 +13213,13 @@
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "dropShadow" : true,
-            "enableFullscreen" : false,
+            "enableFullscreen" : true,
             "widgetStyle" : { },
-            "widgetCss" : ".tb-timewindow.no-padding {\n  padding: 8px 6px !important;   \n}\n\n.tb-search-container {\n  display: none !important;\n}\n",
+            "widgetCss" : ".tb-timewindow.no-padding {\n  padding: 3px 0px !important;   \n}\n\n.tb-search-container {\n  display: none !important;\n}\n",
             "titleStyle" : {
               "fontSize" : "24px",
               "fontWeight" : 700,
-              "padding" : "10px 10px 10px 8px",
+              "padding" : "10px 10px 10px 2px",
               "height" : "35px"
             },
             "pageSize" : 1024,
@@ -12292,12 +13274,13 @@
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.9477966408556568,
-                "aggregationType" : "NONE",
+                "aggregationType" : "AVG",
                 "units" : null,
                 "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : null,
-                "postFuncBody" : null
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -12432,14 +13415,35 @@
               "latestDataKeys" : [ ]
             } ],
             "timewindow" : {
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
               "realtime" : {
+                "realtimeType" : 0,
                 "interval" : 1000,
-                "timewindowMs" : 60000
+                "timewindowMs" : 2592000000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : null,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
               },
               "aggregation" : {
                 "type" : "NONE",
                 "limit" : 200
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : true,
             "backgroundColor" : "rgb(255, 255, 255)",
@@ -12458,7 +13462,7 @@
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400,
-              "padding" : "5px 10px 5px 10px"
+              "padding" : "5px 10px 5px 0px"
             },
             "useDashboardTimewindow" : false,
             "showLegend" : false,
@@ -12468,7 +13472,7 @@
             "iconColor" : "rgba(0, 0, 0, 0.87)",
             "iconSize" : "24px",
             "displayTimewindow" : true,
-            "configMode" : "basic",
+            "configMode" : "advanced",
             "titleFont" : {
               "size" : 24,
               "sizeUnit" : "px",
@@ -12477,7 +13481,11 @@
               "style" : null
             },
             "titleColor" : null,
-            "titleIcon" : null
+            "titleIcon" : null,
+            "titleTooltip" : "",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
@@ -12634,7 +13642,7 @@
             "showTitle" : true,
             "backgroundColor" : "#fff",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "14px",
+            "padding" : "8px",
             "settings" : {
               "color_a" : "#FF1100",
               "color_b" : "#F5DD0082"
@@ -12818,7 +13826,7 @@
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_YEAR",
+                "quickInterval" : "CURRENT_MONTH",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -12828,8 +13836,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1762877685894,
-                  "endTimeMs" : 1762964085894
+                  "startTimeMs" : 1763566719753,
+                  "endTimeMs" : 1763653119753
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -13026,7 +14034,7 @@
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_YEAR",
+                "quickInterval" : "CURRENT_MONTH",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
                 "hideQuickInterval" : false
@@ -13036,8 +14044,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1762878469046,
-                  "endTimeMs" : 1762964869046
+                  "startTimeMs" : 1763566719754,
+                  "endTimeMs" : 1763653119754
                 },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
@@ -13116,6 +14124,732 @@
           "row" : 0,
           "col" : 0,
           "id" : "862608f4-579a-249f-e390-f80578dcd178"
+        },
+        "3630e5e6-72b6-3f51-b8e5-71a4c8735bdd" : {
+          "type" : "latest",
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1682928998568,
+                  "endTimeMs" : 1683015398568
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 2500
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : true,
+              "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
+              "markdownTextFunction" : "\n\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nif (darkMode) {\n    $('.tb-dashboard-page')\n        .addClass('dark');\n} else {\n    $('.tb-dashboard-page')\n        .addClass('light');\n}",
+              "applyDefaultMarkdownStyle" : false,
+              "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "widgetCss" : "",
+            "noDataDisplayMessage" : "",
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "dark-mode-switch",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "$('.tb-dashboard-page').toggleClass('dark');",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "4431866e-87da-0a87-0fe0-1bd7bd404081"
+              } ]
+            },
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "borderRadius" : "0px",
+            "pageSize" : 1024
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "3630e5e6-72b6-3f51-b8e5-71a4c8735bdd",
+          "typeFullFqn" : "system.cards.markdown_card"
+        },
+        "e5f22284-699b-a8d2-0099-f00d8e03a380" : {
+          "typeFullFqn" : "tenant.lastest_values_table_mod",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "deviceId" : "fa61f600-af6f-11f0-9f18-0d482a772853",
+              "entityAliasId" : "580811ae-f6b7-39cf-4b76-c48dc221bd88",
+              "dataKeys" : [ {
+                "name" : "p_operario",
+                "type" : "timeseries",
+                "label" : "${entityName}",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8889858899389461,
+                "aggregationType" : "AVG",
+                "units" : "%",
+                "decimals" : 3,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "//return (value*100).toFixed(2)*100/100;\nreturn (value);",
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_MONTH",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1763566719754,
+                  "endTimeMs" : 1763653119754
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              },
+              "timezone" : null
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "color_a" : "#1746A5",
+              "color_b" : "#62B5E26F"
+            },
+            "title" : "Eficiencia de Operarios",
+            "decimals" : 2,
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "widgetStyle" : { },
+            "widgetCss" : ".tb-timewindow.no-padding {\n  padding: 8px 6px !important;   \n}\n\n.tb-search-container {\n  display: none !important;\n}\n\n",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "10px 10px 10px 8px",
+              "height" : "35px"
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "titleFont" : {
+              "sizeUnit" : "px",
+              "family" : null,
+              "weight" : null,
+              "style" : null,
+              "lineHeight" : ""
+            },
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "24px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : null,
+              "color" : "#959191",
+              "displayTypePrefix" : true
+            },
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Información",
+                "buttonType" : "icon",
+                "icon" : "help",
+                "buttonColor" : "rgba(0, 0, 0, 0.87)",
+                "customButtonStyle" : { },
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<div class=\"simple-text-popup\">\n\n    <mat-toolbar color=\"primary\">\n        <h2>Cantidad de paradas por motivo</h2>\n        <span class=\"flex-1\"></span>\n        <button mat-icon-button (click)=\"close()\" type=\"button\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </mat-toolbar>\n\n    <div mat-dialog-content style=\"padding: 24px;\">\n        <div style=\"font-size: 16px; line-height: 1.6;\">\n            <b>Definición:</b> <br>\n             Prioriza causas que más impactan la producción.<br><br>\n            <b>Fuente de datos / cálculo:</b> <br>\n            <ul>\n              <li>Número de incidencias clasificadas por motivo en la estación.</li>\n            </ul>\n\n        </div>\n    </div>\n\n    <mat-divider></mat-divider>\n\n    <div mat-dialog-actions style=\"padding: 8px;\" class=\"flex flex-row justify-end\">\n        <button mat-raised-button color=\"primary\" (click)=\"close()\">Cerrar</button>\n    </div>\n\n</div>\n",
+                "customCss" : ".simple-text-popup p {\n    margin: 0;\n    color: rgba(0,0,0,0.8);\n    \n}\n\n.simple-text-popup mat-toolbar h2 {\n    margin: 0;\n    font-weight: 600;\n}\n\n.simple-text-popup{\n    width: 30vw;\n}\n\n.cdk-overlay-container.dark .simple-text-popup {\n  background-color: #0D2743 !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.cdk-overlay-container.dark .mat-mdc-dialog-container .mat-mdc-dialog-content {\n\tcolor: #FFF !important;\n}",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\n\nopenTextDialog();\n\nfunction openTextDialog() {\n    customDialog.customDialog(htmlTemplate, TextDialogController).subscribe();\n}\n\nfunction TextDialogController(instance) {\n    let vm = instance;\n\n    vm.close = function () {\n        vm.dialogRef.close(null);\n    };\n}\n\n",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "378f667a-21ba-ef5f-8fd7-f09115e73119"
+              } ]
+            },
+            "units" : "%"
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "e5f22284-699b-a8d2-0099-f00d8e03a380"
+        },
+        "217e4b3e-5386-db34-b85d-6c9c036272a1" : {
+          "typeFullFqn" : "system.alarm_widgets.alarms_table",
+          "type" : "alarm",
+          "sizeX" : 10.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 2592000000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "fixedTimewindow" : null,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              },
+              "timezone" : null
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "alarmsTitle" : "",
+              "enableSelection" : true,
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableFilter" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : false,
+              "showCellActionsMenu" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayDetails" : true,
+              "allowAcknowledgment" : false,
+              "allowClear" : false,
+              "allowAssign" : false,
+              "displayActivity" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : null,
+              "pageStepCount" : 3,
+              "pageStepIncrement" : 6,
+              "defaultSortOrder" : "-createdTime",
+              "useRowStyleFunction" : false,
+              "rowStyleFunction" : ""
+            },
+            "title" : "Alarms table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "5px 10px 5px 0px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "alarmSource" : {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "0d1d206f-e6d0-ac21-6065-05165e4f9be3",
+              "dataKeys" : [ {
+                "name" : "createdTime",
+                "type" : "alarm",
+                "label" : "Fecha",
+                "color" : "#2196f3",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.021092237451093787,
+                "funcBody" : null,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "originator",
+                "type" : "alarm",
+                "label" : "Originador",
+                "color" : "#4caf50",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.2780007688856758,
+                "funcBody" : null,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "type",
+                "type" : "alarm",
+                "label" : "Causa",
+                "color" : "#f44336",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.7323586880398418,
+                "funcBody" : null,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "severity",
+                "type" : "alarm",
+                "label" : "Severidad",
+                "color" : "#ffc107",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "useCellContentFunction" : false
+                },
+                "_hash" : 0.09927019860088193,
+                "funcBody" : null,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            },
+            "alarmsPollingInterval" : 5,
+            "showTitleIcon" : false,
+            "titleIcon" : "warning",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ ]
+            },
+            "configMode" : "advanced",
+            "alarmFilterConfig" : {
+              "statusList" : [ "ACTIVE", "CLEARED", "ACK", "UNACK" ],
+              "severityList" : [ "CRITICAL", "MAJOR", "MINOR", "WARNING" ],
+              "typeList" : [ ],
+              "searchPropagatedAlarms" : false,
+              "assignedToCurrentUser" : false,
+              "assigneeId" : null
+            },
+            "datasources" : [ ],
+            "titleFont" : null,
+            "titleColor" : null,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "24px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : null,
+              "color" : "#959191",
+              "displayTypePrefix" : true
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "217e4b3e-5386-db34-b85d-6c9c036272a1"
+        },
+        "7cc3db14-ba16-b271-90b5-5361354abba1" : {
+          "typeFullFqn" : "system.alarm_widgets.alarms_table",
+          "type" : "alarm",
+          "sizeX" : 10.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 2592000000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "fixedTimewindow" : null,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              },
+              "timezone" : null
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "alarmsTitle" : "Solicitudes",
+              "enableSelection" : true,
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableFilter" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "showCellActionsMenu" : true,
+              "reserveSpaceForHiddenAction" : "false",
+              "displayDetails" : false,
+              "allowAcknowledgment" : false,
+              "allowClear" : false,
+              "allowAssign" : false,
+              "displayActivity" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : null,
+              "pageStepCount" : 3,
+              "pageStepIncrement" : 6,
+              "defaultSortOrder" : "-createdTime",
+              "useRowStyleFunction" : false,
+              "rowStyleFunction" : ""
+            },
+            "title" : "Alarms table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "5px 10px 5px 0px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "alarmSource" : {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "0d1d206f-e6d0-ac21-6065-05165e4f9be3",
+              "dataKeys" : [ {
+                "name" : "createdTime",
+                "type" : "alarm",
+                "label" : "Fecha",
+                "color" : "#2196f3",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.021092237451093787,
+                "funcBody" : null,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "originator",
+                "type" : "alarm",
+                "label" : "Originador",
+                "color" : "#4caf50",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.2780007688856758,
+                "funcBody" : null,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "type",
+                "type" : "alarm",
+                "label" : "Causa",
+                "color" : "#f44336",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.7323586880398418,
+                "funcBody" : null,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.data",
+                "type" : "alarm",
+                "label" : "Detalle",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.5707811776884839,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            },
+            "alarmsPollingInterval" : 5,
+            "showTitleIcon" : false,
+            "titleIcon" : "warning",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "displayTimewindow" : true,
+            "actions" : {
+              "actionCellButton" : [ {
+                "name" : "backup",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : true,
+                "showWidgetActionFunction" : "return false;",
+                "type" : "custom",
+                "customFunction" : "let match = entityName.match(/(\\d+)\\.(\\d+)/);\n\n\nlet linea = parseInt(match[1], 10);\nlet estacion = parseInt(match[2], 10);\n// Example output\n//console.log(\"linea: \", linea, \"estacion: \", estacion);\n\n//var response = {\n//    estacion: estacion,\n//    linea: linea,\n//    response: 'y',\n//}\n\n\n// Example parameters\nconst deviceId = \"fa61f600-af6f-11f0-9f18-0d482a772853\";\nconst url = `https://dashboard.smelpro.com/api/rpc/oneway/${deviceId}`;\n\n// Method and params for the RPC\nconst body = {\n  method: \"response\",\n  params: {\n    estacion: estacion,\n    linea: linea,\n    response: 'n',\n  },\n  persistent: false,\n  timeout: 5000\n};\n\n// Get ThingsBoard’s current user token\nconst token = localStorage.getItem(\"jwt_token\");\n\n// Make the API call\nfetch(url, {\n  method: \"POST\",\n  headers: {\n    \"Content-Type\": \"application/json\",\n    \"X-Authorization\": \"Bearer \" + token\n  },\n  body: JSON.stringify(body)\n})\n.then(res => {\n  if (!res.ok) throw new Error(\"RPC request failed: \" + res.status);\n  return res.json().catch(() => ({})); // Handle empty responses gracefully\n})\n.then(data => {\n  widgetContext.showSuccessToast(\"Solicitud aprobada correctamente\");\n  console.log(\"✅ RPC sent successfully:\", data);\n})\n.catch(err => {\n  widgetContext.showErrorToast(\"La respuesta a la solicitud no llegó a la estación\");\n  console.error(\"❌ RPC error:\", err);\n});\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "7328404a-81fe-f1cd-05b2-9bb8af32774a"
+              } ],
+              "headerButton" : [ ]
+            },
+            "configMode" : "advanced",
+            "alarmFilterConfig" : {
+              "statusList" : [ "ACTIVE", "CLEARED", "ACK", "UNACK" ],
+              "severityList" : [ "INDETERMINATE" ],
+              "typeList" : [ ],
+              "searchPropagatedAlarms" : false,
+              "assignedToCurrentUser" : false,
+              "assigneeId" : null
+            },
+            "datasources" : [ ],
+            "titleFont" : null,
+            "titleColor" : null,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "24px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : null,
+              "color" : "#959191",
+              "displayTypePrefix" : true
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "7cc3db14-ba16-b271-90b5-5361354abba1"
+        },
+        "524e76ba-e8d4-8ae8-fe63-041411dc3c2a" : {
+          "typeFullFqn" : "tenant.tabla_de_paradas",
+          "type" : "timeseries",
+          "sizeX" : 7.5,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
+              "dataKeys" : [ {
+                "name" : "paradas",
+                "type" : "timeseries",
+                "label" : "paradas",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.2741438743240894
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "color_a" : "#4CAF50",
+              "color_b" : "#A5D7A7"
+            },
+            "title" : "Tabla de paradas - Tiempos",
+            "decimals" : null,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "5px 10px 10px 5px"
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "524e76ba-e8d4-8ae8-fe63-041411dc3c2a"
+        },
+        "29cfb677-f61a-148a-4f37-cb0463825195" : {
+          "typeFullFqn" : "tenant.tabla_de_paradas_cantidad",
+          "type" : "timeseries",
+          "sizeX" : 7.5,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
+              "dataKeys" : [ {
+                "name" : "paradas",
+                "type" : "timeseries",
+                "label" : "paradas",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.07788288100131813
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "color_a" : "#4CAF50",
+              "color_b" : "#A5D7A7"
+            },
+            "title" : "Tabla de paradas - Cantidad",
+            "decimals" : null,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "5px 10px 10px 5px"
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "29cfb677-f61a-148a-4f37-cb0463825195"
         }
       },
       "states" : {
@@ -13514,7 +15248,7 @@
                   "mobileOrder" : 4
                 },
                 "95a61f66-02e7-9646-2f93-735dfd57c221" : {
-                  "sizeX" : 5,
+                  "sizeX" : 6,
                   "sizeY" : 4,
                   "row" : 5,
                   "col" : 0,
@@ -13552,8 +15286,8 @@
                 "853690b2-9d8d-e223-5df1-f7b62f70d05c" : {
                   "sizeX" : 4,
                   "sizeY" : 4,
-                  "row" : 21,
-                  "col" : 1,
+                  "row" : 28,
+                  "col" : 0,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -13561,8 +15295,8 @@
                 "15c7e060-106a-cfb4-5fb2-fbeaa2eb8c98" : {
                   "sizeX" : 8,
                   "sizeY" : 7,
-                  "row" : 18,
-                  "col" : 9,
+                  "row" : 28,
+                  "col" : 4,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -13570,8 +15304,8 @@
                 "2a83ce81-2056-e9c3-8252-ba90cc85d454" : {
                   "sizeX" : 8,
                   "sizeY" : 7,
-                  "row" : 19,
-                  "col" : 17,
+                  "row" : 28,
+                  "col" : 12,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -13583,35 +15317,56 @@
                   "col" : 12
                 },
                 "e5baeeba-3cc2-25fc-3204-c1fae92e0f99" : {
-                  "sizeX" : 4,
-                  "sizeY" : 4,
-                  "row" : 5,
-                  "col" : 5
+                  "sizeX" : 8,
+                  "sizeY" : 3,
+                  "row" : 10,
+                  "col" : 16
                 },
                 "0954273c-ef29-5967-9ee5-21ff307cf50d" : {
                   "sizeX" : 8,
-                  "sizeY" : 6,
+                  "sizeY" : 4,
                   "resizable" : true,
-                  "row" : 10,
+                  "row" : 13,
                   "col" : 16
                 },
                 "2c26138d-9af0-eebc-2c76-55b064dca10b" : {
                   "sizeX" : 7,
                   "sizeY" : 4,
-                  "row" : 5,
-                  "col" : 9
+                  "row" : 35,
+                  "col" : 0,
+                  "resizable" : true,
+                  "mobileHide" : true,
+                  "desktopHide" : true
                 },
                 "4bd4b125-79bc-9c23-b521-6f640ebbe806" : {
                   "sizeX" : 8,
-                  "sizeY" : 7,
+                  "sizeY" : 8,
                   "row" : 9,
                   "col" : 0
                 },
                 "862608f4-579a-249f-e390-f80578dcd178" : {
                   "sizeX" : 8,
-                  "sizeY" : 7,
+                  "sizeY" : 8,
                   "row" : 9,
                   "col" : 8
+                },
+                "e5f22284-699b-a8d2-0099-f00d8e03a380" : {
+                  "sizeX" : 10,
+                  "sizeY" : 4,
+                  "row" : 5,
+                  "col" : 6
+                },
+                "524e76ba-e8d4-8ae8-fe63-041411dc3c2a" : {
+                  "sizeX" : 9,
+                  "sizeY" : 7,
+                  "row" : 17,
+                  "col" : 0
+                },
+                "29cfb677-f61a-148a-4f37-cb0463825195" : {
+                  "sizeX" : 9,
+                  "sizeY" : 7,
+                  "row" : 17,
+                  "col" : 9
                 }
               },
               "gridSettings" : {
@@ -13675,13 +15430,22 @@
                   "resizable" : true,
                   "row" : 0,
                   "col" : 0
+                },
+                "3630e5e6-72b6-3f51-b8e5-71a4c8735bdd" : {
+                  "sizeX" : 24,
+                  "sizeY" : 1,
+                  "resizable" : true,
+                  "row" : 14,
+                  "col" : 0,
+                  "mobileHide" : false,
+                  "desktopHide" : false
                 }
               },
               "gridSettings" : {
                 "layoutType" : "default",
                 "backgroundColor" : "#FFFFFFFC",
                 "columns" : 24,
-                "margin" : 10,
+                "margin" : 0,
                 "outerMargin" : false,
                 "backgroundSizeMode" : "100%",
                 "minColumns" : 24,
@@ -13691,6 +15455,56 @@
                 "backgroundImageUrl" : null,
                 "mobileAutoFillHeight" : false,
                 "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "alertashistorial" : {
+          "name" : "Historial de Alarmas",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "217e4b3e-5386-db34-b85d-6c9c036272a1" : {
+                  "sizeX" : 27,
+                  "sizeY" : 14,
+                  "resizable" : true,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        },
+        "solicitudeshistorial" : {
+          "name" : "Historial de Solicitudes",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "7cc3db14-ba16-b271-90b5-5361354abba1" : {
+                  "sizeX" : 24,
+                  "sizeY" : 12,
+                  "resizable" : true,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%"
               }
             }
           }
@@ -13885,7 +15699,10 @@
               "entityType" : "DEVICE",
               "id" : "be3a09a0-8f22-11f0-a61c-01e0c85fd5dd"
             },
-            "rootEntity" : null,
+            "rootEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "be3a09a0-8f22-11f0-a61c-01e0c85fd5dd"
+            },
             "direction" : "FROM",
             "maxLevel" : 3,
             "fetchLastLevelOnly" : true,
@@ -13900,10 +15717,10 @@
         "hideTimezone" : false,
         "selectedTab" : 0,
         "realtime" : {
-          "realtimeType" : 0,
+          "realtimeType" : 1,
           "interval" : 18000000,
           "timewindowMs" : 5184000000,
-          "quickInterval" : "CURRENT_DAY",
+          "quickInterval" : "CURRENT_MONTH",
           "hideInterval" : false,
           "hideLastInterval" : false,
           "hideQuickInterval" : false
@@ -13920,7 +15737,7 @@
           "hideQuickInterval" : false
         },
         "aggregation" : {
-          "type" : "SUM",
+          "type" : "NONE",
           "limit" : 25000
         },
         "timezone" : null
@@ -13939,10 +15756,10 @@
         "hideToolbar" : false,
         "showFilters" : false,
         "showUpdateDashboardImage" : false,
-        "dashboardCss" : ".tb-widget-container > .tb-widget {\n    border-radius: 8px !important;\n}\n\ngridster-item:not(.tb-noselect) > .tb-widget-container > .tb-widget {\n    cursor: default !important;\n}\n\n.tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-row {\n    cursor: pointer;\n}\n\n.tb-widget-container > .tb-widget .tb-legend-keys {\n    cursor: pointer;\n}\n\n.tb-dashboard-page.dark tb-dashboard > div {\n    background-color: #0A1F36 !important; /* rgb(238, 238, 238)*/\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget {\n    background: #0D2743 !important;\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget svg tspan {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-legend-item-label div {\n    color: rgba(255, 255, 255, 0.38) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-legend-item-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-shape svg text {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-type-label {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-item-label div {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text > div > div {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-row {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-row .mat-mdc-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mat-sort-header-arrow {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-divider {\n    border-top-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-moz-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-webkit-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element:-ms-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell .mdc-checkbox__background,.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mdc-checkbox__background {\n    border-color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget mat-toolbar.mat-mdc-table-toolbar:not([color=\"primary\"]) button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button[disabled][disabled] mat-icon {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button[disabled][disabled] {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator .mat-mdc-select-value {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-mdc-select-arrow {\n    color : rgba(255, 255, 255, 0.57);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple:before {\n    border-bottom-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, \n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {\n    border-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div,\n.tb-dashboard-page.dark .tb-markdown-view div.param,\n.tb-dashboard-page.dark .tb-markdown-view .header .title,\n.tb-dashboard-page.dark .tb-markdown-view p {\n    color : rgba(255, 255, 255, 0.87);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div.param-title,\n.tb-dashboard-page.dark .tb-markdown-view .header .subtitle {\n    color : rgba(255, 255, 255, 0.6);\n}\n\n\n.tb-dashboard-page.dark .tb-powered-by-footer {\n    color : rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Override value card background */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-panel {\n    background: #0D2743 !important;\n}\n\n/* Optional: overlay blur background fix */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-overlay {\n    background: rgba(0, 0, 0, 0.4) !important;\n}\n\n/* Override value card label and value text color */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-value,\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-label-row div {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Override subtitle or helper text if any */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-label-row div:nth-child(2) {\n    color: rgba(255, 255, 255, 0.6) !important;\n}\n\n/* Battery widget container background */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-panel {\n    background: #0D2743 !important;\n}\n\n/* Overlay background fix */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-overlay {\n    background: rgba(0, 0, 0, 0.4) !important;\n}\n\n/* Battery title text */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-widget-title .title {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Battery percentage value */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Optional: adjust indicator color if needed (or leave it if it's intentional) */\n/* Uncomment and modify if you want a darker-themed green indicator\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-indicator-box {\n    background-image: linear-gradient(0deg, #5cdf90 0%, #5cdf90 100%) !important;\n}\n*/\n\n\n/* Background panel */\n.tb-dashboard-page.dark .tb-latest-chart-panel {\n    background: #0D2743 !important;  /* matches your dark cards */\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Overlay background (blur layer) */\n.tb-dashboard-page.dark .tb-latest-chart-overlay {\n    background: rgba(0, 0, 0, 0.4) !important;\n}\n\n/* Title text */\n.tb-dashboard-page.dark .tb-latest-chart-panel .tb-widget-title-row .title {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* ECharts text (labels and values) */\n.tb-dashboard-page.dark .tb-latest-chart-panel svg tspan {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n.tb-dashboard-page.dark .tb-latest-chart-panel svg text {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n\n\n/* Force panel background in dark mode */\n.tb-dashboard-page.dark .tb-latest-chart-panel[style] {\n    background: #0D2743 !important;\n}\n\n\n\n/*-------------------------------------------------------------------------------*/\n\n\n/* --- Dark mode adjustments for custom table widget --- */\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-cell {\n  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* softer white line */\n  color: rgba(255, 255, 255, 0.87) !important; /* readable text */\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-row:hover {\n  background-color: rgba(255, 255, 255, 0.08) !important; /* subtle hover */\n}\n\n/* Adjust search box styling */\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-search-container {\n  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-search {\n  background-color: #0d2743 !important;\n  border: 1px solid rgba(255, 255, 255, 0.25) !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-search::placeholder {\n  color: rgba(255, 255, 255, 0.5) !important;\n}\n\n\n\n\n/*-------------------------------------------------------------------------------*/\n\n\n\n/* Fix dark-mode color for custom nav buttons inside header widgets */\n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget \n.tb-table-widget, /* keeps consistency across table widgets */\n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget .header button.tb-nav-button,\n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget .header button.tb-nav-button .mdc-button__label {\n    color: #E0E3E6 !important;\n}\n\n\n/* Optional: give a subtle hover color change for clarity */\n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget .header button.tb-nav-button:hover .mdc-button__label {\n    color: #FFFFFF !important;\n}\n\n\n/* Optional: smooth transition \n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget .header button.tb-nav-button .mdc-button__label {\n    transition: color 0.15s ease;\n}\n*/\n\n\n\n\n\n\n\n\n\n/* Disabled nav buttons in dark mode */\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button.mat-mdc-button-disabled,\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button[disabled] {\n    opacity: 1 !important; /* prevent Material from fading it too much */\n    cursor: not-allowed !important;\n}\n\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button.mat-mdc-button-disabled .mdc-button__label,\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button[disabled] .mdc-button__label {\n    color: rgba(255, 255, 255, 0.38) !important; /* correct \"greyed-out\" tone */\n}\n\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button.mat-mdc-button-disabled:hover,\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button[disabled]:hover {\n    background-color: transparent !important;\n}\n\n\n\n\n\n/* Dark mode fix for header icon buttons */\n.tb-dashboard-page.dark button.mat-mdc-icon-button[style*=\"--mat-icon-color\"] {\n  --mat-icon-color: #e0e3e6 !important;\n}\n\n/* Optional: hover highlight */\n.tb-dashboard-page.dark button.mat-mdc-icon-button[style*=\"--mat-icon-color\"]:hover {\n  --mat-icon-color: #ffffff !important;\n}\n\n/* Gauge value text color fix in dark mode */\n.tb-dashboard-page.dark .gauge-value {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n\n\n\n\n\n\n\n/* --- Dark mode fix for Progress Bar widget --- */\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-panel {\n  background: #0D2743 !important; /* match your dark cards */\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-overlay {\n  background: rgba(0, 0, 0, 0.4) !important;\n}\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-widget-title .title {\n  color: rgba(255, 255, 255, 0.87) !important; /* title text */\n}\n\n/*\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-value {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n*/\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-background {\n  background-color: rgba(255, 255, 255, 0.15) !important; /* bar background */\n}\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-progress {\n  background-color: #F36900 !important; /* keep orange progress */\n}\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-ticks {\n  color: rgba(255, 255, 255, 0.6) !important; /* tick numbers (0, 100, etc.) */\n}\n\n\n/* --- Dark mode fix for bar/gauge labels --- */\n.tb-dashboard-page.dark .bar-label {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n\n\n/* --- Dark mode fix for list item text --- */\n.tb-dashboard-page.dark .mat-mdc-list-item-unscoped-content,\n.tb-dashboard-page.dark .mdc-list-item__primary-text {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Ensure expansion indicator arrow stays light in dark mode */\n.tb-dashboard-page.dark .mat-expansion-indicator svg path {\n  fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Optional: brighten when hovered or expanded */\n.tb-dashboard-page.dark .mat-expansion-panel-header:hover .mat-expansion-indicator svg path,\n.tb-dashboard-page.dark .mat-expansion-panel.mat-expanded .mat-expansion-indicator svg path {\n  fill: #ffffff !important;\n}\n\n/* Extra safeguard — in case inline style or class overrides fill */\n.tb-dashboard-page.dark .mat-expansion-indicator svg {\n  color: rgba(255, 255, 255, 0.87) !important;\n  fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n.ng-tns-c3887866562-1726 .ng-star-inserted {\n    display: none !important;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* --- Dark theme styling for simple-text-popup dialog --- */\n\n/* Main popup container */\n.simple-text-popup {\n  background-color: #0D2743 !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n  border-radius: 12px !important;\n  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6) !important;\n}\n\n.mat-mdc-dialog-container .mat-mdc-dialog-content {\n\tcolor: #FFF !important;\n}\n\n/* Popover container*/\n.tb-popover-inner{\n    background-color: #0D2743 !important;\n}\n\n/* Toolbar */\n.simple-text-popup mat-toolbar[color=\"primary\"] {\n  background-color: #0A1F36 !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n  border-top-left-radius: 12px !important;\n  border-top-right-radius: 12px !important;\n}\n\n/* Content */\n.simple-text-popup [mat-dialog-content] {\n  background-color: transparent !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Divider */\n.simple-text-popup mat-divider {\n  border-top-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n/* Actions area */\n.simple-text-popup [mat-dialog-actions] {\n  background-color: transparent !important;\n}\n\n/* Primary button */\n.simple-text-popup button[mat-raised-button][color=\"primary\"] {\n  background-color: #F36900 !important;\n  color: #fff !important;\n  font-weight: 500;\n}\n\n/* Close icon */\n.simple-text-popup button[mat-icon-button] mat-icon {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Hover effect for close icon */\n.simple-text-popup button[mat-icon-button]:hover mat-icon {\n  color: #ffffff !important;\n}\n\n/* Optional: add fade-in animation */\n.simple-text-popup {\n  animation: popup-fade 0.25s ease-in-out;\n}\n@keyframes popup-fade {\n  from { opacity: 0; transform: scale(0.95); }\n  to { opacity: 1; transform: scale(1); }\n}\n"
+        "dashboardCss" : ".tb-widget-container > .tb-widget {\n    border-radius: 8px !important;\n}\n\n\ngridster-item:not(.tb-noselect) > .tb-widget-container > .tb-widget {\n    cursor: default !important;\n}\n\n\n.tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-row {\n    cursor: pointer;\n}\n\n.tb-widget-container > .tb-widget .tb-legend-keys {\n    cursor: pointer;\n}\n\n.tb-dashboard-page.dark tb-dashboard > div {\n    background-color: #0A1F36 !important; /* rgb(238, 238, 238)*/\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget {\n    background: #0D2743 !important;\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget svg tspan {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-legend-item-label div {\n    color: rgba(255, 255, 255, 0.38) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-legend-item-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-latest-chart-shape svg text {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-type-label {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-item-label div {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text > div > div {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-row {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-row .mat-mdc-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mat-sort-header-arrow {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-divider {\n    border-top-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-moz-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-webkit-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element:-ms-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell .mdc-checkbox__background,.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mdc-checkbox__background {\n    border-color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget mat-toolbar.mat-mdc-table-toolbar:not([color=\"primary\"]) button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button[disabled][disabled] mat-icon {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button[disabled][disabled] {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator .mat-mdc-select-value {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-mdc-select-arrow {\n    color : rgba(255, 255, 255, 0.57);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple:before {\n    border-bottom-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, \n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {\n    border-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div,\n.tb-dashboard-page.dark .tb-markdown-view div.param,\n.tb-dashboard-page.dark .tb-markdown-view .header .title,\n.tb-dashboard-page.dark .tb-markdown-view p {\n    color : rgba(255, 255, 255, 0.87);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div.param-title,\n.tb-dashboard-page.dark .tb-markdown-view .header .subtitle {\n    color : rgba(255, 255, 255, 0.6);\n}\n\n\n.tb-dashboard-page.dark .tb-powered-by-footer {\n    color : rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Override value card background */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-panel {\n    background: #0D2743 !important;\n}\n\n/* Optional: overlay blur background fix */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-overlay {\n    background: rgba(0, 0, 0, 0.4) !important;\n}\n\n/* Override value card label and value text color */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-value,\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-label-row div {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Override subtitle or helper text if any */\n.tb-dashboard-page.dark tb-value-card-widget .tb-value-card-label-row div:nth-child(2) {\n    color: rgba(255, 255, 255, 0.6) !important;\n}\n\n/* Battery widget container background */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-panel {\n    background: #0D2743 !important;\n}\n\n/* Overlay background fix */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-overlay {\n    background: rgba(0, 0, 0, 0.4) !important;\n}\n\n/* Battery title text */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-widget-title .title {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Battery percentage value */\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Optional: adjust indicator color if needed (or leave it if it's intentional) */\n/* Uncomment and modify if you want a darker-themed green indicator\n.tb-dashboard-page.dark tb-battery-level-widget .tb-battery-level-indicator-box {\n    background-image: linear-gradient(0deg, #5cdf90 0%, #5cdf90 100%) !important;\n}\n*/\n\n\n/* Background panel */\n.tb-dashboard-page.dark .tb-latest-chart-panel {\n    background: #0D2743 !important;  /* matches your dark cards */\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Overlay background (blur layer) */\n.tb-dashboard-page.dark .tb-latest-chart-overlay {\n    background: rgba(0, 0, 0, 0.4) !important;\n}\n\n/* Title text */\n.tb-dashboard-page.dark .tb-latest-chart-panel .tb-widget-title-row .title {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* ECharts text (labels and values) */\n.tb-dashboard-page.dark .tb-latest-chart-panel svg tspan {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n.tb-dashboard-page.dark .tb-latest-chart-panel svg text {\n    fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n\n\n/* Force panel background in dark mode */\n.tb-dashboard-page.dark .tb-latest-chart-panel[style] {\n    background: #0D2743 !important;\n}\n\n\n\n/*-------------------------------------------------------------------------------*/\n\n\n/* --- Dark mode adjustments for custom table widget --- */\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-cell {\n  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* softer white line */\n  color: rgba(255, 255, 255, 0.87) !important; /* readable text */\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-row:hover {\n  background-color: rgba(255, 255, 255, 0.08) !important; /* subtle hover */\n}\n\n/* Adjust search box styling */\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-search-container {\n  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-search {\n  background-color: #0d2743 !important;\n  border: 1px solid rgba(255, 255, 255, 0.25) !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-search::placeholder {\n  color: rgba(255, 255, 255, 0.5) !important;\n}\n\n\n\n\n/*-------------------------------------------------------------------------------*/\n\n\n\n/* Fix dark-mode color for custom nav buttons inside header widgets */\n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget \n.tb-table-widget, /* keeps consistency across table widgets */\n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget .header button.tb-nav-button,\n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget .header button.tb-nav-button .mdc-button__label {\n    color: #E0E3E6 !important;\n}\n\n\n/* Optional: give a subtle hover color change for clarity */\n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget .header button.tb-nav-button:hover .mdc-button__label {\n    color: #FFFFFF !important;\n}\n\n\n/* Optional: smooth transition \n.tb-dashboard-page.dark \n.tb-widget-container > .tb-widget .header button.tb-nav-button .mdc-button__label {\n    transition: color 0.15s ease;\n}\n*/\n\n\n\n\n\n\n\n\n\n/* Disabled nav buttons in dark mode */\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button.mat-mdc-button-disabled,\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button[disabled] {\n    opacity: 1 !important; /* prevent Material from fading it too much */\n    cursor: not-allowed !important;\n}\n\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button.mat-mdc-button-disabled .mdc-button__label,\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button[disabled] .mdc-button__label {\n    color: rgba(255, 255, 255, 0.38) !important; /* correct \"greyed-out\" tone */\n}\n\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button.mat-mdc-button-disabled:hover,\n.tb-dashboard-page.dark\n.tb-widget-container > .tb-widget .header button.tb-nav-button[disabled]:hover {\n    background-color: transparent !important;\n}\n\n\n\n\n\n/* Dark mode fix for header icon buttons */\n.tb-dashboard-page.dark button.mat-mdc-icon-button[style*=\"--mat-icon-color\"] {\n  --mat-icon-color: #e0e3e6 !important;\n}\n\n/* Optional: hover highlight */\n.tb-dashboard-page.dark button.mat-mdc-icon-button[style*=\"--mat-icon-color\"]:hover {\n  --mat-icon-color: #ffffff !important;\n}\n\n/* Gauge value text color fix in dark mode */\n.tb-dashboard-page.dark .gauge-value {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n\n\n\n\n\n\n\n/* --- Dark mode fix for Progress Bar widget --- */\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-panel {\n  background: #0D2743 !important; /* match your dark cards */\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-overlay {\n  background: rgba(0, 0, 0, 0.4) !important;\n}\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-widget-title .title {\n  color: rgba(255, 255, 255, 0.87) !important; /* title text */\n}\n\n/*\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-value {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n*/\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-background {\n  background-color: rgba(255, 255, 255, 0.15) !important; /* bar background */\n}\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-progress {\n  background-color: #F36900 !important; /* keep orange progress */\n}\n\n.tb-dashboard-page.dark tb-progress-bar-widget .tb-progress-bar-ticks {\n  color: rgba(255, 255, 255, 0.6) !important; /* tick numbers (0, 100, etc.) */\n}\n\n\n/* --- Dark mode fix for bar/gauge labels --- */\n.tb-dashboard-page.dark .bar-label {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n\n\n/* --- Dark mode fix for list item text --- */\n.tb-dashboard-page.dark .mat-mdc-list-item-unscoped-content,\n.tb-dashboard-page.dark .mdc-list-item__primary-text {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Ensure expansion indicator arrow stays light in dark mode */\n.tb-dashboard-page.dark .mat-expansion-indicator svg path {\n  fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Optional: brighten when hovered or expanded */\n.tb-dashboard-page.dark .mat-expansion-panel-header:hover .mat-expansion-indicator svg path,\n.tb-dashboard-page.dark .mat-expansion-panel.mat-expanded .mat-expansion-indicator svg path {\n  fill: #ffffff !important;\n}\n\n/* Extra safeguard — in case inline style or class overrides fill */\n.tb-dashboard-page.dark .mat-expansion-indicator svg {\n  color: rgba(255, 255, 255, 0.87) !important;\n  fill: rgba(255, 255, 255, 0.87) !important;\n}\n\n.ng-tns-c3887866562-1726 .ng-star-inserted {\n    display: none !important;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* --- Dark theme styling for simple-text-popup dialog --- */\n\n/* Main popup container */\n.simple-text-popup {\n  background-color: #0D2743 !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n  border-radius: 12px !important;\n  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6) !important;\n}\n\n.mat-mdc-dialog-container .mat-mdc-dialog-content {\n\tcolor: #FFF !important;\n}\n\n/* Popover container*/\n.tb-popover-inner{\n    background-color: none !important;\n}\n\n\n/* Toolbar */\n.simple-text-popup mat-toolbar[color=\"primary\"] {\n  background-color: #0A1F36 !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n  border-top-left-radius: 12px !important;\n  border-top-right-radius: 12px !important;\n}\n\n/* Content */\n.simple-text-popup [mat-dialog-content] {\n  background-color: transparent !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Divider */\n.simple-text-popup mat-divider {\n  border-top-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n/* Actions area */\n.simple-text-popup [mat-dialog-actions] {\n  background-color: transparent !important;\n}\n\n/* Primary button */\n.simple-text-popup button[mat-raised-button][color=\"primary\"] {\n  background-color: #F36900 !important;\n  color: #fff !important;\n  font-weight: 500;\n}\n\n/* Close icon */\n.simple-text-popup button[mat-icon-button] mat-icon {\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n/* Hover effect for close icon */\n.simple-text-popup button[mat-icon-button]:hover mat-icon {\n  color: #ffffff !important;\n}\n\n/* Optional: add fade-in animation */\n.simple-text-popup {\n  animation: popup-fade 0.25s ease-in-out;\n}\n@keyframes popup-fade {\n  from { opacity: 0; transform: scale(0.95); }\n  to { opacity: 1; transform: scale(1); }\n}\n\n\n\n\n\n\n\n\n\n\n\n.tb-popover-inner-container {\n    background-color: #0D2743 !important;\n    color: rgba(255, 255, 255, 0.87) !important;\n    padding: 0px !important;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
       }
     },
-    "name" : "Dashboard Supervisor",
+    "name" : "Dashboard de supervisión",
     "resources" : null,
     "assignedCustomers" : [ {
       "customerId" : {

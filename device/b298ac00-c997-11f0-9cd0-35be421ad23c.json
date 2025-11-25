@@ -4,7 +4,7 @@
     "additionalInfo" : null,
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
     },
     "deviceData" : {
       "configuration" : {
@@ -22,27 +22,48 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "42c15d60-c0a9-11f0-9cd0-35be421ad23c"
+      "id" : "b298ac00-c997-11f0-9cd0-35be421ad23c"
     },
     "label" : "Room 234 Sensor",
-    "name" : "A4B72CCDFF33",
+    "name" : "SUPER JUANITO PERECITO",
     "softwareId" : null,
     "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "fVTDXEpWGA9n6Sk9CXH0",
+    "credentialsId" : "qhw3NYQGIuODe0c9fhBK",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b298ac00-c997-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 214188
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1763049365101,
+      "lastUpdateTs" : 1764032035261,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1764032035256,
+      "longValue" : 1764032035255,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

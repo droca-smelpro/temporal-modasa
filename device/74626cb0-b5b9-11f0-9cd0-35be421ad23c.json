@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
     },
     "deviceData" : {
       "configuration" : {
@@ -45,7 +45,15 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1762970481323,
+      "lastUpdateTs" : 1764028795156,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"parte\":3,\"total\":3,\"names\":\"iot4\",\"var1\":1,\"diff\":\"true\",\"test\":3}",
+      "key" : "buffer",
+      "lastUpdateTs" : 1763769914641,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,75 +61,35 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1762970481319,
-      "longValue" : 1762970481319,
+      "lastUpdateTs" : 1764028795153,
+      "longValue" : 1764028795152,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1762969846732,
-      "longValue" : 1762969844007,
+      "lastUpdateTs" : 1764028153729,
+      "longValue" : 1764028152521,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1762969843790,
-      "longValue" : 1762969843790,
+      "lastUpdateTs" : 1764028152322,
+      "longValue" : 1764028152322,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1762969844017,
-      "longValue" : 1762969844017,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "serie_abcd_dispositivo_PruebaSimulador",
-      "lastUpdateTs" : 1762964792523,
-      "longValue" : 30,
+      "lastUpdateTs" : 1764028152523,
+      "longValue" : 1764028152523,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "abcd",
-      "lastUpdateTs" : 1762967812289,
-      "longValue" : null,
-      "strValue" : "abcd"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "serie_abcd_dispositivo_PruebaSimulador",
-      "lastUpdateTs" : 1762969843920,
-      "longValue" : 30,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "seriel",
-      "lastUpdateTs" : 1762968225540,
-      "longValue" : null,
-      "strValue" : "abcd"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "seriel2",
-      "lastUpdateTs" : 1762969843920,
-      "longValue" : null,
-      "strValue" : "abcd"
-    } ]
+    "SHARED_SCOPE" : [ ]
   },
   "calculatedFields" : [ ]
 }

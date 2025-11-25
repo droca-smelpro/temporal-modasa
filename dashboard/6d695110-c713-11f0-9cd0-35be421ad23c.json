@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "testeo_envios",
+    "title" : "testeo_envios_reconstrucción",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -17,59 +17,65 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3",
+              "deviceId" : "1993ee00-a923-11f0-9abe-2dfd6db9cae3",
               "entityAliasId" : null,
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "evento",
+                "name" : "parte",
                 "type" : "timeseries",
-                "label" : "evento",
+                "label" : "parte",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.3401404581803076,
-                "decimals" : 0
+                "_hash" : 0.46519504246139853
               }, {
-                "name" : "causa",
+                "name" : "total",
                 "type" : "timeseries",
-                "label" : "causa",
+                "label" : "total",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.2790989056758474
+              }, {
+                "name" : "names",
+                "type" : "timeseries",
+                "label" : "names",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.07974066029050764
+              }, {
+                "name" : "diff",
+                "type" : "timeseries",
+                "label" : "diff",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.00909945581270788
+              }, {
+                "name" : "test",
+                "type" : "timeseries",
+                "label" : "test",
                 "color" : "#607d8b",
                 "settings" : { },
-                "_hash" : 0.6782603087456879
+                "_hash" : 0.12260721928131113
               }, {
-                "name" : "estado",
+                "name" : "var1",
                 "type" : "timeseries",
-                "label" : "estado",
+                "label" : "var1",
                 "color" : "#9c27b0",
                 "settings" : { },
-                "_hash" : 0.9103828634358593
+                "_hash" : 0.7113446794352963
               }, {
-                "name" : "checklist",
+                "name" : "var2",
                 "type" : "timeseries",
-                "label" : "checklist",
+                "label" : "var2",
                 "color" : "#8bc34a",
                 "settings" : { },
-                "_hash" : 0.5869464224199324
+                "_hash" : 0.5526399780065123
               }, {
-                "name" : "timestamp",
+                "name" : "var3",
                 "type" : "timeseries",
-                "label" : "timestamp",
+                "label" : "var3",
                 "color" : "#3f51b5",
                 "settings" : { },
-                "_hash" : 0.4249069180449173
-              }, {
-                "name" : "tipo",
-                "type" : "timeseries",
-                "label" : "tipo",
-                "color" : "#e91e63",
-                "settings" : { },
-                "_hash" : 0.20480920594328356
-              }, {
-                "name" : "nombre_operario",
-                "type" : "timeseries",
-                "label" : "nombre_operario",
-                "color" : "#8bc34a",
-                "settings" : { },
-                "_hash" : 0.8593273676937472
+                "_hash" : 0.036131286230591586
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -333,15 +339,15 @@
               "widgets" : {
                 "48eb8162-db49-9af9-e8b8-a1063b8ed59d" : {
                   "sizeX" : 18,
-                  "sizeY" : 12,
+                  "sizeY" : 9,
                   "row" : 0,
                   "col" : 0
                 },
                 "d8dfee6f-110b-292b-de73-a2f46e4fb44d" : {
-                  "sizeX" : 6,
-                  "sizeY" : 12,
-                  "row" : 0,
-                  "col" : 18
+                  "sizeX" : 18,
+                  "sizeY" : 5,
+                  "row" : 9,
+                  "col" : 0
                 }
               },
               "gridSettings" : {
@@ -402,13 +408,13 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "testeo_envios",
+    "name" : "testeo_envios_reconstrucción",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,
     "id" : {
       "entityType" : "DASHBOARD",
-      "id" : "db908e30-b5b4-11f0-9cd0-35be421ad23c"
+      "id" : "6d695110-c713-11f0-9cd0-35be421ad23c"
     }
   },
   "relations" : [ ],

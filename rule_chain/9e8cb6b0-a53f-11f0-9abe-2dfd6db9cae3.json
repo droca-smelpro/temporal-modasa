@@ -61,6 +61,10 @@
       "toIndex" : 34,
       "type" : "Success"
     }, {
+      "fromIndex" : 6,
+      "toIndex" : 50,
+      "type" : "Success"
+    }, {
       "fromIndex" : 7,
       "toIndex" : 8,
       "type" : "Success"
@@ -97,8 +101,12 @@
       "toIndex" : 20,
       "type" : "Success"
     }, {
+      "fromIndex" : 18,
+      "toIndex" : 52,
+      "type" : "Success"
+    }, {
       "fromIndex" : 19,
-      "toIndex" : 32,
+      "toIndex" : 47,
       "type" : "Success"
     }, {
       "fromIndex" : 21,
@@ -183,6 +191,38 @@
     }, {
       "fromIndex" : 42,
       "toIndex" : 43,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 45,
+      "toIndex" : 49,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 45,
+      "toIndex" : 49,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 46,
+      "toIndex" : 48,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 47,
+      "toIndex" : 46,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 48,
+      "toIndex" : 45,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 32,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 50,
+      "toIndex" : 51,
+      "type" : "fin_estacion"
+    }, {
+      "fromIndex" : 52,
+      "toIndex" : 53,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
@@ -352,15 +392,15 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "\n\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada){\n    var unidades_ensambladas;\n    unidades_ensambladas=1;\n    \n    msg.unidades_ensambladas=unidades_ensambladas;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=\"true\";\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=\"true\";\n          \n      \n        }\n    }\n  else{\n    unidades_ensambladas=0;\n    msg.unidades_ensambladas=unidades_ensambladas;\n    }\n      \n  //unidades_ensambladas=unidades_ALAprimera+unidades_retrabajadas;\n  \n\n  msg.disponibilidad=(tiempoSegundos(msg.tiempo_activo))/(tiempoSegundos(msg.tiempo_estandar)); //usadado para estacion 1.9\n  msg.cantidad_teorica=msg.produccion_teorica;\n  \n  \n  msg.pe_operario=(msg.tiempo_estandar)/(msg.tiempo_total); //eficiencia operario\n  \n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=(msg.tiempo_activo)/(msg.tiempo_total);\n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n        var categoria = null;\n    if (Array.isArray(msg.causa) && msg.causa.length > 0 && msg.causa[0].categoria) {\n        categoria = msg.causa[0].categoria;\n    }\n\n//------------------------------------------------------------------------\n    if( categoria==\"PROBLEMA DE ENSAMBLAJE\" ){\n        \n        msg.cont_PROBLEMA_DE_ENSAMBLAJE=1;         //contador de tipo de categoria\n        msg.tiempo_paradas_causa1=tiempoSegundos(msg.tiempo_estado); //tiempo en segundos, variable para sumar solo de esa causa.\n        \n        //msg.counter_parada_PROBLEMA_DE_ENSAMBLAJE=1;                  //VARIABLE PARA ACUMULAR CANTIDAD DE CAUSA 1 EN LINEA 1    \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);           //variable usada para acumular tiempo de todas las causas.\n    }\n    \n    else if(categoria==\"INSTRUCTIVO REQUIERE REVISION\"){\n        \n        msg.cont_INSTRUCTIVO_REQUIERE_REVISION=1;\n        msg.tiempo_paradas_causa2=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_INSTRUCTIVO_REQUIERE_REVISION=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if( categoria==\"LISTA DE ESPECIFICACIONES REQUIERE REVISION\" ){\n        \n        msg.cont_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION=1;\n        msg.tiempo_paradas_causa3=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if(categoria==\"PROBLEMA DE SUMINISTRO\"   ){\n        \n        msg.cont_PROBLEMA_DE_SUMINISTRO=1;\n        msg.tiempo_paradas_causa4=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_PROBLEMA_DE_SUMINISTRO=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if( categoria==\"PROBLEMA DE PRUEBA\"   ){\n        \n        msg.cont_PROBLEMA_DE_PRUEBA=1;\n        msg.tiempo_paradas_causa5=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_PROBLEMA_DE_PRUEBA=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if( categoria==\"ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO\"   ){\n        \n        msg.cont_ESPACIO_NO_DISPONIBLE_PARA_ABASTECIMIENTO=1;\n        msg.tiempo_paradas_causa6=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_ESPACION_NO_DISPONIBLE_PARA_ABASTECIMIENTO=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if( categoria==\"OTRO\" ){\n        \n        msg.cont_OTRO=1;\n        msg.tiempo_paradas_causa7=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_OTRO=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    else{\n        msg.z_status_evento_causa=\"sin causa null\";\n    }\n    \n    \n    \n   \n   msg.z_status_evento=\"FIN_PARADA\"; //variable para admin ver que parte del codigo se ejecuto.\n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n /*\n    function tiempoSegundos(timeArray){\n        //se calcula los segundos totales\n        var partes =timeArray.split(':').map(Number);\n         //if (partes.length !== 4) {\n         //throw new Error(\"El formato debe ser dd:hh:mm:ss\");\n    \n         //}\n  var dias=partes[0]*24*3600;\n  var horas=partes[1]*3600;\n  var minutos=partes[2]*60;\n  var segundos=partes[3];\n\n        \n    return dias+horas+minutos+segundos;\n\n}\n*/\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n",
+        "jsScript" : "\n\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\"){\n    var unidades_ensambladas;\n    unidades_ensambladas=1;\n    \n    msg.unidades_ensambladas=unidades_ensambladas;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=\"true\";\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=\"true\";\n          \n      \n        }\n    }\n  else{\n    unidades_ensambladas=0;\n    msg.unidades_ensambladas=unidades_ensambladas;\n    }\n      \n  //unidades_ensambladas=unidades_ALAprimera+unidades_retrabajadas;\n  \n\n  msg.disponibilidad=(tiempoSegundos(msg.tiempo_activo))/(tiempoSegundos(msg.tiempo_estandar)); //usadado para estacion 1.9\n  msg.cantidad_teorica=msg.produccion_teorica;\n  \n\n  \n  \n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=(msg.tiempo_activo)/(msg.tiempo_total);\n  \n  msg.tiempo_estandar=tiempoSegundos(msg.tiempo_estandar);\n  msg.p_operario=(msg.tiempo_estandar)/(msg.tiempo_total); //eficiencia operario\n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n        var categoria = null;\n    if (Array.isArray(msg.causa) && msg.causa.length > 0 && msg.causa[0].categoria) {\n        categoria = msg.causa[0].categoria;\n    }\n\n//------------------------------------------------------------------------\n    if( categoria==\"PROBLEMA DE ENSAMBLAJE\" ){\n        \n        msg.cont_PROBLEMA_DE_ENSAMBLAJE=1;         //contador de tipo de categoria\n        msg.tiempo_paradas_causa1=tiempoSegundos(msg.tiempo_estado); //tiempo en segundos, variable para sumar solo de esa causa.\n        \n        //msg.counter_parada_PROBLEMA_DE_ENSAMBLAJE=1;                  //VARIABLE PARA ACUMULAR CANTIDAD DE CAUSA 1 EN LINEA 1    \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);           //variable usada para acumular tiempo de todas las causas.\n    }\n    \n    else if(categoria==\"INSTRUCTIVO REQUIERE REVISION\"){\n        \n        msg.cont_INSTRUCTIVO_REQUIERE_REVISION=1;\n        msg.tiempo_paradas_causa2=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_INSTRUCTIVO_REQUIERE_REVISION=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if( categoria==\"LISTA DE ESPECIFICACIONES REQUIERE REVISION\" ){\n        \n        msg.cont_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION=1;\n        msg.tiempo_paradas_causa3=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if(categoria==\"PROBLEMA DE SUMINISTRO\"   ){\n        \n        msg.cont_PROBLEMA_DE_SUMINISTRO=1;\n        msg.tiempo_paradas_causa4=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_PROBLEMA_DE_SUMINISTRO=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if( categoria==\"PROBLEMA DE PRUEBA\"   ){\n        \n        msg.cont_PROBLEMA_DE_PRUEBA=1;\n        msg.tiempo_paradas_causa5=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_PROBLEMA_DE_PRUEBA=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if( categoria==\"ESPACIO NO DISPONIBLE PARA ABASTECIMIENTO\"   ){\n        \n        msg.cont_ESPACIO_NO_DISPONIBLE_PARA_ABASTECIMIENTO=1;\n        msg.tiempo_paradas_causa6=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_ESPACION_NO_DISPONIBLE_PARA_ABASTECIMIENTO=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    \n    else if( categoria==\"OTRO\" ){\n        \n        msg.cont_OTRO=1;\n        msg.tiempo_paradas_causa7=tiempoSegundos(msg.tiempo_estado);\n        \n        //msg.counter_parada_OTRO=1; \n        msg.time_parada=tiempoSegundos(msg.tiempo_estado);\n    }\n    else{\n        msg.z_status_evento_causa=\"sin causa null\";\n    }\n    \n    \n    \n   \n   msg.z_status_evento=\"FIN_PARADA\"; //variable para admin ver que parte del codigo se ejecuto.\n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n /*\n    function tiempoSegundos(timeArray){\n        //se calcula los segundos totales\n        var partes =timeArray.split(':').map(Number);\n         //if (partes.length !== 4) {\n         //throw new Error(\"El formato debe ser dd:hh:mm:ss\");\n    \n         //}\n  var dias=partes[0]*24*3600;\n  var horas=partes[1]*3600;\n  var minutos=partes[2]*60;\n  var segundos=partes[3];\n\n        \n    return dias+horas+minutos+segundos;\n\n}\n*/\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1764018443300,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -625,8 +665,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1763655917329,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -695,8 +735,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1182,
-        "layoutY" : 447
+        "layoutX" : 1220,
+        "layoutY" : 449
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -717,8 +757,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1764029882872,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -733,8 +773,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 706,
-        "layoutY" : 360
+        "layoutX" : 707,
+        "layoutY" : 354
       },
       "configuration" : {
         "version" : 0
@@ -743,8 +783,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1763053714174,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -773,8 +813,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1764029882872,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -1089,8 +1129,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1763676076218,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -1105,8 +1145,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 964,
-        "layoutY" : 370
+        "layoutX" : 967,
+        "layoutY" : 429
       },
       "configuration" : {
         "direction" : "FROM",
@@ -1122,8 +1162,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1764029882872,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -1138,8 +1178,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 465,
-        "layoutY" : 441
+        "layoutX" : 445,
+        "layoutY" : 438
       },
       "configuration" : {
         "latestTsKeyNames" : [ "$[nombre_variable]" ],
@@ -1187,8 +1227,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1763671336776,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -1215,8 +1255,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1763671347939,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -1385,8 +1425,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 730,
-        "layoutY" : 449
+        "layoutX" : 449,
+        "layoutY" : 537
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1413,8 +1453,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 973,
-        "layoutY" : 474
+        "layoutX" : 448,
+        "layoutY" : 623
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1441,8 +1481,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1256,
-        "layoutY" : 540
+        "layoutX" : 448,
+        "layoutY" : 725
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1494,45 +1534,289 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 543,
-        "layoutY" : 652
+        "layoutX" : 720,
+        "layoutY" : 689
       },
       "configuration" : {
-        "restEndpointUrlPattern" : "http://localhost/api",
+        "restEndpointUrlPattern" : "https://dashboard.smelpro.com/api/device",
         "requestMethod" : "POST",
-        "headers" : {
-          "Content-Type" : "application/json"
-        },
         "useSimpleClientHttpFactory" : false,
-        "readTimeoutMs" : 0,
-        "maxParallelRequestsCount" : 0,
         "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
         "enableProxy" : false,
         "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
         "proxyHost" : null,
         "proxyPort" : 0,
         "proxyUser" : null,
         "proxyPassword" : null,
-        "proxyScheme" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/json",
+          "Authorization" : "Bearer ${token}"
+        },
         "credentials" : {
           "type" : "anonymous"
         },
-        "ignoreRequestBody" : false,
         "maxInMemoryBufferSizeInKb" : 256
       },
       "configurationVersion" : 3,
       "createdTime" : 0,
-      "debugSettings" : null,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764032078902,
+        "failuresEnabled" : true
+      },
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "f46dfbe0-c0a9-11f0-9cd0-35be421ad23c"
       },
-      "name" : "hola",
+      "name" : "crear_DEVICE_OPERARIOS",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 707,
+        "layoutY" : 526
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "https://dashboard.smelpro.com/api/auth/login",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : false,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/json"
+        },
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : 256
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763066895734,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d8884800-c0bc-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "token",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 699,
+        "layoutY" : 441
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var msgout={};\n\n//msgout.username=\"adelacruz@smelpro.com\";\n//msgout.password=\"alexandersmelpro\";\nmsgout.username=\"modasa@smelpro.com\";\nmsgout.password=\"modasa2025#\";\n\nmetadata.nombre_operario=msg.nombre_operario;\nmetadata.p_operario=msg.p_operario;\n\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763066895734,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ef11ef40-c0bc-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "aaacvv",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 719,
+        "layoutY" : 600
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var msgout={};\n\nvar idperfil={\n    \"id\": \"bcb29c10-bc21-11f0-9cd0-35be421ad23c\",\n    \"entityType\": \"DEVICE_PROFILE\"\n    \n};\n\nmetadata.token=msg.token;\n\nmsgout.name=metadata.nombre_operario;\nmsgout.type=\"chambas\";\nmsgout.label=\"Room 234 Sensor\";\nmsgout.deviceProfileId=idperfil;\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n\n\n\n\n/*\n{\n\n  \"name\": \"A4B72CCDFF33\",\n  \"type\": \"chambas\",\n  \"label\": \"Room 234 Sensor\",\n  \"deviceProfileId\": {\n    \"id\": \"bcb29c10-bc21-11f0-9cd0-35be421ad23c\",\n    \"entityType\": \"DEVICE_PROFILE\"\n  }\n\n\n}\n*/",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764032562393,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "14928360-c0c2-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "koool",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 973,
+        "layoutY" : 562
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\n\nvar msgout ={};\n\nmsgout.nombre_operario=metadata.nombre_operario;\nmsgout.p_operario=metadata.p_operario;\nmetadata.customer=\"Usuarios\";\n\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764032078902,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "bd915990-c0d2-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "mnknk",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 63,
+        "layoutY" : 19
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    if(msg.evento == \"FIN_ESTACION\") {\n        return ['fin_estacion'];\n    }\n    else {\n        return ['no'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763671018614,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5cfdefe0-c64e-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "FILTRO fin estacion",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 393,
+        "layoutY" : 18
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1763676083877,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "859ea200-c64e-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "degug_fin_estacion",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1167,
+        "layoutY" : 675
+      },
+      "configuration" : {
+        "customerNamePattern" : "Usuarios",
+        "createCustomerIfNotExists" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764032078902,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e65a64d0-c991-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "asignar cliente",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbAssignToCustomerNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1438,
+        "layoutY" : 683
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0c03fd60-c99a-11f0-9cd0-35be421ad23c"
+      },
+      "name" : "bygty",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -1548,7 +1832,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 141223
+    "version" : 210368
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
