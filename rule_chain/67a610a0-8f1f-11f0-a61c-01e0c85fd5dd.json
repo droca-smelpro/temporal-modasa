@@ -44,7 +44,7 @@
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 10,
+      "toIndex" : 11,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
@@ -58,10 +58,15 @@
       "fromIndex" : 10,
       "toIndex" : 7,
       "type" : "Salida 1"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 10,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 809,
         "layoutY" : 532
       },
@@ -74,7 +79,11 @@
       },
       "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugSettings" : null,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764106926716,
+        "failuresEnabled" : true
+      },
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -235,8 +244,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 508,
-        "layoutY" : 528
+        "layoutX" : 501,
+        "layoutY" : 531
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
@@ -331,36 +340,32 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 315,
-        "layoutY" : 725
+        "layoutX" : 200,
+        "layoutY" : 367
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "useMessageAlarmData" : false,
-        "overwriteAlarmDetails" : false,
-        "alarmType" : "General Alarm",
-        "severity" : "CRITICAL",
-        "propagate" : false,
-        "relationTypes" : [ ],
-        "propagateToOwner" : false,
-        "propagateToTenant" : false,
-        "dynamicSeverity" : false
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 1,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugSettings" : null,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764106858000,
+        "failuresEnabled" : true
+      },
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "cd6752c0-c951-11f0-9cd0-35be421ad23c"
+        "id" : "ad0b4830-ca44-11f0-b9be-a7eb49293647"
       },
-      "name" : "HYBH",
+      "name" : "delay",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -376,7 +381,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 210368
+    "version" : 218974
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -389,7 +394,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 210366
+    "version" : 218972
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -402,7 +407,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 210364
+    "version" : 218970
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -415,7 +420,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 210362
+    "version" : 218968
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

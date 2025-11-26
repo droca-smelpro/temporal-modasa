@@ -51,32 +51,6 @@
     "type" : "Contains",
     "typeGroup" : "COMMON",
     "version" : 118155
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "863ddff0-bc21-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 139945
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "196f1110-bc20-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 139946
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -86,6 +60,38 @@
       "key" : "active",
       "lastUpdateTs" : 1763983743320,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"c_unidades_ALAprimera\":0,\"c_unidades_ensambladas\":0,\"c_unidades_retrabajadas\":0,\"parte\":1,\"total\":1,\"names\":1,\"diff\":\"true\",\"test\":1}",
+      "key" : "buffer",
+      "lastUpdateTs" : 1764082524985,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ALAprimera",
+      "lastUpdateTs" : 1764082525184,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ensambladas",
+      "lastUpdateTs" : 1764082525184,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_retrabajadas",
+      "lastUpdateTs" : 1764082525184,
+      "longValue" : 0,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -100,24 +106,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764032722733,
-      "longValue" : 1764032721620,
+      "lastUpdateTs" : 1764171241628,
+      "longValue" : 1764171240016,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764025041519,
-      "longValue" : 1764025041519,
+      "lastUpdateTs" : 1764167339961,
+      "longValue" : 1764167339961,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764025038452,
-      "longValue" : 1764025038452,
+      "lastUpdateTs" : 1764082525183,
+      "longValue" : 1764082525183,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

@@ -42,6 +42,19 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
+      "id" : "1993ee00-a923-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 216328
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
       "id" : "7c620750-8f20-11f0-a61c-01e0c85fd5dd"
     },
     "to" : {
@@ -58,15 +71,15 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1763983742335,
+      "lastUpdateTs" : 1764128630954,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "{\"CLASIFICACION\":\"NO ESTANDAR\",\"MODELO\":\"MP45-60\",\"OPERARIO_ID\":[\"72190940\"],\"TIMESTAMP\":\"2025-11-24 19:48:27\",\"cliente\":\"TECNICA AVICOLA S.A.\",\"estacion\":6,\"estado\":\"EN PARADA\",\"evento\":\"REQUIERE_LEVANTAMIENTO\",\"linea\":1,\"names\":46,\"nombre_operario\":[\"GALLARDO TORRES KETTY YARITZA\"],\"parte\":1,\"serie\":\"X57196I\",\"total\":1,\"diff\":\"true\",\"test\":2}",
+      "jsonValue" : "{\"TIMESTAMP\":\"2025-11-25 20:33:06\",\"estacion\":6,\"estado\":\"EN OPERACIÓN\",\"evento\":\"FIN_SELECCION\",\"linea\":1,\"names\":77,\"parte\":1,\"tiempo_estado\":\"00:00:00:03\",\"total\":1,\"diff\":\"true\",\"test\":2}",
       "key" : "buffer",
-      "lastUpdateTs" : 1764031709715,
+      "lastUpdateTs" : 1764120814835,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -74,16 +87,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1763675670208,
-      "longValue" : 3,
+      "lastUpdateTs" : 1764084282745,
+      "longValue" : 4,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1763675670208,
-      "longValue" : 3,
+      "lastUpdateTs" : 1764084282745,
+      "longValue" : 4,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -98,32 +111,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1763982713629,
-      "longValue" : 1763982713628,
+      "lastUpdateTs" : 1764128267337,
+      "longValue" : 1764128267337,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764032722733,
-      "longValue" : 1764032721278,
+      "lastUpdateTs" : 1764171241628,
+      "longValue" : 1764171238932,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764025040991,
-      "longValue" : 1764025040991,
+      "lastUpdateTs" : 1764167338905,
+      "longValue" : 1764167338905,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764025037472,
-      "longValue" : 1764025037472,
+      "lastUpdateTs" : 1764127649665,
+      "longValue" : 1764127649665,
       "strValue" : null
     }, {
       "booleanValue" : null,

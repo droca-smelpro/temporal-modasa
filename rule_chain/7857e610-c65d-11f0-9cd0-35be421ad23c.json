@@ -9,7 +9,7 @@
     "externalId" : null,
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "89b3a880-c663-11f0-9cd0-35be421ad23c"
+      "id" : "177b6cf0-ca4e-11f0-b9be-a7eb49293647"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -37,12 +37,24 @@
       "toIndex" : 1,
       "type" : "Success"
     }, {
+      "fromIndex" : 4,
+      "toIndex" : 3,
+      "type" : "estaciones"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 14,
+      "type" : "estaciones"
+    }, {
       "fromIndex" : 5,
       "toIndex" : 2,
       "type" : "Success"
     }, {
       "fromIndex" : 7,
-      "toIndex" : 0,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 19,
       "type" : "Success"
     }, {
       "fromIndex" : 12,
@@ -52,13 +64,29 @@
       "fromIndex" : 13,
       "toIndex" : 5,
       "type" : "true"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 15,
+      "type" : "estacion_1.2"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 17,
+      "type" : "estacion_1.2"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 0,
+      "type" : "Success"
     } ],
-    "firstNodeIndex" : 3,
+    "firstNodeIndex" : 18,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1184,
-        "layoutY" : 435
+        "layoutX" : 1403,
+        "layoutY" : 426
       },
       "configuration" : {
         "version" : 0
@@ -95,7 +123,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764018620619,
+        "allEnabledUntil" : 1764109219785,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -123,7 +151,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764018697435,
+        "allEnabledUntil" : 1764109219785,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -139,8 +167,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 53,
-        "layoutY" : 279
+        "layoutX" : 25,
+        "layoutY" : 273
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -151,7 +179,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764018620619,
+        "allEnabledUntil" : 1764109219785,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -167,19 +195,19 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 273,
-        "layoutY" : 150
+        "layoutX" : 533,
+        "layoutY" : 118
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName == \"PruebaSimulador\") {\n        return ['pruebasimulador'];\n    }\n    else {\n        return ['noo'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(msg.parte != null) {\n        return ['estaciones'];\n    }\n    else {\n        return ['noo'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1763682169055,
+        "allEnabledUntil" : 1764105110463,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -187,7 +215,7 @@
         "entityType" : "RULE_NODE",
         "id" : "623982c0-c668-11f0-9cd0-35be421ad23c"
       },
-      "name" : "FILTRO_sim",
+      "name" : "FILTRO_estaciones",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -211,7 +239,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764018689178,
+        "allEnabledUntil" : 1764109219785,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -227,8 +255,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1202,
-        "layoutY" : 506
+        "layoutX" : 1400,
+        "layoutY" : 492
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -269,7 +297,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764018502969,
+        "allEnabledUntil" : 1764109219785,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -402,14 +430,14 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var result = {};\r\n\r\n// 1. Si ss_buffer no existe → devolver solo buffer\r\nif (!msg.ss_buffer) {\r\n    \r\n    // si es la primera parte de un mensaje\r\n    if(msg.buffer.parte==1){\r\n        msg.buffer.diff=\"true\";\r\n    }\r\n    else{\r\n        msg.buffer.diff=\"false\";\r\n    }\r\n    msg.buffer.test=1;\r\n    \r\n    result.buffer = msg.buffer || {};\r\n    \r\n    \r\n    return {\r\n        msg: result,\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n\r\n\r\n\r\n// 2. Verificar ID de ambos (si existe buffer también)\r\n//var idBuffer = msg.buffer ? msg.buffer.namess : null;\r\n//var idSS = msg.ss_buffer ? msg.ss_buffer.namess : null;\r\n\r\n// Si los IDs difieren → NO fusionar (solo buffer)\r\nif (msg.buffer.names !== msg.ss_buffer.names) {\r\n    \r\n     // si es la primera parte de un mensaje\r\n    if(msg.buffer.parte==1){\r\n        msg.buffer.diff=\"true\";\r\n    }\r\n    else{\r\n        msg.buffer.diff=\"false\";\r\n    }\r\n    \r\n    msg.buffer.test=2;\r\n    result.buffer = msg.buffer || {};\r\n    \r\n    \r\n    return {\r\n        msg: result,\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n\r\nelse if(msg.buffer.names == msg.ss_buffer.names){\r\n\r\n// 3. IDs iguales → realizar fusión con reglas\r\nvar newBuffer = {};\r\n\r\n// Copiar primero ss_buffer\r\nfor (var key in msg.ss_buffer) {\r\n    newBuffer[key] = msg.ss_buffer[key];\r\n}\r\n\r\n\r\n\r\n\r\n// Fusionar buffer con prioridad en conflicto\r\nfor (var key in msg.buffer) {\r\n\r\n    if (newBuffer.hasOwnProperty(key)) {\r\n\r\n        // Si valores iguales → dejar el de ss_buffer\r\n        if (newBuffer[key] === msg.buffer[key]) {\r\n            continue;\r\n        }\r\n\r\n        // Si valores distintos → gana buffer\r\n        newBuffer[key] = msg.buffer[key];\r\n\r\n    } else {\r\n        // Si no existe → agregar\r\n        newBuffer[key] = msg.buffer[key];\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\nif(msg.ss_buffer.diff==\"true\" && (msg.buffer.parte - msg.ss_buffer.parte)==1 ){\r\n    newBuffer.diff=\"true\";\r\n}\r\n\r\nelse{\r\n    newBuffer.diff=\"false\";\r\n}\r\n\r\n\r\nnewBuffer.test=3;\r\n\r\n\r\nresult.buffer = newBuffer;\r\n\r\nreturn {\r\n    msg: result,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n\r\n}",
+        "jsScript" : "var result = {};\r\n\r\n// 1. Si ss_buffer no existe → devolver solo buffer\r\nif (!msg.ss_buffer) {\r\n    \r\n    // si es la primera parte de un mensaje\r\n    if(msg.buffer.parte==1){\r\n        msg.buffer.diff=\"true\";\r\n    }\r\n    else{\r\n        msg.buffer.diff=\"false\";\r\n    }\r\n    msg.buffer.test=1;\r\n    \r\n    result.buffer = msg.buffer || {};\r\n    \r\n    \r\n    return {\r\n        msg: result,\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n\r\n\r\n\r\n// 2. Verificar ID de ambos (si existe buffer también)\r\n//var idBuffer = msg.buffer ? msg.buffer.namess : null;\r\n//var idSS = msg.ss_buffer ? msg.ss_buffer.namess : null;\r\n\r\n// Si los IDs difieren → NO fusionar (solo buffer)\r\nif (msg.buffer.names !== msg.ss_buffer.names) {\r\n    \r\n     // si es la primera parte de un mensaje\r\n    if(msg.buffer.parte==1){\r\n        msg.buffer.diff=\"true\";\r\n    }\r\n    else{\r\n        msg.buffer.diff=\"false\";\r\n    }\r\n    \r\n    msg.buffer.test=2;\r\n    result.buffer = msg.buffer || {};\r\n    \r\n    \r\n    return {\r\n        msg: result,\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n\r\nelse if(msg.buffer.names == msg.ss_buffer.names){\r\n\r\n// 3. IDs iguales → realizar fusión con reglas\r\nvar newBuffer = {};\r\n\r\n// Copiar primero ss_buffer\r\nfor (var key in msg.ss_buffer) {\r\n    newBuffer[key] = msg.ss_buffer[key];\r\n}\r\n\r\n\r\n\r\n\r\n// Fusionar buffer con prioridad en conflicto\r\nfor (var key in msg.buffer) {\r\n\r\n    if (newBuffer.hasOwnProperty(key)) {\r\n\r\n        // Si valores iguales → dejar el de ss_buffer\r\n        if (newBuffer[key] === msg.buffer[key]) {\r\n            continue;\r\n        }\r\n\r\n        // Si valores distintos → gana buffer\r\n        newBuffer[key] = msg.buffer[key];\r\n\r\n    } else {\r\n        // Si no existe → agregar\r\n        newBuffer[key] = msg.buffer[key];\r\n    }\r\n}\r\n\r\n\r\n//if(msg.ss_buffer.diff==\"true\" && (msg.buffer.parte - msg.ss_buffer.parte)==1 )\r\n\r\nif(msg.ss_buffer.diff==\"true\" && (msg.buffer.parte - msg.ss_buffer.parte)==1){\r\n    newBuffer.diff=\"true\";\r\n}\r\n\r\nelse{\r\n    newBuffer.diff=\"false\";\r\n}\r\n\r\n\r\nnewBuffer.test=3;\r\n\r\n\r\nresult.buffer = newBuffer;\r\n\r\nreturn {\r\n    msg: result,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n\r\n}",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764018625996,
+        "allEnabledUntil" : 1764109219785,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -437,7 +465,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764018634906,
+        "allEnabledUntil" : 1764109219785,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -450,6 +478,166 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 766,
+        "layoutY" : 44
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName==\"Estación 1.2\") {\n        return ['estacion_1.2'];\n    }\n    else {\n        return ['que'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764095058963,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4ca420e0-ca29-11f0-b9be-a7eb49293647"
+      },
+      "name" : "FILTRO_estac",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1097,
+        "layoutY" : 45
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764105110463,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7695bd00-ca29-11f0-b9be-a7eb49293647"
+      },
+      "name" : "debug",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 753,
+        "layoutY" : 643
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName==\"Estación 1.2\") {\n        return ['estacion_1.2'];\n    }\n    else {\n        return ['que'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764095881412,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c6ad3550-ca2b-11f0-b9be-a7eb49293647"
+      },
+      "name" : "FILTRO_estachb",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1029,
+        "layoutY" : 636
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764109219785,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c6ad5c60-ca2b-11f0-b9be-a7eb49293647"
+      },
+      "name" : "debug2",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 284,
+        "layoutY" : 117
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "177b6cf0-ca4e-11f0-b9be-a7eb49293647"
+      },
+      "name" : "Cola secuencial",
+      "queueName" : "SequentialByOriginator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbCheckpointNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1109,
+        "layoutY" : 424
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764115674781,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "177b6cf1-ca4e-11f0-b9be-a7eb49293647"
+      },
+      "name" : "Cola Normal",
+      "queueName" : "Main",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbCheckpointNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -465,7 +653,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 210362
+    "version" : 218968
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

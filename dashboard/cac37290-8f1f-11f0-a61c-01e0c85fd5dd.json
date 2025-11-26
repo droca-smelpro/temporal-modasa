@@ -513,7 +513,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div id=\"menu-buttondiv\" class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n        '<mat-icon>menu</mat-icon>' +\n    '</button>' +\n'</div>' +\n\n        \n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n    '<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+\n        '<div class=\"title\">${entityLabel}</div>' +\n           '<div class=\"subtitle\">${entityName}</div>' +\n    '</div>'+\n    \n        '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n               //'<button mat-button disabled class=\"tb-nav-button_dis\" id=\"btn-nutrientes\">Nutrientes</button>' +\n                '<button id=\"download\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                //'<button mat-button class=\"tb-nav-button\" id=\"btn-estado\">Estado del equipo</button>' +\n    '</div>' +\n    \n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 12px;\">' +\n        '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n'</div>';",
+              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div id=\"menu-buttondiv\" class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n        '<mat-icon>menu</mat-icon>' +\n    '</button>' +\n'</div>' +\n\n        \n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n    '<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+\n        '<div class=\"title\">${entityLabel}</div>' +\n           '<div class=\"subtitle\">${entityName}</div>' +\n    '</div>'+\n    \n        '<div class=\"flex flex-col items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n               //'<button mat-button disabled class=\"tb-nav-button_dis\" id=\"btn-nutrientes\">Nutrientes</button>' +\n                '<button id=\"download\" mat-icon-button matTooltip=\"Descargar Linea\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                //'<button mat-button class=\"tb-nav-button\" id=\"btn-estado\">Estado del equipo</button>' +\n    '</div>' +\n    \n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 12px;\">' +\n        '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n'</div>';",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
             },
@@ -1388,7 +1388,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' :\n    'darkMode';\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>menu</mat-icon>' + '</button>' +\n    '<div class=\"flex flex-col items-stretch justify-center\">' +\n    '<div class=\"title\">Gestión de Producción</div>' +\n    \n    '</div>' +\n    '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-4 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' +\n    '<div class=\"powered-by\">Demo desarrollada por Smelpro</div>' +\n    '</div>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n               //'<button mat-button disabled class=\"tb-nav-button_dis\" id=\"btn-nutrientes\">Nutrientes</button>' +\n                '<button id=\"download\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                //'<button mat-button class=\"tb-nav-button\" id=\"btn-estado\">Estado del equipo</button>' +\n    '</div>' +\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n    '<button (click)=\"darkMode = ' + darkModeExpression +\n    ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ ' +\n    darkModeExpression +\n    ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ ' +\n    darkModeExpression +\n    ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' + '</div>';",
+              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' :\n    'darkMode';\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>menu</mat-icon>' + '</button>' +\n    '<div class=\"flex flex-col items-stretch justify-center\">' +\n    '<div class=\"title\">Gestión de Producción</div>' +\n    \n    '</div>' +\n    '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-4 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' +\n    '<div class=\"powered-by\">Demo desarrollada por Smelpro</div>' +\n    '</div>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n              \n                '<button id=\"download\" mat-icon-button matTooltip=\"Descargar\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                \n    '</div>' +\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n    '<button (click)=\"darkMode = ' + darkModeExpression +\n    ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ ' +\n    darkModeExpression +\n    ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ ' +\n    darkModeExpression +\n    ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' + '</div>';",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 24px;\n    justify-content: space-around;\n}\n\n@media (min-width: 960px) {\n    .header {\n        gap: 24px;\n    }\n}\n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 24px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
             },
@@ -2788,6 +2788,20 @@
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
               }
+            }, {
+              "type" : "entity",
+              "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
+              "dataKeys" : [ {
+                "name" : "paradas",
+                "type" : "timeseries",
+                "label" : "paradas",
+                "color" : "#c51162",
+                "settings" : { },
+                "_hash" : 0.09122423887284237
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "timewindow" : {
               "displayValue" : "",
@@ -2831,7 +2845,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n        '<mat-icon>menu</mat-icon>' +\n    '</button>' +\n'</div>' +\n\n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' +\n    '<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+\n        '<div class=\"title\">${entityLabel}</div>' +\n           '<div class=\"subtitle\">${entityName}</div>' +\n           \n    \n    \n   \n    \n\n           \n   \n'</div>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n               //'<button mat-button disabled class=\"tb-nav-button_dis\" id=\"btn-nutrientes\">Nutrientes</button>' +\n    '<button id=\"download\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                //'<button mat-button class=\"tb-nav-button\" id=\"btn-estado\">Estado del equipo</button>' +\n    '</div>' +\n\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 12px;\">' +\n        '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n    \n    \n'</div>';",
+              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode'; \nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' + \n'<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n'<mat-icon>menu</mat-icon>' + '</button>' +\n\n'</div>' +\n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' + \n'<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+ '<div class=\"title\">${entityLabel}</div>' +\n'<div class=\"subtitle\">${entityName}</div>' + \n'</div>' +\n\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n'<button id=\"download\" mat-icon-button matTooltip=\"Descargar Estación\">' +\n'<mat-icon>download</mat-icon>' + '</button>' + \n\n'</div>' + \n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n'<button (click)=\"darkMode = '+darkModeExpression+ ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression + ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression + ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' + \n'</div>' + '</div>';",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n.tb-timewindow-label {\n    \n}\n"
             },
@@ -7470,7 +7484,7 @@
                 "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : true,
-                "postFuncBody" : "return value*100;"
+                "postFuncBody" : "if(value*100>=100){\n    return 100;\n}\nelse{\n    return value*100;\n}\n"
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -9265,7 +9279,7 @@
                   "useCellStyleFunction" : false,
                   "cellStyleFunction" : "",
                   "useCellContentFunction" : true,
-                  "cellContentFunction" : "var westado = value;\n\nvar stateSvg = getStateSvg(westado);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\nvar stateLabel = westado;\n\nreturn '<span>'+\n           '<img style=\"vertical-align: middle;\" class=\"mat-icon\" src=\"'+ stateSvgUrl +'\">' +\n           '<span style=\"vertical-align: middle; padding-left: 8px;\">'+ stateLabel +'</span>' +\n       '</span>';\n            \nfunction getStateSvg(westado) {\n    switch (westado) {\n        case 'EN OPERACIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#00FF00\"/>' +\n                   '</svg>';\n        case 'EN_OPERACION':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#00FF00\"/>' +\n                   '</svg>';\n                   \n        case 'EN OPERACION':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#00FF00\"/>' +\n                   '</svg>';\n                   \n        \n        case 'EN PARADA':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF0000\"/>' +\n                   '</svg>';\n        case 'EN INSPECCIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#da04a6\"/>' + '</svg>';\n        case 'EN LEVANTAMIENTO':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#04dbd3\"/>' + '</svg>';\n        case 'EN ESPERA':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#000\"/>' + '</svg>';\n                     \n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#AAAAAA\"/>' +\n                   '</svg>';\n    }\n}\n",
+                  "cellContentFunction" : "var westado = value;\n\nvar stateSvg = getStateSvg(westado);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\nvar stateLabel = westado;\n\nreturn '<span>'+\n           '<img style=\"vertical-align: middle;\" class=\"mat-icon\" src=\"'+ stateSvgUrl +'\">' +\n           '<span style=\"vertical-align: middle; padding-left: 8px;\">'+ stateLabel +'</span>' +\n       '</span>';\n            \nfunction getStateSvg(westado) {\n    switch (westado) {\n        case 'EN OPERACIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#00FF00\"/>' +\n                   '</svg>';\n                   \n        \n        case 'EN PARADA':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF0000\"/>' +\n                   '</svg>';\n        case 'EN INSPECCIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#da04a6\"/>' + '</svg>';\n        case 'EN LEVANTAMIENTO':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#04dbd3\"/>' + '</svg>';\n        case 'EN ESPERA':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#000\"/>' + '</svg>';\n                     \n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#AAAAAA\"/>' +\n                   '</svg>';\n    }\n}\n",
                   "defaultColumnVisibility" : "visible",
                   "columnSelectionToDisplay" : "enabled",
                   "disableSorting" : false
@@ -10062,7 +10076,7 @@
                     "smooth" : false,
                     "lineType" : "solid",
                     "lineWidth" : 2,
-                    "showPoints" : false,
+                    "showPoints" : true,
                     "showPointLabel" : false,
                     "pointLabelPosition" : "top",
                     "pointLabelFont" : {
@@ -10113,13 +10127,20 @@
                       }
                     }
                   },
+                  "tooltipValueFormatter" : null,
                   "comparisonSettings" : {
                     "showValuesForComparison" : false,
                     "comparisonValuesLabel" : "",
                     "color" : ""
                   }
                 },
-                "_hash" : 0.9029392710664348
+                "_hash" : 0.9029392710664348,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -12906,8 +12927,8 @@
                 "units" : null,
                 "decimals" : null,
                 "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed(2)*100/100;",
                 "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
@@ -13278,8 +13299,8 @@
                 "units" : null,
                 "decimals" : null,
                 "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return (value/10).toFixed(2)*100/100;",
                 "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
@@ -14234,7 +14255,7 @@
                 "decimals" : 3,
                 "funcBody" : null,
                 "usePostProcessing" : true,
-                "postFuncBody" : "//return (value*100).toFixed(2)*100/100;\nreturn (value);",
+                "postFuncBody" : "return (value/10).toFixed(2)*100/100;\n//return (value);",
                 "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
@@ -14750,10 +14771,16 @@
               "dataKeys" : [ {
                 "name" : "paradas",
                 "type" : "timeseries",
-                "label" : "paradas",
+                "label" : "${entityName}",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.2741438743240894
+                "_hash" : 0.2741438743240894,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -14807,10 +14834,16 @@
               "dataKeys" : [ {
                 "name" : "paradas",
                 "type" : "timeseries",
-                "label" : "paradas",
+                "label" : "${entityName}",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.07788288100131813
+                "_hash" : 0.07788288100131813,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -14830,7 +14863,7 @@
               "color_b" : "#A5D7A7"
             },
             "title" : "Tabla de paradas - Cantidad",
-            "decimals" : null,
+            "decimals" : 0,
             "useDashboardTimewindow" : true,
             "displayTimewindow" : true,
             "showTitleIcon" : false,
@@ -14850,6 +14883,198 @@
           "row" : 0,
           "col" : 0,
           "id" : "29cfb677-f61a-148a-4f37-cb0463825195"
+        },
+        "2d666037-f0d0-9ed7-abdf-7d7ef1337eae" : {
+          "typeFullFqn" : "tenant.tabla_de_paradas_cantidad",
+          "type" : "timeseries",
+          "sizeX" : 7.5,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "7a984630-b8d5-11f0-9cd0-35be421ad23c",
+              "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
+              "dataKeys" : [ {
+                "name" : "paradas",
+                "type" : "timeseries",
+                "label" : "paradas",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.07788288100131813,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "color_a" : "#4CAF50",
+              "color_b" : "#A5D7A7"
+            },
+            "title" : "Tabla de paradas - Cantidad",
+            "decimals" : 0,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "5px 10px 10px 5px"
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "2d666037-f0d0-9ed7-abdf-7d7ef1337eae"
+        },
+        "afd37c32-1648-5c39-ed6d-c0c07e6cc71d" : {
+          "typeFullFqn" : "tenant.tabla_de_paradas",
+          "type" : "timeseries",
+          "sizeX" : 7.5,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "7a984630-b8d5-11f0-9cd0-35be421ad23c",
+              "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
+              "dataKeys" : [ {
+                "name" : "paradas",
+                "type" : "timeseries",
+                "label" : "paradas",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.2741438743240894,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "color_a" : "#4CAF50",
+              "color_b" : "#A5D7A7"
+            },
+            "title" : "Tabla de paradas - Tiempos",
+            "decimals" : null,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "5px 10px 10px 5px"
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "afd37c32-1648-5c39-ed6d-c0c07e6cc71d"
+        },
+        "767d327a-833d-0177-dea1-bb0b8325dafa" : {
+          "typeFullFqn" : "tenant.tabla_de_paradas_cantidad",
+          "type" : "timeseries",
+          "sizeX" : 7.5,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "7a984630-b8d5-11f0-9cd0-35be421ad23c",
+              "entityAliasId" : "202d34fc-2888-46b9-f9ed-1a07d1b4259b",
+              "dataKeys" : [ {
+                "name" : "paradas",
+                "type" : "timeseries",
+                "label" : "paradas",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.07788288100131813,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "color_a" : "#4CAF50",
+              "color_b" : "#A5D7A7"
+            },
+            "title" : "Tabla de paradas - Cantidad",
+            "decimals" : 0,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "5px 10px 10px 5px"
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "767d327a-833d-0177-dea1-bb0b8325dafa"
         }
       },
       "states" : {
@@ -14924,9 +15149,12 @@
                 },
                 "2a6f8d67-eb28-9354-5f53-610b17cc635e" : {
                   "sizeX" : 8,
-                  "sizeY" : 7,
-                  "row" : 14,
-                  "col" : 8
+                  "sizeY" : 3,
+                  "row" : 29,
+                  "col" : 16,
+                  "resizable" : true,
+                  "mobileHide" : true,
+                  "desktopHide" : true
                 },
                 "bcec8108-a7ef-e35e-01f1-1b766f987c56" : {
                   "sizeX" : 8,
@@ -15032,6 +15260,13 @@
                   "sizeY" : 5,
                   "row" : 14,
                   "col" : 16
+                },
+                "767d327a-833d-0177-dea1-bb0b8325dafa" : {
+                  "sizeX" : 8,
+                  "sizeY" : 7,
+                  "resizable" : true,
+                  "row" : 14,
+                  "col" : 8
                 }
               },
               "gridSettings" : {
@@ -15076,8 +15311,8 @@
                 "320d5985-17c3-87fd-9a12-89f44d0ef0ad" : {
                   "sizeX" : 12,
                   "sizeY" : 7,
-                  "row" : 63,
-                  "col" : 5,
+                  "row" : 62,
+                  "col" : 11,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -15085,8 +15320,8 @@
                 "afda4424-4a0a-265f-2d60-d1232697b885" : {
                   "sizeX" : 5,
                   "sizeY" : 4,
-                  "row" : 47,
-                  "col" : 0,
+                  "row" : 54,
+                  "col" : 6,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -15101,8 +15336,8 @@
                   "sizeX" : 6,
                   "sizeY" : 4,
                   "mobileHeight" : null,
-                  "row" : 50,
-                  "col" : 14,
+                  "row" : 54,
+                  "col" : 0,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -15111,8 +15346,8 @@
                   "sizeX" : 5,
                   "sizeY" : 4,
                   "resizable" : true,
-                  "row" : 49,
-                  "col" : 6,
+                  "row" : 58,
+                  "col" : 5,
                   "mobileHide" : true,
                   "desktopHide" : true
                 },
@@ -15160,17 +15395,20 @@
                 "93710090-c67c-b537-cc8b-d95e90ed86b6" : {
                   "sizeX" : 10,
                   "sizeY" : 5,
-                  "row" : 56,
-                  "col" : 6,
+                  "row" : 57,
+                  "col" : 13,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
                 },
                 "db18cc45-58c6-351b-cee7-df225e6a7148" : {
-                  "sizeX" : 24,
+                  "sizeX" : 11,
                   "sizeY" : 7,
-                  "row" : 30,
-                  "col" : 0
+                  "row" : 49,
+                  "col" : 11,
+                  "resizable" : true,
+                  "mobileHide" : true,
+                  "desktopHide" : true
                 },
                 "9f6d249e-4f77-7c9a-2531-0a788205013d" : {
                   "sizeX" : 5,
@@ -15181,7 +15419,7 @@
                 "634b6558-92a7-a945-875b-73a26328b65a" : {
                   "sizeX" : 5,
                   "sizeY" : 6,
-                  "row" : 51,
+                  "row" : 58,
                   "col" : 0,
                   "resizable" : true,
                   "mobileHide" : true,
@@ -15200,9 +15438,26 @@
                   "col" : 14
                 },
                 "775c9780-dbeb-b713-f872-637059c19153" : {
-                  "sizeX" : 24,
-                  "sizeY" : 7,
-                  "row" : 37,
+                  "sizeX" : 11,
+                  "sizeY" : 5,
+                  "row" : 49,
+                  "col" : 0,
+                  "resizable" : true,
+                  "mobileHide" : true,
+                  "desktopHide" : true
+                },
+                "2d666037-f0d0-9ed7-abdf-7d7ef1337eae" : {
+                  "sizeX" : 12,
+                  "sizeY" : 8,
+                  "resizable" : true,
+                  "row" : 30,
+                  "col" : 12
+                },
+                "afd37c32-1648-5c39-ed6d-c0c07e6cc71d" : {
+                  "sizeX" : 12,
+                  "sizeY" : 8,
+                  "resizable" : true,
+                  "row" : 30,
                   "col" : 0
                 }
               },
@@ -15340,15 +15595,21 @@
                 },
                 "4bd4b125-79bc-9c23-b521-6f640ebbe806" : {
                   "sizeX" : 8,
-                  "sizeY" : 8,
-                  "row" : 9,
-                  "col" : 0
+                  "sizeY" : 3,
+                  "row" : 20,
+                  "col" : 0,
+                  "resizable" : true,
+                  "mobileHide" : true,
+                  "desktopHide" : true
                 },
                 "862608f4-579a-249f-e390-f80578dcd178" : {
                   "sizeX" : 8,
-                  "sizeY" : 8,
-                  "row" : 9,
-                  "col" : 8
+                  "sizeY" : 3,
+                  "row" : 20,
+                  "col" : 8,
+                  "resizable" : true,
+                  "mobileHide" : true,
+                  "desktopHide" : true
                 },
                 "e5f22284-699b-a8d2-0099-f00d8e03a380" : {
                   "sizeX" : 10,
@@ -15357,16 +15618,22 @@
                   "col" : 6
                 },
                 "524e76ba-e8d4-8ae8-fe63-041411dc3c2a" : {
-                  "sizeX" : 9,
-                  "sizeY" : 7,
-                  "row" : 17,
-                  "col" : 0
+                  "sizeX" : 8,
+                  "sizeY" : 8,
+                  "row" : 9,
+                  "col" : 0,
+                  "resizable" : true,
+                  "mobileHide" : false,
+                  "desktopHide" : false
                 },
                 "29cfb677-f61a-148a-4f37-cb0463825195" : {
-                  "sizeX" : 9,
-                  "sizeY" : 7,
-                  "row" : 17,
-                  "col" : 9
+                  "sizeX" : 8,
+                  "sizeY" : 8,
+                  "row" : 9,
+                  "col" : 8,
+                  "resizable" : true,
+                  "mobileHide" : false,
+                  "desktopHide" : false
                 }
               },
               "gridSettings" : {
@@ -15678,12 +15945,18 @@
             "type" : "relationsQuery",
             "resolveMultiple" : true,
             "rootStateEntity" : true,
-            "stateEntityParamName" : null,
-            "defaultStateEntity" : null,
-            "rootEntity" : null,
+            "stateEntityParamName" : "",
+            "defaultStateEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
+            },
+            "rootEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
+            },
             "direction" : "FROM",
             "maxLevel" : 2,
-            "fetchLastLevelOnly" : false,
+            "fetchLastLevelOnly" : true,
             "filters" : [ ]
           }
         },

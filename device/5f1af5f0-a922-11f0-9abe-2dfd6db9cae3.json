@@ -46,19 +46,6 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "b298ac00-c997-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 214188
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
       "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
     },
     "type" : "Contains",
@@ -98,6 +85,19 @@
     },
     "to" : {
       "entityType" : "DEVICE",
+      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 219833
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
       "id" : "3ef09dd0-c992-11f0-9cd0-35be421ad23c"
     },
     "type" : "Contains",
@@ -129,10 +129,34 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "{\"CONTADOR_OPERACION\":1,\"CONTADOR_PARADA\":0,\"MODELO\":\"-\",\"TIMESTAMP\":\"2025-11-24 20:00:48\",\"cliente\":\"TECNICA AVICOLA S.A.\",\"contador_inspeccion\":0,\"contador_levantamiento\":0,\"desviacion\":-99.84,\"eficiencia\":107.69,\"estacion\":2,\"evento\":\"FIN_ESTACION\",\"incidentes\":0,\"linea\":1,\"names\":215,\"parte\":2,\"serie\":\"-\",\"tiempo_activo\":\"00:00:00:14\",\"tiempo_estandar\":\"02:22:00\",\"tiempo_inspeccion\":\"00:00:00:00\",\"tiempo_levantamiento\":\"00:00:00:00\",\"tiempo_operacion\":\"00:00:00:14\",\"tiempo_paradas\":\"00:00:00:00\",\"tiempo_serie\":\"00:00:06:22\",\"tiempo_total\":\"00:00:00:13\",\"total\":2,\"unidad_terminada\":\"Y\",\"diff\":\"true\",\"test\":3,\"CLASIFICACION\":\"NO ESTANDAR\",\"OPERARIO_ID\":[\"72190940\",\"12345678\",\"42385039\",\"47387549\",\"004152108\"],\"nombre_operario\":[\"GALLARDO TORRES KETTY YARITZA\",\"SUPER JUANITO PERECITO\",\"GUERRERO DUEÑAS NESTOR ALBERTO\",\"PAREDES RUIZ YONATAN\",\"GARCIA ANUEL MANUEL ASDRUBAL\"]}",
+      "jsonValue" : "{\"CONTADOR_OPERACION\":12,\"CONTADOR_PARADA\":9,\"MODELO\":\"WSP-25 \",\"TIMESTAMP\":\"2025-11-25 20:31:59\",\"contador_inspeccion\":1,\"contador_levantamiento\":1,\"desviacion\":-77.88,\"eficiencia\":28.28,\"estacion\":2,\"evento\":\"FIN_ESTACION\",\"incidentes\":10,\"linea\":1,\"names\":93,\"parte\":2,\"serie\":\"X46800I\",\"tiempo_activo\":\"00:00:31:25\",\"tiempo_estandar\":\"02:22:00\",\"tiempo_inspeccion\":\"00:00:00:00\",\"tiempo_levantamiento\":\"00:00:00:00\",\"tiempo_operacion\":\"00:00:31:25\",\"tiempo_paradas\":\"00:00:04:40\",\"tiempo_serie\":\"00:00:36:11\",\"tiempo_total\":\"00:01:51:06\",\"total\":2,\"unidad_terminada\":\"Y\",\"diff\":\"true\",\"test\":3,\"CLASIFICACION\":\"ESTANDAR\",\"OPERARIO_ID\":[\"72568846\"],\"cliente\":\"Power Sports Warehouse Inc.\",\"nombre_operario\":[\"DAHUA JOTA JERRI\"]}",
       "key" : "buffer",
-      "lastUpdateTs" : 1764032471821,
+      "lastUpdateTs" : 1764120739304,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ALAprimera",
+      "lastUpdateTs" : 1764104325191,
+      "longValue" : 6,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ensambladas",
+      "lastUpdateTs" : 1764120739582,
+      "longValue" : 9,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_retrabajadas",
+      "lastUpdateTs" : 1764120739582,
+      "longValue" : 3,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -147,25 +171,65 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764032725725,
-      "longValue" : 1764032725044,
+      "lastUpdateTs" : 1764171238629,
+      "longValue" : 1764171237376,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764025044960,
-      "longValue" : 1764025044960,
+      "lastUpdateTs" : 1764167337346,
+      "longValue" : 1764167337346,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764025036154,
-      "longValue" : 1764025036154,
+      "lastUpdateTs" : 1764090221611,
+      "longValue" : 1764090221611,
       "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.67,
+      "jsonValue" : null,
+      "key" : "p_ALAprimera",
+      "lastUpdateTs" : 1764120739582,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.33,
+      "jsonValue" : null,
+      "key" : "p_retrabajadas",
+      "lastUpdateTs" : 1764120739582,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ALAprimera",
+      "lastUpdateTs" : 1764082828864,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ensambladas",
+      "lastUpdateTs" : 1764082828864,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_retrabajadas",
+      "lastUpdateTs" : 1764111153227,
+      "longValue" : null,
+      "strValue" : "true"
     } ],
     "SHARED_SCOPE" : [ {
       "booleanValue" : null,

@@ -64,6 +64,38 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
+      "jsonValue" : "{\"c_unidades_ALAprimera\":0,\"c_unidades_ensambladas\":0,\"c_unidades_retrabajadas\":0,\"parte\":1,\"total\":1,\"names\":1,\"diff\":\"true\",\"test\":1}",
+      "key" : "buffer",
+      "lastUpdateTs" : 1764082622982,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ALAprimera",
+      "lastUpdateTs" : 1764082623188,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ensambladas",
+      "lastUpdateTs" : 1764082623188,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_retrabajadas",
+      "lastUpdateTs" : 1764082623188,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1763982713629,
@@ -74,24 +106,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764032719715,
-      "longValue" : 1764032719606,
+      "lastUpdateTs" : 1764171238629,
+      "longValue" : 1764171238002,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764025039525,
-      "longValue" : 1764025039524,
+      "lastUpdateTs" : 1764167337974,
+      "longValue" : 1764167337974,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764025036808,
-      "longValue" : 1764025036808,
+      "lastUpdateTs" : 1764082623178,
+      "longValue" : 1764082623178,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

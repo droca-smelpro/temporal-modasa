@@ -574,6 +574,28 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 927,
+        "layoutY" : 834
+      },
+      "configuration" : {
+        "alarmStatusList" : [ "ACTIVE_ACK", "ACTIVE_UNACK" ]
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "774767b0-ca53-11f0-b9be-a7eb49293647"
+      },
+      "name" : "cg",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbCheckAlarmStatusNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -589,7 +611,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 210366
+    "version" : 218972
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
