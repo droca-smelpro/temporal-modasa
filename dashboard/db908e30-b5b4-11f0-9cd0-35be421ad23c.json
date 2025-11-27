@@ -17,7 +17,7 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3",
+              "deviceId" : "d411ed10-8f22-11f0-a61c-01e0c85fd5dd",
               "entityAliasId" : null,
               "filterId" : null,
               "dataKeys" : [ {
@@ -31,7 +31,7 @@
               }, {
                 "name" : "CAUSA_1",
                 "type" : "timeseries",
-                "label" : "causa",
+                "label" : "causa 1",
                 "color" : "#607d8b",
                 "settings" : { },
                 "_hash" : 0.6782603087456879,
@@ -137,6 +137,13 @@
                 "color" : "#ff9800",
                 "settings" : { },
                 "_hash" : 0.36502191925447913
+              }, {
+                "name" : "motivo",
+                "type" : "timeseries",
+                "label" : "motivo",
+                "color" : "#673ab7",
+                "settings" : { },
+                "_hash" : 0.6366942816798817
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -151,7 +158,7 @@
               "realtime" : {
                 "realtimeType" : 0,
                 "interval" : 1000,
-                "timewindowMs" : 86400000,
+                "timewindowMs" : 2592000000,
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
                 "hideLastInterval" : false,

@@ -77,9 +77,9 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "{\"TIMESTAMP\":\"2025-11-25 20:33:06\",\"estacion\":6,\"estado\":\"EN OPERACIÓN\",\"evento\":\"FIN_SELECCION\",\"linea\":1,\"names\":77,\"parte\":1,\"tiempo_estado\":\"00:00:00:03\",\"total\":1,\"diff\":\"true\",\"test\":2}",
+      "jsonValue" : "{\"CLASIFICACION\":\"NO ESTANDAR\",\"HORARIO_VALIDO\":\"Y\",\"MODELO\":\"MP45-60\",\"OPERARIO_CARGO\":[\"OPERARIO DE ALMACEN\"],\"OPERARIO_FINAL\":[\"22:20\"],\"OPERARIO_ID\":[\"42385039\"],\"OPERARIO_INICIO\":[\"07:00\"],\"OPERARIO_NIVEL\":[\"OBRERO\"],\"OPERARIO_TURNO\":[\"DIA\"],\"TIMESTAMP\":\"2025-11-27 11:49:04\",\"TIPO_JORNADA\":\"normal\",\"cliente\":\"TECNICA AVICOLA S.A.\",\"estacion\":6,\"estado\":\"EN OPERACIÓN\",\"evento\":\"INICIO_OPERACION\",\"linea\":1,\"names\":140,\"nombre_operario\":[\"GUERRERO DUEÑAS NESTOR ALBERTO\"],\"parte\":1,\"serie\":\"X57196I\",\"total\":1,\"diff\":\"true\",\"test\":2}",
       "key" : "buffer",
-      "lastUpdateTs" : 1764120814835,
+      "lastUpdateTs" : 1764262229522,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -119,24 +119,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764171241628,
-      "longValue" : 1764171238932,
+      "lastUpdateTs" : 1764278047639,
+      "longValue" : 1764278046838,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764167338905,
-      "longValue" : 1764167338905,
+      "lastUpdateTs" : 1764277806706,
+      "longValue" : 1764277806706,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764127649665,
-      "longValue" : 1764127649665,
+      "lastUpdateTs" : 1764277806229,
+      "longValue" : 1764277806229,
       "strValue" : null
     }, {
       "booleanValue" : null,

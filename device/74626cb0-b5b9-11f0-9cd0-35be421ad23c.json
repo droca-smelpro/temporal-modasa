@@ -41,19 +41,11 @@
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764028795156,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : "{\"parte\":3,\"total\":3,\"names\":\"iot4\",\"var1\":1,\"diff\":\"true\",\"test\":3}",
-      "key" : "buffer",
-      "lastUpdateTs" : 1763769914641,
+      "lastUpdateTs" : 1764277717439,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -61,32 +53,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764028795153,
-      "longValue" : 1764028795152,
+      "lastUpdateTs" : 1764275992679,
+      "longValue" : 1764275992678,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764028153729,
-      "longValue" : 1764028152521,
+      "lastUpdateTs" : 1764277807624,
+      "longValue" : 1764277806226,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764028152322,
-      "longValue" : 1764028152322,
+      "lastUpdateTs" : 1764277722467,
+      "longValue" : 1764277722467,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764028152523,
-      "longValue" : 1764028152523,
+      "lastUpdateTs" : 1764277806241,
+      "longValue" : 1764277806241,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

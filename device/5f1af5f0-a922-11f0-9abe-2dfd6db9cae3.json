@@ -123,15 +123,15 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1763983741024,
+      "lastUpdateTs" : 1764268414081,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "{\"CONTADOR_OPERACION\":12,\"CONTADOR_PARADA\":9,\"MODELO\":\"WSP-25 \",\"TIMESTAMP\":\"2025-11-25 20:31:59\",\"contador_inspeccion\":1,\"contador_levantamiento\":1,\"desviacion\":-77.88,\"eficiencia\":28.28,\"estacion\":2,\"evento\":\"FIN_ESTACION\",\"incidentes\":10,\"linea\":1,\"names\":93,\"parte\":2,\"serie\":\"X46800I\",\"tiempo_activo\":\"00:00:31:25\",\"tiempo_estandar\":\"02:22:00\",\"tiempo_inspeccion\":\"00:00:00:00\",\"tiempo_levantamiento\":\"00:00:00:00\",\"tiempo_operacion\":\"00:00:31:25\",\"tiempo_paradas\":\"00:00:04:40\",\"tiempo_serie\":\"00:00:36:11\",\"tiempo_total\":\"00:01:51:06\",\"total\":2,\"unidad_terminada\":\"Y\",\"diff\":\"true\",\"test\":3,\"CLASIFICACION\":\"ESTANDAR\",\"OPERARIO_ID\":[\"72568846\"],\"cliente\":\"Power Sports Warehouse Inc.\",\"nombre_operario\":[\"DAHUA JOTA JERRI\"]}",
+      "jsonValue" : "{\"MODELO\":\"MP45-60\",\"TIMESTAMP\":\"2025-11-27 13:59:31\",\"TIPO_EVENTO\":\"DESACTIVADO\",\"cliente\":\"TECNICA AVICOLA S.A.\",\"estacion\":2,\"evento\":\"FIN_EMERGENCIA\",\"linea\":1,\"motivo\":\"ENSAMBLE MECÁNICO\",\"names\":112,\"nombre_operario\":[\"GUERRERO DUEÑAS NESTOR ALBERTO\"],\"parte\":1,\"serie\":\"X57196I\",\"tiempo_estado\":\"00:00:00:05\",\"total\":1,\"diff\":\"true\",\"test\":2}",
       "key" : "buffer",
-      "lastUpdateTs" : 1764120739304,
+      "lastUpdateTs" : 1764269976575,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -139,16 +139,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1764104325191,
-      "longValue" : 6,
+      "lastUpdateTs" : 1764276043594,
+      "longValue" : 8,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1764120739582,
-      "longValue" : 9,
+      "lastUpdateTs" : 1764276043594,
+      "longValue" : 11,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -163,47 +163,47 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1763982713629,
-      "longValue" : 1763982713628,
+      "lastUpdateTs" : 1764267712383,
+      "longValue" : 1764267712382,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764171238629,
-      "longValue" : 1764171237376,
+      "lastUpdateTs" : 1764278047639,
+      "longValue" : 1764278046828,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764167337346,
-      "longValue" : 1764167337346,
+      "lastUpdateTs" : 1764277806719,
+      "longValue" : 1764277806719,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764090221611,
-      "longValue" : 1764090221611,
+      "lastUpdateTs" : 1764277806241,
+      "longValue" : 1764277806241,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.67,
+      "doubleValue" : 0.73,
       "jsonValue" : null,
       "key" : "p_ALAprimera",
-      "lastUpdateTs" : 1764120739582,
+      "lastUpdateTs" : 1764268426220,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.33,
+      "doubleValue" : 0.27,
       "jsonValue" : null,
       "key" : "p_retrabajadas",
-      "lastUpdateTs" : 1764120739582,
+      "lastUpdateTs" : 1764268426220,
       "longValue" : null,
       "strValue" : null
     }, {

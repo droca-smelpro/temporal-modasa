@@ -7,7 +7,10 @@
     "configuration" : null,
     "debugMode" : false,
     "externalId" : null,
-    "firstRuleNodeId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "adbd9fa0-caf1-11f0-b9be-a7eb49293647"
+    },
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "19e854a0-c574-11f0-9cd0-35be421ad23c"
@@ -17,18 +20,124 @@
     "type" : "CORE"
   },
   "metaData" : {
-    "connections" : null,
-    "firstNodeIndex" : null,
+    "connections" : [ {
+      "fromIndex" : 2,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 2,
+      "type" : "INICIO_EMERGENCIA"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 3,
+      "type" : "LIMPIAR FIJA"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 6,
+      "type" : "ALERTA DINAMICA"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 8,
+      "type" : "LIMPIAR DINAMICO"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 10,
+      "type" : "ALERTA FIJA"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 1,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 4,
     "nodes" : [ {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 297,
-        "layoutY" : 160
+        "description" : "${motivo}",
+        "layoutX" : 1040,
+        "layoutY" : 251
       },
       "configuration" : {
         "scriptLang" : "TBEL",
-        "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "return msg.event === \"INICIO_EMERGENCIA\";"
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmType" : "${motivo}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764177508825,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "821e2611-cae9-11f0-b9be-a7eb49293647"
+      },
+      "name" : "LIMPIAR ALERTA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "${motivo}",
+        "layoutX" : 1165,
+        "layoutY" : 81
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "${motivo}",
+        "severity" : "MINOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764186640345,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "821e4d20-cae9-11f0-b9be-a7eb49293647"
+      },
+      "name" : "ALERTA DE PARADA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "metadata.motivo=\"ALERTA DE EMERGENCIA\";",
+        "layoutX" : 768,
+        "layoutY" : 164
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "metadata.motivo=\"ALERTA DE EMERGENCIA\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -36,13 +145,256 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5f9f02a0-c574-11f0-9cd0-35be421ad23c"
+        "id" : "ba3efcd0-caef-11f0-b9be-a7eb49293647"
       },
-      "name" : "Is an alarm event",
+      "name" : "PROC_EMERGENCIA",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "metadata.motivo= \"ALERTA DE PARADA\", metadata.motivo= \"ALERTA DE EMERGENCIA\"",
+        "layoutX" : 770,
+        "layoutY" : 248
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\n\nif(msg.evento == \"FIN_PARADA\"){\n    metadata.motivo=\"ALERTA DE PARADA\";\n}\n\nelse if(msg.evento == \"FIN_EMERGENCIA\"){\n    metadata.motivo=\"ALERTA DE EMERGENCIA\";\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4b6ecdc0-caf0-11f0-b9be-a7eb49293647"
+      },
+      "name" : "PROC_LIMPIEZA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 371,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    if(msg.evento == \"ALERTA\") {\n        \n        if(msg.motivo==\"ALERTA DE PARADA\"){\n            return ['ALERTA FIJA'];\n        }\n        else{\n            return ['ALERTA DINAMICA'];\n        }\n    }\n    else if(msg.evento == \"INICIO_EMERGENCIA\"){\n        return ['INICIO_EMERGENCIA'];\n    }\n    else if(msg.evento == \"FIN_EMERGENCIA\" || msg.evento == \"FIN_PARADA\" ){\n        return ['LIMPIAR FIJA'];\n    }\n    else if(msg.evento==\"FIN\"){\n        return ['LIMPIAR DINAMICO'];\n    }\n    else {\n        return ['NO'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764188057335,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "adbd9fa0-caf1-11f0-b9be-a7eb49293647"
+      },
+      "name" : "evento",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "${motivo}",
+        "layoutX" : 1158,
+        "layoutY" : 160
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "${motivo}",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0c1fa6f0-caf3-11f0-b9be-a7eb49293647"
+      },
+      "name" : "ALERTA DE ENERGENCIA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "metadata.motivo=msg.motivo;",
+        "layoutX" : 756,
+        "layoutY" : 382
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "metadata.motivo=msg.motivo;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7baa76a0-caf6-11f0-b9be-a7eb49293647"
+      },
+      "name" : "PROC_DINAMICO",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "${motivo}",
+        "layoutX" : 1183,
+        "layoutY" : 375
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "${motivo}",
+        "severity" : "MINOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "cd9b7bd0-caf6-11f0-b9be-a7eb49293647"
+      },
+      "name" : "ALERTA DINAMICA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "metadata.motivo=msg.motivo;",
+        "layoutX" : 757,
+        "layoutY" : 475
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\n\nmetadata.motivo=msg.motivo;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e377a500-caf6-11f0-b9be-a7eb49293647"
+      },
+      "name" : "LIMPIEZA_DINAMICA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "${motivo}",
+        "layoutX" : 1024,
+        "layoutY" : 478
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmType" : "${motivo}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a899d40-caf7-11f0-b9be-a7eb49293647"
+      },
+      "name" : "LIMPIAR ALERTA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "metadata.motivo=\"ALERTA DE PARADA\";",
+        "layoutX" : 782,
+        "layoutY" : 86
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "metadata.motivo=\"ALERTA DE PARADA\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8bb1f6e0-cb00-11f0-b9be-a7eb49293647"
+      },
+      "name" : "PROC_ALERTA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -58,7 +410,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 218970
+    "version" : 224210
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

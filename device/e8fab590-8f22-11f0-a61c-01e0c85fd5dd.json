@@ -64,6 +64,14 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
+      "jsonValue" : "{\"CONTADOR_OPERACION\":3,\"CONTADOR_PARADA\":0,\"MODELO\":\"WSP-25 \",\"TIMESTAMP\":\"2025-11-27 12:19:09\",\"contador_inspeccion\":0,\"contador_levantamiento\":0,\"desviacion\":-70.83,\"eficiencia\":100.19,\"estacion\":1,\"evento\":\"FIN_ESTACION\",\"incidentes\":0,\"linea\":1,\"names\":123,\"parte\":2,\"serie\":\"X46800I\",\"tiempo_activo\":\"00:00:17:30\",\"tiempo_estandar\":\"01:00:00\",\"tiempo_inspeccion\":\"00:00:00:00\",\"tiempo_levantamiento\":\"00:00:00:00\",\"tiempo_operacion\":\"00:00:17:30\",\"tiempo_paradas\":\"00:00:00:00\",\"tiempo_serie\":\"00:00:17:20\",\"tiempo_total\":\"00:00:17:28\",\"total\":2,\"var_193\":\"Y\",\"diff\":\"true\",\"test\":3,\"CLASIFICACION\":\"ESTANDAR\",\"OPERARIO_ID\":[\"72190940\"],\"cliente\":\"Power Sports Warehouse Inc.\",\"unidad_terminada\":\"GALLARDO TORRES KETTY YARITZA\"}",
+      "key" : "buffer",
+      "lastUpdateTs" : 1764263964950,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
       "lastUpdateTs" : 1763671750602,
@@ -98,24 +106,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764171214641,
-      "longValue" : 1764171212920,
+      "lastUpdateTs" : 1764278047639,
+      "longValue" : 1764278046832,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764167312883,
-      "longValue" : 1764167312883,
+      "lastUpdateTs" : 1764277806719,
+      "longValue" : 1764277806719,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764051936686,
-      "longValue" : 1764051936686,
+      "lastUpdateTs" : 1764277806241,
+      "longValue" : 1764277806241,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -146,8 +154,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "unidades_ensambladas",
-      "lastUpdateTs" : 1763664331033,
-      "longValue" : 1,
+      "lastUpdateTs" : 1764263965192,
+      "longValue" : 0,
       "strValue" : null
     }, {
       "booleanValue" : null,

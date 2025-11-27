@@ -80,9 +80,9 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "{\"TIMESTAMP\":\"2025-11-25 15:38:33\",\"estacion\":9,\"estado\":\"EN INACTIVIDAD\",\"evento\":\"INICIO_INACTIVIDAD\",\"linea\":1,\"names\":20,\"parte\":1,\"total\":1,\"diff\":\"true\",\"test\":2}",
+      "jsonValue" : "{\"c_unidades_ALAprimera\":0,\"c_unidades_ensambladas\":0,\"c_unidades_retrabajadas\":0,\"parte\":1,\"total\":1,\"names\":1,\"diff\":\"true\",\"test\":2}",
       "key" : "buffer",
-      "lastUpdateTs" : 1764103121282,
+      "lastUpdateTs" : 1764202987181,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -138,24 +138,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764171238629,
-      "longValue" : 1764171237698,
+      "lastUpdateTs" : 1764278047639,
+      "longValue" : 1764278046838,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764167337673,
-      "longValue" : 1764167337673,
+      "lastUpdateTs" : 1764277806706,
+      "longValue" : 1764277806706,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764127645039,
-      "longValue" : 1764127645039,
+      "lastUpdateTs" : 1764277806229,
+      "longValue" : 1764277806229,
       "strValue" : null
     }, {
       "booleanValue" : null,
