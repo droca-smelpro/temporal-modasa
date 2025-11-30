@@ -42,7 +42,7 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "7c620750-8f20-11f0-a61c-01e0c85fd5dd"
+      "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
     },
     "to" : {
       "entityType" : "DEVICE",
@@ -50,15 +50,47 @@
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 118153
+    "version" : 227743
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CLASIFICACION",
+      "lastUpdateTs" : 1764370824613,
+      "longValue" : null,
+      "strValue" : "REASIGNADO"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "MODELO",
+      "lastUpdateTs" : 1764370824613,
+      "longValue" : null,
+      "strValue" : "MP45-60"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "TIMESTAMP",
+      "lastUpdateTs" : 1764371441998,
+      "longValue" : null,
+      "strValue" : "2025-11-28 18:10:35"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "TIPO_EVENTO",
+      "lastUpdateTs" : 1764370824613,
+      "longValue" : null,
+      "strValue" : "SERIE"
+    }, {
       "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1763983743646,
+      "lastUpdateTs" : 1764488894531,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -97,33 +129,169 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "caso",
+      "lastUpdateTs" : 1764371442257,
+      "longValue" : 2,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "cliente",
+      "lastUpdateTs" : 1764370824613,
+      "longValue" : null,
+      "strValue" : "MODASA EXPORTACION"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "diff",
+      "lastUpdateTs" : 1764370402249,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "estacion",
+      "lastUpdateTs" : 1764370402249,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "estado",
+      "lastUpdateTs" : 1764371441998,
+      "longValue" : null,
+      "strValue" : "EN INACTIVIDAD"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "evento",
+      "lastUpdateTs" : 1764371441998,
+      "longValue" : null,
+      "strValue" : "INICIO_INACTIVIDAD"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "filtrog",
+      "lastUpdateTs" : 1764371442257,
+      "longValue" : null,
+      "strValue" : "si"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "id_mensaje",
+      "lastUpdateTs" : 1764371441998,
+      "longValue" : 25,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1763982713629,
-      "longValue" : 1763982713628,
+      "lastUpdateTs" : 1764486960040,
+      "longValue" : 1764486960037,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764278047639,
-      "longValue" : 1764278046822,
+      "lastUpdateTs" : 1764528739629,
+      "longValue" : 1764528738557,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764277806719,
-      "longValue" : 1764277806719,
+      "lastUpdateTs" : 1764488894531,
+      "longValue" : 1764488894531,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764277806241,
-      "longValue" : 1764277806241,
+      "lastUpdateTs" : 1764486358158,
+      "longValue" : 1764486358158,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "linea",
+      "lastUpdateTs" : 1764370402249,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "names",
+      "lastUpdateTs" : 1764371441998,
+      "longValue" : 25,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "parte",
+      "lastUpdateTs" : 1764370402249,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "serie",
+      "lastUpdateTs" : 1764370824613,
+      "longValue" : null,
+      "strValue" : "X42222H"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ss_id_mensaje",
+      "lastUpdateTs" : 1764371442257,
+      "longValue" : 25,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "test",
+      "lastUpdateTs" : 1764370402249,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_seleccion",
+      "lastUpdateTs" : 1764370824613,
+      "longValue" : null,
+      "strValue" : "00:00:02"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "total",
+      "lastUpdateTs" : 1764370402249,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[]",
+      "key" : "var_0",
+      "lastUpdateTs" : 1764370402249,
+      "longValue" : null,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

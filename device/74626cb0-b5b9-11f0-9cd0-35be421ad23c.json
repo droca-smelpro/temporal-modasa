@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
     },
     "deviceData" : {
       "configuration" : {
@@ -20,7 +20,7 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "67af3860-8f1f-11f0-a61c-01e0c85fd5dd"
+      "id" : "f0f25a00-8f22-11f0-a61c-01e0c85fd5dd"
     },
     "externalId" : null,
     "firmwareId" : null,
@@ -29,59 +29,269 @@
       "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
     },
     "label" : "",
-    "name" : "PruebaSimulador",
+    "name" : "Estación 1.0",
     "softwareId" : null,
-    "type" : "default"
+    "type" : "workstation"
   },
   "credentials" : {
     "credentialsId" : "z8w5yaPhoEwQCKdNYeNW",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 224235
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 227742
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "TIMESTAMP",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : null,
+      "strValue" : "2025-11-28 15:56:59"
+    }, {
       "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764277717439,
+      "lastUpdateTs" : 1764488894506,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "c_unidades_ALAprimera",
+      "lastUpdateTs" : 1764280044804,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ensambladas",
+      "lastUpdateTs" : 1764280044804,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_retrabajadas",
+      "lastUpdateTs" : 1764279515843,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "caso",
+      "lastUpdateTs" : 1764363426500,
+      "longValue" : 2,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "diff",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "estacion",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "estado",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : null,
+      "strValue" : "EN INACTIVIDAD"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "evento",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : null,
+      "strValue" : "INICIO_INACTIVIDAD"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "filtrog",
+      "lastUpdateTs" : 1764363426500,
+      "longValue" : null,
+      "strValue" : "si"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "id_mensaje",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : 55,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764275992679,
-      "longValue" : 1764275992678,
+      "lastUpdateTs" : 1764486960039,
+      "longValue" : 1764486960037,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764277807624,
-      "longValue" : 1764277806226,
+      "lastUpdateTs" : 1764528739629,
+      "longValue" : 1764528738553,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764277722467,
-      "longValue" : 1764277722467,
+      "lastUpdateTs" : 1764488894506,
+      "longValue" : 1764488894506,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764277806241,
-      "longValue" : 1764277806241,
+      "lastUpdateTs" : 1764486358159,
+      "longValue" : 1764486358159,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "linea",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "names",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : 55,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 1.0,
+      "jsonValue" : null,
+      "key" : "p_ALAprimera",
+      "lastUpdateTs" : 1764280044804,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.0,
+      "jsonValue" : null,
+      "key" : "p_retrabajadas",
+      "lastUpdateTs" : 1764280044804,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "parte",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ss_id_mensaje",
+      "lastUpdateTs" : 1764363426500,
+      "longValue" : 55,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "test",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "total",
+      "lastUpdateTs" : 1764363425517,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ALAprimera",
+      "lastUpdateTs" : 1764280044804,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ensambladas",
+      "lastUpdateTs" : 1764280044804,
+      "longValue" : 1,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ ]
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "nombreDeEstacion",
+      "lastUpdateTs" : 1764289478843,
+      "longValue" : null,
+      "strValue" : "Estación 1.0"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "orden",
+      "lastUpdateTs" : 1764289264782,
+      "longValue" : 2,
+      "strValue" : null
+    } ]
   },
   "calculatedFields" : [ ]
 }

@@ -17,7 +17,7 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "1993ee00-a923-11f0-9abe-2dfd6db9cae3",
+              "deviceId" : "50776240-cc95-11f0-b9be-a7eb49293647",
               "entityAliasId" : null,
               "filterId" : null,
               "dataKeys" : [ {
@@ -55,6 +55,27 @@
                 "color" : "#607d8b",
                 "settings" : { },
                 "_hash" : 0.12260721928131113
+              }, {
+                "name" : "id_mensaje",
+                "type" : "timeseries",
+                "label" : "id_mensaje",
+                "color" : "#e91e63",
+                "settings" : { },
+                "_hash" : 0.8192368448786407
+              }, {
+                "name" : "filtrog",
+                "type" : "timeseries",
+                "label" : "filtrog",
+                "color" : "#ffeb3b",
+                "settings" : { },
+                "_hash" : 0.42643391257370455
+              }, {
+                "name" : "caso",
+                "type" : "timeseries",
+                "label" : "caso",
+                "color" : "#03a9f4",
+                "settings" : { },
+                "_hash" : 0.05995005346733773
               }, {
                 "name" : "var1",
                 "type" : "timeseries",

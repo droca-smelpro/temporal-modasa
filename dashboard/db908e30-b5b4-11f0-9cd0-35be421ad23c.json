@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "testeo_envios",
+    "title" : "testeo_envios_estaciones",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -17,7 +17,7 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "d411ed10-8f22-11f0-a61c-01e0c85fd5dd",
+              "deviceId" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3",
               "entityAliasId" : null,
               "filterId" : null,
               "dataKeys" : [ {
@@ -144,6 +144,13 @@
                 "color" : "#673ab7",
                 "settings" : { },
                 "_hash" : 0.6366942816798817
+              }, {
+                "name" : "TIPO_EVENTO",
+                "type" : "timeseries",
+                "label" : "TIPO_EVENTO",
+                "color" : "#cddc39",
+                "settings" : { },
+                "_hash" : 0.23854375003533146
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -304,7 +311,7 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "testeo_envios",
+    "name" : "testeo_envios_estaciones",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,

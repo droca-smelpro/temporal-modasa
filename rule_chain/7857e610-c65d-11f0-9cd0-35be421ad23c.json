@@ -15,7 +15,7 @@
       "entityType" : "RULE_CHAIN",
       "id" : "7857e610-c65d-11f0-9cd0-35be421ad23c"
     },
-    "name" : "Reconstruir",
+    "name" : "Reconstruir_en_TB",
     "root" : false,
     "type" : "CORE"
   },
@@ -38,11 +38,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 4,
-      "toIndex" : 14,
-      "type" : "estaciones"
-    }, {
-      "fromIndex" : 4,
-      "toIndex" : 20,
+      "toIndex" : 16,
       "type" : "parte"
     }, {
       "fromIndex" : 5,
@@ -50,11 +46,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 7,
-      "toIndex" : 16,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 7,
-      "toIndex" : 19,
+      "toIndex" : 15,
       "type" : "Success"
     }, {
       "fromIndex" : 12,
@@ -66,39 +58,31 @@
       "type" : "true"
     }, {
       "fromIndex" : 14,
-      "toIndex" : 15,
-      "type" : "estacion_1.2"
-    }, {
-      "fromIndex" : 16,
-      "toIndex" : 17,
-      "type" : "estacion_1.2"
-    }, {
-      "fromIndex" : 18,
       "toIndex" : 4,
       "type" : "Success"
     }, {
-      "fromIndex" : 19,
+      "fromIndex" : 15,
       "toIndex" : 0,
       "type" : "Success"
     }, {
-      "fromIndex" : 20,
+      "fromIndex" : 16,
       "toIndex" : 3,
       "type" : "estaciones"
     }, {
-      "fromIndex" : 20,
-      "toIndex" : 21,
+      "fromIndex" : 16,
+      "toIndex" : 17,
       "type" : "simulador"
     }, {
-      "fromIndex" : 21,
-      "toIndex" : 22,
+      "fromIndex" : 17,
+      "toIndex" : 18,
       "type" : "Success"
     } ],
-    "firstNodeIndex" : 18,
+    "firstNodeIndex" : 14,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1403,
-        "layoutY" : 426
+        "layoutX" : 1559,
+        "layoutY" : 630
       },
       "configuration" : {
         "version" : 0
@@ -119,8 +103,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 303,
-        "layoutY" : 275
+        "layoutX" : 568,
+        "layoutY" : 370
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
@@ -151,8 +135,8 @@
     }, {
       "additionalInfo" : {
         "description" : "msg.buffer.parte == msg.buffer.total",
-        "layoutX" : 510,
-        "layoutY" : 423
+        "layoutX" : 742,
+        "layoutY" : 621
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -179,8 +163,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 25,
-        "layoutY" : 273
+        "layoutX" : 285,
+        "layoutY" : 368
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -206,9 +190,9 @@
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 531,
-        "layoutY" : 30
+        "description" : "tiene la variable parte ?",
+        "layoutX" : 624,
+        "layoutY" : 154
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -235,8 +219,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1239,
-        "layoutY" : 265
+        "layoutX" : 1522,
+        "layoutY" : 363
       },
       "configuration" : {
         "processingSettings" : {
@@ -267,8 +251,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1400,
-        "layoutY" : 492
+        "layoutX" : 1556,
+        "layoutY" : 700
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -289,7 +273,7 @@
         "entityType" : "RULE_NODE",
         "id" : "89cc5fa0-c66e-11f0-9cd0-35be421ad23c"
       },
-      "name" : "HTFR",
+      "name" : "save",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -297,8 +281,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 825,
-        "layoutY" : 431
+        "layoutX" : 1013,
+        "layoutY" : 629
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -325,8 +309,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 134,
-        "layoutY" : 606
+        "layoutX" : 101,
+        "layoutY" : 762
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -353,8 +337,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 133,
-        "layoutY" : 662
+        "layoutX" : 101,
+        "layoutY" : 818
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -381,8 +365,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 131,
-        "layoutY" : 549
+        "layoutX" : 107,
+        "layoutY" : 698
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -409,8 +393,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 135,
-        "layoutY" : 721
+        "layoutX" : 96,
+        "layoutY" : 875
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -437,8 +421,8 @@
     }, {
       "additionalInfo" : {
         "description" : "suma el msg actual y el anterior si son del mismo mensaje, caso contrario deja pasar el ultimo mensaje",
-        "layoutX" : 608,
-        "layoutY" : 277
+        "layoutX" : 930,
+        "layoutY" : 368
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -465,8 +449,8 @@
     }, {
       "additionalInfo" : {
         "description" : "msg.buffer.parte == msg.buffer.total",
-        "layoutX" : 905,
-        "layoutY" : 269
+        "layoutX" : 1238,
+        "layoutY" : 360
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -493,120 +477,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 912,
-        "layoutY" : 24
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName==\"Estación 1.2\") {\n        return ['estacion_1.2'];\n    }\n    else {\n        return ['que'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764095058963,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "4ca420e0-ca29-11f0-b9be-a7eb49293647"
-      },
-      "name" : "FILTRO_estac",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1230,
-        "layoutY" : 29
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764105110463,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "7695bd00-ca29-11f0-b9be-a7eb49293647"
-      },
-      "name" : "debug",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 753,
-        "layoutY" : 643
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName==\"Estación 1.2\") {\n        return ['estacion_1.2'];\n    }\n    else {\n        return ['que'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764095881412,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c6ad3550-ca2b-11f0-b9be-a7eb49293647"
-      },
-      "name" : "FILTRO_estachb",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1029,
-        "layoutY" : 636
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764109219785,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c6ad5c60-ca2b-11f0-b9be-a7eb49293647"
-      },
-      "name" : "debug2",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 277,
-        "layoutY" : 57
+        "layoutX" : 319,
+        "layoutY" : 154
       },
       "configuration" : {
         "version" : 0
@@ -631,8 +503,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1109,
-        "layoutY" : 424
+        "layoutX" : 1282,
+        "layoutY" : 627
       },
       "configuration" : {
         "version" : 0
@@ -657,8 +529,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 295,
-        "layoutY" : 148
+        "layoutX" : 933,
+        "layoutY" : 164
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -681,8 +553,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 700,
-        "layoutY" : 143
+        "layoutX" : 1280,
+        "layoutY" : 166
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -709,8 +581,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1020,
-        "layoutY" : 144
+        "layoutX" : 1573,
+        "layoutY" : 172
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -727,7 +599,7 @@
         "entityType" : "RULE_NODE",
         "id" : "dc5387b0-cbbb-11f0-b9be-a7eb49293647"
       },
-      "name" : "gbh",
+      "name" : "save debug",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -747,7 +619,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 224208
+    "version" : 233931
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

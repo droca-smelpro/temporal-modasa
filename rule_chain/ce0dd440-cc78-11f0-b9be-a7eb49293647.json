@@ -1,0 +1,423 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "f880ea80-cc7a-11f0-b9be-a7eb49293647"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "ce0dd440-cc78-11f0-b9be-a7eb49293647"
+    },
+    "name" : "Filtro_Gateway",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 4,
+      "type" : "estaciones"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 4,
+      "type" : "simulador"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 6,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 8,
+      "type" : "no"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 11,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 2,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 3,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 113,
+        "layoutY" : 514
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName == \"Estación 1.0\" || metadata.deviceName == \"Estación 1.1\" \n    || metadata.deviceName == \"Estación 1.2\" || metadata.deviceName == \"Estación 1.3\"\n    || metadata.deviceName == \"Estación 1.4\" || metadata.deviceName == \"Estación 1.5\"\n    || metadata.deviceName == \"Estación 1.6\" || metadata.deviceName == \"Estación 1.7\"\n    || metadata.deviceName == \"Estación 1.8\" || metadata.deviceName == \"Estación 1.9\") {\n        return ['estaciones'];\n    }\n    else if (metadata.deviceName == \"simulador1\"){\n        return ['simulador'];\n    }\n    else {\n        return ['noo'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764372925586,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "22211d30-cc79-11f0-b9be-a7eb49293647"
+      },
+      "name" : "estaciones registradas",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "save el atributo id_mensaje",
+        "layoutX" : 91,
+        "layoutY" : 268
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "DATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "id_mensaje" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "22211d31-cc79-11f0-b9be-a7eb49293647"
+      },
+      "name" : "id_mensaje",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 917,
+        "layoutY" : 637
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2dac96c0-cc79-11f0-b9be-a7eb49293647"
+      },
+      "name" : "SALIDA",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainOutputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 262,
+        "layoutY" : 150
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f880ea80-cc7a-11f0-b9be-a7eb49293647"
+      },
+      "name" : "Cola secuencial",
+      "queueName" : "SequentialByOriginator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbCheckpointNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 513,
+        "layoutY" : 514
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0174f050-cc7b-11f0-b9be-a7eb49293647"
+      },
+      "name" : "Cola Normal",
+      "queueName" : "Main",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbCheckpointNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 543,
+        "layoutY" : 151
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "msg.id_mensaje=msg.names;\n\nreturn {msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764378449516,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b8ea01c0-cc7c-11f0-b9be-a7eb49293647"
+      },
+      "name" : "id_mensaje",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 481,
+        "layoutY" : 270
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\n\n\n// 1. Si ss_buffer no existe → devolver solo buffer\n// no existe porque seria el primer dato en llegar y pues entonces ss_buffer esta vacio\nif (!msg.ss_id_mensaje) {\n    msg.filtrog=\"no\";\n    msg.caso=1;\n    return {msg: msg, metadata: metadata, msgType: msgType};\n}\n\nelse{\n    if(msg.id_mensaje == msg.ss_id_mensaje){\n        msg.filtrog=\"si\";\n        msg.caso=2;\n       return {msg: msg, metadata: metadata, msgType: msgType}; \n    }\n    else{\n        msg.filtrog=\"no\";\n        msg.caso=3;\n    return {msg: msg, metadata: metadata, msgType: msgType};\n    }\n}\n\n\n\n\n\n\n\n\n\n\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764378449516,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1fb5ebc0-cc88-11f0-b9be-a7eb49293647"
+      },
+      "name" : "id_mensaje ==?",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 79,
+        "layoutY" : 403
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : true
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "9d3f69d0-cc89-11f0-b9be-a7eb49293647"
+      },
+      "name" : "save_id_mensaje",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 633,
+        "layoutY" : 404
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\n\n\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: 'POST_TELEMETRY_REQUEST'};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764378482576,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "48e5b720-cc8b-11f0-b9be-a7eb49293647"
+      },
+      "name" : "convert telemetria",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 376,
+        "layoutY" : 404
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    \n    if(msg.filtrog == \"no\") {\n        return ['no'];\n    }\n    else {\n        return ['si'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "84f31910-cc8b-11f0-b9be-a7eb49293647"
+      },
+      "name" : "es repetida?",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "nombre_operario: [\" \", \" \", \" \" ..., \" \"]",
+        "layoutX" : 123,
+        "layoutY" : 642
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var lista = [];\r\n\r\n// Buscar claves tipo OPERARIO_NOMBRE_n\r\nfor (var key in msg) {\r\n    if (msg.hasOwnProperty(key) && key.startsWith(\"OPERARIO_NOMBRE_\")) {\r\n        lista.push(msg[key]);\r\n    }\r\n}\r\n\r\n// Si NO hay operarios, devolver el mensaje sin agregar nada\r\nif (lista.length === 0) {\r\n    return {\r\n        msg: msg,         // ← Se devuelve igual\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n// Si HAY operarios, agregamos la variable nombre_operario\r\nmsg.nombre_operario = lista;\r\n\r\nreturn {\r\n    msg: msg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764378449516,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3ff191d0-ccad-11f0-b9be-a7eb49293647"
+      },
+      "name" : "nombre_operario: [\" \", \" \", \" \" ..., \" \"]",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "checklist",
+        "layoutX" : 514,
+        "layoutY" : 642
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var lista = [];\r\n\r\n// Recorremos todas las claves del mensaje\r\nfor (var key in msg) {\r\n    if (msg.hasOwnProperty(key) && key.indexOf(\"CHECKLIST_\") === 0) {\r\n        lista.push({\r\n            index: parseInt(key.replace(\"CHECKLIST_\", \"\")),\r\n            data: msg[key]\r\n        });\r\n    }\r\n}\r\n\r\n// Si no hay ningún CHECKLIST → devolver el mensaje tal cual\r\nif (lista.length === 0) {\r\n    return {\r\n        msg: msg,\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n// Ordenar por número CHECKLIST_n para mantener el orden correcto\r\nlista.sort(function(a, b) {\r\n    return a.index - b.index;\r\n});\r\n\r\n// Construimos el array final solo con los datos (sin el índice)\r\nvar checklist = lista.map(function(x) {\r\n    return x.data;\r\n});\r\n\r\n// Agregamos variable al mensaje\r\nmsg.checklist = checklist;\r\n\r\nreturn {\r\n    msg: msg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764378399861,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "63168910-ccba-11f0-b9be-a7eb49293647"
+      },
+      "name" : "checklist",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "ce0dd440-cc78-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 233929
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

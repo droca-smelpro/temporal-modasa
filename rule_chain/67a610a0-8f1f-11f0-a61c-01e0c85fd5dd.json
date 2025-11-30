@@ -36,7 +36,7 @@
       "type" : "RPC Request to Device"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 12,
+      "toIndex" : 11,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
@@ -45,30 +45,34 @@
     }, {
       "fromIndex" : 7,
       "toIndex" : 0,
-      "type" : "Output"
+      "type" : "save"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 12,
+      "type" : "Calcular eficiencia operario"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 13,
+      "type" : "Calcular tiempo serie"
     }, {
       "fromIndex" : 11,
-      "toIndex" : 10,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 12,
       "toIndex" : 7,
-      "type" : "estaciones"
+      "type" : "SALIDA"
     }, {
-      "fromIndex" : 12,
+      "fromIndex" : 11,
       "toIndex" : 8,
-      "type" : "estaciones"
+      "type" : "SALIDA"
     }, {
-      "fromIndex" : 12,
+      "fromIndex" : 11,
       "toIndex" : 9,
-      "type" : "estaciones"
+      "type" : "SALIDA"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 984,
-        "layoutY" : 539
+        "layoutX" : 1263,
+        "layoutY" : 275
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -96,8 +100,8 @@
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 825,
-        "layoutY" : 52
+        "layoutX" : 677,
+        "layoutY" : 20
       },
       "configuration" : {
         "processingSettings" : {
@@ -149,8 +153,8 @@
       "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 830,
-        "layoutY" : 314
+        "layoutX" : 789,
+        "layoutY" : 82
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -172,8 +176,8 @@
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 825,
-        "layoutY" : 379
+        "layoutX" : 822,
+        "layoutY" : 142
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -195,8 +199,8 @@
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 825,
-        "layoutY" : 468
+        "layoutX" : 835,
+        "layoutY" : 198
       },
       "configuration" : {
         "timeoutInSeconds" : 60
@@ -243,9 +247,9 @@
       "type" : "org.thingsboard.rule.engine.profile.TbDeviceProfileNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 678,
-        "layoutY" : 545
+        "description" : "Se procesa la telemetría entrante para ser mostrada en los widgets",
+        "layoutX" : 835,
+        "layoutY" : 321
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
@@ -270,9 +274,9 @@
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 680,
-        "layoutY" : 694
+        "description" : "Se procesan los mensajes a Telegran y/o correo",
+        "layoutX" : 834,
+        "layoutY" : 455
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
@@ -293,9 +297,9 @@
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 685,
-        "layoutY" : 621
+        "description" : "Se procesan las Alarmas",
+        "layoutX" : 833,
+        "layoutY" : 391
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
@@ -316,9 +320,9 @@
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 103,
-        "layoutY" : 482
+        "description" : "Realiza la reconstrucción en Thingsboard de las tramas que vienen en trozos.",
+        "layoutX" : 135,
+        "layoutY" : 298
       },
       "configuration" : {
         "forwardMsgToDefaultRuleChain" : false,
@@ -332,7 +336,30 @@
         "entityType" : "RULE_NODE",
         "id" : "a85ad640-c664-11f0-9cd0-35be421ad23c"
       },
-      "name" : "re Recontruir",
+      "name" : "reconstrucción TB",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Realiza el filtro de los mensajes que estan repetidas luego de que se reconstruyan en el Gateway. ",
+        "layoutX" : 511,
+        "layoutY" : 305
+      },
+      "configuration" : {
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "ce0dd440-cc78-11f0-b9be-a7eb49293647"
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e80fb250-cc78-11f0-b9be-a7eb49293647"
+      },
+      "name" : "FILTRO gateway",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -340,60 +367,49 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 112,
-        "layoutY" : 328
+        "layoutX" : 1265,
+        "layoutY" : 321
       },
       "configuration" : {
-        "useMetadataPeriodInSecondsPatterns" : false,
-        "periodInSeconds" : 1,
-        "periodInSecondsPattern" : null,
-        "maxPendingMsgs" : 1000
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "acfe6180-ce16-11f0-b9be-a7eb49293647"
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764106858000,
-        "failuresEnabled" : true
-      },
+      "debugSettings" : null,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ad0b4830-ca44-11f0-b9be-a7eb49293647"
+        "id" : "4b81cc60-ce18-11f0-b9be-a7eb49293647"
       },
-      "name" : "delay",
+      "name" : "Eficencia Operario",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 389,
-        "layoutY" : 498
+        "layoutX" : 1266,
+        "layoutY" : 368
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName == \"Estación 1.0\" || metadata.deviceName == \"Estación 1.1\" \n    || metadata.deviceName == \"Estación 1.2\" || metadata.deviceName == \"Estación 1.3\"\n    || metadata.deviceName == \"Estación 1.4\" || metadata.deviceName == \"Estación 1.5\"\n    || metadata.deviceName == \"Estación 1.6\" || metadata.deviceName == \"Estación 1.7\"\n    || metadata.deviceName == \"Estación 1.8\" || metadata.deviceName == \"Estación 1.9\") {\n        return ['estaciones'];\n    }\n    else if (metadata.deviceName == \"PruebaSimulador\"){\n        return ['simulador'];\n    }\n    else {\n        return ['noo'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+        "forwardMsgToDefaultRuleChain" : false,
+        "ruleChainId" : "5564f7b0-ce19-11f0-b9be-a7eb49293647"
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
+      "debugSettings" : null,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "782dff60-cbcd-11f0-b9be-a7eb49293647"
+        "id" : "6694afd0-ce19-11f0-b9be-a7eb49293647"
       },
-      "name" : "filtro estaciones",
+      "name" : "Tiempo seire",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -409,7 +425,33 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 224214
+    "version" : 233937
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "acfe6180-ce16-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 233927
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "ce0dd440-cc78-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 233929
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -422,7 +464,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 224212
+    "version" : 233935
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -435,7 +477,20 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 224210
+    "version" : 233933
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "5564f7b0-ce19-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 233925
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -448,7 +503,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 224208
+    "version" : 233931
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

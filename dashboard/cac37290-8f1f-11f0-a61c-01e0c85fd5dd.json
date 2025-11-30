@@ -1547,7 +1547,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' :\n    'darkMode';\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>menu</mat-icon>' + '</button>' +\n    '<div class=\"flex flex-col items-stretch justify-center\">' +\n    '<div class=\"title\">Gestión de Producción</div>' +\n    \n    '</div>' +\n    '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-4 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' +\n    '<div class=\"powered-by\">Demo desarrollada por Smelpro</div>' +\n    '</div>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n              \n                '<button id=\"download\" mat-icon-button matTooltip=\"Descargar\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                \n    '</div>' +\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n    '<button (click)=\"darkMode = ' + darkModeExpression +\n    ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ ' +\n    darkModeExpression +\n    ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ ' +\n    darkModeExpression +\n    ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' + '</div>';",
+              "markdownTextFunction" : "$('.tb-dashboard-page').addClass('dark');\n\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' :\n    'darkMode';\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>menu</mat-icon>' + '</button>' +\n    '<div class=\"flex flex-col items-stretch justify-center\">' +\n    '<div class=\"title\">Gestión de Producción</div>' +\n    \n    '</div>' +\n    '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-4 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' +\n    '<div class=\"powered-by\">Demo desarrollada por Smelpro</div>' +\n    '</div>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 24px;\">' +\n              \n                '<button id=\"download\" mat-icon-button matTooltip=\"Descargar\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                \n    '</div>' +\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n    '<button (click)=\"darkMode = ' + darkModeExpression +\n    ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ ' +\n    darkModeExpression +\n    ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ ' +\n    darkModeExpression +\n    ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' + '</div>';",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 24px;\n    justify-content: space-around;\n}\n\n@media (min-width: 960px) {\n    .header {\n        gap: 24px;\n    }\n}\n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 24px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
             },
@@ -2808,7 +2808,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode'; \nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' + \n'<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n'<mat-icon>menu</mat-icon>' + '</button>' +\n\n'</div>' +\n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' + \n'<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+ '<div class=\"title\">${entityLabel}</div>' +\n'<div class=\"subtitle\">${entityName}</div>' + \n'</div>' +\n\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n'<button id=\"download\" mat-icon-button matTooltip=\"Descargar Estación\">' +\n'<mat-icon>download</mat-icon>' + '</button>' + \n\n'</div>' + \n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n'<button (click)=\"darkMode = '+darkModeExpression+ ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression + ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression + ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' + \n'</div>' + '</div>';",
+              "markdownTextFunction" : "\n\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode'; \nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 12px;\">' + \n'<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n'<mat-icon>menu</mat-icon>' + '</button>' +\n\n'</div>' +\n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' + \n'<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+ '<div class=\"title\">${entityLabel}</div>' +\n'<div class=\"subtitle\">${entityName}</div>' + \n'</div>' +\n\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n'<button id=\"download\" mat-icon-button matTooltip=\"Descargar Estación\">' +\n'<mat-icon>download</mat-icon>' + '</button>' + \n\n'</div>' + \n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 24px;\">' +\n'<button (click)=\"darkMode = '+darkModeExpression+ ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression + ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression + ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' + \n'</div>' + '</div>';",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n.tb-timewindow-label {\n    \n}\n"
             },
@@ -9255,7 +9255,7 @@
                   "useCellStyleFunction" : false,
                   "cellStyleFunction" : "",
                   "useCellContentFunction" : true,
-                  "cellContentFunction" : "var westado = value;\n\nvar stateSvg = getStateSvg(westado);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\nvar stateLabel = westado;\n\nreturn '<span>'+\n           '<img style=\"vertical-align: middle;\" class=\"mat-icon\" src=\"'+ stateSvgUrl +'\">' +\n           '<span style=\"vertical-align: middle; padding-left: 8px;\">'+ stateLabel +'</span>' +\n       '</span>';\n            \nfunction getStateSvg(westado) {\n    switch (westado) {\n        case 'EN OPERACIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#00FF00\"/>' +\n                   '</svg>';\n                   \n        \n        case 'EN PARADA':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF0000\"/>' +\n                   '</svg>';\n        case 'EN INSPECCIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#da04a6\"/>' + '</svg>';\n        case 'EN LEVANTAMIENTO':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#04dbd3\"/>' + '</svg>';\n        case 'EN ESPERA':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#000\"/>' + '</svg>';\n                     \n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#AAAAAA\"/>' +\n                   '</svg>';\n    }\n}\n",
+                  "cellContentFunction" : "var westado = value;\n\nvar stateSvg = getStateSvg(westado);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\nvar stateLabel = westado;\n\nreturn '<span>'+\n           '<img style=\"vertical-align: middle;\" class=\"mat-icon\" src=\"'+ stateSvgUrl +'\">' +\n           '<span style=\"vertical-align: middle; padding-left: 8px;\">'+ stateLabel +'</span>' +\n       '</span>';\n            \nfunction getStateSvg(westado) {\n    switch (westado) {\n        case 'EN OPERACIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#4CE16B\"/>' +\n                   '</svg>';\n                   \n        \n        case 'EN PARADA':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF5144\"/>' +\n                   '</svg>';\n        case 'EN INSPECCIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF2C73\"/>' + '</svg>';\n        case 'EN LEVANTAMIENTO':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#1EE9CC\"/>' + '</svg>';\n        case 'EN ESPERA':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#000\"/>' + '</svg>';\n                     \n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#AAAAAA\"/>' +\n                   '</svg>';\n    }\n}\n\n\n\n\n\n\n\n\n\n\n\n\n/*\nvar westado = value;\n\nvar stateSvg = getStateSvg(westado);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\nvar stateLabel = westado;\n\nreturn '<span>'+\n           '<img style=\"vertical-align: middle;\" class=\"mat-icon\" src=\"'+ stateSvgUrl +'\">' +\n           '<span style=\"vertical-align: middle; padding-left: 8px;\">'+ stateLabel +'</span>' +\n       '</span>';\n            \nfunction getStateSvg(westado) {\n    switch (westado) {\n        case 'EN OPERACIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#00FF00\"/>' +\n                   '</svg>';\n                   \n        \n        case 'EN PARADA':            \n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF0000\"/>' +\n                   '</svg>';\n        case 'EN INSPECCIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#da04a6\"/>' + '</svg>';\n        case 'EN LEVANTAMIENTO':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#04dbd3\"/>' + '</svg>';\n        case 'EN ESPERA':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' + \n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#000\"/>' + '</svg>';\n                     \n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                   '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#AAAAAA\"/>' +\n                   '</svg>';\n    }\n}\n*/",
                   "defaultColumnVisibility" : "visible",
                   "columnSelectionToDisplay" : "enabled",
                   "disableSorting" : false
@@ -15173,6 +15173,112 @@
           "row" : 0,
           "col" : 0,
           "id" : "e7057033-2778-e510-569f-d0c6362e635b"
+        },
+        "aa4c3baa-b76e-7271-1379-3bcba774de22" : {
+          "typeFullFqn" : "tenant.control",
+          "type" : "timeseries",
+          "sizeX" : 9,
+          "sizeY" : 4,
+          "config" : {
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "Linea 1 - Estaciones",
+            "decimals" : null,
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "0px 0px 5px 0px"
+            },
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "fa8395bf-6a57-2a07-b080-13048e5e1b29",
+              "dataKeys" : [ {
+                "name" : "westado",
+                "type" : "timeseries",
+                "label" : "westado",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5233217160734591
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "aa4c3baa-b76e-7271-1379-3bcba774de22"
+        },
+        "c50a7201-688d-38df-0440-faaae0777518" : {
+          "typeFullFqn" : "tenant.control",
+          "type" : "timeseries",
+          "sizeX" : 9,
+          "sizeY" : 4,
+          "config" : {
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "Linea 2 - Estaciones",
+            "decimals" : null,
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "0px 0px 5px 0px"
+            },
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "150604ff-f485-0068-4c39-a074a7f5f031",
+              "dataKeys" : [ {
+                "name" : "westado",
+                "type" : "timeseries",
+                "label" : "westado",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5233217160734591
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c50a7201-688d-38df-0440-faaae0777518"
         }
       },
       "states" : {
@@ -15195,8 +15301,8 @@
                 "9e22bfb2-6437-ceb5-3452-883c83910f7d" : {
                   "sizeX" : 5,
                   "sizeY" : 5,
-                  "row" : 31,
-                  "col" : 3,
+                  "row" : 50,
+                  "col" : 11,
                   "resizable" : true,
                   "mobileOrder" : 7,
                   "mobileHide" : true,
@@ -15209,14 +15315,14 @@
                   "mobileHeight" : 1,
                   "desktopHide" : true,
                   "resizable" : true,
-                  "row" : 28,
+                  "row" : 31,
                   "col" : 0
                 },
                 "eb016c95-e9ed-911c-0542-a609bd49d461" : {
                   "sizeX" : 3,
                   "sizeY" : 4,
-                  "row" : 36,
-                  "col" : 9,
+                  "row" : 45,
+                  "col" : 6,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -15224,8 +15330,8 @@
                 "1d930159-13ec-a015-0865-efee55fa2d61" : {
                   "sizeX" : 4,
                   "sizeY" : 4,
-                  "row" : 36,
-                  "col" : 12,
+                  "row" : 45,
+                  "col" : 9,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -15233,8 +15339,8 @@
                 "6c37f8cd-8661-97c9-7df4-22ffc1b7287c" : {
                   "sizeX" : 8,
                   "sizeY" : 4,
-                  "row" : 32,
-                  "col" : 16,
+                  "row" : 50,
+                  "col" : 3,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -15242,14 +15348,14 @@
                 "da7fd847-2b0a-2f8f-cbfe-eafe132cd4eb" : {
                   "sizeX" : 8,
                   "sizeY" : 9,
-                  "row" : 14,
+                  "row" : 19,
                   "col" : 0
                 },
                 "2a6f8d67-eb28-9354-5f53-610b17cc635e" : {
                   "sizeX" : 8,
                   "sizeY" : 3,
-                  "row" : 29,
-                  "col" : 16,
+                  "row" : 55,
+                  "col" : 3,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -15257,38 +15363,38 @@
                 "bcec8108-a7ef-e35e-01f1-1b766f987c56" : {
                   "sizeX" : 8,
                   "sizeY" : 5,
-                  "row" : 36,
-                  "col" : 16,
+                  "row" : 45,
+                  "col" : 13,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
                 },
                 "bd417389-a0c4-3fdb-d44d-c6272db0f533" : {
-                  "sizeX" : 4,
+                  "sizeX" : 6,
                   "sizeY" : 5,
-                  "row" : 1,
+                  "row" : 5,
                   "col" : 8
                 },
                 "98be5c19-5862-f613-9a44-455e38ff99e2" : {
                   "sizeX" : 6,
                   "sizeY" : 3,
-                  "row" : 31,
-                  "col" : 8,
+                  "row" : 50,
+                  "col" : 16,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
                 },
                 "38f7ffd1-4598-e040-aea6-cce37274ee09" : {
-                  "sizeX" : 8,
-                  "sizeY" : 8,
-                  "row" : 6,
+                  "sizeX" : 7,
+                  "sizeY" : 7,
+                  "row" : 10,
                   "col" : 0
                 },
                 "521525a5-2a54-cb0b-4644-6a1d1d8049bc" : {
                   "sizeX" : 3,
                   "sizeY" : 11,
                   "resizable" : true,
-                  "row" : 31,
+                  "row" : 45,
                   "col" : 0,
                   "mobileHide" : true,
                   "desktopHide" : true
@@ -15297,74 +15403,86 @@
                   "sizeX" : 3,
                   "sizeY" : 4,
                   "mobileHeight" : null,
-                  "row" : 36,
-                  "col" : 6,
+                  "row" : 45,
+                  "col" : 3,
                   "resizable" : true,
                   "mobileHide" : true,
                   "desktopHide" : true
                 },
                 "36ad3b8f-ab9e-3865-e774-07239614039d" : {
-                  "sizeX" : 8,
-                  "sizeY" : 8,
+                  "sizeX" : 10,
+                  "sizeY" : 7,
                   "resizable" : true,
-                  "row" : 6,
-                  "col" : 16
+                  "row" : 10,
+                  "col" : 14
                 },
                 "ce310e4b-a9f8-58d6-7393-c2d1a4648302" : {
-                  "sizeX" : 12,
+                  "sizeX" : 10,
                   "sizeY" : 5,
                   "resizable" : true,
-                  "row" : 1,
-                  "col" : 12
+                  "row" : 5,
+                  "col" : 14
                 },
                 "8277d14e-e5a2-544e-d4db-70416cd136ed" : {
                   "sizeX" : 4,
                   "sizeY" : 5,
-                  "row" : 1,
+                  "row" : 5,
                   "col" : 4
                 },
                 "0552efc6-0da4-a28d-1e9a-9cb2d4ab3f0e" : {
                   "sizeX" : 8,
                   "sizeY" : 3,
-                  "row" : 23,
+                  "row" : 28,
                   "col" : 0
                 },
                 "60a97906-f2d9-0b24-3b77-ac54ec7ba17d" : {
                   "sizeX" : 4,
                   "sizeY" : 5,
-                  "row" : 1,
+                  "row" : 5,
                   "col" : 0
                 },
                 "1efe1dd0-f96e-1f64-d257-fd17aee0bfe4" : {
-                  "sizeX" : 8,
-                  "sizeY" : 8,
-                  "row" : 6,
-                  "col" : 8
+                  "sizeX" : 7,
+                  "sizeY" : 7,
+                  "row" : 10,
+                  "col" : 7
                 },
                 "dfb0ff76-e8b6-01e5-34ee-9c4c0b3e6e3c" : {
                   "sizeX" : 8,
                   "sizeY" : 7,
-                  "row" : 19,
+                  "row" : 24,
                   "col" : 16
                 },
                 "6c40a207-f2e5-913a-9645-e227e76b3232" : {
                   "sizeX" : 8,
                   "sizeY" : 5,
-                  "row" : 21,
+                  "row" : 26,
                   "col" : 8
                 },
                 "6a6e8f8b-44a5-d862-caa7-bb5573e529ce" : {
                   "sizeX" : 8,
                   "sizeY" : 5,
-                  "row" : 14,
+                  "row" : 19,
                   "col" : 16
                 },
                 "767d327a-833d-0177-dea1-bb0b8325dafa" : {
                   "sizeX" : 8,
                   "sizeY" : 7,
                   "resizable" : true,
-                  "row" : 14,
+                  "row" : 19,
                   "col" : 8
+                },
+                "aa4c3baa-b76e-7271-1379-3bcba774de22" : {
+                  "sizeX" : 12,
+                  "sizeY" : 4,
+                  "row" : 1,
+                  "col" : 0
+                },
+                "c50a7201-688d-38df-0440-faaae0777518" : {
+                  "sizeX" : 12,
+                  "sizeY" : 4,
+                  "row" : 1,
+                  "col" : 12
                 }
               },
               "gridSettings" : {
@@ -15989,7 +16107,7 @@
           "filter" : {
             "type" : "deviceType",
             "resolveMultiple" : true,
-            "deviceTypes" : [ "workstation", "line" ],
+            "deviceTypes" : [ "workstation", "line", "linea_produccion" ],
             "deviceNameFilter" : ""
           }
         },
@@ -16088,6 +16206,56 @@
             "fetchLastLevelOnly" : true,
             "filters" : [ ]
           }
+        },
+        "fa8395bf-6a57-2a07-b080-13048e5e1b29" : {
+          "id" : "fa8395bf-6a57-2a07-b080-13048e5e1b29",
+          "alias" : "Estaciones de Linea 1",
+          "filter" : {
+            "type" : "relationsQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
+            },
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "filters" : [ ]
+          }
+        },
+        "150604ff-f485-0068-4c39-a074a7f5f031" : {
+          "id" : "150604ff-f485-0068-4c39-a074a7f5f031",
+          "alias" : "Estaciones de Linea 2",
+          "filter" : {
+            "type" : "relationsQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "0bf20710-b9b7-11f0-9cd0-35be421ad23c"
+            },
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "filters" : [ ]
+          }
+        },
+        "355a59d1-cb10-fcb4-5f12-c3dff8af7539" : {
+          "id" : "355a59d1-cb10-fcb4-5f12-c3dff8af7539",
+          "alias" : "Customers",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "CURRENT_CUSTOMER",
+              "id" : "7810e4c0-45cd-11ef-bcb7-976e94e2a809"
+            }
+          }
         }
       },
       "filters" : { },
@@ -16131,8 +16299,8 @@
         "showDashboardExport" : false,
         "toolbarAlwaysOpen" : true,
         "titleColor" : "rgba(0,0,0,0.870588)",
-        "showDashboardLogo" : false,
-        "dashboardLogoUrl" : null,
+        "showDashboardLogo" : true,
+        "dashboardLogoUrl" : "tb-image;/api/images/tenant/Logo Modasa RGB-01.png",
         "hideToolbar" : false,
         "showFilters" : false,
         "showUpdateDashboardImage" : false,

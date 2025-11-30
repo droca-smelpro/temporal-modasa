@@ -1,0 +1,191 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "67af3860-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "50776240-cc95-11f0-b9be-a7eb49293647"
+    },
+    "label" : "",
+    "name" : "simulador1",
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "3qSZXQfZeztRttey8iUm",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_1",
+      "lastUpdateTs" : 1764371920780,
+      "longValue" : null,
+      "strValue" : "GARCIA"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_2",
+      "lastUpdateTs" : 1764371920780,
+      "longValue" : null,
+      "strValue" : "GALLARDO"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_3",
+      "lastUpdateTs" : 1764371920780,
+      "longValue" : null,
+      "strValue" : "pedro"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_4",
+      "lastUpdateTs" : 1764371920780,
+      "longValue" : null,
+      "strValue" : "garcilazo"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_5",
+      "lastUpdateTs" : 1764371920780,
+      "longValue" : null,
+      "strValue" : "alexander"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_6",
+      "lastUpdateTs" : 1764371920780,
+      "longValue" : null,
+      "strValue" : "Juan"
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1764373256100,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "caso",
+      "lastUpdateTs" : 1764372558546,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "filtrog",
+      "lastUpdateTs" : 1764372558546,
+      "longValue" : null,
+      "strValue" : "no"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "id_mensaje",
+      "lastUpdateTs" : 1764372600025,
+      "longValue" : 53,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1764373256097,
+      "longValue" : 1764373256095,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1764372601628,
+      "longValue" : 1764372600172,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1764372599815,
+      "longValue" : 1764372599815,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1764372600192,
+      "longValue" : 1764372600192,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "names",
+      "lastUpdateTs" : 1764372600025,
+      "longValue" : 53,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ss_id_mensaje",
+      "lastUpdateTs" : 1764372600025,
+      "longValue" : 52,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "var1",
+      "lastUpdateTs" : 1764360455028,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "var2",
+      "lastUpdateTs" : 1764360957507,
+      "longValue" : 20,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
