@@ -17,7 +17,7 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3",
+              "deviceId" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c",
               "entityAliasId" : null,
               "filterId" : null,
               "dataKeys" : [ {
@@ -103,27 +103,6 @@
                 "settings" : { },
                 "_hash" : 0.8593273676937472
               }, {
-                "name" : "parte",
-                "type" : "timeseries",
-                "label" : "parte",
-                "color" : "#3f51b5",
-                "settings" : { },
-                "_hash" : 0.19734063032489157
-              }, {
-                "name" : "total",
-                "type" : "timeseries",
-                "label" : "total",
-                "color" : "#e91e63",
-                "settings" : { },
-                "_hash" : 0.9723948586918786
-              }, {
-                "name" : "names",
-                "type" : "timeseries",
-                "label" : "names",
-                "color" : "#ffeb3b",
-                "settings" : { },
-                "_hash" : 0.7752982434242589
-              }, {
                 "name" : "test",
                 "type" : "timeseries",
                 "label" : "test",
@@ -151,6 +130,13 @@
                 "color" : "#cddc39",
                 "settings" : { },
                 "_hash" : 0.23854375003533146
+              }, {
+                "name" : "produccion_teorica",
+                "type" : "timeseries",
+                "label" : "produccion_teorica",
+                "color" : "#ff9800",
+                "settings" : { },
+                "_hash" : 0.6259753298789278
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]

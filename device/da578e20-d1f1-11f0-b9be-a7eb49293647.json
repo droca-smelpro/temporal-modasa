@@ -1,0 +1,72 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "bcb29c10-bc21-11f0-9cd0-35be421ad23c"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "da578e20-d1f1-11f0-b9be-a7eb49293647"
+    },
+    "label" : "Room 234 Sensor",
+    "name" : "CHIPANA HUAMAN NILO JULHIÑO",
+    "softwareId" : null,
+    "type" : "chambas"
+  },
+  "credentials" : {
+    "credentialsId" : "L6Cr1FgTlK5YcpBTLSIi",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "da578e20-d1f1-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 278606
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1764950357949,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1764950357945,
+      "longValue" : 1764950357943,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}

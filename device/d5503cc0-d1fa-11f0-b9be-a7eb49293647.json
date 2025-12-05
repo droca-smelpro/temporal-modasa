@@ -22,15 +22,15 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
     },
     "label" : "Room 234 Sensor",
-    "name" : "DAHUA JOTA JERRI",
+    "name" : "GONZALES CHUMPITAZ EDWIN ALONSO",
     "softwareId" : null,
     "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "bcKbZIvwCDgUfK0Uv2pS",
+    "credentialsId" : "90Ddi5GDZB8E9hEyTLe4",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -38,15 +38,15 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "d0033100-a62b-11f0-9abe-2dfd6db9cae3"
+      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 250764
+    "version" : 281202
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -55,11 +55,11 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 219833
+    "version" : 283640
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -68,37 +68,11 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 224235
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 286965
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 269207
+    "version" : 281203
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -106,7 +80,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764118546992,
+      "lastUpdateTs" : 1764954198096,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -114,8 +88,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764118546971,
-      "longValue" : 1764118546970,
+      "lastUpdateTs" : 1764954198083,
+      "longValue" : 1764954198081,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

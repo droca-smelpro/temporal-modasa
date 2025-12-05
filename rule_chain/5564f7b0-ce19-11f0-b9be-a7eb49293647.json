@@ -57,12 +57,16 @@
       "toIndex" : 9,
       "type" : "Success"
     }, {
+      "fromIndex" : 8,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
       "fromIndex" : 9,
       "toIndex" : 10,
       "type" : "Success"
     }, {
       "fromIndex" : 10,
-      "toIndex" : 15,
+      "toIndex" : 14,
       "type" : "Success"
     }, {
       "fromIndex" : 12,
@@ -77,16 +81,16 @@
       "toIndex" : 13,
       "type" : "Success"
     }, {
-      "fromIndex" : 15,
-      "toIndex" : 14,
+      "fromIndex" : 16,
+      "toIndex" : 17,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 1,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1220,
-        "layoutY" : 139
+        "layoutX" : 64,
+        "layoutY" : 508
       },
       "configuration" : {
         "latestTsKeyNames" : [ "$[nombre_variable]" ],
@@ -122,8 +126,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 289,
-        "layoutY" : 142
+        "layoutX" : 78,
+        "layoutY" : 219
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -150,8 +154,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 589,
-        "layoutY" : 137
+        "layoutX" : 72,
+        "layoutY" : 306
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -178,8 +182,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 449,
-        "layoutY" : 250
+        "layoutX" : 321,
+        "layoutY" : 242
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -208,8 +212,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 901,
-        "layoutY" : 136
+        "layoutX" : 67,
+        "layoutY" : 402
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -246,8 +250,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 710,
-        "layoutY" : 259
+        "layoutX" : 333,
+        "layoutY" : 347
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -276,8 +280,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1505,
-        "layoutY" : 139
+        "layoutX" : 65,
+        "layoutY" : 618
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -303,13 +307,13 @@
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1039,
-        "layoutY" : 304
+        "description" : "guardar/\n\n tiempo_serie_total: tiempo total de la serie en formato DD:HH:MM:SS\n\ntiempo_serie_totalMin: LO MISMO pero en minutos para el widget tendencia\n\nserie_tiempo: variable aparte para no mezclar con estaciones y solo se actualize con estacion 9.",
+        "layoutX" : 71,
+        "layoutY" : 713
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var msgout={};\n\nvar clave = msg.nombre_variable; // \"serie_abcd_dispositivo_Estación 1.7\"\nvar total = 0;\n\n\n\nif (metadata[clave]) {\n    try {\n        var historial = JSON.parse(metadata[clave]);\n        historial.forEach(function(item) {\n            total += parseFloat(item.value) || 0;\n        });\n    } catch(e) {\n        // Si no es JSON válido, intentar sumar directamente\n        total += parseFloat(metadata[clave]) || 0;\n    }\n    \n    delete metadata[clave];\n}\n\n\n\n/*\nif (msg[clave]) {\n    total += parseFloat(msg[clave]) || 0;\n}\n*/\n\n//  Guardar resultado\nmsgout.tiempo_serie_total = segundosAFormato(total);\nmsgout.tiempo_serie_totalMin=tiempoMinutos(segundosAFormato(total)).toFixed(2);\nmsgout.estatus = \"sumado\";\nmsgout.serie_tiempo=msg.serie;\nmsgout.clave=clave;\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n//#############################################################\nfunction segundosAFormato(totalSeg) {\n    function dosDigitos(n) {\n        return (n < 10 ? \"0\" : \"\") + n;\n    }\n\n    var d = Math.floor(totalSeg / 86400);\n    totalSeg = totalSeg % 86400;\n\n    var h = Math.floor(totalSeg / 3600);\n    totalSeg = totalSeg % 3600;\n\n    var m = Math.floor(totalSeg / 60);\n    var s = totalSeg % 60;\n\n    return dosDigitos(d) + \":\" + dosDigitos(h) + \":\" + dosDigitos(m) + \":\" + dosDigitos(s);\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}",
+        "jsScript" : "var msgout={};\n\nvar clave = msg.nombre_variable; //  \"serie_X42222H\"\nvar total = 0;\n\nif (metadata[clave]) {\n    try {\n        var historial = JSON.parse(metadata[clave]);\n        historial.forEach(function(item) {\n            total += parseFloat(item.value) || 0;\n        });\n    } catch(e) {\n        // Si no es JSON válido, intentar sumar directamente\n        total += parseFloat(metadata[clave]) || 0;\n    }\n    \n    delete metadata[clave];\n}\n\n//  Guardar resultado\nmsgout.tiempo_serie_total = segundosAFormato(total);\nmsgout.tiempo_serie_totalMin=tiempoMinutos(segundosAFormato(total)).toFixed(2);\nmsgout.serie_tiempo=msg.serie;\n\nmetadata.clave=msg.clave;\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n//#############################################################\nfunction segundosAFormato(totalSeg) {\n    function dosDigitos(n) {\n        return (n < 10 ? \"0\" : \"\") + n;\n    }\n\n    var d = Math.floor(totalSeg / 86400);\n    totalSeg = totalSeg % 86400;\n\n    var h = Math.floor(totalSeg / 3600);\n    totalSeg = totalSeg % 3600;\n\n    var m = Math.floor(totalSeg / 60);\n    var s = totalSeg % 60;\n\n    return dosDigitos(d) + \":\" + dosDigitos(h) + \":\" + dosDigitos(m) + \":\" + dosDigitos(s);\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -332,8 +336,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 986,
-        "layoutY" : 415
+        "layoutX" : 61,
+        "layoutY" : 841
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -354,7 +358,7 @@
         "entityType" : "RULE_NODE",
         "id" : "8daf1013-ce19-11f0-b9be-a7eb49293647"
       },
-      "name" : "save serie_tiempo",
+      "name" : "save estacion 1.9",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -362,8 +366,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 927,
-        "layoutY" : 520
+        "layoutX" : 316,
+        "layoutY" : 755
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -400,8 +404,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 935,
-        "layoutY" : 749
+        "layoutX" : 565,
+        "layoutY" : 753
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -422,7 +426,7 @@
         "entityType" : "RULE_NODE",
         "id" : "a7d42321-d172-11f0-b9be-a7eb49293647"
       },
-      "name" : "save serie_tiempo",
+      "name" : "save Linea 1",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -430,8 +434,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1393,
-        "layoutY" : 765
+        "layoutX" : 1147,
+        "layoutY" : 600
       },
       "configuration" : {
         "restEndpointUrlPattern" : "https://dashboard.smelpro.com/api/plugins/telemetry/DEVICE/777f8010-ab85-11f0-9abe-2dfd6db9cae3/timeseries/delete?keys=${clave}&deleteAllDataForKeys=false&startTs=0&endTs=9999999999999&deleteLatest=true&rewriteLatestIfDeleted=false",
@@ -476,13 +480,13 @@
       "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1387,
-        "layoutY" : 673
+        "description" : "datos necesarios para el delete",
+        "layoutX" : 1095,
+        "layoutY" : 744
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var msgout={};\n\n/*\nvar idperfil={\n    \"id\": \"bcb29c10-bc21-11f0-9cd0-35be421ad23c\",\n    \"entityType\": \"DEVICE_PROFILE\"\n    \n};\n\n*/\n\n\nmetadata.token=msg.token;\n\nmsgout.keys = metadata.clave;\nmsgout.startTs=0;\nmsgout.endTs=9999999999999;\n\n\n\n//msgout.name=metadata.nombre_operario;\n//msgout.type=\"chambas\";\n//msgout.label=\"Room 234 Sensor\";\n//msgout.deviceProfileId=idperfil;\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n\n\n\n\n/*\n{\n\n  \"name\": \"A4B72CCDFF33\",\n  \"type\": \"chambas\",\n  \"label\": \"Room 234 Sensor\",\n  \"deviceProfileId\": {\n    \"id\": \"bcb29c10-bc21-11f0-9cd0-35be421ad23c\",\n    \"entityType\": \"DEVICE_PROFILE\"\n  }\n\n\n}\n*/",
+        "jsScript" : "var msgout={};\n\n\nmetadata.token=msg.token;\n\nmsgout.keys = metadata.clave;\nmsgout.startTs=0;\nmsgout.endTs=9999999999999;\n\n\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n\n\n\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -497,7 +501,7 @@
         "entityType" : "RULE_NODE",
         "id" : "fcc6b310-d173-11f0-b9be-a7eb49293647"
       },
-      "name" : "borrar",
+      "name" : "DELETE",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -505,8 +509,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1387,
-        "layoutY" : 564
+        "layoutX" : 835,
+        "layoutY" : 608
       },
       "configuration" : {
         "restEndpointUrlPattern" : "https://dashboard.smelpro.com/api/auth/login",
@@ -543,20 +547,20 @@
         "entityType" : "RULE_NODE",
         "id" : "d5a865c0-d174-11f0-b9be-a7eb49293647"
       },
-      "name" : "token",
+      "name" : "obtener token",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1397,
-        "layoutY" : 433
+        "description" : "credenciales para obtener el token",
+        "layoutX" : 840,
+        "layoutY" : 747
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var msgout={};\n\n//msgout.username=\"adelacruz@smelpro.com\";\n//msgout.password=\"alexandersmelpro\";\nmsgout.username=\"modasa@smelpro.com\";\nmsgout.password=\"modasa2025#\";\n\n\n//metadata.nombre_operario=msg.nombre_operario;\n//metadata.p_operario=msg.p_operario;\n\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};",
+        "jsScript" : "var msgout={};\n\nmsgout.username=\"modasa@smelpro.com\";\nmsgout.password=\"modasa2025#\";\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -571,7 +575,7 @@
         "entityType" : "RULE_NODE",
         "id" : "d5a88cd0-d174-11f0-b9be-a7eb49293647"
       },
-      "name" : "credenciales",
+      "name" : "credenc... for token",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -579,36 +583,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1370,
-        "layoutY" : 326
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "\n\n\nmetadata.clave=msg.clave;\n\n\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764899215539,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "2f20f630-d17a-11f0-b9be-a7eb49293647"
-      },
-      "name" : "clave",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 864,
-        "layoutY" : 960
+        "layoutX" : 107,
+        "layoutY" : 1089
       },
       "configuration" : {
         "restEndpointUrlPattern" : "https://dashboard.smelpro.com/api/plugins/telemetry/DEVICE/777f8010-ab85-11f0-9abe-2dfd6db9cae3/timeseries/delete",
@@ -651,6 +627,74 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 312,
+        "layoutY" : 940
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "DEVICE",
+        "entityNamePattern" : "Supervisor",
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ],
+            "negate" : false
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "98426650-d1f0-11f0-b9be-a7eb49293647"
+      },
+      "name" : "para Supervisor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 571,
+        "layoutY" : 935
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "03dbb080-d1f4-11f0-b9be-a7eb49293647"
+      },
+      "name" : "save Supervisor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },

@@ -55,6 +55,32 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
+      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 281202
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "da578e20-d1f1-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 278606
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
       "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
     },
     "to" : {
@@ -271,7 +297,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764894075945,
+      "lastUpdateTs" : 1764968238604,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -287,16 +313,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1764893354364,
-      "longValue" : 22,
+      "lastUpdateTs" : 1764955799695,
+      "longValue" : 26,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1764893354364,
-      "longValue" : 24,
+      "lastUpdateTs" : 1764955799695,
+      "longValue" : 28,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -479,8 +505,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764894075942,
-      "longValue" : 1764894075941,
+      "lastUpdateTs" : 1764968238600,
+      "longValue" : 1764968238599,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -495,24 +521,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764893434624,
-      "longValue" : 1764893434444,
+      "lastUpdateTs" : 1764967627643,
+      "longValue" : 1764967625433,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764893334848,
-      "longValue" : 1764893334848,
+      "lastUpdateTs" : 1764967610760,
+      "longValue" : 1764967610760,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764893434447,
-      "longValue" : 1764893434447,
+      "lastUpdateTs" : 1764967625449,
+      "longValue" : 1764967625449,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -572,18 +598,18 @@
       "strValue" : "GALLARDO TORRES KETTY YARITZA"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.92,
+      "doubleValue" : 0.93,
       "jsonValue" : null,
       "key" : "p_ALAprimera",
-      "lastUpdateTs" : 1764887919927,
+      "lastUpdateTs" : 1764955446168,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.08,
+      "doubleValue" : 0.07,
       "jsonValue" : null,
       "key" : "p_retrabajadas",
-      "lastUpdateTs" : 1764887919927,
+      "lastUpdateTs" : 1764955446168,
       "longValue" : null,
       "strValue" : null
     }, {

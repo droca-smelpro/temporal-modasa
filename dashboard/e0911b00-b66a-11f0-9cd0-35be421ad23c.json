@@ -9235,6 +9235,392 @@
           "row" : 0,
           "col" : 0,
           "id" : "0ef7b63e-92ac-08b6-b4f9-e2af6adaf67e"
+        },
+        "69636e2d-9a38-eb8a-56a4-151f41258766" : {
+          "typeFullFqn" : "tenant.lastest_values_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "7a984630-b8d5-11f0-9cd0-35be421ad23c",
+              "dataKeys" : [ {
+                "name" : "UE_10",
+                "type" : "timeseries",
+                "label" : "Estación 1.0",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5337679529809034,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_11",
+                "type" : "timeseries",
+                "label" : "Estación 1.1",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.2609514977958145,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_12",
+                "type" : "timeseries",
+                "label" : "Estación 1.2",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.1511889607000355,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_13",
+                "type" : "timeseries",
+                "label" : "Estación 1.3",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.004692840059480119,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_14",
+                "type" : "timeseries",
+                "label" : "Estación 1.4",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.378731999290454,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_15",
+                "type" : "timeseries",
+                "label" : "Estación 1.5",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.8901075730559549,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_16",
+                "type" : "timeseries",
+                "label" : "Estación 1.6",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.977656182566412,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_17",
+                "type" : "timeseries",
+                "label" : "Estación 1.7",
+                "color" : "#3f51b5",
+                "settings" : { },
+                "_hash" : 0.46687047840786877,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_18",
+                "type" : "timeseries",
+                "label" : "Estación 1.8",
+                "color" : "#e91e63",
+                "settings" : { },
+                "_hash" : 0.1109483920229617,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              }, {
+                "name" : "UE_19",
+                "type" : "timeseries",
+                "label" : "Estación 1.9",
+                "color" : "#ffeb3b",
+                "settings" : { },
+                "_hash" : 0.6072175430915785,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : true,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_MONTH",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 2,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1764796857713,
+                  "endTimeMs" : 1764883257713
+                },
+                "quickInterval" : "CURRENT_MONTH",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              },
+              "timezone" : null
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "color_a" : "#109E16",
+              "color_b" : "#F5DD00"
+            },
+            "title" : "Producción por Estación - Línea 2",
+            "decimals" : null,
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "widgetCss" : ".tb-timewindow.no-padding {\n    padding: 0px 6px !important;\n}\n\n.tb-search-container {\n    display: none !important;\n}\n\n/* let the title wrap */\n.tb-widget-title .title {\n  white-space: normal !important;\n  height: auto !important;\n}\n\n/* allow the flex container to shrink so wrapping can happen */\n.tb-widget-title .title-row {\n  min-width: 0 !important;\n}\n\n\n.tb-widget-title {\n    max-height: 80px !important;\n}",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "4px 10px 10px 8px",
+              "height" : "35px"
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "12px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : {
+                "size" : 11,
+                "sizeUnit" : "px",
+                "family" : "Roboto",
+                "weight" : "400",
+                "style" : "normal",
+                "lineHeight" : "16px"
+              },
+              "color" : "#959191",
+              "displayTypePrefix" : true
+            },
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Información",
+                "buttonType" : "icon",
+                "icon" : "help",
+                "buttonColor" : "rgba(0, 0, 0, 0.87)",
+                "customButtonStyle" : { },
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<div class=\"simple-text-popup\">\n\n    <mat-toolbar color=\"primary\">\n        <h2>Producción por estación de la Línea 2</h2>\n        <span class=\"flex-1\"></span>\n        <button mat-icon-button (click)=\"close()\" type=\"button\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </mat-toolbar>\n\n    <div mat-dialog-content style=\"padding: 24px;\">\n        <div style=\"font-size: 16px; line-height: 1.6;\">\n            <b>Definición:</b> <br>\n             Identifica cuellos de botella y estaciones con menor rendimiento para reasignar recursos o mejorar procesos.<br><br>\n            <b>Fuente de datos / cálculo:</b> <br>\n            <ul>\n              <li>Cantidad de unidades terminadas por cada estación.</li>\n            </ul>\n\n        </div>\n    </div>\n\n    <mat-divider></mat-divider>\n\n    <div mat-dialog-actions style=\"padding: 8px;\" class=\"flex flex-row justify-end\">\n        <button mat-raised-button color=\"primary\" (click)=\"close()\">Cerrar</button>\n    </div>\n\n</div>",
+                "customCss" : ".simple-text-popup p {\n    margin: 0;\n    color: rgba(0,0,0,0.8);\n    \n}\n\n.simple-text-popup mat-toolbar h2 {\n    margin: 0;\n    font-weight: 600;\n}\n\n.simple-text-popup{\n    width: 30vw;\n}\n\n.cdk-overlay-container.dark .simple-text-popup {\n  background-color: #0D2743 !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.cdk-overlay-container.dark .mat-mdc-dialog-container .mat-mdc-dialog-content {\n\tcolor: #FFF !important;\n}",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\n\nopenTextDialog();\n\nfunction openTextDialog() {\n    customDialog.customDialog(htmlTemplate, TextDialogController).subscribe();\n}\n\nfunction TextDialogController(instance) {\n    let vm = instance;\n\n    vm.close = function () {\n        vm.dialogRef.close(null);\n    };\n}\n\n",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "3af48dd3-4c1b-09fa-3885-ecc2b2fde19a"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "69636e2d-9a38-eb8a-56a4-151f41258766"
+        },
+        "b9c8621a-f486-d045-4dd8-ed39d433cba7" : {
+          "typeFullFqn" : "tenant.lastest_values_table_mod",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "deviceId" : "7a984630-b8d5-11f0-9cd0-35be421ad23c",
+              "entityAliasId" : "f953d774-526a-fa25-e3a8-b199b3158151",
+              "dataKeys" : [ {
+                "name" : "unidades_ensambladas",
+                "type" : "timeseries",
+                "label" : "${entityName}",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.6581047939697555,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null,
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_MONTH",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1762723739406,
+                  "endTimeMs" : 1762810139406
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              },
+              "timezone" : null
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "color_a" : "#16951B",
+              "color_b" : "#F5DD00"
+            },
+            "title" : "Producción por Estación - Línea 2",
+            "decimals" : null,
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "widgetStyle" : { },
+            "widgetCss" : ".tb-timewindow.no-padding {\n    padding: 0px 6px !important;\n}\n\n.tb-search-container {\n    display: none !important;\n}\n\n/* let the title wrap */\n.tb-widget-title .title {\n  white-space: normal !important;\n  height: auto !important;\n}\n\n/* allow the flex container to shrink so wrapping can happen */\n.tb-widget-title .title-row {\n  min-width: 0 !important;\n}\n\n\n.tb-widget-title {\n    max-height: 80px !important;\n}",
+            "titleStyle" : {
+              "fontSize" : "24px",
+              "fontWeight" : 700,
+              "padding" : "4px 10px 10px 8px",
+              "height" : "35px"
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "12px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : {
+                "size" : 11,
+                "sizeUnit" : "px",
+                "family" : null,
+                "weight" : null,
+                "style" : null
+              },
+              "color" : "#959191",
+              "displayTypePrefix" : true
+            },
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Información",
+                "buttonType" : "icon",
+                "icon" : "help",
+                "buttonColor" : "rgba(0, 0, 0, 0.87)",
+                "customButtonStyle" : { },
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<div class=\"simple-text-popup\">\n\n    <mat-toolbar color=\"primary\">\n        <h2>Comparativa de Producción por Estación</h2>\n        <span class=\"flex-1\"></span>\n        <button mat-icon-button (click)=\"close()\" type=\"button\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </mat-toolbar>\n\n    <div mat-dialog-content style=\"padding: 24px;\">\n        <div style=\"font-size: 16px; line-height: 1.6;\">\n            <b>Definición:</b> <br>\n             Detecta cuellos de botella y estaciones con baja productividad.<br><br>\n            <b>Fuente de datos / cálculo:</b> <br>\n            <ul>\n              <li>Unidades terminadas por cada estación.</li>\n            </ul>\n\n        </div>\n    </div>\n\n    <mat-divider></mat-divider>\n\n    <div mat-dialog-actions style=\"padding: 8px;\" class=\"flex flex-row justify-end\">\n        <button mat-raised-button color=\"primary\" (click)=\"close()\">Cerrar</button>\n    </div>\n\n</div>\n",
+                "customCss" : ".simple-text-popup p {\n    margin: 0;\n    color: rgba(0,0,0,0.8);\n    \n}\n\n.simple-text-popup mat-toolbar h2 {\n    margin: 0;\n    font-weight: 600;\n}\n\n.simple-text-popup{\n    width: 30vw;\n}\n\n.cdk-overlay-container.dark .simple-text-popup {\n  background-color: #0D2743 !important;\n  color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.cdk-overlay-container.dark .mat-mdc-dialog-container .mat-mdc-dialog-content {\n\tcolor: #FFF !important;\n}",
+                "customFunction" : "\nlet $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\n\nopenTextDialog();\n\nfunction openTextDialog() {\n    customDialog.customDialog(htmlTemplate, TextDialogController).subscribe();\n}\n\nfunction TextDialogController(instance) {\n    let vm = instance;\n\n    vm.close = function () {\n        vm.dialogRef.close(null);\n    };\n}\n",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "2d4a41cf-314a-e636-29f6-9e45c488992b"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b9c8621a-f486-d045-4dd8-ed39d433cba7"
         }
       },
       "states" : {
@@ -9255,10 +9641,10 @@
                   "mobileHide" : true
                 },
                 "bd417389-a0c4-3fdb-d44d-c6272db0f533" : {
-                  "sizeX" : 4,
-                  "sizeY" : 5,
-                  "row" : 1,
-                  "col" : 0
+                  "sizeX" : 5,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 6
                 },
                 "cff243f3-2877-1554-d7d5-a4afba800210" : {
                   "sizeX" : 20,
@@ -9267,35 +9653,47 @@
                   "col" : 1
                 },
                 "50d02d61-1765-1f0f-7c8c-afaf82210513" : {
-                  "sizeX" : 9,
+                  "sizeX" : 4,
                   "sizeY" : 7,
-                  "row" : 7,
-                  "col" : 11
+                  "row" : 14,
+                  "col" : 6
                 },
                 "77919078-818b-1ca6-f306-9df6ceb50b46" : {
-                  "sizeX" : 18,
+                  "sizeX" : 11,
                   "sizeY" : 6,
-                  "row" : 1,
-                  "col" : 8
+                  "row" : 2,
+                  "col" : 0
                 },
                 "84cac3e3-11c4-534c-169f-f5afae6ae30c" : {
                   "sizeX" : 6,
                   "sizeY" : 6,
-                  "row" : 6,
+                  "row" : 8,
                   "col" : 0
                 },
                 "a8a9211e-cc41-69d6-ef45-c133aed97683" : {
                   "sizeX" : 5,
                   "sizeY" : 2,
-                  "row" : 7,
+                  "row" : 12,
                   "col" : 6
                 },
                 "0ef7b63e-92ac-08b6-b4f9-e2af6adaf67e" : {
-                  "sizeX" : 16,
+                  "sizeX" : 6,
                   "sizeY" : 8,
                   "resizable" : true,
                   "row" : 14,
                   "col" : 0
+                },
+                "69636e2d-9a38-eb8a-56a4-151f41258766" : {
+                  "sizeX" : 11,
+                  "sizeY" : 8,
+                  "row" : 1,
+                  "col" : 11
+                },
+                "b9c8621a-f486-d045-4dd8-ed39d433cba7" : {
+                  "sizeX" : 12,
+                  "sizeY" : 8,
+                  "row" : 1,
+                  "col" : 22
                 }
               },
               "gridSettings" : {

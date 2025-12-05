@@ -129,6 +129,10 @@
       "toIndex" : 38,
       "type" : "Success"
     }, {
+      "fromIndex" : 24,
+      "toIndex" : 41,
+      "type" : "Success"
+    }, {
       "fromIndex" : 25,
       "toIndex" : 39,
       "type" : "Success"
@@ -184,13 +188,21 @@
       "fromIndex" : 39,
       "toIndex" : 40,
       "type" : "Success"
+    }, {
+      "fromIndex" : 41,
+      "toIndex" : 42,
+      "type" : "True"
+    }, {
+      "fromIndex" : 42,
+      "toIndex" : 39,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 636,
-        "layoutY" : 225
+        "layoutX" : 491,
+        "layoutY" : 251
       },
       "configuration" : {
         "version" : 0
@@ -215,8 +227,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 391,
-        "layoutY" : 956
+        "layoutX" : 382,
+        "layoutY" : 1070
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -243,8 +255,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 84,
-        "layoutY" : 957
+        "layoutX" : 37,
+        "layoutY" : 1068
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
@@ -275,8 +287,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 537,
-        "layoutY" : 1039
+        "layoutX" : 329,
+        "layoutY" : 1120
       },
       "configuration" : {
         "processingSettings" : {
@@ -303,8 +315,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 290,
-        "layoutY" : 1035
+        "layoutX" : 50,
+        "layoutY" : 1127
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -327,8 +339,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 708,
-        "layoutY" : 954
+        "layoutX" : 681,
+        "layoutY" : 1071
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -356,14 +368,14 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "\n\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada == true){\n\n    \n    msg.unidades_ensambladas=1;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=1;\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=1;\n          \n      \n        }\n    }\n  else{\n\n    }\n      \n  //unidades_ensambladas=unidades_ALAprimera+unidades_retrabajadas;\n  \n\n\n  msg.disponibilidad=((tiempoSegundos(msg.tiempo_activo))/(tiempoSegundos(msg.tiempo_estandar))); //usadado para estacion 1.9\n  //msg.cantidad_teorica=msg.produccion_teorica;\n  \n\n  /*\n  \n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=((msg.tiempo_activo)*100)/(msg.tiempo_total);\n  \n  msg.tiempo_estandar=tiempoSegundos(msg.tiempo_estandar);\n  msg.p_operario=(msg.tiempo_estandar)/(msg.tiempo_total); //eficiencia operario\n  */\n  \n  \n  msg.tiempo_total =tiempoMinutos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoMinutos(msg.tiempo_activo);\n  msg.p_efectivo=(((msg.tiempo_activo)*100)/(msg.tiempo_total)).toFixed(2);  /// 0 -100\n  \n  msg.tiempo_estandar=tiempoMinutos(msg.tiempo_estandar);\n  msg.p_operario=(((msg.tiempo_estandar)*100)/(msg.tiempo_total)).toFixed(2); //eficiencia operario  // 0 - 100\n  \n  \n  if(msg.p_operario>=100){\n      msg.p_operario=100;\n  }\n  if(msg.p_efectivo>=100){\n       msg.p_efectivo=100;\n  }\n  \n  \n  \n  \n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n\nmsg.time_parada=(tiempoMinutos(msg.tiempo_estado)).toFixed(2);\n\n\nmsg.paradas={\"causa1\": msg.CAUSA_1, \"causa2\": msg.CAUSA_2, \"causa3\": msg.CAUSA_3, \"causa4\": msg.CAUSA_4, \"causa5\": msg.CAUSA_5 , \"tiempo_parada\": msg.time_parada};\n    \n    \n   \n   msg.z_status_evento=\"FIN_PARADA\"; //variable para admin ver que parte del codigo se ejecuto.\n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n /*\n    function tiempoSegundos(timeArray){\n        //se calcula los segundos totales\n        var partes =timeArray.split(':').map(Number);\n         //if (partes.length !== 4) {\n         //throw new Error(\"El formato debe ser dd:hh:mm:ss\");\n    \n         //}\n  var dias=partes[0]*24*3600;\n  var horas=partes[1]*3600;\n  var minutos=partes[2]*60;\n  var segundos=partes[3];\n\n        \n    return dias+horas+minutos+segundos;\n\n}\n*/\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        //return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        //return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n\n\n",
+        "jsScript" : "\n\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada == true){\n\n    \n    msg.unidades_ensambladas=1;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=1;\n          msg.unidades_retrabajadas=0;\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=1;\n          msg.unidades_ALAprimera=0;\n          \n      \n        }\n    }\n  else{\n     msg.unidades_ensambladas=0;\n    }\n      \n\n  \n\n\n  //msg.disponibilidad=((tiempoSegundos(msg.tiempo_activo))/(tiempoSegundos(msg.tiempo_estandar))); //usadado para estacion 1.9\n  \n  //msg.cantidad_teorica=msg.produccion_teorica;\n  \n\n  /*\n  \n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=((msg.tiempo_activo)*100)/(msg.tiempo_total);\n  \n  msg.tiempo_estandar=tiempoSegundos(msg.tiempo_estandar);\n  msg.p_operario=(msg.tiempo_estandar)/(msg.tiempo_total); //eficiencia operario\n  */\n  \n  \n  msg.tiempo_total =tiempoMinutos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoMinutos(msg.tiempo_activo);\n  msg.p_efectivo=(((msg.tiempo_activo)*100)/(msg.tiempo_total)).toFixed(2);  /// 0 -100\n  \n  msg.tiempo_estandar=tiempoMinutos(msg.tiempo_estandar);\n  msg.p_operario=(((msg.tiempo_estandar)*100)/(msg.tiempo_total)).toFixed(2); //eficiencia operario  // 0 - 100\n  \n  \n  if(msg.p_operario>=100){\n      msg.p_operario=100;\n  }\n  if(msg.p_efectivo>=100){\n       msg.p_efectivo=100;\n  }\n  \n  \n  \n  \n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n\nmsg.time_parada=(tiempoMinutos(msg.tiempo_estado)).toFixed(2);\n\n\nmsg.paradas={\"causa1\": msg.CAUSA_1, \"causa2\": msg.CAUSA_2, \"causa3\": msg.CAUSA_3, \"causa4\": msg.CAUSA_4, \"causa5\": msg.CAUSA_5 , \"tiempo_parada\": msg.time_parada};\n    \n\n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        //return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        //return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n\n\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764871244978,
+        "allEnabledUntil" : 1764960647526,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -549,8 +561,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1255,
-        "layoutY" : 144
+        "layoutX" : 1028,
+        "layoutY" : 119
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -587,8 +599,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1582,
-        "layoutY" : 147
+        "layoutX" : 1322,
+        "layoutY" : 115
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -617,19 +629,19 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 867,
-        "layoutY" : 149
+        "layoutX" : 781,
+        "layoutY" : 136
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var msgout={};\n//------------------------------------------------------------\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada== true){\n\n    \n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=\"true\";\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=\"true\";\n          \n      \n        }\n        \n     if(msg.contador_inspeccion ==1){\n     \n          msgout.unidades_buenas=1;\n          \n       }\n      else if(msg.contador_inspeccion >=1){\n          \n          msgout.unidades_defecto=1;\n          \n      \n        }\n        \n        \n    switch (metadata.deviceName) {\n     case \"Estación 1.0\":\n        msgout.UE_10=1;\n        break;\n     case \"Estación 1.1\":\n        msgout.UE_11=1;\n        break;\n     case \"Estación 1.2\":\n        msgout.UE_12=1;\n        break;\n     case \"Estación 1.3\":\n        msgout.UE_13=1;\n        break;\n     case \"Estación 1.4\":\n        msgout.UE_14=1;\n        break;\n     case \"Estación 1.5\":\n        msgout.UE_15=1;\n        break;\n     case \"Estación 1.6\":\n        msgout.UE_16=1;\n        break;\n     case \"Estación 1.7\":\n        msgout.UE_17=1;\n        break;\n     case \"Estación 1.8\":\n        msgout.UE_18=1;\n        break;\n     case \"Estación 1.9\":\n        msgout.UE_19=1;\n        msgout.unidades_ensambladasL=1;\n        break;\n        \n     default:\n        msgout.alerta= \"no es dispositivo\";\n        break;\n   }\n  \n    }\n  else{\n\n    }\n    \n    \n      \n  //unidades_ensambladas=unidades_ALAprimera+unidades_retrabajadas;\n  \n\n  \n\n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=(msg.tiempo_activo)/(msg.tiempo_total);\n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n        switch (metadata.deviceName) {\n     case \"Estación 1.0\":\n        msgout.PARADAS_10=1;\n        break;\n     case \"Estación 1.1\":\n        msgout.PARADAS_11=1;\n        break;\n     case \"Estación 1.2\":\n        msgout.PARADAS_12=1;\n        break;\n     case \"Estación 1.3\":\n        msgout.PARADAS_13=1;\n        break;\n     case \"Estación 1.4\":\n        msgout.PARADAS_14=1;\n        break;\n     case \"Estación 1.5\":\n        msgout.PARADAS_15=1;\n        break;\n     case \"Estación 1.6\":\n        msgout.PARADAS_16=1;\n        break;\n     case \"Estación 1.7\":\n        msgout.PARADAS_17=1;\n        break;\n     case \"Estación 1.8\":\n        msgout.PARADAS_18=1;\n        break;\n     case \"Estación 1.9\":\n        msgout.PARADAS_19=1;\n        break;\n        \n     default:\n        msgout.alerta= \"DISPOSITIVO NO REGISTRADO\";\n        break;\n   }\n   \n   //---------------------------------------------------------------------------------\n   //msg.paradas={\"causa1\": msg.CAUSA_1, \"causa2\": msg.CAUSA_2, \"causa3\": msg.CAUSA_3, \"causa4\": msg.CAUSA_4, \"causa5\": msg.CAUSA_5 , \"tiempo_parada\": tiempoSegundos(msg.tiempo_estado)};\n   msgout.paradas=msg.paradas;\n   \n   //-------------------------------------------------------------------------------\n\n    \n    \n   msgout.tiempo_linea_parada=tiempoMinutos(msg.tiempo_estado);\n   \n   msg.z_status_evento=\"FIN_PARADA\"; //variable para admin ver que parte del codigo se ejecuto.\n    \n}\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n /*\n    function tiempoSegundos(timeArray){\n        //se calcula los segundos totales\n        var partes =timeArray.split(':').map(Number);\n         //if (partes.length !== 4) {\n         //throw new Error(\"El formato debe ser dd:hh:mm:ss\");\n    \n         //}\n  var dias=partes[0]*24*3600;\n  var horas=partes[1]*3600;\n  var minutos=partes[2]*60;\n  var segundos=partes[3];\n\n        \n    return dias+horas+minutos+segundos;\n\n}\n*/\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}",
+        "jsScript" : "var msgout={};\n//------------------------------------------------------------\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada== true){\n\n    \n    \n      if(msg.contador_levantamiento ==0){\n          \n          if(metadata.deviceName == \"Estación 1.9\"){\n              msgout.unidades_ALAprimeraL=1;\n              msgout.unidades_retrabajadasL=0;\n              \n          }\n          else{\n              \n          }\n     \n          \n          \n       }\n      else{\n          \n        if(metadata.deviceName == \"Estación 1.9\"){\n              msgout.unidades_ALAprimeraL=0;\n              msgout.unidades_retrabajadasL=1;\n              \n          }\n          else{\n              \n          }\n          \n          \n      \n        }\n        \n     if(msg.contador_inspeccion ==1){\n     \n          msgout.unidades_buenas=1;\n          \n       }\n      else if(msg.contador_inspeccion >=1){\n          \n          msgout.unidades_defecto=1;\n          \n      \n        }\n        \n        \n    switch (metadata.deviceName) {\n     case \"Estación 1.0\":\n        msgout.UE_10=1;   //unidades ensambladas en estacion 1.0\n        break;\n     case \"Estación 1.1\":\n        msgout.UE_11=1;   //unidades ensambladas en estacion 1.1\n        break;\n     case \"Estación 1.2\":\n        msgout.UE_12=1;   //unidades ensambladas en estacion 1.2\n        break;\n     case \"Estación 1.3\":\n        msgout.UE_13=1;   //unidades ensambladas en estacion 1.3\n        break;\n     case \"Estación 1.4\":\n        msgout.UE_14=1;   //unidades ensambladas en estacion 1.4\n        break;\n     case \"Estación 1.5\":\n        msgout.UE_15=1;    //unidades ensambladas en estacion 1.5\n        break;\n     case \"Estación 1.6\":\n        msgout.UE_16=1;    //unidades ensambladas en estacion 1.6\n        break;\n     case \"Estación 1.7\":\n        msgout.UE_17=1;   //unidades ensambladas en estacion 1.7\n        break;\n     case \"Estación 1.8\":\n        msgout.UE_18=1;   //unidades ensambladas en estacion 1.8\n        break;\n     case \"Estación 1.9\":\n        msgout.UE_19=1;    //unidades ensambladas en estacion 1.9\n        msgout.unidades_ensambladasL=1;\n        break;\n        \n     default:\n        msgout.alerta= \"no es dispositivo\";\n        break;\n   }\n  \n    }\n  else{\n\n    }\n  \n  msgout.tiempo_activoL=(msg.tiempo_activo).toFixed(2);\n  msgout.tiempo_estandarL=msg.tiempo_estandar.toFixed(2);\n  \n  \n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n        switch (metadata.deviceName) {\n     case \"Estación 1.0\":\n        msgout.PARADAS_10=1;  // cantidad de parada en estacion 1.0\n        break;\n     case \"Estación 1.1\":\n        msgout.PARADAS_11=1;  // cantidad de parada en estacion 1.1\n        break;\n     case \"Estación 1.2\":\n        msgout.PARADAS_12=1;  // cantidad de parada en estacion 1.2\n        break;\n     case \"Estación 1.3\":\n        msgout.PARADAS_13=1;   // cantidad de parada en estacion 1.3\n        break;\n     case \"Estación 1.4\":\n        msgout.PARADAS_14=1;  // cantidad de parada en estacion 1.4\n        break;\n     case \"Estación 1.5\":\n        msgout.PARADAS_15=1;  // cantidad de parada en estacion 1.5\n        break;\n     case \"Estación 1.6\":\n        msgout.PARADAS_16=1;  // cantidad de parada en estacion 1.6\n        break;\n     case \"Estación 1.7\":\n        msgout.PARADAS_17=1;  // cantidad de parada en estacion 1.7\n        break;\n     case \"Estación 1.8\":\n        msgout.PARADAS_18=1;   // cantidad de parada en estacion 1.8\n        break;\n     case \"Estación 1.9\":\n        msgout.PARADAS_19=1;   // cantidad de parada en estacion 1.9\n        break;\n        \n     default:\n        msgout.alerta= \"DISPOSITIVO NO REGISTRADO\";\n        break;\n   }\n   \n   //---------------------------------------------------------------------------------\n   \n   msgout.paradas=msg.paradas; // objeto con las causas y tiempo de paradas\n   \n   msgout.tiempo_linea_parada=tiempoMinutos(msg.tiempo_estado);\n\n    \n}\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764864669819,
+        "allEnabledUntil" : 1764960653357,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -645,8 +657,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 624,
-        "layoutY" : 61
+        "layoutX" : 705,
+        "layoutY" : 22
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -673,8 +685,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 950,
-        "layoutY" : 56
+        "layoutX" : 1061,
+        "layoutY" : 15
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -910,7 +922,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var msgout={};\n\n    \n    msgout.unidades_planificadasL=msg.unidades_planificadas;\n    //msg.cantidad_teorica=msg.produccion_teorica;\n    \n\n    \n\n    \n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};",
+        "jsScript" : "var msgout={};\n\n    msgout.unidades_planificadasL=msg.unidades_planificadas;\n    \nreturn {msg: msgout, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -1157,7 +1169,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764872423521,
+        "allEnabledUntil" : 1764960660377,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -1323,8 +1335,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1377,
-        "layoutY" : 927
+        "layoutX" : 1558,
+        "layoutY" : 903
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1350,6 +1362,62 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 861,
+        "layoutY" : 883
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return msg.evento==\"INICIO_ESTACION\";\n\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c9146650-d1f7-11f0-b9be-a7eb49293647"
+      },
+      "name" : "INICIO_ESTACION ?",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1122,
+        "layoutY" : 878
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var msgout={};\n  \n    msgout.ratio_produccionL=msg.ratio_produccion;\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db748820-d1f7-11f0-b9be-a7eb49293647"
+      },
+      "name" : "ratio_produccion",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
