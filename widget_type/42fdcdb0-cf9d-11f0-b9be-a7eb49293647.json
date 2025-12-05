@@ -1,0 +1,58 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "last_value_card",
+    "name" : "Last value Card",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 7,
+      "sizeY" : 6,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"mini-card\">\r\n    <!-- SVG ICON -->\r\n    <mat-icon *ngIf=\"ctx.settings.icon?.startsWith('mdi:')\"\r\n              [svgIcon]=\"ctx.settings.icon\"\r\n              [ngStyle]=\"{ color: ctx.settings.color }\">\r\n    </mat-icon>\r\n\r\n    <!-- FONT ICON (ligature) -->\r\n    <mat-icon *ngIf=\"!ctx.settings.icon?.startsWith('mdi:')\"\r\n              [ngStyle]=\"{ color: ctx.settings.color }\">\r\n        {{ ctx.settings.icon }}\r\n    </mat-icon>\r\n\r\n    <div class=\"mini-value\">-</div>\r\n</div>\r\n",
+      "templateCss" : ".mini-card {\r\n    --icon-size: 40px;\r\n    --value-size: 24px;\r\n\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 10px;\r\n\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n\r\n    text-align: center;\r\n    font-family: inherit;\r\n    color: #212121;\r\n}\r\n\r\n.mini-icon {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.mini-value {\r\n    margin-top: 6px;\r\n    font-size: var(--value-size);\r\n    font-weight: 600;\r\n}\r\n\r\n.mat-icon {\r\n    width: var(--icon-size);\r\n    height: var(--icon-size);\r\n    font-size: var(--icon-size);\r\n}",
+      "controllerScript" : "self.onInit = function () {\r\n    const ctx = self.ctx;\r\n\r\n    ctx.icon = ctx.settings.icon || 'mdi:alert-circle';\r\n    ctx.color = ctx.settings.color || '#2196f3';\r\n    ctx.unit = ctx.settings.unit || ''; \r\n    \r\n    console.log(ctx.icon);\r\n};\r\n\r\nself.onDataUpdated = function () {\r\n    const ctx = self.ctx;\r\n    const data = ctx.data;\r\n\r\n    if (!data?.length || !data[0].data?.length) return;\r\n\r\n    const last = data[0].data[data[0].data.length - 1];\r\n    const value = last[1];\r\n\r\n    // Units if available\r\n    //ctx.unit = data[0].dataKey.units || \"\";\r\n\r\n    ctx.$container.find(\".mini-value\").text(`${value} ${ctx.unit}`);\r\n};\r\n\r\nself.onResize = function () {\r\n    const ctx = self.ctx;\r\n    const container = ctx.$container.find(\".mini-card\")[0];\r\n    if (!container) return;\r\n\r\n    const h = container.offsetHeight;\r\n\r\n    const iconSize = h * 0.22;\r\n    const valueSize = h * 0.25;\r\n\r\n    //container.style.setProperty(\"--icon-size\", `${iconSize}px`);\r\n    container.style.setProperty(\"--value-size\", `${valueSize}px`);\r\n    \r\n    \r\n    const container_mat_icon = ctx.$container.find(\".mat-icon\")[0];\r\n    if (!container_mat_icon) return;\r\n\r\n    container_mat_icon.style.setProperty(\"--icon-size\", `${iconSize}px`);\r\n    //container.style.setProperty(\"--value-size\", `${valueSize}px`);\r\n};",
+      "settingsForm" : [ {
+        "id" : "icon",
+        "name" : "Icon",
+        "hint" : "icon-hint",
+        "group" : "Appereance",
+        "type" : "icon",
+        "default" : "mdi:counter",
+        "required" : true
+      }, {
+        "id" : "color",
+        "name" : "Color",
+        "hint" : "color-hint",
+        "group" : "Appereance",
+        "type" : "color",
+        "default" : "#000",
+        "required" : true
+      }, {
+        "id" : "unit",
+        "name" : "Unit",
+        "hint" : "unit-hint",
+        "group" : "Appereance",
+        "type" : "units",
+        "default" : "%",
+        "supportsUnitConversion" : false
+      } ],
+      "settingsDirective" : "",
+      "defaultConfig" : "{\"showTitle\":true,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"icon\":\"mdi:counter\",\"color\":\"#000000\",\"unit\":\"%\"},\"title\":\"Last value Card\",\"dropShadow\":true,\"showTitleIcon\":false,\"titleTooltip\":\"\",\"enableFullscreen\":true,\"widgetStyle\":{},\"widgetCss\":\".tb-timewindow.no-padding {\\n    padding: 0px 6px !important;\\n}\\n\\n.tb-search-container {\\n    display: none !important;\\n}\\n\\n/* let the title wrap */\\n.tb-widget-title .title {\\n  white-space: normal !important;\\n  height: auto !important;\\n}\\n\\n/* allow the flex container to shrink so wrapping can happen */\\n.tb-widget-title .title-row {\\n  min-width: 0 !important;\\n}\\n\\n\\n.tb-widget-title {\\n    max-height: 80px !important;\\n}\",\"titleStyle\":{\"fontSize\":\"24px\",\"fontWeight\":700},\"pageSize\":1024,\"noDataDisplayMessage\":\"\",\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Sin\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.5775934452579587,\"funcBody\":\"return Math.round(1000*Math.sin(time/5000));\",\"aggregationType\":null,\"units\":\"%\",\"decimals\":null,\"usePostProcessing\":null,\"postFuncBody\":null}],\"alarmFilterConfig\":{\"statusList\":[\"ACTIVE\"]}}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"useDashboardTimewindow\":true,\"displayTimewindow\":true}"
+    },
+    "externalId" : null,
+    "resources" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "42fdcdb0-cf9d-11f0-b9be-a7eb49293647"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -42,6 +42,19 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
+      "id" : "ddc39f20-d171-11f0-b9be-a7eb49293647"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 271986
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
       "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
     },
     "to" : {
@@ -187,109 +200,15 @@
       "longValue" : 1762189377249,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ ]
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "orden",
+      "lastUpdateTs" : 1764602692223,
+      "longValue" : 1,
+      "strValue" : null
+    } ]
   },
-  "calculatedFields" : [ {
-    "configuration" : {
-      "type" : "SIMPLE",
-      "arguments" : {
-        "TPC1" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "time_parada_ESPACIO_NO_DISPONIBLE_PARA_ABASTECIMIENTO",
-            "type" : "TS_LATEST"
-          }
-        },
-        "TPC2" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "time_parada_INSTRUCTIVO_REQUIERE_REVISION",
-            "type" : "TS_LATEST"
-          }
-        },
-        "TPC3" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "time_parada_LISTA_DE_ESPECIFICACIONES_REQUIERE_REVISION",
-            "type" : "TS_LATEST"
-          }
-        },
-        "TPC4" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "time_parada_OTRO",
-            "type" : "TS_LATEST"
-          }
-        },
-        "TPC5" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "time_parada_PROBLEMA_DE_ENSAMBLAJE",
-            "type" : "TS_LATEST"
-          }
-        },
-        "TPC6" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "time_parada_PROBLEMA_DE_PRUEBA",
-            "type" : "TS_LATEST"
-          }
-        },
-        "TPC7" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "time_parada_PROBLEMA_DE_SUMINISTRO",
-            "type" : "TS_LATEST"
-          }
-        }
-      },
-      "expression" : "TPC1+TPC2+TPC3+TPC4+TPC5+TPC6+TPC7",
-      "output" : {
-        "decimalsByDefault" : 2,
-        "name" : "tiempo_parada_linea1",
-        "type" : "TIME_SERIES"
-      },
-      "useLatestTs" : false
-    },
-    "configurationVersion" : 0,
-    "debugSettings" : {
-      "allEnabled" : false,
-      "allEnabledUntil" : 1762388970436,
-      "failuresEnabled" : true
-    },
-    "name" : "tiempo_parada_linea1",
-    "tenantId" : {
-      "entityType" : "TENANT",
-      "id" : "67a414d0-8f1f-11f0-a61c-01e0c85fd5dd"
-    },
-    "type" : "SIMPLE"
-  } ]
+  "calculatedFields" : [ ]
 }

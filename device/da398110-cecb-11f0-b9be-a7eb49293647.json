@@ -22,15 +22,15 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+      "id" : "da398110-cecb-11f0-b9be-a7eb49293647"
     },
     "label" : "Room 234 Sensor",
-    "name" : "DAHUA JOTA JERRI",
+    "name" : "CRUZ CASTILLO YERENMIN ANDREA DEL CARMEN",
     "softwareId" : null,
     "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "bcKbZIvwCDgUfK0Uv2pS",
+    "credentialsId" : "BFXP0ZBkr2zZIK1KzCAE",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -38,15 +38,15 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "d0033100-a62b-11f0-9abe-2dfd6db9cae3"
+      "id" : "a36ff110-a922-11f0-9abe-2dfd6db9cae3"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+      "id" : "da398110-cecb-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 250764
+    "version" : 241968
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -55,37 +55,24 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+      "id" : "da398110-cecb-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 219833
+    "version" : 243247
   }, {
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
+      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
+      "id" : "da398110-cecb-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 224235
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 269207
+    "version" : 239722
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -93,7 +80,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764118546992,
+      "lastUpdateTs" : 1764604145553,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -101,8 +88,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764118546971,
-      "longValue" : 1764118546970,
+      "lastUpdateTs" : 1764604145545,
+      "longValue" : 1764604145544,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

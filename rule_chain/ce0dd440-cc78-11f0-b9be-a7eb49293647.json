@@ -151,7 +151,7 @@
         "entityType" : "RULE_NODE",
         "id" : "2dac96c0-cc79-11f0-b9be-a7eb49293647"
       },
-      "name" : "SALIDA",
+      "name" : "filtrado",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -415,7 +415,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 233929
+    "version" : 269094
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

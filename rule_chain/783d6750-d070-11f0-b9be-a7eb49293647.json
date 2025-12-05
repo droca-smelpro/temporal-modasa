@@ -1,0 +1,277 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "a4cbf572-d070-11f0-b9be-a7eb49293647"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "783d6750-d070-11f0-b9be-a7eb49293647"
+    },
+    "name" : "Filtro_mqtt",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 3,
+      "type" : "estaciones"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 3,
+      "type" : "simulador"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 0,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 2,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 346,
+        "layoutY" : 382
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName == \"Estación 1.0\" || metadata.deviceName == \"Estación 1.1\" \n    || metadata.deviceName == \"Estación 1.2\" || metadata.deviceName == \"Estación 1.3\"\n    || metadata.deviceName == \"Estación 1.4\" || metadata.deviceName == \"Estación 1.5\"\n    || metadata.deviceName == \"Estación 1.6\" || metadata.deviceName == \"Estación 1.7\"\n    || metadata.deviceName == \"Estación 1.8\" || metadata.deviceName == \"Estación 1.9\") {\n        return ['estaciones'];\n    }\n    else if (metadata.deviceName == \"simulador1\"){\n        return ['simulador'];\n    }\n    else {\n        return ['noo'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4cbce60-d070-11f0-b9be-a7eb49293647"
+      },
+      "name" : "estaciones registradas",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1118,
+        "layoutY" : 638
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4cbf571-d070-11f0-b9be-a7eb49293647"
+      },
+      "name" : "filtrado mqtt",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainOutputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 374,
+        "layoutY" : 148
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4cbf572-d070-11f0-b9be-a7eb49293647"
+      },
+      "name" : "Cola secuencial",
+      "queueName" : "SequentialByOriginator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbCheckpointNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 794,
+        "layoutY" : 383
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4cc1c80-d070-11f0-b9be-a7eb49293647"
+      },
+      "name" : "Cola Normal",
+      "queueName" : "Main",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.flow.TbCheckpointNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Construye un array con los operarios y lo guarda en operarios",
+        "layoutX" : 324,
+        "layoutY" : 643
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var lista = [];\r\n\r\n// Buscar claves tipo OPERARIO_NOMBRE_n\r\nfor (var key in msg) {\r\n    if (msg.hasOwnProperty(key) && key.startsWith(\"OPERARIO_NOMBRE_\")) {\r\n        lista.push(msg[key]);\r\n    }\r\n}\r\n\r\n// Si NO hay operarios, devolver el mensaje sin agregar nada\r\nif (lista.length === 0) {\r\n    return {\r\n        msg: msg,         // ← Se devuelve igual\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n// Si HAY operarios, agregamos la variable nombre_operario\r\nmsg.nombre_operario = lista;\r\n\r\nreturn {\r\n    msg: msg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4cc4391-d070-11f0-b9be-a7eb49293647"
+      },
+      "name" : "nombre_operario: [\" \", \" \", \" \" ..., \" \"]",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "checklist",
+        "layoutX" : 676,
+        "layoutY" : 778
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var lista = [];\r\n\r\n// Recorremos todas las claves del mensaje\r\nfor (var key in msg) {\r\n    if (msg.hasOwnProperty(key) && key.indexOf(\"CHECKLIST_\") === 0) {\r\n        lista.push({\r\n            index: parseInt(key.replace(\"CHECKLIST_\", \"\")),\r\n            data: msg[key]\r\n        });\r\n    }\r\n}\r\n\r\n// Si no hay ningún CHECKLIST → devolver el mensaje tal cual\r\nif (lista.length === 0) {\r\n    return {\r\n        msg: msg,\r\n        metadata: metadata,\r\n        msgType: msgType\r\n    };\r\n}\r\n\r\n// Ordenar por número CHECKLIST_n para mantener el orden correcto\r\nlista.sort(function(a, b) {\r\n    return a.index - b.index;\r\n});\r\n\r\n// Construimos el array final solo con los datos (sin el índice)\r\nvar checklist = lista.map(function(x) {\r\n    return x.data;\r\n});\r\n\r\n// Agregamos variable al mensaje\r\nmsg.checklist = checklist;\r\n\r\nreturn {\r\n    msg: msg,\r\n    metadata: metadata,\r\n    msgType: msgType\r\n};\r\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4cc4392-d070-11f0-b9be-a7eb49293647"
+      },
+      "name" : "checklist",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 797,
+        "layoutY" : 147
+      },
+      "configuration" : {
+        "renameIn" : "DATA",
+        "renameKeysMapping" : {
+          "modelo" : "MODELO",
+          "clasificacion" : "CLASIFICACION",
+          "tipo" : "TIPO_EVENTO",
+          "timestamp" : "TIMESTAMP",
+          "nombre_operario_1" : "OPERARIO_NOMBRE_1",
+          "nombre_operario_2" : "OPERARIO_NOMBRE_2",
+          "nombre_operario_3" : "OPERARIO_NOMBRE_3",
+          "nombre_operario_4" : "OPERARIO_NOMBRE_4",
+          "nombre_operario_5" : "OPERARIO_NOMBRE_5",
+          "horario_valido" : "HORARIO_VALIDO",
+          "tipo_jornada" : "TIPO_JORNADA",
+          "horas_extras" : "HORAS_EXTRAS",
+          "tiempo_parada" : "tiempo_paradas",
+          "contador_operacion" : "CONTADOR_OPERACION",
+          "contador_parada" : "CONTADOR_PARADA",
+          "causa1" : "CAUSA_1",
+          "causa2" : "CAUSA_2",
+          "causa3" : "CAUSA_3",
+          "causa4" : "CAUSA_4",
+          "causa5" : "CAUSA_5",
+          "respuesta" : "RESPUESTA",
+          "id_responsables" : "RESPONSABLES_ID"
+        }
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0f6546b0-d072-11f0-b9be-a7eb49293647"
+      },
+      "name" : "Renombrar",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbRenameKeysNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "67a610a0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "783d6750-d070-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Uses",
+    "typeGroup" : "COMMON",
+    "version" : 269088
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

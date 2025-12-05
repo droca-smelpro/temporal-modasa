@@ -20,32 +20,45 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "f9a89110-af6f-11f0-9f18-0d482a772853"
+      "id" : "f0f25a00-8f22-11f0-a61c-01e0c85fd5dd"
     },
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "fa61f600-af6f-11f0-9f18-0d482a772853"
+      "id" : "04573b10-ce70-11f0-b9be-a7eb49293647"
     },
     "label" : "",
-    "name" : "Downlinks",
+    "name" : "Estación 2.4",
     "softwareId" : null,
-    "type" : "downlink"
+    "type" : "workstation"
   },
   "credentials" : {
-    "credentialsId" : "jifPJ4jTkdlj2SIjqgzZ",
+    "credentialsId" : "xMXogUFAdLLlHabKmMny",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "0bf20710-b9b7-11f0-9cd0-35be421ad23c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "04573b10-ce70-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 239377
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764845670716,
+      "lastUpdateTs" : 1764564724021,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,35 +66,19 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764843974130,
-      "longValue" : 1764843974129,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764904084625,
-      "longValue" : 1764904081893,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764899041951,
-      "longValue" : 1764899041951,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764899016523,
-      "longValue" : 1764899016523,
+      "lastUpdateTs" : 1764564723986,
+      "longValue" : 1764564723985,
       "strValue" : null
     } ],
-    "SHARED_SCOPE" : [ ]
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "orden",
+      "lastUpdateTs" : 1764603266083,
+      "longValue" : 17,
+      "strValue" : null
+    } ]
   },
   "calculatedFields" : [ ]
 }

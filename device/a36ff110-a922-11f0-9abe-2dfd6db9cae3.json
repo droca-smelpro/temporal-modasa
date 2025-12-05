@@ -42,6 +42,32 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
+      "id" : "a36ff110-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 251955
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "a36ff110-a922-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "da398110-cecb-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 241968
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
       "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
     },
     "to" : {
@@ -54,11 +80,219 @@
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CAUSA_1",
+      "lastUpdateTs" : 1764621730459,
+      "longValue" : null,
+      "strValue" : "LISTA DE ESPECIFICACIONES REQUIERE REV."
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CAUSA_2",
+      "lastUpdateTs" : 1764621730459,
+      "longValue" : null,
+      "strValue" : "-"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CAUSA_3",
+      "lastUpdateTs" : 1764621730459,
+      "longValue" : null,
+      "strValue" : "-"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CAUSA_4",
+      "lastUpdateTs" : 1764619732091,
+      "longValue" : null,
+      "strValue" : "-"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CAUSA_5",
+      "lastUpdateTs" : 1764619732091,
+      "longValue" : null,
+      "strValue" : "-"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"tarea\":\"Instalación de caja selector de voltaje\",\"respuesta\":\"Y\"}",
+      "key" : "CHECKLIST_1",
+      "lastUpdateTs" : 1764622146758,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"tarea\":\"Instalación/montaje de selector de voltaje\",\"respuesta\":\"Y\"}",
+      "key" : "CHECKLIST_2",
+      "lastUpdateTs" : 1764622146758,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"tarea\":\"Interconexión eléctrica entre el panel de control, alternador y selector de voltaje. Instalación de transformadores\",\"respuesta\":\"Y\"}",
+      "key" : "CHECKLIST_3",
+      "lastUpdateTs" : 1764622146758,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"tarea\":\"Inspección eléctrica 1 por parte de Calidad\",\"respuesta\":\"Y\"}",
+      "key" : "CHECKLIST_4",
+      "lastUpdateTs" : 1764622146758,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"tarea\":\"Instalación de tapa selector de voltaje\",\"respuesta\":\"Y\"}",
+      "key" : "CHECKLIST_5",
+      "lastUpdateTs" : 1764622146758,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CLASIFICACION",
+      "lastUpdateTs" : 1764629925409,
+      "longValue" : null,
+      "strValue" : "REASIGNADO"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CONTADOR_OPERACION",
+      "lastUpdateTs" : 1764622157774,
+      "longValue" : 4,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "CONTADOR_PARADA",
+      "lastUpdateTs" : 1764622157774,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "HORARIO_VALIDO",
+      "lastUpdateTs" : 1764619679053,
+      "longValue" : null,
+      "strValue" : "Y"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "MODELO",
+      "lastUpdateTs" : 1764619663011,
+      "longValue" : null,
+      "strValue" : "MP45-60"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"OPERARIO DE FIBRA DE VIDRIO\"]",
+      "key" : "OPERARIO_CARGO",
+      "lastUpdateTs" : 1764627304550,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"22:20\"]",
+      "key" : "OPERARIO_FINAL",
+      "lastUpdateTs" : 1764627304550,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"004152108\"]",
+      "key" : "OPERARIO_ID",
+      "lastUpdateTs" : 1764627304550,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"07:00\"]",
+      "key" : "OPERARIO_INICIO",
+      "lastUpdateTs" : 1764619679053,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"OBRERO\"]",
+      "key" : "OPERARIO_NIVEL",
+      "lastUpdateTs" : 1764624834802,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_1",
+      "lastUpdateTs" : 1764627304550,
+      "longValue" : null,
+      "strValue" : "GARCIA ANUEL MANUEL ASDRUBAL"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"DIA\"]",
+      "key" : "OPERARIO_TURNO",
+      "lastUpdateTs" : 1764619679053,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"@HC2902\",\"@melanibelen10\"]",
+      "key" : "RESPONSABLES_ID",
+      "lastUpdateTs" : 1764621730459,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "TIMESTAMP",
+      "lastUpdateTs" : 1764629925409,
+      "longValue" : null,
+      "strValue" : "2025-12-01 17:58:43"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "TIPO_EVENTO",
+      "lastUpdateTs" : 1764622959380,
+      "longValue" : null,
+      "strValue" : "SERIE"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "TIPO_JORNADA",
+      "lastUpdateTs" : 1764619679053,
+      "longValue" : null,
+      "strValue" : "normal"
+    }, {
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764488894506,
+      "lastUpdateTs" : 1764881535499,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -74,16 +308,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1764082623188,
-      "longValue" : 0,
+      "lastUpdateTs" : 1764622157912,
+      "longValue" : 1,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1764082623188,
-      "longValue" : 0,
+      "lastUpdateTs" : 1764622157912,
+      "longValue" : 1,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -96,34 +330,538 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
+      "jsonValue" : "[\"OPERARIO DE ENSAMBLE\"]",
+      "key" : "cargo_operario",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "caso",
+      "lastUpdateTs" : 1764624856835,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "causa1",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : null,
+      "strValue" : "PROBLEMA DE ENSAMBLAJE"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "causa2",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : null,
+      "strValue" : "PIEZAS DAÑADAS O NO ENCAJAN"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "causa3",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : null,
+      "strValue" : "DEFECTO DE FABRICACIÓN"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "causa4",
+      "lastUpdateTs" : 1764784143237,
+      "longValue" : null,
+      "strValue" : "-"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "causa5",
+      "lastUpdateTs" : 1764784143237,
+      "longValue" : null,
+      "strValue" : "-"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[{\"tarea\":\"Instalación de caja selector de voltaje\",\"resultado\":\"NO\"},{\"tarea\":\"Instalación/montaje de selector de voltaje\",\"resultado\":\"SI\"},{\"tarea\":\"Interconexión eléctrica entre el panel de control, alternador y selector de voltaje. Instalación de transformadores\",\"resultado\":\"NO\"},{\"tarea\":\"Inspección eléctrica 1 por parte de Calidad\",\"resultado\":\"SI\"},{\"tarea\":\"Instalación de tapa selector de voltaje\",\"resultado\":\"NO\"}]",
+      "key" : "checklist",
+      "lastUpdateTs" : 1764786446523,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "clasificacion",
+      "lastUpdateTs" : 1764786828871,
+      "longValue" : null,
+      "strValue" : "ESTANDAR"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "cliente",
+      "lastUpdateTs" : 1764786828871,
+      "longValue" : null,
+      "strValue" : "MODASA EXPORTACION"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "cod_evento",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : 11,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "contador_inspeccion",
+      "lastUpdateTs" : 1764622157774,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "contador_levantamiento",
+      "lastUpdateTs" : 1764622157774,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "contador_operacion",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : 2,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "contador_parada",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : -87.6,
+      "jsonValue" : null,
+      "key" : "desviacion",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "diff",
+      "lastUpdateTs" : 1764619564934,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 45.78,
+      "jsonValue" : null,
+      "key" : "eficiencia",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "estacion",
+      "lastUpdateTs" : 1764619564934,
+      "longValue" : 4,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "estado",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : null,
+      "strValue" : "EN PARADA"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "evento",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : null,
+      "strValue" : "INICIO_PARADA"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "filtrog",
+      "lastUpdateTs" : 1764624856835,
+      "longValue" : null,
+      "strValue" : "no"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"22:20\"]",
+      "key" : "hora_fin_operario",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"07:00\"]",
+      "key" : "hora_inicio_operario",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "horario_valido",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "id_mensaje",
+      "lastUpdateTs" : 1764629925409,
+      "longValue" : 41,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"72190940\"]",
+      "key" : "id_operario",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"@JavierBautistaTovar\"]",
+      "key" : "id_responsables",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764486960039,
-      "longValue" : 1764486960037,
+      "lastUpdateTs" : 1764881535489,
+      "longValue" : 1764881535488,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "incidentes",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : 1,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764528739629,
-      "longValue" : 1764528738557,
+      "lastUpdateTs" : 1764880912626,
+      "longValue" : 1764880909972,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764488894506,
-      "longValue" : 1764488894506,
+      "lastUpdateTs" : 1764878226332,
+      "longValue" : 1764878226332,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764486358159,
-      "longValue" : 1764486358159,
+      "lastUpdateTs" : 1764880909985,
+      "longValue" : 1764880909985,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "linea",
+      "lastUpdateTs" : 1764619564934,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "modelo",
+      "lastUpdateTs" : 1764786828871,
+      "longValue" : null,
+      "strValue" : "WSP-25 "
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "motivo",
+      "lastUpdateTs" : 1764787046622,
+      "longValue" : null,
+      "strValue" : "REQUIERE INICIO DE LA INSPECCIÓN"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "names",
+      "lastUpdateTs" : 1764629925409,
+      "longValue" : 41,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"OBRERO\"]",
+      "key" : "nivel_operario",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"GALLARDO TORRES KETTY YARITZA\"]",
+      "key" : "nombre_operario",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "operario",
+      "lastUpdateTs" : 1764784130888,
+      "longValue" : null,
+      "strValue" : "GALLARDO TORRES KETTY YARITZA"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 1.0,
+      "jsonValue" : null,
+      "key" : "p_ALAprimera",
+      "lastUpdateTs" : 1764622157912,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.0,
+      "jsonValue" : null,
+      "key" : "p_retrabajadas",
+      "lastUpdateTs" : 1764622157912,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "parte",
+      "lastUpdateTs" : 1764627306546,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.322,
+      "jsonValue" : null,
+      "key" : "produccion_teorica",
+      "lastUpdateTs" : 1764619685012,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "serie",
+      "lastUpdateTs" : 1764786828871,
+      "longValue" : null,
+      "strValue" : "X46800I"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ss_id_mensaje",
+      "lastUpdateTs" : 1764784111732,
+      "longValue" : 41,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "test",
+      "lastUpdateTs" : 1764627306546,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_activo",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : null,
+      "strValue" : "00:00:14:01"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.002,
+      "jsonValue" : null,
+      "key" : "tiempo_estado",
+      "lastUpdateTs" : 1764787432232,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_estandar",
+      "lastUpdateTs" : 1764622157774,
+      "longValue" : null,
+      "strValue" : "01:53:00"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_inspeccion",
+      "lastUpdateTs" : 1764622157774,
+      "longValue" : null,
+      "strValue" : "00:00:00:00"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_levantamiento",
+      "lastUpdateTs" : 1764622157774,
+      "longValue" : null,
+      "strValue" : "00:00:00:00"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_operacion",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : null,
+      "strValue" : "00:00:14:01"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_parada",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : null,
+      "strValue" : "00:00:16:40"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_paradas",
+      "lastUpdateTs" : 1764622157774,
+      "longValue" : null,
+      "strValue" : "00:00:05:01"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_seleccion",
+      "lastUpdateTs" : 1764784116620,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_serie",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : null,
+      "strValue" : "00:00:30:43"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tiempo_total",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : null,
+      "strValue" : "00:00:30:37"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "timestamp",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : null,
+      "strValue" : "2025-12-03 13:43:52"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tipo",
+      "lastUpdateTs" : 1764787432461,
+      "longValue" : null,
+      "strValue" : "DETALLE_PARADA"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tipo_jornada",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : "normal"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "total",
+      "lastUpdateTs" : 1764627306546,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"DIA\"]",
+      "key" : "turno_operario",
+      "lastUpdateTs" : 1764784118635,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidad_terminada",
+      "lastUpdateTs" : 1764786446789,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ALAprimera",
+      "lastUpdateTs" : 1764622157912,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ensambladas",
+      "lastUpdateTs" : 1764786447041,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_planificadas",
+      "lastUpdateTs" : 1764627315589,
+      "longValue" : 3,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

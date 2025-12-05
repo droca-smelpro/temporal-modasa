@@ -71,8 +71,8 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "be3a09a0-8f22-11f0-a61c-01e0c85fd5dd",
-              "dataKeys" : [ ],
+              "deviceId" : "ddc39f20-d171-11f0-b9be-a7eb49293647",
+              "dataKeys" : null,
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
               }

@@ -42,6 +42,19 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
+      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 269633
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
       "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
     },
     "to" : {
@@ -114,9 +127,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "CLASIFICACION",
-      "lastUpdateTs" : 1764366618775,
+      "lastUpdateTs" : 1764620590665,
       "longValue" : null,
-      "strValue" : "REASIGNADO"
+      "strValue" : "-"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -146,9 +159,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "MODELO",
-      "lastUpdateTs" : 1764373101137,
+      "lastUpdateTs" : 1764620590665,
       "longValue" : null,
-      "strValue" : "MP45-60"
+      "strValue" : "-"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -234,17 +247,17 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "TIMESTAMP",
-      "lastUpdateTs" : 1764373723569,
+      "lastUpdateTs" : 1764620590665,
       "longValue" : null,
-      "strValue" : "2025-11-28 18:48:41"
+      "strValue" : "2025-12-01 15:23:06"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "TIPO_EVENTO",
-      "lastUpdateTs" : 1764373723569,
+      "lastUpdateTs" : 1764620590665,
       "longValue" : null,
-      "strValue" : "aprobacion"
+      "strValue" : "SERIE"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -254,11 +267,11 @@
       "longValue" : null,
       "strValue" : "normal"
     }, {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764488894506,
+      "lastUpdateTs" : 1764894075945,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -274,16 +287,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1764366781204,
-      "longValue" : 21,
+      "lastUpdateTs" : 1764893354364,
+      "longValue" : 22,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1764366781204,
-      "longValue" : 23,
+      "lastUpdateTs" : 1764893354364,
+      "longValue" : 24,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -292,6 +305,14 @@
       "key" : "c_unidades_retrabajadas",
       "lastUpdateTs" : 1762813545728,
       "longValue" : 2,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"OPERARIO DE ENSAMBLE\"]",
+      "key" : "cargo_operario",
+      "lastUpdateTs" : 1764783474119,
+      "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -313,10 +334,26 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "cliente",
-      "lastUpdateTs" : 1764373101137,
+      "key" : "clasificacion",
+      "lastUpdateTs" : 1764783472398,
       "longValue" : null,
-      "strValue" : "MODASA EXPORTACION"
+      "strValue" : "NO ESTANDAR"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "cliente",
+      "lastUpdateTs" : 1764783472398,
+      "longValue" : null,
+      "strValue" : "TECNICA AVICOLA S.A."
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "cod_evento",
+      "lastUpdateTs" : 1764783481319,
+      "longValue" : 22,
+      "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -370,7 +407,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "estado",
-      "lastUpdateTs" : 1764373672519,
+      "lastUpdateTs" : 1764783476822,
       "longValue" : null,
       "strValue" : "EN OPERACIÓN"
     }, {
@@ -378,9 +415,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "evento",
-      "lastUpdateTs" : 1764373723569,
+      "lastUpdateTs" : 1764783481319,
       "longValue" : null,
-      "strValue" : "LLAMAR_SUPERVISOR"
+      "strValue" : "FIN_EMERGENCIA"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -392,18 +429,58 @@
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
+      "jsonValue" : "[\"22:20\"]",
+      "key" : "hora_fin_operario",
+      "lastUpdateTs" : 1764783474119,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"07:00\"]",
+      "key" : "hora_inicio_operario",
+      "lastUpdateTs" : 1764783474119,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "horario_valido",
+      "lastUpdateTs" : 1764783474119,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
       "jsonValue" : null,
       "key" : "id_mensaje",
-      "lastUpdateTs" : 1764373723569,
-      "longValue" : 26,
+      "lastUpdateTs" : 1764620590665,
+      "longValue" : 32,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"72190940\"]",
+      "key" : "id_operario",
+      "lastUpdateTs" : 1764783474119,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"@JavierBautistaTovar\",\"@Franco_Alcantara\",\"@HC2902\"]",
+      "key" : "id_responsables",
+      "lastUpdateTs" : 1764783477425,
+      "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764486960039,
-      "longValue" : 1764486960037,
+      "lastUpdateTs" : 1764894075942,
+      "longValue" : 1764894075941,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -418,24 +495,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764528739629,
-      "longValue" : 1764528738553,
+      "lastUpdateTs" : 1764893434624,
+      "longValue" : 1764893434444,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764488894506,
-      "longValue" : 1764488894506,
+      "lastUpdateTs" : 1764893334848,
+      "longValue" : 1764893334848,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764486358158,
-      "longValue" : 1764486358158,
+      "lastUpdateTs" : 1764893434447,
+      "longValue" : 1764893434447,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -449,32 +526,64 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "motivo",
-      "lastUpdateTs" : 1764373111158,
+      "key" : "modelo",
+      "lastUpdateTs" : 1764783472398,
       "longValue" : null,
-      "strValue" : "APOYO_EN_SERIE"
+      "strValue" : "MP45-60"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "motivo",
+      "lastUpdateTs" : 1764783477425,
+      "longValue" : null,
+      "strValue" : "ENSAMBLE MECÁNICO"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "names",
-      "lastUpdateTs" : 1764373723569,
-      "longValue" : 26,
+      "lastUpdateTs" : 1764620590665,
+      "longValue" : 32,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.91,
-      "jsonValue" : null,
-      "key" : "p_ALAprimera",
-      "lastUpdateTs" : 1764341368218,
+      "doubleValue" : null,
+      "jsonValue" : "[\"OBRERO\"]",
+      "key" : "nivel_operario",
+      "lastUpdateTs" : 1764783474119,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.09,
+      "doubleValue" : null,
+      "jsonValue" : "[\"GALLARDO TORRES KETTY YARITZA\"]",
+      "key" : "nombre_operario",
+      "lastUpdateTs" : 1764783474119,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "operario",
+      "lastUpdateTs" : 1764783477425,
+      "longValue" : null,
+      "strValue" : "GALLARDO TORRES KETTY YARITZA"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.92,
+      "jsonValue" : null,
+      "key" : "p_ALAprimera",
+      "lastUpdateTs" : 1764887919927,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.08,
       "jsonValue" : null,
       "key" : "p_retrabajadas",
-      "lastUpdateTs" : 1764341368218,
+      "lastUpdateTs" : 1764887919927,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -498,16 +607,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "serie",
-      "lastUpdateTs" : 1764373101137,
+      "lastUpdateTs" : 1764783472398,
       "longValue" : null,
-      "strValue" : "X42222H"
+      "strValue" : "X57196I"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "ss_id_mensaje",
-      "lastUpdateTs" : 1764373723569,
-      "longValue" : 202,
+      "lastUpdateTs" : 1764783470566,
+      "longValue" : 32,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -530,9 +639,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "tiempo_estado",
-      "lastUpdateTs" : 1764372967043,
+      "lastUpdateTs" : 1764783481319,
       "longValue" : null,
-      "strValue" : "00:00:00:00"
+      "strValue" : "00:00:00:04"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -578,9 +687,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "tiempo_seleccion",
-      "lastUpdateTs" : 1764373672519,
-      "longValue" : null,
-      "strValue" : "00:00:01"
+      "lastUpdateTs" : 1764783472398,
+      "longValue" : 0,
+      "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -601,9 +710,41 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "timestamp",
+      "lastUpdateTs" : 1764783481319,
+      "longValue" : null,
+      "strValue" : "2025-12-03 12:38:02"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tipo",
+      "lastUpdateTs" : 1764783481319,
+      "longValue" : null,
+      "strValue" : "DESACTIVADO"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tipo_jornada",
+      "lastUpdateTs" : 1764783474119,
+      "longValue" : null,
+      "strValue" : "normal"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "total",
       "lastUpdateTs" : 1764369399576,
       "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"DIA\"]",
+      "key" : "turno_operario",
+      "lastUpdateTs" : 1764783474119,
+      "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -618,9 +759,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "unidades_ALAprimera",
-      "lastUpdateTs" : 1761778408574,
-      "longValue" : null,
-      "strValue" : "true"
+      "lastUpdateTs" : 1764887919927,
+      "longValue" : 1,
+      "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,

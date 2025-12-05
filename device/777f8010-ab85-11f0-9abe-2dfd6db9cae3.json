@@ -46,6 +46,32 @@
     },
     "to" : {
       "entityType" : "DEVICE",
+      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 239580
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "da398110-cecb-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 239722
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
       "id" : "1ee44980-c98b-11f0-9cd0-35be421ad23c"
     },
     "type" : "Contains",
@@ -84,25 +110,25 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "CAUSA_1",
-      "lastUpdateTs" : 1764377400302,
+      "lastUpdateTs" : 1764780908519,
       "longValue" : null,
-      "strValue" : "PROBLEMA DE ENSAMBLAJE"
+      "strValue" : "PROBLEMA DE SUMINISTRO (CONSUMIBLES LÍQUIDOS)"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "CAUSA_2",
-      "lastUpdateTs" : 1764377400302,
+      "lastUpdateTs" : 1764780908519,
       "longValue" : null,
-      "strValue" : "PIEZAS DAÑADAS O NO ENCAJAN"
+      "strValue" : "SISTEMA INOPERATIVO"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "CAUSA_3",
-      "lastUpdateTs" : 1764377400302,
+      "lastUpdateTs" : 1764780908519,
       "longValue" : null,
-      "strValue" : "DEFECTO DE FABRICACIÓN"
+      "strValue" : "-"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -124,7 +150,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"tarea\":\"Aplicación de silicona en uniones de chapería y en cajas acústicas (Pegado de cinta masking tape, distribución manual de silicona, retiro de cinta masking tape, limpieza de silicona).\",\"respuesta\":\"Y\"}",
       "key" : "CHECKLIST_1",
-      "lastUpdateTs" : 1764375840026,
+      "lastUpdateTs" : 1764600527506,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -132,7 +158,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"tarea\":\"Instalación de amarras plásticas\",\"respuesta\":\"Y\"}",
       "key" : "CHECKLIST_2",
-      "lastUpdateTs" : 1764375840026,
+      "lastUpdateTs" : 1764603980374,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -148,7 +174,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"tarea\":\"Etiquetado de cabina y bastidor (Señalización de la cabina, logo MODASA o del cliente (L.E.), colocar nomenclatura del modelo de grupo, puntos de drenaje de fluídos, etc)\",\"respuesta\":\"Y\"}",
       "key" : "CHECKLIST_4",
-      "lastUpdateTs" : 1764375840026,
+      "lastUpdateTs" : 1764603980374,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -164,7 +190,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"tarea\":\"Colocado de placa de identificación del G.E. y diagrama eléctrico\",\"respuesta\":\"Y\"}",
       "key" : "CHECKLIST_6",
-      "lastUpdateTs" : 1764375840026,
+      "lastUpdateTs" : 1764603980374,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -172,7 +198,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"tarea\":\"Inspección final por parte de Calidad\",\"respuesta\":\"Y\"}",
       "key" : "CHECKLIST_7",
-      "lastUpdateTs" : 1764375840026,
+      "lastUpdateTs" : 1764603525996,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -180,7 +206,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"tarea\":\"Embalaje final del equipo\",\"respuesta\":\"Y\"}",
       "key" : "CHECKLIST_8",
-      "lastUpdateTs" : 1764375840026,
+      "lastUpdateTs" : 1764603980374,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -188,32 +214,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "CLASIFICACION",
-      "lastUpdateTs" : 1764378047837,
+      "lastUpdateTs" : 1764785980461,
       "longValue" : null,
-      "strValue" : "NO ESTANDAR"
+      "strValue" : "REASIGNADO"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "CONTADOR_OPERACION",
-      "lastUpdateTs" : 1764378037850,
-      "longValue" : 2,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "CONTADOR_PARADA",
-      "lastUpdateTs" : 1764378037850,
+      "lastUpdateTs" : 1764781024644,
       "longValue" : 1,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "CONTADOR_PARADA",
+      "lastUpdateTs" : 1764599743753,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 133.33,
+      "jsonValue" : null,
       "key" : "C_plan_prod",
-      "lastUpdateTs" : 1764378038209,
-      "longValue" : 150,
+      "lastUpdateTs" : 1764781025343,
+      "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -236,23 +262,39 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "MODELO",
-      "lastUpdateTs" : 1764377257090,
+      "lastUpdateTs" : 1764785980461,
       "longValue" : null,
       "strValue" : "MP45-60"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 4.838709677419355,
+      "doubleValue" : 21.333333333333332,
       "jsonValue" : null,
       "key" : "OEE",
-      "lastUpdateTs" : 1762389719944,
+      "lastUpdateTs" : 1764903862030,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 52.94,
+      "jsonValue" : null,
+      "key" : "OEEE",
+      "lastUpdateTs" : 1764781025385,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 52.94,
+      "jsonValue" : null,
+      "key" : "OEEE2",
+      "lastUpdateTs" : 1764781025436,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "[\"OPERARIO DE ALMACEN\"]",
+      "jsonValue" : "[\"OPERARIO DE FIBRA DE VIDRIO\"]",
       "key" : "OPERARIO_CARGO",
-      "lastUpdateTs" : 1764377270095,
+      "lastUpdateTs" : 1764780819462,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -260,15 +302,15 @@
       "doubleValue" : null,
       "jsonValue" : "[\"22:20\"]",
       "key" : "OPERARIO_FINAL",
-      "lastUpdateTs" : 1764375664874,
+      "lastUpdateTs" : 1764630673128,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "[\"42385039\"]",
+      "jsonValue" : "[\"004152108\"]",
       "key" : "OPERARIO_ID",
-      "lastUpdateTs" : 1764377270095,
+      "lastUpdateTs" : 1764780819462,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -276,7 +318,7 @@
       "doubleValue" : null,
       "jsonValue" : "[\"07:00\"]",
       "key" : "OPERARIO_INICIO",
-      "lastUpdateTs" : 1764375664874,
+      "lastUpdateTs" : 1764601149065,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -284,7 +326,7 @@
       "doubleValue" : null,
       "jsonValue" : "[\"OBRERO\"]",
       "key" : "OPERARIO_NIVEL",
-      "lastUpdateTs" : 1764375664874,
+      "lastUpdateTs" : 1764630673128,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -292,7 +334,31 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "OPERARIO_NOMBRE_1",
-      "lastUpdateTs" : 1764377270095,
+      "lastUpdateTs" : 1764780819462,
+      "longValue" : null,
+      "strValue" : "GARCIA ANUEL MANUEL ASDRUBAL"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_2",
+      "lastUpdateTs" : 1764601109009,
+      "longValue" : null,
+      "strValue" : "GALLARDO TORRES KETTY YARITZA"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_3",
+      "lastUpdateTs" : 1764601109009,
+      "longValue" : null,
+      "strValue" : "DAHUA JOTA JERRI"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "OPERARIO_NOMBRE_4",
+      "lastUpdateTs" : 1764601109009,
       "longValue" : null,
       "strValue" : "GUERRERO DUEÑAS NESTOR ALBERTO"
     }, {
@@ -300,15 +366,15 @@
       "doubleValue" : null,
       "jsonValue" : "[\"DIA\"]",
       "key" : "OPERARIO_TURNO",
-      "lastUpdateTs" : 1764375664874,
+      "lastUpdateTs" : 1764601149065,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
-      "jsonValue" : "[\"@JavierBautistaTovar\"]",
+      "jsonValue" : "[\"@Ferdinandstone\"]",
       "key" : "RESPONSABLES_ID",
-      "lastUpdateTs" : 1764377400302,
+      "lastUpdateTs" : 1764780908519,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -316,17 +382,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "TIMESTAMP",
-      "lastUpdateTs" : 1764378335071,
+      "lastUpdateTs" : 1764786004381,
       "longValue" : null,
-      "strValue" : "2025-11-28 20:05:23"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "TIPO_EVENTO",
-      "lastUpdateTs" : 1764378110905,
-      "longValue" : null,
-      "strValue" : "DESACTIVADO"
+      "strValue" : "2025-12-03 13:19:47"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -340,7 +398,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764488894506,
+      "lastUpdateTs" : 1764897427412,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -356,24 +414,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1764378047943,
-      "longValue" : 3,
+      "lastUpdateTs" : 1764903862030,
+      "longValue" : 21,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1764378047943,
-      "longValue" : 3,
+      "lastUpdateTs" : 1764903862030,
+      "longValue" : 23,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "c_unidades_retrabajadas",
-      "lastUpdateTs" : 1762073004528,
-      "longValue" : 0,
+      "lastUpdateTs" : 1764630663184,
+      "longValue" : 2,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -388,7 +446,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "caso",
-      "lastUpdateTs" : 1764378067860,
+      "lastUpdateTs" : 1764603687130,
       "longValue" : 3,
       "strValue" : null
     }, {
@@ -396,9 +454,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "cliente",
-      "lastUpdateTs" : 1764378047837,
+      "lastUpdateTs" : 1764785980461,
       "longValue" : null,
-      "strValue" : "TECNICA AVICOLA S.A."
+      "strValue" : "MODASA EXPORTACION"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -412,15 +470,15 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "contador_levantamiento",
-      "lastUpdateTs" : 1764375847003,
+      "lastUpdateTs" : 1764781024644,
       "longValue" : 0,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : -90.48,
+      "doubleValue" : -97.16,
       "jsonValue" : null,
       "key" : "desviacion",
-      "lastUpdateTs" : 1764378037850,
+      "lastUpdateTs" : 1764781024644,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -433,18 +491,18 @@
       "strValue" : "true"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.9461904761904761,
+      "doubleValue" : null,
       "jsonValue" : null,
       "key" : "disponibilidad",
-      "lastUpdateTs" : 1764288430196,
+      "lastUpdateTs" : 1764903862030,
       "longValue" : null,
-      "strValue" : null
+      "strValue" : "0.010158730158730159"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 81.97,
+      "doubleValue" : 172.12,
       "jsonValue" : null,
       "key" : "eficiencia",
-      "lastUpdateTs" : 1764378037850,
+      "lastUpdateTs" : 1764781024644,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -460,7 +518,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "estado",
-      "lastUpdateTs" : 1764378077863,
+      "lastUpdateTs" : 1764786004381,
       "longValue" : null,
       "strValue" : "EN OPERACIÓN"
     }, {
@@ -468,15 +526,15 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "evento",
-      "lastUpdateTs" : 1764378324036,
+      "lastUpdateTs" : 1764786004381,
       "longValue" : null,
-      "strValue" : "INICIO_CONFIRMACION_TAREAS"
+      "strValue" : "INICIO_OPERACION"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "filtrog",
-      "lastUpdateTs" : 1764378067860,
+      "lastUpdateTs" : 1764603687130,
       "longValue" : null,
       "strValue" : "no"
     }, {
@@ -484,48 +542,48 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "id_mensaje",
-      "lastUpdateTs" : 1764378335071,
-      "longValue" : 190,
+      "lastUpdateTs" : 1764786004381,
+      "longValue" : 175,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764486960038,
-      "longValue" : 1764486960037,
+      "lastUpdateTs" : 1764887595708,
+      "longValue" : 1764887595707,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "incidentes",
-      "lastUpdateTs" : 1764378037850,
-      "longValue" : 1,
+      "lastUpdateTs" : 1764781024644,
+      "longValue" : 0,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764528739629,
-      "longValue" : 1764528738557,
+      "lastUpdateTs" : 1764903973619,
+      "longValue" : 1764903970734,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764488894506,
-      "longValue" : 1764488894506,
+      "lastUpdateTs" : 1764903777954,
+      "longValue" : 1764903777954,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764486358137,
-      "longValue" : 1764486358137,
+      "lastUpdateTs" : 1764903970753,
+      "longValue" : 1764903970753,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -540,31 +598,31 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "motivo",
-      "lastUpdateTs" : 1764377565488,
+      "lastUpdateTs" : 1764780908519,
       "longValue" : null,
-      "strValue" : "ACABADOS FINALES"
+      "strValue" : "ALERTA DE PARADA"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "names",
-      "lastUpdateTs" : 1764378335071,
-      "longValue" : 190,
+      "lastUpdateTs" : 1764786004381,
+      "longValue" : 175,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 1.0,
+      "doubleValue" : 0.91,
       "jsonValue" : null,
       "key" : "p_ALAprimera",
-      "lastUpdateTs" : 1762073004528,
+      "lastUpdateTs" : 1764902611594,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.0,
+      "doubleValue" : 0.09,
       "jsonValue" : null,
       "key" : "p_retrabajadas",
-      "lastUpdateTs" : 1762073004528,
+      "lastUpdateTs" : 1764902611594,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -572,8 +630,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "parte",
-      "lastUpdateTs" : 1764378084883,
-      "longValue" : 1,
+      "lastUpdateTs" : 1764786004381,
+      "longValue" : 2,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -587,42 +645,34 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "serie",
-      "lastUpdateTs" : 1764378047837,
-      "longValue" : null,
-      "strValue" : "X57196I"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
       "key" : "ss_id_mensaje",
-      "lastUpdateTs" : 1764378336231,
-      "longValue" : 190,
+      "lastUpdateTs" : 1764786005187,
+      "longValue" : 175,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "test",
-      "lastUpdateTs" : 1764378084883,
-      "longValue" : 1,
+      "lastUpdateTs" : 1764786004381,
+      "longValue" : 3,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "tiempo_activo",
-      "lastUpdateTs" : 1764378037850,
+      "lastUpdateTs" : 1764781024644,
       "longValue" : null,
-      "strValue" : "00:00:10:00"
+      "strValue" : "00:00:02:59"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "tiempo_estado",
-      "lastUpdateTs" : 1764378110905,
+      "lastUpdateTs" : 1764786001318,
       "longValue" : null,
-      "strValue" : "00:00:00:04"
+      "strValue" : "00:01:30:55"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
@@ -644,7 +694,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "tiempo_levantamiento",
-      "lastUpdateTs" : 1764375847003,
+      "lastUpdateTs" : 1764781024644,
       "longValue" : null,
       "strValue" : "00:00:00:00"
     }, {
@@ -652,48 +702,40 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "tiempo_operacion",
-      "lastUpdateTs" : 1764378037850,
+      "lastUpdateTs" : 1764781024644,
       "longValue" : null,
-      "strValue" : "00:00:10:00"
+      "strValue" : "00:00:02:59"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "tiempo_paradas",
-      "lastUpdateTs" : 1764378037850,
+      "lastUpdateTs" : 1764603537990,
       "longValue" : null,
-      "strValue" : "00:00:02:20"
+      "strValue" : "00:00:00:00"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "tiempo_seleccion",
-      "lastUpdateTs" : 1764377257090,
+      "lastUpdateTs" : 1764785980461,
       "longValue" : null,
       "strValue" : "00:00:01"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "tiempo_serie",
-      "lastUpdateTs" : 1764378037850,
-      "longValue" : null,
-      "strValue" : "00:00:12:20"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
       "key" : "tiempo_total",
-      "lastUpdateTs" : 1764378037850,
+      "lastUpdateTs" : 1764781024644,
       "longValue" : null,
-      "strValue" : "00:00:12:12"
+      "strValue" : "00:00:01:44"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "total",
-      "lastUpdateTs" : 1764378084883,
-      "longValue" : 1,
+      "lastUpdateTs" : 1764786004381,
+      "longValue" : 2,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -708,24 +750,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "unidades_ALAprimera",
-      "lastUpdateTs" : 1762073004528,
-      "longValue" : null,
-      "strValue" : "true"
+      "lastUpdateTs" : 1764781024800,
+      "longValue" : 1,
+      "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "unidades_ensambladas",
-      "lastUpdateTs" : 1764288430196,
-      "longValue" : 0,
+      "lastUpdateTs" : 1764871110175,
+      "longValue" : 1,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "unidades_planificadas",
-      "lastUpdateTs" : 1764378067860,
-      "longValue" : 2,
+      "lastUpdateTs" : 1764785999312,
+      "longValue" : 1,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {
@@ -744,22 +786,6 @@
       "lastUpdateTs" : 1761090843239,
       "longValue" : 11,
       "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "serie_abcd_dispositivo_Estación 1.9",
-      "lastUpdateTs" : 1762970758859,
-      "longValue" : 30,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "seriel2",
-      "lastUpdateTs" : 1762970758859,
-      "longValue" : null,
-      "strValue" : "abcd"
     } ]
   },
   "calculatedFields" : [ {
@@ -804,6 +830,111 @@
       "failuresEnabled" : true
     },
     "name" : "C_plan_prod",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "67a414d0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "disponibilidad" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
+          },
+          "refEntityKey" : {
+            "key" : "disponibilidad",
+            "type" : "TS_LATEST"
+          }
+        },
+        "produccion_T" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
+          },
+          "refEntityKey" : {
+            "key" : "produccion_teorica",
+            "type" : "TS_LATEST"
+          }
+        },
+        "u_ALAprimera" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
+          },
+          "refEntityKey" : {
+            "key" : "c_unidades_ALAprimera",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "(disponibilidad*u_ALAprimera*100)/produccion_T",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "OEEE",
+        "type" : "TIME_SERIES"
+      },
+      "useLatestTs" : false
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1762380543009,
+      "failuresEnabled" : true
+    },
+    "name" : "OEEE",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "67a414d0-8f1f-11f0-a61c-01e0c85fd5dd"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "oee" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
+          },
+          "refEntityKey" : {
+            "key" : "OEE",
+            "type" : "TS_LATEST"
+          }
+        },
+        "produccion_T" : {
+          "defaultValue" : "",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
+          },
+          "refEntityKey" : {
+            "key" : "produccion_teorica",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "(oee)/produccion_T",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "OEEE2",
+        "type" : "TIME_SERIES"
+      },
+      "useLatestTs" : false
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1762380543009,
+      "failuresEnabled" : true
+    },
+    "name" : "OEEE2",
     "tenantId" : {
       "entityType" : "TENANT",
       "id" : "67a414d0-8f1f-11f0-a61c-01e0c85fd5dd"

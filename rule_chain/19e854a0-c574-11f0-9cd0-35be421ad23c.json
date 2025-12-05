@@ -49,6 +49,10 @@
       "toIndex" : 10,
       "type" : "ALERTA FIJA"
     }, {
+      "fromIndex" : 4,
+      "toIndex" : 12,
+      "type" : "LLAMAR_SUPERVISOR"
+    }, {
       "fromIndex" : 6,
       "toIndex" : 7,
       "type" : "Success"
@@ -60,25 +64,29 @@
       "fromIndex" : 10,
       "toIndex" : 1,
       "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 11,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 4,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "${motivo}",
-        "layoutX" : 1040,
-        "layoutY" : 251
+        "layoutX" : 1080,
+        "layoutY" : 236
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmType" : "${motivo}"
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\ndetails.evento = msg.evento;\n\n\nreturn details;",
+        "alarmType" : "${motivo} | $[serie] $[MODELO]"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764177508825,
+        "allEnabledUntil" : 1764800512043,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -94,16 +102,16 @@
     }, {
       "additionalInfo" : {
         "description" : "${motivo}",
-        "layoutX" : 1165,
-        "layoutY" : 81
+        "layoutX" : 1077,
+        "layoutY" : 90
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\ndetails.linea=msg.linea;\ndetails.estacion=msg.estacion;\ndetails.serie=msg.serie;\ndetails.MODELO=msg.MODELO;\ndetails.cliente=msg.cliente;\n\nreturn details;",
         "useMessageAlarmData" : false,
         "overwriteAlarmDetails" : false,
-        "alarmType" : "${motivo}",
+        "alarmType" : "${motivo} | $[serie] $[MODELO]",
         "severity" : "MINOR",
         "propagate" : false,
         "relationTypes" : [ ],
@@ -131,7 +139,7 @@
     }, {
       "additionalInfo" : {
         "description" : "metadata.motivo=\"ALERTA DE EMERGENCIA\";",
-        "layoutX" : 768,
+        "layoutX" : 756,
         "layoutY" : 164
       },
       "configuration" : {
@@ -141,7 +149,11 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugSettings" : null,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764795937409,
+        "failuresEnabled" : true
+      },
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -155,8 +167,8 @@
     }, {
       "additionalInfo" : {
         "description" : "metadata.motivo= \"ALERTA DE PARADA\", metadata.motivo= \"ALERTA DE EMERGENCIA\"",
-        "layoutX" : 770,
-        "layoutY" : 248
+        "layoutX" : 756,
+        "layoutY" : 236
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -167,8 +179,8 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1764796509760,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
@@ -189,13 +201,13 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    if(msg.evento == \"ALERTA\") {\n        \n        if(msg.motivo==\"ALERTA DE PARADA\"){\n            return ['ALERTA FIJA'];\n        }\n        else{\n            return ['ALERTA DINAMICA'];\n        }\n    }\n    else if(msg.evento == \"INICIO_EMERGENCIA\"){\n        return ['INICIO_EMERGENCIA'];\n    }\n    else if(msg.evento == \"FIN_EMERGENCIA\" || msg.evento == \"FIN_PARADA\" ){\n        return ['LIMPIAR FIJA'];\n    }\n    else if(msg.evento==\"FIN\"){\n        return ['LIMPIAR DINAMICO'];\n    }\n    else {\n        return ['NO'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    if(msg.evento == \"ALERTA\") {\n        return ['ALERTA DINAMICA'];\n    }\n    else if(msg.evento == \"INICIO_PARADA\"){\n        return ['ALERTA FIJA'];\n    }\n    else if(msg.evento == \"INICIO_EMERGENCIA\"){\n        return ['INICIO_EMERGENCIA'];\n    }\n    else if(msg.evento == \"FIN_EMERGENCIA\" || msg.evento == \"FIN_PARADA\" ){\n        return ['LIMPIAR FIJA'];\n    }\n    else if(msg.evento==\"FIN\"){\n        return ['LIMPIAR DINAMICO'];\n    }\n    else if(msg.evento==\"LLAMAR_SUPERVISOR\"){\n        return ['LLAMAR_SUPERVISOR'];\n    }\n    else {\n        return ['NO'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1764188057335,
+        "allEnabledUntil" : 1764795961337,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -211,16 +223,16 @@
     }, {
       "additionalInfo" : {
         "description" : "${motivo}",
-        "layoutX" : 1158,
-        "layoutY" : 160
+        "layoutX" : 1077,
+        "layoutY" : 166
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\ndetails.linea=msg.linea;\ndetails.estacion=msg.estacion;\ndetails.serie=msg.serie;\ndetails.MODELO=msg.MODELO;\ndetails.cliente=msg.cliente;\n\n\n\n\nreturn details;",
         "useMessageAlarmData" : false,
         "overwriteAlarmDetails" : false,
-        "alarmType" : "${motivo}",
+        "alarmType" : "${motivo} | $[serie] $[MODELO]",
         "severity" : "CRITICAL",
         "propagate" : false,
         "relationTypes" : [ ],
@@ -232,7 +244,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1764800120246,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -248,8 +260,8 @@
     }, {
       "additionalInfo" : {
         "description" : "metadata.motivo=msg.motivo;",
-        "layoutX" : 756,
-        "layoutY" : 382
+        "layoutX" : 758,
+        "layoutY" : 305
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -276,16 +288,16 @@
     }, {
       "additionalInfo" : {
         "description" : "${motivo}",
-        "layoutX" : 1183,
-        "layoutY" : 375
+        "layoutX" : 1081,
+        "layoutY" : 310
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\ndetails.linea=msg.linea;\ndetails.estacion=msg.estacion;\ndetails.serie=msg.serie;\ndetails.MODELO=msg.MODELO;\ndetails.cliente=msg.cliente;\n\nreturn details;",
         "useMessageAlarmData" : false,
         "overwriteAlarmDetails" : false,
-        "alarmType" : "${motivo}",
+        "alarmType" : "${motivo} | $[serie] $[MODELO]",
         "severity" : "MINOR",
         "propagate" : false,
         "relationTypes" : [ ],
@@ -313,8 +325,8 @@
     }, {
       "additionalInfo" : {
         "description" : "metadata.motivo=msg.motivo;",
-        "layoutX" : 757,
-        "layoutY" : 475
+        "layoutX" : 758,
+        "layoutY" : 381
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -341,14 +353,14 @@
     }, {
       "additionalInfo" : {
         "description" : "${motivo}",
-        "layoutX" : 1024,
-        "layoutY" : 478
+        "layoutX" : 1079,
+        "layoutY" : 382
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
         "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmType" : "${motivo}"
+        "alarmType" : "${motivo} | $[serie] $[MODELO]"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -370,7 +382,7 @@
     }, {
       "additionalInfo" : {
         "description" : "metadata.motivo=\"ALERTA DE PARADA\";",
-        "layoutX" : 782,
+        "layoutX" : 759,
         "layoutY" : 86
       },
       "configuration" : {
@@ -395,6 +407,71 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "${motivo}",
+        "layoutX" : 1078,
+        "layoutY" : 592
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\ndetails.serie=msg.serie;\ndetails.MODELO=msg.MODELO;\ndetails.motivo=msg.motivo;\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "${motivo} | $[serie] $[MODELO]",
+        "severity" : "INDETERMINATE",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3733dee0-d13a-11f0-b9be-a7eb49293647"
+      },
+      "name" : "CREAR SOLICITUD",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "metadata.motivo=\"ALERTA DE PARADA\";",
+        "layoutX" : 760,
+        "layoutY" : 588
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "metadata.motivo=\"Solicitud\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1764872026501,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "37342d00-d13a-11f0-b9be-a7eb49293647"
+      },
+      "name" : "CREAR SOLICITUD",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
@@ -410,7 +487,7 @@
     },
     "type" : "Uses",
     "typeGroup" : "COMMON",
-    "version" : 233933
+    "version" : 269098
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

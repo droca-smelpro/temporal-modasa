@@ -41,75 +41,67 @@
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "OPERARIO_NOMBRE_1",
-      "lastUpdateTs" : 1764371920780,
-      "longValue" : null,
-      "strValue" : "GARCIA"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "OPERARIO_NOMBRE_2",
-      "lastUpdateTs" : 1764371920780,
-      "longValue" : null,
-      "strValue" : "GALLARDO"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "OPERARIO_NOMBRE_3",
-      "lastUpdateTs" : 1764371920780,
-      "longValue" : null,
-      "strValue" : "pedro"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "OPERARIO_NOMBRE_4",
-      "lastUpdateTs" : 1764371920780,
-      "longValue" : null,
-      "strValue" : "garcilazo"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "OPERARIO_NOMBRE_5",
-      "lastUpdateTs" : 1764371920780,
-      "longValue" : null,
-      "strValue" : "alexander"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "OPERARIO_NOMBRE_6",
-      "lastUpdateTs" : 1764371920780,
-      "longValue" : null,
-      "strValue" : "Juan"
-    }, {
       "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764373256100,
+      "lastUpdateTs" : 1764533642711,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "caso",
-      "lastUpdateTs" : 1764372558546,
+      "key" : "c_unidades_ALAprimera",
+      "lastUpdateTs" : 1764532937163,
+      "longValue" : 2,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "c_unidades_ensambladas",
+      "lastUpdateTs" : 1764532985134,
       "longValue" : 3,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "c_unidades_retrabajadas",
+      "lastUpdateTs" : 1764532985134,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "caso",
+      "lastUpdateTs" : 1764532937026,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "contador_levantamiento",
+      "lastUpdateTs" : 1764532984999,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "evento",
+      "lastUpdateTs" : 1764532123661,
+      "longValue" : null,
+      "strValue" : "FIN_ESTACION"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "filtrog",
-      "lastUpdateTs" : 1764372558546,
+      "lastUpdateTs" : 1764532123661,
       "longValue" : null,
       "strValue" : "no"
     }, {
@@ -117,73 +109,105 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "id_mensaje",
-      "lastUpdateTs" : 1764372600025,
-      "longValue" : 53,
+      "lastUpdateTs" : 1764532984999,
+      "longValue" : 3,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764373256097,
-      "longValue" : 1764373256095,
+      "lastUpdateTs" : 1764533642708,
+      "longValue" : 1764533642706,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764372601628,
-      "longValue" : 1764372600172,
+      "lastUpdateTs" : 1764532987638,
+      "longValue" : 1764532985051,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764372599815,
-      "longValue" : 1764372599815,
+      "lastUpdateTs" : 1764532984872,
+      "longValue" : 1764532984872,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764372600192,
-      "longValue" : 1764372600192,
+      "lastUpdateTs" : 1764532985073,
+      "longValue" : 1764532985073,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "names",
-      "lastUpdateTs" : 1764372600025,
-      "longValue" : 53,
+      "lastUpdateTs" : 1764532984999,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.67,
+      "jsonValue" : null,
+      "key" : "p_ALAprimera",
+      "lastUpdateTs" : 1764532985134,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.33,
+      "jsonValue" : null,
+      "key" : "p_retrabajadas",
+      "lastUpdateTs" : 1764532985134,
+      "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "ss_id_mensaje",
-      "lastUpdateTs" : 1764372600025,
-      "longValue" : 52,
+      "lastUpdateTs" : 1764532984999,
+      "longValue" : 2,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "var1",
-      "lastUpdateTs" : 1764360455028,
-      "longValue" : 10,
+      "key" : "unidad_terminada",
+      "lastUpdateTs" : 1764532123661,
+      "longValue" : null,
+      "strValue" : "Y"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ALAprimera",
+      "lastUpdateTs" : 1764532835732,
+      "longValue" : null,
+      "strValue" : "true"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "unidades_ensambladas",
+      "lastUpdateTs" : 1764532835732,
+      "longValue" : 1,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "var2",
-      "lastUpdateTs" : 1764360957507,
-      "longValue" : 20,
-      "strValue" : null
+      "key" : "unidades_retrabajadas",
+      "lastUpdateTs" : 1764532985134,
+      "longValue" : null,
+      "strValue" : "true"
     } ],
     "SHARED_SCOPE" : [ ]
   },

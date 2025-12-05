@@ -1,0 +1,44 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "oee",
+    "name" : "Porcentaje",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 7.5,
+      "sizeY" : 7.5,
+      "resources" : [ {
+        "url" : "https://test-thingsboard-oficina.s3.us-east-1.amazonaws.com/d3.v7.min.js"
+      } ],
+      "templateHtml" : "<div class=\"gauge-container\">\r\n  <svg id=\"gaugeChart\" class=\"gauge-svg\"></svg>\r\n  <div id=\"gaugeValue\" class=\"gauge-value\"></div>\r\n</div>",
+      "templateCss" : ".gauge-container {\r\n  --gauge-color: #0056b8;\r\n  --gauge-bg-color: rgba(150,150,150,0.15);\r\n  --gauge-font-size: var(--gauge-font-size);\r\n  --gauge-font-weight: 700;\r\n\r\n  width: 100%;\r\n  height: 100%;\r\n  position: relative;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background: transparent;\r\n  color: inherit;\r\n}\r\n\r\n.gauge-svg {\r\n    margin-top: 3px;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n\r\n.gauge-container {\r\n  --gauge-thickness: 20px; /* default fallback */\r\n}\r\n\r\n/* Fondo del gauge */\r\n.gauge-bg {\r\n  fill: none;\r\n  stroke: var(--gauge-bg-color);\r\n  stroke-width: var(--gauge-thickness);\r\n  stroke-linecap: round;\r\n}\r\n\r\n/* Barra de progreso */\r\n.gauge-progress {\r\n  fill: none;\r\n  stroke: var(--gauge-color);\r\n  stroke-width: var(--gauge-thickness);\r\n  stroke-linecap: round;\r\n  transition: stroke 0.3s ease;\r\n}\r\n\r\n/* Valor central */\r\n.gauge-value {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  font-size: var(--gauge-font-size);\r\n  font-weight: var(--gauge-font-weight);\r\n  color: #212121;\r\n  text-align: center;\r\n  pointer-events: none;\r\n}\r\n",
+      "controllerScript" : "self.onInit = function () {\r\n  const ctx = self.ctx;\r\n\r\n  ctx.parameter = ctx.settings.parameter || 'progress';\r\n  ctx.minValue = ctx.settings.minValue || 0;\r\n  ctx.maxValue = ctx.settings.maxValue || 100;\r\n  ctx.unit = ctx.settings.unit || '%';\r\n\r\n  // Container base\r\n  ctx.$container.html(`\r\n    <div class=\"gauge-container\">\r\n      <svg id=\"gaugeChart\" class=\"gauge-svg\"></svg>\r\n      <div id=\"gaugeValue\" class=\"gauge-value\"></div>\r\n    </div>\r\n  `);\r\n};\r\n\r\nself.onDataUpdated = function () {\r\n  const ctx = self.ctx;\r\n  const data = ctx.data;\r\n  if (!data?.length || !data[0].data?.length) return;\r\n\r\n  var raw1 = data[0].data[0][1];\r\n  var raw2 = data[1].data[0][1];\r\n  if(raw2 == 0){\r\n      raw1 = 0;\r\n      raw2 = 1;\r\n  }\r\n  const val = 100 * raw1/raw2;\r\n\r\n  const container = ctx.$container.find(\".gauge-container\")[0];\r\n  const width = container.offsetWidth || 200;\r\n  const height = container.offsetHeight || 200;\r\n  const cx = width / 2;\r\n  const cy = height / 2;\r\n\r\n  const radius = Math.min(width, height) / 2.4;\r\n  const thickness = radius * 0.25;\r\n  container.style.setProperty('--gauge-thickness', `${thickness}px`);\r\n  \r\n  // Example: label font-size = 35% of radius\r\n  const labelSize = radius * 0.4;\r\n  // Update the CSS variable dynamically\r\n  container.style.setProperty('--gauge-font-size', `${labelSize}px`);\r\n\r\n\r\n  const color = getComputedStyle(container).getPropertyValue('--gauge-color').trim() || '#0056b8';\r\n  const bgColor = getComputedStyle(container).getPropertyValue('--gauge-bg-color').trim() || 'rgba(150,150,150,0.15)';\r\n  \r\n  container.style.setProperty(\"--gauge-color\", ctx.settings.color);\r\n\r\n  const svg = d3.select(container).select(\"#gaugeChart\");\r\n  svg.selectAll(\"*\").remove();\r\n  svg.attr(\"width\", width).attr(\"height\", height);\r\n\r\n  const scale = d3.scaleLinear().domain([ctx.minValue, ctx.maxValue]).range([0, 2 * Math.PI]);\r\n  const angle = scale(val);\r\n  const startAngle = -Math.PI / 2;\r\n  const endAngle = startAngle + angle;\r\n\r\n  function polar(cx, cy, r, angle) {\r\n    return { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) };\r\n  }\r\n\r\n  // Background circle\r\n  svg.append(\"circle\")\r\n    .attr(\"class\", \"gauge-bg\")\r\n    .attr(\"cx\", cx)\r\n    .attr(\"cy\", cy)\r\n    .attr(\"r\", radius);\r\n\r\n  // Foreground arc (progress)\r\n  if (angle > 1e-6) {\r\n    if (angle >= 2 * Math.PI - 1e-6) {\r\n      svg.append(\"circle\")\r\n        .attr(\"class\", \"gauge-progress\")\r\n        .attr(\"cx\", cx)\r\n        .attr(\"cy\", cy)\r\n        .attr(\"r\", radius);\r\n    } else {\r\n      const start = polar(cx, cy, radius, startAngle);\r\n      const end = polar(cx, cy, radius, endAngle);\r\n      const largeArc = angle > Math.PI ? 1 : 0;\r\n\r\n      const d = `M ${start.x} ${start.y} A ${radius} ${radius} 0 ${largeArc} 1 ${end.x} ${end.y}`;\r\n      svg.append(\"path\")\r\n        .attr(\"class\", \"gauge-progress\")\r\n        .attr(\"d\", d);\r\n    }\r\n  }\r\n\r\n  // Update central value\r\n  ctx.$container.find(\"#gaugeValue\").text(`${val.toFixed(0)}${ctx.unit}`);\r\n};\r\n\r\nself.onResize = function () {\r\n  self.onDataUpdated();\r\n};\r\n",
+      "settingsForm" : [ {
+        "id" : "color",
+        "name" : "Color",
+        "hint" : "color-hint",
+        "group" : "Appereance",
+        "type" : "color",
+        "default" : "#048AD3",
+        "required" : true
+      } ],
+      "dataKeySettingsForm" : [ ],
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Cos\",\"color\":\"#4caf50\",\"settings\":{},\"_hash\":0.07209268203479235,\"funcBody\":\"return Math.round(1000*Math.cos(time/5000));\"},{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Sin\",\"color\":\"#4caf50\",\"settings\":{},\"_hash\":0.3105463311813452,\"funcBody\":\"return Math.round(1000*Math.sin(time/5000));\"}],\"alarmFilterConfig\":{\"statusList\":[\"ACTIVE\"]}}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"color\":\"#048AD3\"},\"title\":\"Porcentaje\",\"decimals\":null,\"useDashboardTimewindow\":true,\"displayTimewindow\":true,\"showTitleIcon\":false,\"titleTooltip\":\"\",\"dropShadow\":true,\"enableFullscreen\":true,\"widgetStyle\":{},\"widgetCss\":\"\",\"titleStyle\":{\"fontSize\":\"16px\",\"fontWeight\":400},\"pageSize\":1024,\"noDataDisplayMessage\":\"\"}"
+    },
+    "externalId" : null,
+    "resources" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "e27b5440-ced3-11f0-b9be-a7eb49293647"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

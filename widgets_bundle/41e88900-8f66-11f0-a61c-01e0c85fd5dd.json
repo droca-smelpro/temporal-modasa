@@ -14,7 +14,7 @@
     "scada" : false,
     "title" : "Widgets del Proyecto"
   },
-  "fqns" : [ "navigation_panel", "lastest_values_table", "gauge_creado", "custom_gauge", "custom_gauge_porcentaje", "doughnut_modificado", "lastest_values_table_mod", "bars_mod", "tabla_de_paradas", "tabla_de_paradas_cantidad", "control" ],
+  "fqns" : [ "navigation_panel", "lastest_values_table", "gauge_creado", "custom_gauge", "custom_gauge_porcentaje", "doughnut_modificado", "lastest_values_table_mod", "bars_mod", "tabla_de_paradas", "tabla_de_paradas_cantidad", "control", "oee", "last_value_card", "meta_de_producci_n", "percentage_bar", "oee3" ],
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

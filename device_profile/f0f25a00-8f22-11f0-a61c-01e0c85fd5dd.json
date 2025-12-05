@@ -63,7 +63,15 @@
               }
             },
             "dashboardId" : null,
-            "schedule" : null
+            "schedule" : {
+              "type" : "SPECIFIC_TIME",
+              "daysOfWeek" : [ 7 ],
+              "dynamicValue" : null,
+              "endsOn" : 28800000,
+              "startsOn" : 0,
+              "timezone" : "America/Lima",
+              "type" : "SPECIFIC_TIME"
+            }
           }
         },
         "id" : "1782eeae-291d-daf8-2f3f-89b2d9203325",
