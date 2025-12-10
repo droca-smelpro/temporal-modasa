@@ -22,15 +22,15 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "3ef09dd0-c992-11f0-9cd0-35be421ad23c"
+      "id" : "8c18dd90-d228-11f0-b9be-a7eb49293647"
     },
     "label" : "Room 234 Sensor",
-    "name" : "PAREDES RUIZ YONATAN",
+    "name" : "GARCIA ANUEL MANUEL ASDRUBAL",
     "softwareId" : null,
     "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "hUPGXeok6PNf1aAPL8UY",
+    "credentialsId" : "I0OtO9KbYa8AksbBPkW7",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -38,15 +38,15 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "3ef09dd0-c992-11f0-9cd0-35be421ad23c"
+      "id" : "8c18dd90-d228-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 211879
+    "version" : 287789
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -54,7 +54,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764029695190,
+      "lastUpdateTs" : 1764973818813,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -62,8 +62,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764029695184,
-      "longValue" : 1764029695182,
+      "lastUpdateTs" : 1764973818801,
+      "longValue" : 1764973818799,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

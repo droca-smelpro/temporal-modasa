@@ -22,15 +22,15 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "1ee44981-c98b-11f0-9cd0-35be421ad23c"
+      "id" : "f473b3b0-d22d-11f0-b9be-a7eb49293647"
     },
     "label" : "Room 234 Sensor",
-    "name" : "GUERRERO DUEÑAS NESTOR ALBERTO",
+    "name" : "ISUIZA ISUIZA GOMER",
     "softwareId" : null,
     "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "d98Hady9dKYxAN3dZmeh",
+    "credentialsId" : "mun9CHfmqGFvN3oG6xGG",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -38,28 +38,15 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
+      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "1ee44981-c98b-11f0-9cd0-35be421ad23c"
+      "id" : "f473b3b0-d22d-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 210855
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "1ee44981-c98b-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 224236
+    "version" : 288672
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -67,7 +54,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764026635092,
+      "lastUpdateTs" : 1764976158886,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -75,8 +62,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764026635087,
-      "longValue" : 1764026635086,
+      "lastUpdateTs" : 1764976158882,
+      "longValue" : 1764976158881,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

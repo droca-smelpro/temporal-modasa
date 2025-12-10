@@ -46,37 +46,11 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
+      "id" : "f473b3b0-d22d-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 269633
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 281202
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "da578e20-d1f1-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 278606
+    "version" : 288672
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -297,7 +271,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764968238604,
+      "lastUpdateTs" : 1764976338892,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -505,8 +479,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764968238600,
-      "longValue" : 1764968238599,
+      "lastUpdateTs" : 1764976338888,
+      "longValue" : 1764976338887,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -521,24 +495,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764967627643,
-      "longValue" : 1764967625433,
+      "lastUpdateTs" : 1764975712624,
+      "longValue" : 1764975711867,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764967610760,
-      "longValue" : 1764967610760,
+      "lastUpdateTs" : 1764975401742,
+      "longValue" : 1764975401742,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764967625449,
-      "longValue" : 1764967625449,
+      "lastUpdateTs" : 1764975711870,
+      "longValue" : 1764975711869,
       "strValue" : null
     }, {
       "booleanValue" : null,

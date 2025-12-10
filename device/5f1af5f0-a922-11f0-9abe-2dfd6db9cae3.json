@@ -42,97 +42,6 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 212086
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 283640
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "da398110-cecb-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 243247
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "1ee44980-c98b-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 210854
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "1ee44981-c98b-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 210855
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 219833
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "3ef09dd0-c992-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 211879
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
       "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
     },
     "to" : {
@@ -385,11 +294,11 @@
       "longValue" : null,
       "strValue" : "normal"
     }, {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764970297418,
+      "lastUpdateTs" : 1764977118919,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -525,8 +434,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764969318640,
-      "longValue" : 1764969318640,
+      "lastUpdateTs" : 1764977118916,
+      "longValue" : 1764977118915,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -541,24 +450,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764971128636,
-      "longValue" : 1764971126872,
+      "lastUpdateTs" : 1764976486631,
+      "longValue" : 1764976484029,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764970984865,
-      "longValue" : 1764970984865,
+      "lastUpdateTs" : 1764974901375,
+      "longValue" : 1764974901375,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764971126876,
-      "longValue" : 1764971126876,
+      "lastUpdateTs" : 1764976484040,
+      "longValue" : 1764976484040,
       "strValue" : null
     }, {
       "booleanValue" : null,

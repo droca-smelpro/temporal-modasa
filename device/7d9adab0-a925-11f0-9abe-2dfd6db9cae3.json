@@ -51,58 +51,6 @@
     "type" : "Contains",
     "typeGroup" : "COMMON",
     "version" : 227750
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "ae791cc1-d15a-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 269210
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 269208
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "1ee44980-c98b-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 269209
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "7d9adab0-a925-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 269207
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {

@@ -46,11 +46,11 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "b91673f0-c992-11f0-9cd0-35be421ad23c"
+      "id" : "8c18dd90-d228-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 239580
+    "version" : 287789
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -59,50 +59,11 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "da398110-cecb-11f0-b9be-a7eb49293647"
+      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 239722
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "1ee44980-c98b-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 228247
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "1ee44981-c98b-11f0-9cd0-35be421ad23c"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 224236
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "2e8a7630-ca61-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 286965
+    "version" : 289434
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -407,11 +368,11 @@
       "longValue" : null,
       "strValue" : "normal"
     }, {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764969206700,
+      "lastUpdateTs" : 1764983959160,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -563,8 +524,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764961338354,
-      "longValue" : 1764961338353,
+      "lastUpdateTs" : 1764983959157,
+      "longValue" : 1764983959157,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -579,24 +540,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764971368638,
-      "longValue" : 1764971368008,
+      "lastUpdateTs" : 1764983338627,
+      "longValue" : 1764983336734,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764969206699,
-      "longValue" : 1764969206699,
+      "lastUpdateTs" : 1764983099226,
+      "longValue" : 1764983099226,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764960705636,
-      "longValue" : 1764960705635,
+      "lastUpdateTs" : 1764983336740,
+      "longValue" : 1764983336740,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -801,157 +762,5 @@
       "strValue" : null
     } ]
   },
-  "calculatedFields" : [ {
-    "configuration" : {
-      "type" : "SIMPLE",
-      "arguments" : {
-        "U_planificadas" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "unidades_planificadas",
-            "type" : "TS_LATEST"
-          }
-        },
-        "U_terminadas_19" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-          },
-          "refEntityKey" : {
-            "key" : "c_unidades_ensambladas",
-            "type" : "TS_LATEST"
-          }
-        }
-      },
-      "expression" : "((U_terminadas_19)*100)/(U_planificadas)",
-      "output" : {
-        "decimalsByDefault" : 2,
-        "name" : "C_plan_prod",
-        "type" : "TIME_SERIES"
-      },
-      "useLatestTs" : false
-    },
-    "configurationVersion" : 0,
-    "debugSettings" : {
-      "allEnabled" : false,
-      "allEnabledUntil" : 1762380543009,
-      "failuresEnabled" : true
-    },
-    "name" : "C_plan_prod",
-    "tenantId" : {
-      "entityType" : "TENANT",
-      "id" : "67a414d0-8f1f-11f0-a61c-01e0c85fd5dd"
-    },
-    "type" : "SIMPLE"
-  }, {
-    "configuration" : {
-      "type" : "SIMPLE",
-      "arguments" : {
-        "disponibilidad" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-          },
-          "refEntityKey" : {
-            "key" : "disponibilidad",
-            "type" : "TS_LATEST"
-          }
-        },
-        "produccion_T" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "produccion_teorica",
-            "type" : "TS_LATEST"
-          }
-        },
-        "u_ALAprimera" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-          },
-          "refEntityKey" : {
-            "key" : "c_unidades_ALAprimera",
-            "type" : "TS_LATEST"
-          }
-        }
-      },
-      "expression" : "(disponibilidad*u_ALAprimera*100)/produccion_T",
-      "output" : {
-        "decimalsByDefault" : 2,
-        "name" : "OEEE",
-        "type" : "TIME_SERIES"
-      },
-      "useLatestTs" : false
-    },
-    "configurationVersion" : 0,
-    "debugSettings" : {
-      "allEnabled" : false,
-      "allEnabledUntil" : 1762380543009,
-      "failuresEnabled" : true
-    },
-    "name" : "OEEE",
-    "tenantId" : {
-      "entityType" : "TENANT",
-      "id" : "67a414d0-8f1f-11f0-a61c-01e0c85fd5dd"
-    },
-    "type" : "SIMPLE"
-  }, {
-    "configuration" : {
-      "type" : "SIMPLE",
-      "arguments" : {
-        "oee" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-          },
-          "refEntityKey" : {
-            "key" : "OEE",
-            "type" : "TS_LATEST"
-          }
-        },
-        "produccion_T" : {
-          "defaultValue" : "",
-          "refEntityId" : {
-            "entityType" : "DEVICE",
-            "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
-          },
-          "refEntityKey" : {
-            "key" : "produccion_teorica",
-            "type" : "TS_LATEST"
-          }
-        }
-      },
-      "expression" : "(oee)/produccion_T",
-      "output" : {
-        "decimalsByDefault" : 2,
-        "name" : "OEEE2",
-        "type" : "TIME_SERIES"
-      },
-      "useLatestTs" : false
-    },
-    "configurationVersion" : 0,
-    "debugSettings" : {
-      "allEnabled" : false,
-      "allEnabledUntil" : 1762380543009,
-      "failuresEnabled" : true
-    },
-    "name" : "OEEE2",
-    "tenantId" : {
-      "entityType" : "TENANT",
-      "id" : "67a414d0-8f1f-11f0-a61c-01e0c85fd5dd"
-    },
-    "type" : "SIMPLE"
-  } ]
+  "calculatedFields" : [ ]
 }

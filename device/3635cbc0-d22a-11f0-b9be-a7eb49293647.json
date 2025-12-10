@@ -22,15 +22,15 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
+      "id" : "3635cbc0-d22a-11f0-b9be-a7eb49293647"
     },
     "label" : "Room 234 Sensor",
-    "name" : "GONZALES CHUMPITAZ EDWIN ALONSO",
+    "name" : "DAHUA JOTA JERRI",
     "softwareId" : null,
     "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "90Ddi5GDZB8E9hEyTLe4",
+    "credentialsId" : "Nrnl7wtdi4njRAVMM5dM",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -38,41 +38,15 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
+      "id" : "a36ff110-a922-11f0-9abe-2dfd6db9cae3"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
+      "id" : "3635cbc0-d22a-11f0-b9be-a7eb49293647"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 281202
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 283640
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "74626cb0-b5b9-11f0-9cd0-35be421ad23c"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "d5503cc0-d1fa-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 281203
+    "version" : 287791
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -80,7 +54,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764954198096,
+      "lastUpdateTs" : 1764974538828,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -88,8 +62,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764954198083,
-      "longValue" : 1764954198081,
+      "lastUpdateTs" : 1764974538825,
+      "longValue" : 1764974538824,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

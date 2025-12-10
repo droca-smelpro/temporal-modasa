@@ -42,167 +42,91 @@
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 15,
+      "toIndex" : 9,
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 16,
+      "toIndex" : 10,
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 26,
+      "toIndex" : 14,
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 31,
+      "toIndex" : 19,
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 35,
+      "toIndex" : 21,
       "type" : "Success"
     }, {
       "fromIndex" : 7,
       "toIndex" : 8,
       "type" : "Success"
     }, {
-      "fromIndex" : 8,
-      "toIndex" : 32,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 8,
-      "toIndex" : 32,
-      "type" : "Success"
-    }, {
       "fromIndex" : 9,
-      "toIndex" : 10,
+      "toIndex" : 7,
       "type" : "Success"
     }, {
-      "fromIndex" : 9,
-      "toIndex" : 12,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 9,
-      "toIndex" : 37,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 12,
+      "fromIndex" : 10,
       "toIndex" : 11,
       "type" : "Success"
     }, {
-      "fromIndex" : 13,
-      "toIndex" : 14,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 15,
-      "toIndex" : 13,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 16,
-      "toIndex" : 17,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 18,
-      "toIndex" : 19,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 33,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 33,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 20,
-      "toIndex" : 21,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 20,
+      "fromIndex" : 12,
       "toIndex" : 22,
       "type" : "Success"
     }, {
-      "fromIndex" : 22,
+      "fromIndex" : 12,
+      "toIndex" : 25,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
       "toIndex" : 23,
       "type" : "Success"
     }, {
-      "fromIndex" : 24,
-      "toIndex" : 38,
-      "type" : "Success"
+      "fromIndex" : 14,
+      "toIndex" : 17,
+      "type" : "True"
     }, {
-      "fromIndex" : 24,
-      "toIndex" : 41,
+      "fromIndex" : 14,
+      "toIndex" : 18,
+      "type" : "True"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 16,
+      "type" : "fin_estacion"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 12,
+      "type" : "1.0"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 20,
+      "type" : "1.9"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 13,
+      "type" : "True"
+    }, {
+      "fromIndex" : 23,
+      "toIndex" : 24,
       "type" : "Success"
     }, {
       "fromIndex" : 25,
-      "toIndex" : 39,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 26,
-      "toIndex" : 29,
+      "toIndex" : 26,
       "type" : "True"
     }, {
       "fromIndex" : 26,
-      "toIndex" : 30,
-      "type" : "True"
-    }, {
-      "fromIndex" : 27,
-      "toIndex" : 28,
-      "type" : "fin_estacion"
-    }, {
-      "fromIndex" : 31,
-      "toIndex" : 7,
-      "type" : "1.0"
-    }, {
-      "fromIndex" : 31,
-      "toIndex" : 7,
-      "type" : "1.1 - 1.8"
-    }, {
-      "fromIndex" : 31,
-      "toIndex" : 18,
-      "type" : "1.9"
-    }, {
-      "fromIndex" : 31,
-      "toIndex" : 24,
-      "type" : "1.0"
-    }, {
-      "fromIndex" : 32,
-      "toIndex" : 9,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 33,
-      "toIndex" : 20,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 35,
-      "toIndex" : 34,
-      "type" : "1.9"
-    }, {
-      "fromIndex" : 37,
-      "toIndex" : 36,
-      "type" : "1.2"
-    }, {
-      "fromIndex" : 38,
-      "toIndex" : 25,
-      "type" : "True"
-    }, {
-      "fromIndex" : 39,
-      "toIndex" : 40,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 41,
-      "toIndex" : 42,
-      "type" : "True"
-    }, {
-      "fromIndex" : 42,
-      "toIndex" : 39,
+      "toIndex" : 23,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 491,
-        "layoutY" : 251
+        "layoutX" : 845,
+        "layoutY" : 253
       },
       "configuration" : {
         "version" : 0
@@ -368,7 +292,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "\n\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada == true){\n\n    \n    msg.unidades_ensambladas=1;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=1;\n          msg.unidades_retrabajadas=0;\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=1;\n          msg.unidades_ALAprimera=0;\n          \n      \n        }\n    }\n  else{\n     msg.unidades_ensambladas=0;\n    }\n      \n\n  \n\n\n  //msg.disponibilidad=((tiempoSegundos(msg.tiempo_activo))/(tiempoSegundos(msg.tiempo_estandar))); //usadado para estacion 1.9\n  \n  //msg.cantidad_teorica=msg.produccion_teorica;\n  \n\n  /*\n  \n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=((msg.tiempo_activo)*100)/(msg.tiempo_total);\n  \n  msg.tiempo_estandar=tiempoSegundos(msg.tiempo_estandar);\n  msg.p_operario=(msg.tiempo_estandar)/(msg.tiempo_total); //eficiencia operario\n  */\n  \n  \n  msg.tiempo_total =tiempoMinutos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoMinutos(msg.tiempo_activo);\n  msg.p_efectivo=(((msg.tiempo_activo)*100)/(msg.tiempo_total)).toFixed(2);  /// 0 -100\n  \n  msg.tiempo_estandar=tiempoMinutos(msg.tiempo_estandar);\n  msg.p_operario=(((msg.tiempo_estandar)*100)/(msg.tiempo_total)).toFixed(2); //eficiencia operario  // 0 - 100\n  \n  \n  if(msg.p_operario>=100){\n      msg.p_operario=100;\n  }\n  if(msg.p_efectivo>=100){\n       msg.p_efectivo=100;\n  }\n  \n  \n  \n  \n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n\nmsg.time_parada=(tiempoMinutos(msg.tiempo_estado)).toFixed(2);\n\n\nmsg.paradas={\"causa1\": msg.CAUSA_1, \"causa2\": msg.CAUSA_2, \"causa3\": msg.CAUSA_3, \"causa4\": msg.CAUSA_4, \"causa5\": msg.CAUSA_5 , \"tiempo_parada\": msg.time_parada};\n    \n\n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        //return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        //return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n\n\n",
+        "jsScript" : "\n\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada == true){\n\n    \n    msg.unidades_ensambladas=1;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=1;\n          msg.unidades_retrabajadas=0;\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=1;\n          msg.unidades_ALAprimera=0;\n          \n      \n        }\n    }\n  else{\n     msg.unidades_ensambladas=0;\n    }\n      \n\n  \n\n\n  //msg.disponibilidad=((tiempoSegundos(msg.tiempo_activo))/(tiempoSegundos(msg.tiempo_estandar))); //usadado para estacion 1.9\n  \n  //msg.cantidad_teorica=msg.produccion_teorica;\n  \n\n  /*\n  \n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=((msg.tiempo_activo)*100)/(msg.tiempo_total);\n  \n  msg.tiempo_estandar=tiempoSegundos(msg.tiempo_estandar);\n  msg.p_operario=(msg.tiempo_estandar)/(msg.tiempo_total); //eficiencia operario\n  */\n  \n  \n  msg.tiempo_total =tiempoMinutos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoMinutos(msg.tiempo_activo);\n  msg.p_efectivo=(((msg.tiempo_activo)*100)/(msg.tiempo_total)).toFixed(2);  /// 0 -100\n  \n  msg.tiempo_estandar=tiempoMinutos(msg.tiempo_estandar);\n\n  \n  \n  \n  \n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n\nmsg.time_parada=(tiempoMinutos(msg.tiempo_estado)).toFixed(2);\n\n\nmsg.paradas={\"causa1\": msg.CAUSA_1, \"causa2\": msg.CAUSA_2, \"causa3\": msg.CAUSA_3, \"causa4\": msg.CAUSA_4, \"causa5\": msg.CAUSA_5 , \"tiempo_parada\": msg.time_parada};\n    \n\n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        //return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        //return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n\n\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -384,176 +308,6 @@
         "id" : "67654bc0-b43a-11f0-9cd0-35be421ad23c"
       },
       "name" : "evento",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 663,
-        "layoutY" : 302
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "var outmsg={};\noutmsg.unidades_ALAprimera=msg.unidades_ALAprimera;\noutmsg.unidades_retrabajadas=msg.unidades_retrabajadas;\noutmsg.unidades_ensambladas=msg.unidades_ensambladas;\n\n//outmsg.c_unidades_ALAprimera=msg.c_unidades_ALAprimera;\n//outmsg.cont2=msg.cont2;\n\nreturn {msg: outmsg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "f8ca88b0-b4f7-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "convert atributos 0 - 8",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 670,
-        "layoutY" : 422
-      },
-      "configuration" : {
-        "tellFailureIfAbsent" : true,
-        "fetchTo" : "DATA",
-        "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ ],
-        "latestTsKeyNames" : [ "c_unidades_ALAprimera", "c_unidades_retrabajadas", "c_unidades_ensambladas" ],
-        "getLatestValueWithTs" : false
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "7ce9d140-b4f9-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "c_unidades",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1258,
-        "layoutY" : 419
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "\nvar c=msg.c_unidades_ALAprimera+1;\nvar r=msg.c_unidades_retrabajadas+1;\nvar e=msg.c_unidades_ensambladas+1;\n\nif(msg.unidades_ALAprimera){\n  //var c=msg.c_unidades_ALAprimera+1;\n   msg.c_unidades_ALAprimera=c;\n   metadata.c_unidades_ALAprimera=c;\n   \n   msg.p_ALAprimera=(c/e).toFixed(2) ;\n   msg.p_retrabajadas=(1-(c/e)).toFixed(2) ;\n   metadata.p_ALAprimera=(c/e).toFixed(2) ;\n   \n   \n}\nif(msg.unidades_retrabajadas){\n   //var r=msg.c_unidades_retrabajadas+1;\n   msg.c_unidades_retrabajadas=r;\n   metadata.c_unidades_retrabajadas=r;\n   \n   msg.p_ALAprimera=(1-(r/e)).toFixed(2)  ;\n   msg.p_retrabajadas=(r/e).toFixed(2) ;\n   metadata.p_retrabajadas=(r/e).toFixed(2) ;\n}\n\nif(msg.unidades_ensambladas){\n    //var e=msg.c_unidades_ensambladas+1;\n    msg.c_unidades_ensambladas=e;\n    metadata.unidades_ensambladas=e;\n    \n    \n\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n//e=c+r",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c3aa8950-b506-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "procesar 0 - 8",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1278,
-        "layoutY" : 309
-      },
-      "configuration" : {
-        "processingSettings" : {
-          "type" : "ON_EVERY_MESSAGE"
-        },
-        "scope" : "SERVER_SCOPE",
-        "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : true
-      },
-      "configurationVersion" : 3,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "03d2cde0-b50b-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "save contadores atributos",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1566,
-        "layoutY" : 309
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "useServerTs" : false,
-        "processingSettings" : {
-          "type" : "ON_EVERY_MESSAGE"
-        }
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "b23fade0-b50f-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "save contadores telemetry",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1575,
-        "layoutY" : 428
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "\n\nreturn {msg: msg, metadata: metadata, msgType: 'POST_TELEMETRY_REQUEST'};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "b23fd4f0-b50f-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "convert telemetry",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -711,186 +465,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 635,
-        "layoutY" : 571
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "var outmsg={};\noutmsg.unidades_ALAprimera=msg.unidades_ALAprimera;\noutmsg.unidades_retrabajadas=msg.unidades_retrabajadas;\noutmsg.unidades_ensambladas=msg.unidades_ensambladas;\n\noutmsg.disponibilidad=msg.disponibilidad;\n//outmsg.cantidad_teorica=msg.cantidad_teorica;\n\nreturn {msg: outmsg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "6af44e50-ba6e-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "convert atributos 1.9",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 705,
-        "layoutY" : 685
-      },
-      "configuration" : {
-        "tellFailureIfAbsent" : true,
-        "fetchTo" : "DATA",
-        "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ ],
-        "latestTsKeyNames" : [ "c_unidades_ALAprimera", "c_unidades_retrabajadas", "c_unidades_ensambladas" ],
-        "getLatestValueWithTs" : false
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "0ead13e0-ba71-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "c_unidades 1.9",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1273,
-        "layoutY" : 681
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "\nvar c=msg.c_unidades_ALAprimera+1;\nvar r=msg.c_unidades_retrabajadas+1;\nvar e=msg.c_unidades_ensambladas+1;\n\n\nif(msg.unidades_ensambladas){\n    //var e=msg.c_unidades_ensambladas+1;\n    msg.c_unidades_ensambladas=e;\n    metadata.unidades_ensambladas=e;\n    \n    msg.OEE=(msg.disponibilidad)*(c)*100;\n    //msg.Complemento_OEE=(100-((msg.disponibilidad)*(c)*100/(msg.cantidad_teorica)));\n    \n    \n\nif(msg.unidades_ALAprimera){\n  //var c=msg.c_unidades_ALAprimera+1;\n   msg.c_unidades_ALAprimera=c;\n   metadata.c_unidades_ALAprimera=c;\n   \n   msg.p_ALAprimera=(c/e).toFixed(2) ;\n   msg.p_retrabajadas=(1-(c/e)).toFixed(2) ;\n   metadata.p_ALAprimera=(c/e).toFixed(2) ;\n   \n   \n}\nif(msg.unidades_retrabajadas){\n   //var r=msg.c_unidades_retrabajadas+1;\n   msg.c_unidades_retrabajadas=r;\n   metadata.c_unidades_retrabajadas=r;\n   \n   msg.p_ALAprimera=(1-(r/e)).toFixed(2)  ;\n   msg.p_retrabajadas=(r/e).toFixed(2) ;\n   metadata.p_retrabajadas=(r/e).toFixed(2) ;\n}\n\n\n    \n    \n\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n//e=c+r",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764701125308,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "0ead3af0-ba71-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "procesar 1.9",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1229,
-        "layoutY" : 557
-      },
-      "configuration" : {
-        "processingSettings" : {
-          "type" : "ON_EVERY_MESSAGE"
-        },
-        "scope" : "SERVER_SCOPE",
-        "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : true
-      },
-      "configurationVersion" : 3,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "0ead3af1-ba71-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "save contadores atributos 1.9",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1574,
-        "layoutY" : 671
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "\n\nreturn {msg: msg, metadata: metadata, msgType: 'POST_TELEMETRY_REQUEST'};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "0ead3af2-ba71-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "convert telemetry 1.9",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1551,
-        "layoutY" : 555
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "useServerTs" : false,
-        "processingSettings" : {
-          "type" : "ON_EVERY_MESSAGE"
-        }
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "0ead3af3-ba71-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "save contadores telemetry 1.9",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 598,
-        "layoutY" : 814
+        "layoutX" : 576,
+        "layoutY" : 524
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -917,8 +493,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1124,
-        "layoutY" : 805
+        "layoutX" : 1087,
+        "layoutY" : 521
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -946,7 +522,7 @@
       "additionalInfo" : {
         "description" : "",
         "layoutX" : 83,
-        "layoutY" : 657
+        "layoutY" : 639
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1029,8 +605,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 368,
-        "layoutY" : 643
+        "layoutX" : 367,
+        "layoutY" : 606
       },
       "configuration" : {
         "version" : 0
@@ -1051,8 +627,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 365,
-        "layoutY" : 700
+        "layoutX" : 363,
+        "layoutY" : 693
       },
       "configuration" : {
         "version" : 0
@@ -1073,8 +649,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 394,
-        "layoutY" : 424
+        "layoutX" : 493,
+        "layoutY" : 303
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1098,62 +674,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 990,
-        "layoutY" : 426
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "if (!msg.c_unidades_ensambladas) {\n    msg.c_unidades_ensambladas=0;\n}\n\nif (!msg.c_unidades_ALAprimera) {\n    msg.c_unidades_ALAprimera=0;\n}\n\nif (!msg.c_unidades_retrabajadas) {\n    msg.c_unidades_retrabajadas=0;\n}\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764534237527,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "67482380-ce28-11f0-b9be-a7eb49293647"
-      },
-      "name" : "contadores ?",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1010,
-        "layoutY" : 686
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "if (!msg.c_unidades_ensambladas) {\n    msg.c_unidades_ensambladas=0;\n}\n\nif (!msg.c_unidades_ALAprimera) {\n    msg.c_unidades_ALAprimera=0;\n}\n\nif (!msg.c_unidades_retrabajadas) {\n    msg.c_unidades_retrabajadas=0;\n}\n\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764534374838,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "b91ffb60-ce28-11f0-b9be-a7eb49293647"
-      },
-      "name" : "contadores ?",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
         "description" : "",
@@ -1213,64 +733,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 911,
-        "layoutY" : 617
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    if(msg.evento == \"FIN_ESTACION\") {\n        return ['fin_estacion'];\n    }\n    else if(msg.evento == \"FIN_PARADA\") {\n        return ['fin_parada'];\n    }\n    else {\n        return ['no'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764713547403,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "e0594bd0-cfc9-11f0-b9be-a7eb49293647"
-      },
-      "name" : "debug eventos",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1028,
-        "layoutY" : 520
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    if(metadata.deviceName == \"Estación 1.2\") {\n        return ['1.2'];\n    }\n    else if(metadata.deviceName == \"Estación 1.0\") {\n        return ['1.0'];\n    }\n    else if(metadata.deviceName == \"simulador1\") {\n        return ['simulador'];\n    }\n    else {\n        return ['otros'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "e0594bd1-cfc9-11f0-b9be-a7eb49293647"
-      },
-      "name" : "debug Estaciones",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 863,
-        "layoutY" : 807
+        "layoutX" : 844,
+        "layoutY" : 519
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1297,8 +761,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1400,
-        "layoutY" : 803
+        "layoutX" : 1350,
+        "layoutY" : 521
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -1335,8 +799,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1558,
-        "layoutY" : 903
+        "layoutX" : 1327,
+        "layoutY" : 658
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1365,8 +829,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 861,
-        "layoutY" : 883
+        "layoutX" : 840,
+        "layoutY" : 588
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1393,8 +857,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1122,
-        "layoutY" : 878
+        "layoutX" : 1087,
+        "layoutY" : 580
       },
       "configuration" : {
         "scriptLang" : "JS",

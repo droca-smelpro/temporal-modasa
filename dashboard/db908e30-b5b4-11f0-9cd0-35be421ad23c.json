@@ -131,12 +131,19 @@
                 "settings" : { },
                 "_hash" : 0.23854375003533146
               }, {
-                "name" : "produccion_teorica",
+                "name" : "unidades_planificadas",
                 "type" : "timeseries",
-                "label" : "produccion_teorica",
-                "color" : "#ff9800",
+                "label" : "unidades_planificadas",
+                "color" : "#673ab7",
                 "settings" : { },
-                "_hash" : 0.6259753298789278
+                "_hash" : 0.22100288626838005
+              }, {
+                "name" : "ratio_produccion",
+                "type" : "timeseries",
+                "label" : "ratio_produccion",
+                "color" : "#673ab7",
+                "settings" : { },
+                "_hash" : 0.516692654875283
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]

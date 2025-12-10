@@ -9,7 +9,7 @@
     "externalId" : null,
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "a8f47c93-ce17-11f0-b9be-a7eb49293647"
+      "id" : "931d6b40-d22f-11f0-b9be-a7eb49293647"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -68,13 +68,17 @@
       "fromIndex" : 10,
       "toIndex" : 11,
       "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 3,
+      "type" : "Success"
     } ],
-    "firstNodeIndex" : 3,
+    "firstNodeIndex" : 12,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 939,
-        "layoutY" : 423
+        "layoutX" : 806,
+        "layoutY" : 400
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -95,7 +99,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1764976332796,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -111,8 +115,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 556,
-        "layoutY" : 97
+        "layoutX" : 252,
+        "layoutY" : 367
       },
       "configuration" : {
         "version" : 0
@@ -137,8 +141,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1337,
-        "layoutY" : 427
+        "layoutX" : 1265,
+        "layoutY" : 369
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -151,7 +155,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1764976605161,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -167,8 +171,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 274,
-        "layoutY" : 95
+        "layoutX" : 251,
+        "layoutY" : 214
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -195,8 +199,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1512,
-        "layoutY" : 278
+        "layoutX" : 1376,
+        "layoutY" : 199
       },
       "configuration" : {
         "direction" : "FROM",
@@ -212,7 +216,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1764976339589,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -220,7 +224,7 @@
         "entityType" : "RULE_NODE",
         "id" : "a8f4a3a0-ce17-11f0-b9be-a7eb49293647"
       },
-      "name" : "adggh",
+      "name" : "operario",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -228,8 +232,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 903,
-        "layoutY" : 268
+        "layoutX" : 717,
+        "layoutY" : 216
       },
       "configuration" : {
         "restEndpointUrlPattern" : "https://dashboard.smelpro.com/api/device",
@@ -275,8 +279,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1120,
-        "layoutY" : 106
+        "layoutX" : 978,
+        "layoutY" : 53
       },
       "configuration" : {
         "restEndpointUrlPattern" : "https://dashboard.smelpro.com/api/auth/login",
@@ -320,9 +324,9 @@
       "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
     }, {
       "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 852,
-        "layoutY" : 94
+        "description" : "credenciales para token",
+        "layoutX" : 666,
+        "layoutY" : 49
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -341,7 +345,7 @@
         "entityType" : "RULE_NODE",
         "id" : "a8f4a3a3-ce17-11f0-b9be-a7eb49293647"
       },
-      "name" : "aaacvv",
+      "name" : "creden...para token",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -349,8 +353,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1397,
-        "layoutY" : 113
+        "layoutX" : 1279,
+        "layoutY" : 57
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -369,7 +373,7 @@
         "entityType" : "RULE_NODE",
         "id" : "a8f4a3a4-ce17-11f0-b9be-a7eb49293647"
       },
-      "name" : "koool",
+      "name" : "crear device",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -377,8 +381,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1240,
-        "layoutY" : 276
+        "layoutX" : 1076,
+        "layoutY" : 216
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -389,7 +393,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1764976611363,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -397,7 +401,7 @@
         "entityType" : "RULE_NODE",
         "id" : "a8f4a3a5-ce17-11f0-b9be-a7eb49293647"
       },
-      "name" : "mnknk",
+      "name" : "operario",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -405,8 +409,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1172,
-        "layoutY" : 535
+        "layoutX" : 970,
+        "layoutY" : 525
       },
       "configuration" : {
         "customerNamePattern" : "Usuarios",
@@ -416,7 +420,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1764976326463,
         "failuresEnabled" : true
       },
       "externalId" : null,
@@ -432,8 +436,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1430,
-        "layoutY" : 535
+        "layoutX" : 1243,
+        "layoutY" : 510
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -446,19 +450,43 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
+        "allEnabledUntil" : 1764976605161,
+        "failuresEnabled" : true
       },
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "a8f4cab1-ce17-11f0-b9be-a7eb49293647"
       },
-      "name" : "bygty",
+      "name" : "save cliente",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "calcular p_operario",
+        "layoutX" : 267,
+        "layoutY" : 41
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "  msg.p_operario=(((msg.tiempo_estandar)*100)/(msg.tiempo_total)).toFixed(2); //eficiencia operario  // 0 - 100\n  \n  \n  if(msg.p_operario>=100){\n      msg.p_operario=100;\n  }\n  if(msg.p_efectivo>=100){\n       msg.p_efectivo=100;\n  }\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "931d6b40-d22f-11f0-b9be-a7eb49293647"
+      },
+      "name" : "calcular p_operario",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
