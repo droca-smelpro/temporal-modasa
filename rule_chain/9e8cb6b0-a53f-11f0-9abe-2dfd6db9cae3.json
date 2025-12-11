@@ -38,131 +38,115 @@
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 9,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 6,
       "toIndex" : 10,
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 14,
+      "toIndex" : 13,
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 19,
+      "toIndex" : 16,
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 21,
+      "toIndex" : 25,
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 30,
+      "toIndex" : 28,
       "type" : "Success"
     }, {
       "fromIndex" : 7,
       "toIndex" : 8,
       "type" : "Success"
     }, {
-      "fromIndex" : 8,
-      "toIndex" : 33,
-      "type" : "Success"
-    }, {
       "fromIndex" : 9,
-      "toIndex" : 31,
+      "toIndex" : 26,
       "type" : "Success"
     }, {
       "fromIndex" : 10,
-      "toIndex" : 29,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 12,
-      "toIndex" : 22,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 12,
-      "toIndex" : 25,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 13,
-      "toIndex" : 23,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 14,
-      "toIndex" : 17,
-      "type" : "True"
-    }, {
-      "fromIndex" : 14,
-      "toIndex" : 18,
-      "type" : "True"
-    }, {
-      "fromIndex" : 15,
-      "toIndex" : 16,
-      "type" : "fin_estacion"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 12,
-      "type" : "1.0"
-    }, {
-      "fromIndex" : 21,
-      "toIndex" : 20,
-      "type" : "1.9"
-    }, {
-      "fromIndex" : 22,
-      "toIndex" : 13,
-      "type" : "True"
-    }, {
-      "fromIndex" : 23,
       "toIndex" : 24,
       "type" : "Success"
     }, {
-      "fromIndex" : 25,
-      "toIndex" : 26,
+      "fromIndex" : 12,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 14,
       "type" : "True"
     }, {
-      "fromIndex" : 26,
+      "fromIndex" : 13,
+      "toIndex" : 15,
+      "type" : "True"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 17,
+      "type" : "1.0"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 20,
+      "type" : "1.0"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 12,
+      "type" : "True"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 21,
+      "type" : "True"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 22,
       "toIndex" : 23,
       "type" : "Success"
     }, {
-      "fromIndex" : 26,
-      "toIndex" : 27,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 27,
-      "toIndex" : 28,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 29,
+      "fromIndex" : 24,
       "toIndex" : 11,
       "type" : "True"
     }, {
-      "fromIndex" : 30,
+      "fromIndex" : 25,
       "toIndex" : 0,
       "type" : "Success"
     }, {
-      "fromIndex" : 31,
+      "fromIndex" : 26,
       "toIndex" : 7,
       "type" : "linea_1"
     }, {
-      "fromIndex" : 31,
-      "toIndex" : 32,
+      "fromIndex" : 26,
+      "toIndex" : 27,
       "type" : "linea_2"
     }, {
-      "fromIndex" : 32,
+      "fromIndex" : 27,
       "toIndex" : 8,
       "type" : "Success"
     }, {
-      "fromIndex" : 33,
-      "toIndex" : 34,
-      "type" : "Success"
+      "fromIndex" : 28,
+      "toIndex" : 9,
+      "type" : "FIN_ESTACION"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 9,
+      "type" : "FIN_PARADA"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 855,
-        "layoutY" : 160
+        "layoutX" : 819,
+        "layoutY" : 327
       },
       "configuration" : {
         "version" : 0
@@ -179,7 +163,7 @@
         "entityType" : "RULE_NODE",
         "id" : "fd846e50-a540-11f0-9abe-2dfd6db9cae3"
       },
-      "name" : "save",
+      "name" : "save estaciones",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -323,8 +307,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 263,
-        "layoutY" : 154
+        "layoutX" : 60,
+        "layoutY" : 279
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -343,7 +327,7 @@
         "entityType" : "RULE_NODE",
         "id" : "67654bc0-b43a-11f0-9cd0-35be421ad23c"
       },
-      "name" : "evento",
+      "name" : "estaciones",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -351,8 +335,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1042,
-        "layoutY" : 68
+        "layoutX" : 1093,
+        "layoutY" : 149
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -389,8 +373,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1335,
-        "layoutY" : 72
+        "layoutX" : 1351,
+        "layoutY" : 103
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -419,8 +403,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 487,
-        "layoutY" : 78
+        "layoutX" : 857,
+        "layoutY" : 101
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -447,8 +431,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 364,
-        "layoutY" : 16
+        "layoutX" : 335,
+        "layoutY" : 24
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -475,8 +459,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 931,
-        "layoutY" : 18
+        "layoutX" : 920,
+        "layoutY" : 19
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -501,36 +485,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 428,
-        "layoutY" : 549
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "var msgout={};\nif(metadata.deviceName == \"Estación 1.0\"){\n    msgout=msg;\n}\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764532779688,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "7c832fe0-ba8e-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "filtrar estacion 1.0",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 971,
-        "layoutY" : 487
+        "layoutX" : 902,
+        "layoutY" : 480
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -585,62 +541,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 76,
-        "layoutY" : 944
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    if(msg.evento == \"FIN_ESTACION\") {\n        return ['fin_estacion'];\n    }\n    else {\n        return ['no'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1763671018614,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "5cfdefe0-c64e-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "FILTRO fin estacion",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 354,
-        "layoutY" : 942
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764101588671,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "859ea200-c64e-11f0-9cd0-35be421ad23c"
-      },
-      "name" : "degug_fin_estacion",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 526,
         "layoutY" : 784
       },
@@ -685,12 +585,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 434,
-        "layoutY" : 423
+        "layoutX" : 332,
+        "layoutY" : 414
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    if(metadata.deviceName == \"Estación 1.9\") {\n        return ['1.9'];\n    }\n    else if(metadata.deviceName == \"Estación 1.0\") {\n        return ['1.0'];\n    }\n    else if(metadata.deviceName == \"simulador1\") {\n        return ['simulador'];\n    }\n    else {\n        return ['1.1 - 1.8'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    if(metadata.deviceName == \"Estación 2.0\") {\n        return ['2.0'];\n    }\n    else if(metadata.deviceName == \"Estación 1.0\") {\n        return ['1.0'];\n    }\n    else if(metadata.deviceName == \"simulador1\") {\n        return ['simulador'];\n    }\n    else {\n        return ['1-8'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
         "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
       },
       "configurationVersion" : 0,
@@ -705,7 +605,7 @@
         "entityType" : "RULE_NODE",
         "id" : "ab390e00-ce1a-11f0-b9be-a7eb49293647"
       },
-      "name" : "FILTRO Estaciones",
+      "name" : "Filtrar 1.0  y 2.0",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -713,64 +613,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 60,
-        "layoutY" : 353
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    if(msg.evento == \"FIN_ESTACION\") {\n        return ['fin_estacion'];\n    }\n    else if(msg.evento == \"FIN_PARADA\") {\n        return ['fin_parada'];\n    }\n    else {\n        return ['no'];\n    }\n}\n\nreturn nextRelation(metadata, msg);"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1764960660377,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "de8ffb60-cef6-11f0-b9be-a7eb49293647"
-      },
-      "name" : "debug eventos",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 54,
-        "layoutY" : 261
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    if(metadata.deviceName == \"Estación 1.2\") {\n        return ['1.2'];\n    }\n    else if(metadata.deviceName == \"Estación 1.0\") {\n        return ['1.0'];\n    }\n        else if(metadata.deviceName == \"Estación 1.9\") {\n        return ['1.9'];\n    }\n    else if(metadata.deviceName == \"simulador1\") {\n        return ['simulador'];\n    }\n    else {\n        return ['otros'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : true
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "a1cc3f80-cfab-11f0-b9be-a7eb49293647"
-      },
-      "name" : "debug Estaciones",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 708,
-        "layoutY" : 507
+        "layoutX" : 620,
+        "layoutY" : 484
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -797,8 +641,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1316,
-        "layoutY" : 506
+        "layoutX" : 1231,
+        "layoutY" : 509
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -865,8 +709,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 728,
-        "layoutY" : 607
+        "layoutX" : 616,
+        "layoutY" : 579
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -893,8 +737,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 995,
-        "layoutY" : 604
+        "layoutX" : 903,
+        "layoutY" : 575
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -921,8 +765,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1298,
-        "layoutY" : 637
+        "layoutX" : 1215,
+        "layoutY" : 623
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -989,7 +833,7 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 659,
+        "layoutX" : 631,
         "layoutY" : 20
       },
       "configuration" : {
@@ -1017,8 +861,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 561,
-        "layoutY" : 158
+        "layoutX" : 526,
+        "layoutY" : 323
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1045,8 +889,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 762,
-        "layoutY" : 78
+        "layoutX" : 849,
+        "layoutY" : 191
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1073,8 +917,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1043,
-        "layoutY" : 116
+        "layoutX" : 1099,
+        "layoutY" : 202
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -1111,23 +955,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1329,
-        "layoutY" : 173
+        "layoutX" : 373,
+        "layoutY" : 101
       },
       "configuration" : {
-        "originatorSource" : "ENTITY",
-        "entityType" : "DEVICE",
-        "entityNamePattern" : "Supervisor",
-        "relationsQuery" : {
-          "direction" : "FROM",
-          "maxLevel" : 1,
-          "filters" : [ {
-            "relationType" : "Contains",
-            "entityTypes" : [ ],
-            "negate" : false
-          } ],
-          "fetchLastLevelOnly" : false
-        }
+        "scriptLang" : "JS",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    if(msg.evento == \"FIN_ESTACION\") {\n        return ['FIN_ESTACION'];\n    }\n    else if(msg.evento == \"FIN_PARADA\") {\n        return ['FIN_PARADA'];\n    }\n\n    else {\n        return ['otros_eventos'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1139,43 +973,13 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "44d36290-d6a4-11f0-a94a-cb6d065d835f"
+        "id" : "680eb710-d6a8-11f0-a94a-cb6d065d835f"
       },
-      "name" : "para Supervisor",
+      "name" : "FILTRAR msg.evento",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1318,
-        "layoutY" : 270
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "useServerTs" : false,
-        "processingSettings" : {
-          "type" : "ON_EVERY_MESSAGE"
-        }
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "44d389a0-d6a4-11f0-a94a-cb6d065d835f"
-      },
-      "name" : "save Supervisor",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
     } ],
     "ruleChainConnections" : null
   },

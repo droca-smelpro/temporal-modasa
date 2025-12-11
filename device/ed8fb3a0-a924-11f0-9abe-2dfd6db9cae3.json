@@ -42,6 +42,19 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
+      "id" : "ed8fb3a0-a924-11f0-9abe-2dfd6db9cae3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 296331
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
       "id" : "7a984630-b8d5-11f0-9cd0-35be421ad23c"
     },
     "to" : {
@@ -54,11 +67,11 @@
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1765413324019,
+      "lastUpdateTs" : 1765483716183,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -66,32 +79,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1765413324016,
-      "longValue" : 1765413324013,
+      "lastUpdateTs" : 1765472126408,
+      "longValue" : 1765472126405,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1765412699510,
-      "longValue" : 1765412697297,
+      "lastUpdateTs" : 1765494860509,
+      "longValue" : 1765494859073,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1765409028991,
-      "longValue" : 1765409028991,
+      "lastUpdateTs" : 1765487281797,
+      "longValue" : 1765487281797,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1765412697298,
-      "longValue" : 1765412697298,
+      "lastUpdateTs" : 1765494875149,
+      "longValue" : 1765494875149,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

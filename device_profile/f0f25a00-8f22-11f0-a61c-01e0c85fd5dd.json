@@ -6,7 +6,7 @@
     "defaultEdgeRuleChainId" : null,
     "defaultQueueName" : null,
     "defaultRuleChainId" : null,
-    "description" : "",
+    "description" : "perfil para estaciones",
     "externalId" : null,
     "firmwareId" : null,
     "id" : {

@@ -66,7 +66,23 @@
     "version" : 271986
   } ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1765495442481,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1765495442185,
+      "longValue" : 1765495441951,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   },
   "calculatedFields" : [ ]

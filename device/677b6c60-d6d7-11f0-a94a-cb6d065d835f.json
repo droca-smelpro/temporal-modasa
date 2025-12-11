@@ -22,15 +22,15 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
+      "id" : "677b6c60-d6d7-11f0-a94a-cb6d065d835f"
     },
     "label" : "Room 234 Sensor",
-    "name" : "CHIPANA HUAMAN NILO JULHIÑO",
+    "name" : "GONZALES CHUMPITAZ EDWIN ALONSO",
     "softwareId" : null,
     "type" : "chambas"
   },
   "credentials" : {
-    "credentialsId" : "RXv2SVhkkPeGUmj6F5jX",
+    "credentialsId" : "gFdHrScFEfuG1yMaGaZW",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -38,54 +38,15 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "DEVICE",
-      "id" : "d0033100-a62b-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 291613
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
       "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
+      "id" : "677b6c60-d6d7-11f0-a94a-cb6d065d835f"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 291360
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "ed8fb3a0-a924-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 296331
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 289652
+    "version" : 296332
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -94,24 +55,11 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
+      "id" : "677b6c60-d6d7-11f0-a94a-cb6d065d835f"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 294235
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "DEVICE",
-      "id" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "b99fe330-d22d-11f0-b9be-a7eb49293647"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON",
-    "version" : 289434
+    "version" : 296335
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -119,7 +67,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764976038888,
+      "lastUpdateTs" : 1765488747057,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -127,8 +75,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764976038878,
-      "longValue" : 1764976038877,
+      "lastUpdateTs" : 1765488747052,
+      "longValue" : 1765488747050,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]
