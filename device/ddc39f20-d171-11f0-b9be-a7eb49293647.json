@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "79d09240-9f1f-11f0-9abe-2dfd6db9cae3"
     },
     "deviceData" : {
       "configuration" : {
@@ -66,23 +66,7 @@
     "version" : 271986
   } ],
   "attributes" : {
-    "SERVER_SCOPE" : [ {
-      "booleanValue" : false,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "active",
-      "lastUpdateTs" : 1764895396008,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764895396003,
-      "longValue" : 1764895396001,
-      "strValue" : null
-    } ],
+    "SERVER_SCOPE" : [ ],
     "SHARED_SCOPE" : [ ]
   },
   "calculatedFields" : [ ]

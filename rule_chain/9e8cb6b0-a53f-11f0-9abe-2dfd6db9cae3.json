@@ -38,10 +38,6 @@
       "type" : "Success"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 0,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 6,
       "toIndex" : 9,
       "type" : "Success"
     }, {
@@ -61,16 +57,24 @@
       "toIndex" : 21,
       "type" : "Success"
     }, {
+      "fromIndex" : 6,
+      "toIndex" : 30,
+      "type" : "Success"
+    }, {
       "fromIndex" : 7,
       "toIndex" : 8,
       "type" : "Success"
     }, {
+      "fromIndex" : 8,
+      "toIndex" : 33,
+      "type" : "Success"
+    }, {
       "fromIndex" : 9,
-      "toIndex" : 7,
+      "toIndex" : 31,
       "type" : "Success"
     }, {
       "fromIndex" : 10,
-      "toIndex" : 11,
+      "toIndex" : 29,
       "type" : "Success"
     }, {
       "fromIndex" : 12,
@@ -120,13 +124,45 @@
       "fromIndex" : 26,
       "toIndex" : 23,
       "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 28,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 11,
+      "type" : "True"
+    }, {
+      "fromIndex" : 30,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 31,
+      "toIndex" : 7,
+      "type" : "linea_1"
+    }, {
+      "fromIndex" : 31,
+      "toIndex" : 32,
+      "type" : "linea_2"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 34,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 845,
-        "layoutY" : 253
+        "layoutX" : 855,
+        "layoutY" : 160
       },
       "configuration" : {
         "version" : 0
@@ -292,7 +328,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "\n\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada == true){\n\n    \n    msg.unidades_ensambladas=1;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=1;\n          msg.unidades_retrabajadas=0;\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=1;\n          msg.unidades_ALAprimera=0;\n          \n      \n        }\n    }\n  else{\n     msg.unidades_ensambladas=0;\n    }\n      \n\n  \n\n\n  //msg.disponibilidad=((tiempoSegundos(msg.tiempo_activo))/(tiempoSegundos(msg.tiempo_estandar))); //usadado para estacion 1.9\n  \n  //msg.cantidad_teorica=msg.produccion_teorica;\n  \n\n  /*\n  \n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=((msg.tiempo_activo)*100)/(msg.tiempo_total);\n  \n  msg.tiempo_estandar=tiempoSegundos(msg.tiempo_estandar);\n  msg.p_operario=(msg.tiempo_estandar)/(msg.tiempo_total); //eficiencia operario\n  */\n  \n  \n  msg.tiempo_total =tiempoMinutos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoMinutos(msg.tiempo_activo);\n  msg.p_efectivo=(((msg.tiempo_activo)*100)/(msg.tiempo_total)).toFixed(2);  /// 0 -100\n  \n  msg.tiempo_estandar=tiempoMinutos(msg.tiempo_estandar);\n\n  \n  \n  \n  \n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n\nmsg.time_parada=(tiempoMinutos(msg.tiempo_estado)).toFixed(2);\n\n\nmsg.paradas={\"causa1\": msg.CAUSA_1, \"causa2\": msg.CAUSA_2, \"causa3\": msg.CAUSA_3, \"causa4\": msg.CAUSA_4, \"causa5\": msg.CAUSA_5 , \"tiempo_parada\": msg.time_parada};\n    \n\n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        //return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        //return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n\n\n",
+        "jsScript" : "\n\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada == true){\n\n    \n    msg.unidades_ensambladas=1;\n    \n\n    \n      if(msg.contador_levantamiento ==0){\n     \n          msg.unidades_ALAprimera=1;\n          msg.unidades_retrabajadas=0;\n          \n       }\n      else{\n          \n          msg.unidades_retrabajadas=1;\n          msg.unidades_ALAprimera=0;\n          \n      \n        }\n    }\n  else{\n     msg.unidades_ensambladas=0;\n    }\n      \n\n  \n\n\n  //msg.disponibilidad=((tiempoSegundos(msg.tiempo_activo))/(tiempoSegundos(msg.tiempo_estandar))); //usadado para estacion 1.9\n  \n  //msg.cantidad_teorica=msg.produccion_teorica;\n  \n\n  /*\n  \n  msg.tiempo_total=tiempoSegundos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoSegundos(msg.tiempo_activo);\n  msg.p_efectivo=((msg.tiempo_activo)*100)/(msg.tiempo_total);\n  \n  msg.tiempo_estandar=tiempoSegundos(msg.tiempo_estandar);\n  msg.p_operario=(msg.tiempo_estandar)/(msg.tiempo_total); //eficiencia operario\n  */\n  \n  \n  msg.tiempo_total =tiempoMinutos(msg.tiempo_total);\n  msg.tiempo_activo=tiempoMinutos(msg.tiempo_activo);\n  msg.p_efectivo=(((msg.tiempo_activo)*100)/(msg.tiempo_total)).toFixed(2);  /// 0 -100\n  \n  msg.tiempo_estandar=tiempoMinutos(msg.tiempo_estandar);\n\n    if(msg.p_efectivo>=100){\n       msg.p_efectivo=100;\n  }\n  \n  \n  \n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n\nmsg.time_parada=(tiempoMinutos(msg.tiempo_estado)).toFixed(2);\n\n\nmsg.paradas={\"causa1\": msg.CAUSA_1, \"causa2\": msg.CAUSA_2, \"causa3\": msg.CAUSA_3, \"causa4\": msg.CAUSA_4, \"causa5\": msg.CAUSA_5 , \"tiempo_parada\": msg.time_parada};\n    \n\n    \n}\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n \n\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        //return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        //return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n\n\n",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -315,8 +351,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1028,
-        "layoutY" : 119
+        "layoutX" : 1042,
+        "layoutY" : 68
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -353,8 +389,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1322,
-        "layoutY" : 115
+        "layoutX" : 1335,
+        "layoutY" : 72
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -375,7 +411,7 @@
         "entityType" : "RULE_NODE",
         "id" : "4e419251-b914-11f0-9cd0-35be421ad23c"
       },
-      "name" : "save linea 1",
+      "name" : "save linea",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -383,12 +419,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 781,
-        "layoutY" : 136
+        "layoutX" : 487,
+        "layoutY" : 78
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var msgout={};\n//------------------------------------------------------------\n if(msg.nombre_operario)  {\nmsg.string_nombre_operario = msg.nombre_operario.join(\", \"); //variable para nombre_operario\n\n}\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada== true){\n\n    \n    \n      if(msg.contador_levantamiento ==0){\n          \n          if(metadata.deviceName == \"Estación 1.9\"){\n              msgout.unidades_ALAprimeraL=1;\n              msgout.unidades_retrabajadasL=0;\n              \n          }\n          else{\n              \n          }\n     \n          \n          \n       }\n      else{\n          \n        if(metadata.deviceName == \"Estación 1.9\"){\n              msgout.unidades_ALAprimeraL=0;\n              msgout.unidades_retrabajadasL=1;\n              \n          }\n          else{\n              \n          }\n          \n          \n      \n        }\n        \n     if(msg.contador_inspeccion ==1){\n     \n          msgout.unidades_buenas=1;\n          \n       }\n      else if(msg.contador_inspeccion >=1){\n          \n          msgout.unidades_defecto=1;\n          \n      \n        }\n        \n        \n    switch (metadata.deviceName) {\n     case \"Estación 1.0\":\n        msgout.UE_10=1;   //unidades ensambladas en estacion 1.0\n        break;\n     case \"Estación 1.1\":\n        msgout.UE_11=1;   //unidades ensambladas en estacion 1.1\n        break;\n     case \"Estación 1.2\":\n        msgout.UE_12=1;   //unidades ensambladas en estacion 1.2\n        break;\n     case \"Estación 1.3\":\n        msgout.UE_13=1;   //unidades ensambladas en estacion 1.3\n        break;\n     case \"Estación 1.4\":\n        msgout.UE_14=1;   //unidades ensambladas en estacion 1.4\n        break;\n     case \"Estación 1.5\":\n        msgout.UE_15=1;    //unidades ensambladas en estacion 1.5\n        break;\n     case \"Estación 1.6\":\n        msgout.UE_16=1;    //unidades ensambladas en estacion 1.6\n        break;\n     case \"Estación 1.7\":\n        msgout.UE_17=1;   //unidades ensambladas en estacion 1.7\n        break;\n     case \"Estación 1.8\":\n        msgout.UE_18=1;   //unidades ensambladas en estacion 1.8\n        break;\n     case \"Estación 1.9\":\n        msgout.UE_19=1;    //unidades ensambladas en estacion 1.9\n        msgout.unidades_ensambladasL=1;\n        break;\n        \n     default:\n        msgout.alerta= \"no es dispositivo\";\n        break;\n   }\n  \n    }\n  else{\n\n    }\n  \n  msgout.tiempo_activoL=(msg.tiempo_activo).toFixed(2);\n  msgout.tiempo_estandarL=msg.tiempo_estandar.toFixed(2);\n  \n  \n      }\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_OPERACION\"){\n    \n    \n    //msg.tiempo_estado=tiempoSegundos(msg.tiempo_estado);\n    \n\n    \n}\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    \n        switch (metadata.deviceName) {\n     case \"Estación 1.0\":\n        msgout.PARADAS_10=1;  // cantidad de parada en estacion 1.0\n        break;\n     case \"Estación 1.1\":\n        msgout.PARADAS_11=1;  // cantidad de parada en estacion 1.1\n        break;\n     case \"Estación 1.2\":\n        msgout.PARADAS_12=1;  // cantidad de parada en estacion 1.2\n        break;\n     case \"Estación 1.3\":\n        msgout.PARADAS_13=1;   // cantidad de parada en estacion 1.3\n        break;\n     case \"Estación 1.4\":\n        msgout.PARADAS_14=1;  // cantidad de parada en estacion 1.4\n        break;\n     case \"Estación 1.5\":\n        msgout.PARADAS_15=1;  // cantidad de parada en estacion 1.5\n        break;\n     case \"Estación 1.6\":\n        msgout.PARADAS_16=1;  // cantidad de parada en estacion 1.6\n        break;\n     case \"Estación 1.7\":\n        msgout.PARADAS_17=1;  // cantidad de parada en estacion 1.7\n        break;\n     case \"Estación 1.8\":\n        msgout.PARADAS_18=1;   // cantidad de parada en estacion 1.8\n        break;\n     case \"Estación 1.9\":\n        msgout.PARADAS_19=1;   // cantidad de parada en estacion 1.9\n        break;\n        \n     default:\n        msgout.alerta= \"DISPOSITIVO NO REGISTRADO\";\n        break;\n   }\n   \n   //---------------------------------------------------------------------------------\n   \n   msgout.paradas=msg.paradas; // objeto con las causas y tiempo de paradas\n   \n   msgout.tiempo_linea_parada=tiempoMinutos(msg.tiempo_estado);\n\n    \n}\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}",
+        "jsScript" : "var msgout={};\n\n//********************************************************************************************************\n\nif (msg.evento==\"FIN_ESTACION\"){\n    \n    \n  if(msg.unidad_terminada==\"Y\" || msg.unidad_terminada== true){\n\n    \n    \n      if(msg.contador_levantamiento ==0){\n          \n          if(metadata.deviceName == \"Estación 1.9\" || metadata.deviceName == \"Estación 2.9\"){\n              msgout.unidades_ALAprimeraL=1;\n              msgout.unidades_retrabajadasL=0;\n              \n          }\n          else{\n              //\n          }\n     \n          \n          \n       }\n      else{\n          \n        if(metadata.deviceName == \"Estación 1.9\" || metadata.deviceName == \"Estación 2.9\"){\n              msgout.unidades_ALAprimeraL=0;\n              msgout.unidades_retrabajadasL=1;\n              \n          }\n          else{\n              //\n          }\n          \n          \n      \n        }\n        \n     if(msg.contador_inspeccion ==1){\n         \n          if(metadata.deviceName == \"Estación 1.9\" || metadata.deviceName == \"Estación 2.9\"){\n            msgout.unidades_buenas=1;\n          }\n          else{\n              //\n          }\n     \n          \n          \n       }\n      else if(msg.contador_inspeccion >1){\n          \n          \n         if(metadata.deviceName == \"Estación 1.9\" || metadata.deviceName == \"Estación 2.9\"){\n            msgout.unidades_defecto=1;\n          }\n          else{\n              //\n          }\n          \n      \n        }\n        \n        \n    switch (metadata.deviceName) {\n     case \"Estación 1.0\":\n        //msgout.UE_10=1;   //unidades ensambladas en estacion 1.0\n        break;\n     case \"Estación 1.1\":\n        //msgout.UE_11=1;   //unidades ensambladas en estacion 1.1\n        break;\n     case \"Estación 1.2\":\n        //msgout.UE_12=1;   //unidades ensambladas en estacion 1.2\n        break;\n     case \"Estación 1.3\":\n        //msgout.UE_13=1;   //unidades ensambladas en estacion 1.3\n        break;\n     case \"Estación 1.4\":\n        //msgout.UE_14=1;   //unidades ensambladas en estacion 1.4\n        break;\n     case \"Estación 1.5\":\n        //msgout.UE_15=1;    //unidades ensambladas en estacion 1.5\n        break;\n     case \"Estación 1.6\":\n        //msgout.UE_16=1;    //unidades ensambladas en estacion 1.6\n        break;\n     case \"Estación 1.7\":\n        //msgout.UE_17=1;   //unidades ensambladas en estacion 1.7\n        break;\n     case \"Estación 1.8\":\n        //msgout.UE_18=1;   //unidades ensambladas en estacion 1.8\n        break;\n     case \"Estación 1.9\":\n        //msgout.UE_19=1;    //unidades ensambladas en estacion 1.9\n        msgout.unidades_ensambladasL=1;\n        break;\n    case \"Estación 2.9\":\n        msgout.unidades_ensambladasL=1;\n        break;\n        \n     default:\n        msgout.alerta= \"dispositivo no registrado\";\n        break;\n   }\n  \n    }\n  else{\n         //\n    }\n  \n  msgout.tiempo_activoL=(msg.tiempo_activo).toFixed(2);\n  msgout.tiempo_estandarL=msg.tiempo_estandar.toFixed(2);\n  \n  \n      }\n\n\n//**********************************************************************************************************\nelse if(msg.evento==\"FIN_PARADA\"){\n    /*\n    \n        switch (metadata.deviceName) {\n     case \"Estación 1.0\":\n        // msgout.PARADAS_10=1;  // cantidad de parada en estacion 1.0\n        break;\n     case \"Estación 1.1\":\n        msgout.PARADAS_11=1;  // cantidad de parada en estacion 1.1\n        break;\n     case \"Estación 1.2\":\n        // msgout.PARADAS_12=1;  // cantidad de parada en estacion 1.2\n        break;\n     case \"Estación 1.3\":\n        // msgout.PARADAS_13=1;   // cantidad de parada en estacion 1.3\n        break;\n     case \"Estación 1.4\":\n        msgout.PARADAS_14=1;  // cantidad de parada en estacion 1.4\n        break;\n     case \"Estación 1.5\":\n        msgout.PARADAS_15=1;  // cantidad de parada en estacion 1.5\n        break;\n     case \"Estación 1.6\":\n        msgout.PARADAS_16=1;  // cantidad de parada en estacion 1.6\n        break;\n     case \"Estación 1.7\":\n        msgout.PARADAS_17=1;  // cantidad de parada en estacion 1.7\n        break;\n     case \"Estación 1.8\":\n        msgout.PARADAS_18=1;   // cantidad de parada en estacion 1.8\n        break;\n     case \"Estación 1.9\":\n        msgout.PARADAS_19=1;   // cantidad de parada en estacion 1.9\n        break;\n        \n     default:\n        msgout.alerta= \"DISPOSITIVO NO REGISTRADO\";\n        break;\n   }\n   */\n   \n   //---------------------------------------------------------------------------------\n   \n   msgout.paradas=msg.paradas; // objeto con las causas y tiempo de paradas\n   \n   msgout.tiempo_linea_parada=tiempoMinutos(msg.tiempo_estado);\n\n    \n}\n\n\nreturn {msg: msgout, metadata: metadata, msgType: msgType};\n\n// funciones $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n\n \n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoSegundos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n        return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n    }\n\n    // Cualquier otro formato\n    return 0;\n}\n\n//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nfunction tiempoMinutos(timeArray) {\n    // Si no existe, devolver 0\n    if (timeArray === undefined || timeArray === null) {\n        return 0;\n    }\n\n    // Si no es string, intentar convertirlo a string\n    if (typeof timeArray !== \"string\") {\n        timeArray = String(timeArray);\n    }\n\n    // Verificar que contenga \":\"\n    if (timeArray.indexOf(\":\") === -1) {\n        return 0;\n    }\n\n    // Separar en partes\n    var partes = timeArray.split(\":\").map(function(x) { return parseInt(x, 10) || 0; });\n\n    // dd:hh:mm:ss\n    if (partes.length === 4) {\n       // return (partes[0] * 24 * 3600) + (partes[1] * 3600) + (partes[2] * 60) + partes[3];\n        return (partes[0] * 24 * 60) + (partes[1] * 60) + (partes[2]) + ((partes[3])/60);\n    }\n\n    // hh:mm:ss\n    if (partes.length === 3) {\n        //return (partes[0] * 3600) + (partes[1] * 60) + partes[2];\n        return (partes[0] * 60) + (partes[1]) + ((partes[2])/60);\n    }\n\n    // Cualquier otro formato\n    return 0;\n}",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -403,7 +439,7 @@
         "entityType" : "RULE_NODE",
         "id" : "49656c00-b993-11f0-9cd0-35be421ad23c"
       },
-      "name" : "linea1 procesar",
+      "name" : "linea procesar",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -411,8 +447,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 705,
-        "layoutY" : 22
+        "layoutX" : 364,
+        "layoutY" : 16
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -439,8 +475,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1061,
-        "layoutY" : 15
+        "layoutX" : 931,
+        "layoutY" : 18
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -465,8 +501,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 576,
-        "layoutY" : 524
+        "layoutX" : 428,
+        "layoutY" : 549
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -493,8 +529,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1087,
-        "layoutY" : 521
+        "layoutX" : 971,
+        "layoutY" : 487
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -521,8 +557,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 83,
-        "layoutY" : 639
+        "layoutX" : 254,
+        "layoutY" : 800
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -549,8 +585,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 63,
-        "layoutY" : 19
+        "layoutX" : 76,
+        "layoutY" : 944
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -577,8 +613,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 341,
-        "layoutY" : 17
+        "layoutX" : 354,
+        "layoutY" : 942
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -605,8 +641,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 367,
-        "layoutY" : 606
+        "layoutX" : 526,
+        "layoutY" : 784
       },
       "configuration" : {
         "version" : 0
@@ -627,8 +663,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 363,
-        "layoutY" : 693
+        "layoutX" : 526,
+        "layoutY" : 849
       },
       "configuration" : {
         "version" : 0
@@ -649,8 +685,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 493,
-        "layoutY" : 303
+        "layoutX" : 434,
+        "layoutY" : 423
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -705,8 +741,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 177,
-        "layoutY" : 256
+        "layoutX" : 54,
+        "layoutY" : 261
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -733,8 +769,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 844,
-        "layoutY" : 519
+        "layoutX" : 708,
+        "layoutY" : 507
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -761,8 +797,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1350,
-        "layoutY" : 521
+        "layoutX" : 1316,
+        "layoutY" : 506
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
@@ -799,8 +835,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1327,
-        "layoutY" : 658
+        "layoutX" : 1295,
+        "layoutY" : 420
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -829,8 +865,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 840,
-        "layoutY" : 588
+        "layoutX" : 728,
+        "layoutY" : 607
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -857,8 +893,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1087,
-        "layoutY" : 580
+        "layoutX" : 995,
+        "layoutY" : 604
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -882,6 +918,264 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1298,
+        "layoutY" : 637
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "DEVICE",
+        "entityNamePattern" : "Supervisor",
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ],
+            "negate" : false
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "46388d60-d5df-11f0-a94a-cb6d065d835f"
+      },
+      "name" : "para Supervisor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1304,
+        "layoutY" : 741
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4638db80-d5df-11f0-a94a-cb6d065d835f"
+      },
+      "name" : "save Supervisor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 659,
+        "layoutY" : 20
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return msg.westado==\"EN INACTIVIDAD\" || msg.westado==\"EN OPERACIÓN\" ||\n       msg.westado==\"EN PARADA\" || msg.westado==\"EN INSPECCIÓN\" || msg.westado==\"EN LEVANTAMIENTO\";\n\n\n\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1765383077781,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "caa88370-d5df-11f0-a94a-cb6d065d835f"
+      },
+      "name" : "westado ?",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 561,
+        "layoutY" : 158
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if (msg.evento == \"INICIO_INACTIVIDAD\") {\n    msg.nombre_operario = \" \";\n} else if (msg.evento != \"INICIO_OPERACION\" ||\n           msg.evento != \"INICIO_PARADA\" ||\n           msg.evento != \"INICIO_INSPECCION\" ||\n           msg.evento != \"INICIO_LEVANTAMIENTO\"\n) {\n    msg.nombre_operario = undefined;\n}\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1765412588613,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0f779521-d623-11f0-a94a-cb6d065d835f"
+      },
+      "name" : "operario",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 762,
+        "layoutY" : 78
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    \n    if(metadata.deviceName == \"Estación 1.0\" || metadata.deviceName == \"Estación 1.1\" \n    || metadata.deviceName == \"Estación 1.2\" || metadata.deviceName == \"Estación 1.3\"\n    || metadata.deviceName == \"Estación 1.4\" || metadata.deviceName == \"Estación 1.5\"\n    || metadata.deviceName == \"Estación 1.6\" || metadata.deviceName == \"Estación 1.7\"\n    || metadata.deviceName == \"Estación 1.8\" || metadata.deviceName == \"Estación 1.9\") {\n        return ['linea_1'];\n    }\n    else if(metadata.deviceName == \"Estación 2.0\" || metadata.deviceName == \"Estación 2.1\" \n    || metadata.deviceName == \"Estación 2.2\" || metadata.deviceName == \"Estación 2.3\"\n    || metadata.deviceName == \"Estación 2.4\" || metadata.deviceName == \"Estación 2.5\"\n    || metadata.deviceName == \"Estación 2.6\" || metadata.deviceName == \"Estación 2.7\"\n    || metadata.deviceName == \"Estación 2.8\" || metadata.deviceName == \"Estación 2.9\") {\n        return ['linea_2'];\n    }\n    \n    else if (metadata.deviceName == \"simulador1\"){\n        return ['simulador'];\n    }\n    else {\n        return ['noo'];\n    }\n}\n\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType == 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "055f04b0-d6a0-11f0-a94a-cb6d065d835f"
+      },
+      "name" : "estaciones registradas",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1043,
+        "layoutY" : 116
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "DEVICE",
+        "entityNamePattern" : "Linea 2",
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ],
+            "negate" : false
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "af95bc70-d6a1-11f0-a94a-cb6d065d835f"
+      },
+      "name" : "para Linea2",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1329,
+        "layoutY" : 173
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "DEVICE",
+        "entityNamePattern" : "Supervisor",
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ],
+            "negate" : false
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : true
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "44d36290-d6a4-11f0-a94a-cb6d065d835f"
+      },
+      "name" : "para Supervisor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1318,
+        "layoutY" : 270
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "useServerTs" : false,
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "44d389a0-d6a4-11f0-a94a-cb6d065d835f"
+      },
+      "name" : "save Supervisor",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },

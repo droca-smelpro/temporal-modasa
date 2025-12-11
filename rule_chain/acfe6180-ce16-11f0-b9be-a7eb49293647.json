@@ -471,7 +471,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "  msg.p_operario=(((msg.tiempo_estandar)*100)/(msg.tiempo_total)).toFixed(2); //eficiencia operario  // 0 - 100\n  \n  \n  if(msg.p_operario>=100){\n      msg.p_operario=100;\n  }\n  if(msg.p_efectivo>=100){\n       msg.p_efectivo=100;\n  }\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "  msg.p_operario=(((msg.tiempo_estandar)*100)/(msg.tiempo_total)).toFixed(2); //eficiencia operario  // 0 - 100\n  \n  \n  if(msg.p_operario>=100){\n      msg.p_operario=100;\n  }\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,

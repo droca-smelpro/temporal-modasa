@@ -365,13 +365,6 @@
                 "settings" : { },
                 "_hash" : 0.5274960452861236
               }, {
-                "name" : "ratio_produccion_linea_1",
-                "type" : "timeseries",
-                "label" : "ratio_produccion_linea_1",
-                "color" : "#c51162",
-                "settings" : { },
-                "_hash" : 0.5104321083645735
-              }, {
                 "name" : "operarios_registrados",
                 "type" : "timeseries",
                 "label" : "operarios_registrados",
@@ -399,6 +392,13 @@
                 "usePostProcessing" : null,
                 "postFuncBody" : null,
                 "comparisonEnabled" : null
+              }, {
+                "name" : "ratio_produccionL",
+                "type" : "timeseries",
+                "label" : "ratio_produccionL",
+                "color" : "#d50000",
+                "settings" : { },
+                "_hash" : 0.8276917898652865
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -684,7 +684,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "$('.tb-dashboard-page').addClass('dark');\n\nlet meta = \"Meta: \" + data[0][\"operarios_registrados\"].toString();\n\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' :\n    'darkMode';\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>menu</mat-icon>' + '</button>' +\n    '<div class=\"flex flex-col items-stretch justify-center\">' +\n    '<div class=\"title\">Gestión de Producción</div>' +\n    \n    '</div>' +\n    '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-2 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-start\">' +\n    '<div class=\"powered-by\">' + meta + '</div>' +\n    '</div>' +\n    \n    //'<div class=\"powered-by\">' + meta + '</div>' +\n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 0px;\">' +\n                '<button id=\"search\" mat-icon-button matTooltip=\"Buscar\">' +\n    '<mat-icon>search</mat-icon>' + '</button>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 0px;\">' +\n                '<button id=\"download\" mat-icon-button matTooltip=\"Descargar\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                \n    '</div>' +\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 10px;\">' +\n    '<button (click)=\"darkMode = ' + darkModeExpression +\n    ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ ' +\n    darkModeExpression +\n    ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ ' +\n    darkModeExpression +\n    ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n    '</div>';",
+              "markdownTextFunction" : "$('.tb-dashboard-page').addClass('dark');\n\nlet operarios_registrados = data[0][\"operarios_registrados\"];\nlet ratio_produccion = data[0][\"ratio_produccionL\"];\nlet timestamp = Date.now();\nlet date = new Date(timestamp).toLocaleDateString('es-ES');\n\nlet meta = \"Meta de hoy: \" + (operarios_registrados * ratio_produccion).toFixed(1).toString() + \" (G.E.) | Fecha de hoy: \" + date;\n\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' :\n    'darkMode';\nreturn '<div class=\"header flex flex-col items-center justify-around gt-sm:flex-row gt-sm:items-stretch gt-sm:justify-start gt-sm:gap-6\">' +\n    '<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\">' +\n    '<mat-icon>menu</mat-icon>' + '</button>' +\n    '<div class=\"flex flex-col items-stretch justify-center\">' +\n    '<div class=\"title\">Gestión de Producción</div>' +\n    \n    '</div>' +\n    '<div class=\"flex flex-col gt-sm:flex-1 items-center justify-around gap-2 gt-sm:flex-row gt-sm:gap-2 gt-sm:items-center gt-sm:justify-center\">' +\n    '<div class=\"powered-by\" style=\"margin-right: 120px;\">' + meta + '</div>' +\n    '</div>' +\n    \n    //'<div class=\"powered-by\">' + meta + '</div>' +\n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 0px;\">' +\n                '<button id=\"search\" mat-icon-button matTooltip=\"Buscar\">' +\n    '<mat-icon>search</mat-icon>' + '</button>' +\n    \n    \n    '<div class=\"flex flex-row items-stretch justify-center gap-2\" style=\"padding-right: 0px;\">' +\n                '<button id=\"download\" mat-icon-button matTooltip=\"Descargar\">' +\n    '<mat-icon>download</mat-icon>' + '</button>' +\n                \n                \n    '</div>' +\n    \n    '<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 10px;\">' +\n    '<button (click)=\"darkMode = ' + darkModeExpression +\n    ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ ' +\n    darkModeExpression +\n    ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ ' +\n    darkModeExpression +\n    ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n    '</div>' +\n    '</div>';",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 8px;\n    justify-content: space-around;\n}\n\n@media (min-width: 960px) {\n    .header {\n        gap: 4px;\n    }\n}\n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 24px;\n    font-weight: 500;\n    color: #28232D;\n    padding-right: 24px;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n\n\n\n.cdk-overlay-container .tb-popover-inner-content {\n    padding: 0 !important;\n}\n"
             },
@@ -1567,7 +1567,7 @@
             "settings" : {
               "useMarkdownTextFunction" : true,
               "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
-              "markdownTextFunction" : "var estado = data[0].westado;\nvar stateSvg = getStateSvg(estado);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\n\n\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode'; \n\n\nif (darkMode) {\n    $('.tb-dashboard-page')\n        .addClass('dark');\n} else {\n    $('.tb-dashboard-page')\n        .addClass('light');\n}\n\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 8px;\">' + \n'<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n'<mat-icon>menu</mat-icon>' + '</button>' +\n\n'</div>' +\n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' + \n'<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+ '<div class=\"title\">${entityLabel}</div>' +\n'<div class=\"subtitle flex flex-row items-center gap-1\">' +\n    '<img src=\"' + stateSvgUrl + '\" width=\"16\" height=\"16\" />' +\n    estado +\n'</div>' +\n'</div>' +\n\n//'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 0px;\">' +\n//'<button id=\"search\" mat-icon-button matTooltip=\"Buscar\">' +\n//'<mat-icon>search</mat-icon>' + '</button>' + \n//'</div>' + \n\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 0px;\">' +\n'<button id=\"download\" mat-icon-button matTooltip=\"Descargar Estación\">' +\n'<mat-icon>download</mat-icon>' + '</button>' + \n'</div>' + \n\n\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 10px;\">' +\n'<button (click)=\"darkMode = '+darkModeExpression+ ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression + ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression + ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' + \n'</div>' + '</div>';\n\n\nfunction getStateSvg(status) {\n    switch (estado) {\n        case 'EN OPERACIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#4CE16B\"/>' +\n                '</svg>';\n        case 'EN_OPERACION':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#4CE16B\"/>' +\n                '</svg>';\n        case 'EN OPERACION':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#4CE16B\"/>' +\n                '</svg>';\n        case 'EN PARADA':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF5144\"/>' +\n                '</svg>';\n        case 'EN INSPECCIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF2C73\"/>' +\n                '</svg>';\n        case 'EN LEVANTAMIENTO':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#1EE9CC\"/>' +\n                '</svg>';\n        case 'EN INACTIVIDAD':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#EEEEEE\"/>' +\n                '</svg>';\n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#EEEEEE\"/>' +\n                '</svg>';\n    }\n}\n\n\n\n",
+              "markdownTextFunction" : "var estado = data[0].Estado;\nconsole.log(estado);\n\nvar stateSvg = getStateSvg(estado);\nvar encodedStateSvg = encodeURIComponent(stateSvg);\nvar stateSvgUrl = 'data:image/svg+xml,' + encodedStateSvg;\n\n\nvar darkMode = $('.tb-dashboard-page').hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode'; \n\n\nif (darkMode) {\n    $('.tb-dashboard-page')\n        .addClass('dark');\n} else {\n    $('.tb-dashboard-page')\n        .addClass('light');\n}\n\n\nreturn '<div class=\"header flex flex-row items-stretch justify-start gap-2\">'+\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-left: 8px;\">' + \n'<button id=\"menu-button\" mat-icon-button matTooltip=\"Abrir menú\" type=\"button\">' +\n'<mat-icon>menu</mat-icon>' + '</button>' +\n\n'</div>' +\n'<div class=\"flex flex-col items-stretch justify-center\"><button id=\"go-back\" matTooltip=\"Go back\" type=\"button\" mat-icon-button><mat-icon>arrow_back</mat-icon></button></div>' + \n'<div class=\"flex flex-1 flex-col items-stretch justify-center\">'+ '<div class=\"title\">${entityLabel}</div>' +\n'<div class=\"subtitle flex flex-row items-center gap-1\">' +\n    '<img src=\"' + stateSvgUrl + '\" width=\"16\" height=\"16\" />' +\n    estado +\n'</div>' +\n'</div>' +\n\n//'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 0px;\">' +\n//'<button id=\"search\" mat-icon-button matTooltip=\"Buscar\">' +\n//'<mat-icon>search</mat-icon>' + '</button>' + \n//'</div>' + \n\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 0px;\">' +\n'<button id=\"download\" mat-icon-button matTooltip=\"Descargar Estación\">' +\n'<mat-icon>download</mat-icon>' + '</button>' + \n'</div>' + \n\n\n'<div class=\"flex flex-col items-stretch justify-center\" style=\"padding-right: 10px;\">' +\n'<button (click)=\"darkMode = '+darkModeExpression+ ' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression + ' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression + ' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' + \n'</div>' + '</div>';\n\n\nfunction getStateSvg(estado) {\n    switch (estado) {\n        case 'EN OPERACIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#4CE16B\"/>' +\n                '</svg>';\n\n        case 'EN PARADA':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF5144\"/>' +\n                '</svg>';\n        case 'EN INSPECCIÓN':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#FF2C73\"/>' +\n                '</svg>';\n        case 'EN LEVANTAMIENTO':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#1EE9CC\"/>' +\n                '</svg>';\n        case 'EN INACTIVIDAD':\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#EEEEEE\"/>' +\n                '</svg>';\n        default:\n            return '<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">' +\n                '<circle cx=\"10\" cy=\"10\" r=\"6\" fill=\"#EEEEEE\"/>' +\n                '</svg>';\n    }\n}\n\n\n\n",
               "applyDefaultMarkdownStyle" : false,
               "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 0px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n\n.tb-timewindow-label {\n    \n}\n"
             },
@@ -1910,7 +1910,7 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "e216e9a0-a922-11f0-9abe-2dfd6db9cae3",
+              "deviceId" : "5f1af5f0-a922-11f0-9abe-2dfd6db9cae3",
               "entityAliasId" : null,
               "filterId" : null,
               "dataKeys" : [ {
@@ -5156,7 +5156,9 @@
             "datasources" : [ {
               "type" : "device",
               "name" : "",
-              "deviceId" : "7a984630-b8d5-11f0-9cd0-35be421ad23c",
+              "deviceId" : "777f8010-ab85-11f0-9abe-2dfd6db9cae3",
+              "entityAliasId" : "0d1d206f-e6d0-ac21-6065-05165e4f9be3",
+              "filterId" : null,
               "dataKeys" : [ {
                 "name" : "unidades_defecto",
                 "type" : "timeseries",
@@ -8270,13 +8272,13 @@
                 "postFuncBody" : null,
                 "comparisonEnabled" : null
               }, {
-                "name" : "ratio_produccion",
+                "name" : "ratio_produccionL",
                 "type" : "timeseries",
-                "label" : "ratio_produccion",
+                "label" : "ratio_produccionL",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.778992273074076,
-                "aggregationType" : "COUNT",
+                "aggregationType" : "NONE",
                 "units" : null,
                 "decimals" : null,
                 "funcBody" : null,
@@ -8444,6 +8446,7 @@
               }
             } ],
             "timewindow" : {
+              "displayValue" : "",
               "hideAggregation" : false,
               "hideAggInterval" : false,
               "hideTimezone" : false,
@@ -8461,7 +8464,10 @@
                 "historyType" : 0,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "fixedTimewindow" : null,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1765290823546,
+                  "endTimeMs" : 1765377223546
+                },
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
@@ -9057,12 +9063,18 @@
                 "postFuncBody" : null,
                 "comparisonEnabled" : null
               }, {
-                "name" : "ratio_produccion",
+                "name" : "ratio_produccionL",
                 "type" : "timeseries",
                 "label" : "ratio_produccion",
                 "color" : "#ffc107",
                 "settings" : { },
-                "_hash" : 0.16458216595333575
+                "_hash" : 0.16458216595333575,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "unidades_ALAprimeraL",
                 "type" : "timeseries",

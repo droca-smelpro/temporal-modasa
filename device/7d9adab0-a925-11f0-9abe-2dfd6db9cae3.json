@@ -54,268 +54,44 @@
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "CLASIFICACION",
-      "lastUpdateTs" : 1764622248828,
-      "longValue" : null,
-      "strValue" : "REASIGNADO"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "MODELO",
-      "lastUpdateTs" : 1764622248828,
-      "longValue" : null,
-      "strValue" : "MP45-60"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "TIMESTAMP",
-      "lastUpdateTs" : 1764629573108,
-      "longValue" : null,
-      "strValue" : "2025-12-01 17:52:50"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "TIPO_EVENTO",
-      "lastUpdateTs" : 1764622248828,
-      "longValue" : null,
-      "strValue" : "SERIE"
-    }, {
       "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1764885495637,
+      "lastUpdateTs" : 1765413264048,
       "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : "{\"c_unidades_ALAprimera\":0,\"c_unidades_ensambladas\":0,\"c_unidades_retrabajadas\":0,\"parte\":1,\"total\":1,\"names\":1,\"diff\":\"true\",\"test\":1}",
-      "key" : "buffer",
-      "lastUpdateTs" : 1764082524985,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "c_unidades_ALAprimera",
-      "lastUpdateTs" : 1764884784463,
-      "longValue" : 1,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "c_unidades_ensambladas",
-      "lastUpdateTs" : 1764884784463,
-      "longValue" : 1,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "c_unidades_retrabajadas",
-      "lastUpdateTs" : 1764082525184,
-      "longValue" : 0,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "caso",
-      "lastUpdateTs" : 1764622248828,
-      "longValue" : 3,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "cliente",
-      "lastUpdateTs" : 1764622248828,
-      "longValue" : null,
-      "strValue" : "MODASA EXPORTACION"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "diff",
-      "lastUpdateTs" : 1764622246881,
-      "longValue" : null,
-      "strValue" : "true"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "estacion",
-      "lastUpdateTs" : 1764622246881,
-      "longValue" : 8,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "estado",
-      "lastUpdateTs" : 1764629573108,
-      "longValue" : null,
-      "strValue" : "EN OPERACIÓN"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "evento",
-      "lastUpdateTs" : 1764629573108,
-      "longValue" : null,
-      "strValue" : "INICIO_SELECCION"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "filtrog",
-      "lastUpdateTs" : 1764622246881,
-      "longValue" : null,
-      "strValue" : "no"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "id_mensaje",
-      "lastUpdateTs" : 1764629573108,
-      "longValue" : 45,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1764885495633,
-      "longValue" : 1764885495632,
+      "lastUpdateTs" : 1765413264011,
+      "longValue" : 1765413264010,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1764884863620,
-      "longValue" : 1764884861570,
+      "lastUpdateTs" : 1765412654497,
+      "longValue" : 1765412651492,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1764884447286,
-      "longValue" : 1764884447286,
+      "lastUpdateTs" : 1765409222731,
+      "longValue" : 1765409222731,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1764884861583,
-      "longValue" : 1764884861583,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "linea",
-      "lastUpdateTs" : 1764622246881,
-      "longValue" : 1,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "names",
-      "lastUpdateTs" : 1764629573108,
-      "longValue" : 45,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 1.0,
-      "jsonValue" : null,
-      "key" : "p_ALAprimera",
-      "lastUpdateTs" : 1764884784463,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.0,
-      "jsonValue" : null,
-      "key" : "p_retrabajadas",
-      "lastUpdateTs" : 1764884784463,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "parte",
-      "lastUpdateTs" : 1764622246881,
-      "longValue" : 1,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "serie",
-      "lastUpdateTs" : 1764622248828,
-      "longValue" : null,
-      "strValue" : "X42222H"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "ss_id_mensaje",
-      "lastUpdateTs" : 1764629573108,
-      "longValue" : 199,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "test",
-      "lastUpdateTs" : 1764622246881,
-      "longValue" : 1,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "tiempo_seleccion",
-      "lastUpdateTs" : 1764629573108,
-      "longValue" : null,
-      "strValue" : "00:00:01"
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "total",
-      "lastUpdateTs" : 1764622246881,
-      "longValue" : 1,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "unidades_ALAprimera",
-      "lastUpdateTs" : 1764884784463,
-      "longValue" : 1,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "unidades_ensambladas",
-      "lastUpdateTs" : 1764884784463,
-      "longValue" : 1,
+      "lastUpdateTs" : 1765412651505,
+      "longValue" : 1765412651505,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

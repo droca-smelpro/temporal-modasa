@@ -47,6 +47,19 @@
     "type" : "Contains",
     "typeGroup" : "COMMON",
     "version" : 287791
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "e8fab590-8f22-11f0-a61c-01e0c85fd5dd"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "3635cbc0-d22a-11f0-b9be-a7eb49293647"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 289651
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
